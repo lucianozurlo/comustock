@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shadow Themes Studio">
+    <meta name="description" content="Bringer - Creative Multipurpose HTML5 Template Documentation." />
+
+    <!-- Page Title -->
+    <title>Bringer Documentation | UI Elements</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/std-config.css">
+    <link type="text/css" rel="stylesheet" href="../css/std.css">
+    <link type="text/css" rel="stylesheet" href="../css/std-responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body>
+    
+    <main class="std-main">
+        <!-- Content -->
+        <div class="std-container">
+            <section class="chapter-intro-section">
+                <div class="row">
+                    <div class="col-4 chapter-title-wrap">
+                        <!-- Chapter Title -->
+                    </div>
+                    <div class="col-8">
+                        In this chapter, we will take a closer look at the template UI elements like Dynamic Backlight and Right Click Protection. Now, let's take a closer look at each of them.
+                    </div>
+                </div><!-- .row -->
+            </section>
+            <section>
+                <h4>Dynamic Backlight</h4>
+                <p>This element adds a background light effect that follows the cursor and highlights content blocks. The code for that element should be located at the bottom of the page before the Scripts section and look the following way:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+...
+    <span>Dynamic Backlight</span>
+    <tag data-attrs='{"class":"bringer-backlight"}'>div</tag><tag>/div</tag>
+
+    <span>JS Scripts</span>
+    ...
+</pre>
+<!-- * END CODE EXAMPLE -->
+            </section>
+            
+            <section>
+                <h4>Right Click Protection</h4>
+                <p>This element prevents your visitors from using the context menu. For example, it may help to protect your images from downloading with a right-click menu or a long tap on touch devices. The message for the user can be specified in the <tag class='inline-html'>h2</tag> tag. When the element is on the page, and the user tries to open the context menu, the message will be shown and may be closed by clicking on the overlay or will hide automatically after 2 seconds.</p>
+                <p>Here is a code structure for the element:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+    <span>Right Click Protection Block</span>
+    <tag data-attrs='{"class":"bringer-rcp-wrap"}'>div</tag>
+        <tag data-attrs='{"class":"bringer-rcp-overlay"}'>div</tag><tag>/div</tag>
+        <tag data-attrs='{"class":"bringer-rcp-container"}'>div</tag>
+            <tag>h2</tag>The context menu is not allowed on this page.<tag>/h2</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                <figure>
+                    <img src="../img/rcp.jpg" alt="Right Click Protection">
+                    <figcaption>Example of the Right Click Protection screen.</figcaption>
+                </figure>
+            </section>
+            
+            <!-- Next Chapter -->
+            <div class="std-next-chapter"></div>
+        </div>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/std.js"></script>
+</body>

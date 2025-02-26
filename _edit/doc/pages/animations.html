@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shadow Themes Studio">
+    <meta name="description" content="Bringer - Creative Multipurpose HTML5 Template Documentation." />    
+
+    <!-- Page Title -->
+    <title>Bringer Documentation | Animations</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/std-config.css">
+    <link type="text/css" rel="stylesheet" href="../css/std.css">
+    <link type="text/css" rel="stylesheet" href="../css/std-responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body>
+    
+    <main class="std-main">
+        <!-- Content -->
+        <div class="std-container">
+            <section class="chapter-intro-section">
+                <div class="row">
+                    <div class="col-4 chapter-title-wrap">
+                        <!-- Chapter Title -->
+                    </div>
+                    <div class="col-8">
+                        In this chapter, we will talk about appearing and leaving animations for the content elements. You can configure these animations with data attributes on each content item you want to animate.
+                    </div>
+                </div><!-- .row -->
+            </section>
+
+            <section>
+                <h4>Element Appearing Animations</h4>
+                <p>For most elements, you can specify the animation to play on page loading or when an item appears in the viewport. There are a three types of those attributes:</p>
+                <ul>
+                    <li><code class="chl-attr">data-appear</code> - can be applied to a single element on the page.</li>
+                    <li><code class="chl-attr">data-split-appear</code> - can be applied to the text, like a heading, to create an appearing effect with delay for each <span class="highlight">character</span>, <span class="highlight">word</span>, or <span class="highlight">line</span> of text.</li>
+                    <li><code class="chl-attr">data-stagger-appear</code> - can be applied to parent elements to animate children's items with some delay depending on the item position in the row.</li>
+                </ul>
+                <br>
+                
+                <h6>Animations list</h6>
+                <p>Let's take a look at the list of possible values for the appearing (and unloading, as well) animations:</p>
+                <div class="row">
+                    <div class="col-4">
+                        <ul>
+                            <li><code class="chl-attr-val">fade-in</code></li>
+                            <li><code class="chl-attr-val">fade-up</code></li>
+                            <li><code class="chl-attr-val">fade-down</code></li>
+                            <li><code class="chl-attr-val">fade-left</code></li>
+                            <li><code class="chl-attr-val">fade-right</code></li>
+                            <li><code class="chl-attr-val">fade-up-left</code></li>
+                            <li><code class="chl-attr-val">fade-up-right</code></li>
+                            <li><code class="chl-attr-val">fade-down-left</code></li>
+                            <li><code class="chl-attr-val">fade-down-right</code></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <ul>
+                            <li><code class="chl-attr-val">zoom-in</code></li>
+                            <li><code class="chl-attr-val">zoom-in-up</code></li>
+                            <li><code class="chl-attr-val">zoom-in-down</code></li>
+                            <li><code class="chl-attr-val">zoom-in-left</code></li>
+                            <li><code class="chl-attr-val">zoom-in-right</code></li>
+                            <li><code class="chl-attr-val">zoom-in-up-left</code></li>
+                            <li><code class="chl-attr-val">zoom-in-up-right</code></li>
+                            <li><code class="chl-attr-val">zoom-in-down-left</code></li>
+                            <li><code class="chl-attr-val">zoom-in-down-right</code></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <ul>
+                            <li><code class="chl-attr-val">zoom-out</code></li>
+                            <li><code class="chl-attr-val">zoom-out-up</code></li>
+                            <li><code class="chl-attr-val">zoom-out-down</code></li>
+                            <li><code class="chl-attr-val">zoom-out-left</code></li>
+                            <li><code class="chl-attr-val">zoom-out-right</code></li>
+                            <li><code class="chl-attr-val">zoom-out-up-left</code></li>
+                            <li><code class="chl-attr-val">zoom-out-up-right</code></li>
+                            <li><code class="chl-attr-val">zoom-out-down-left</code></li>
+                            <li><code class="chl-attr-val">zoom-out-down-right</code></li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                
+                <h6>Additional Parameters</h6>
+                <p>For each element with aniamtion attribute, you can also add the following optional attributes:</p>
+                <ul>
+                    <li><code class="chl-attr">data-delay</code> - defines a time <span class="highlight">(in milliseconds)</span> to delay item animation start.</li>
+                    <li><code class="chl-attr">data-threshold</code> - defines what part of an item should be in view before triggering an animation. It can hold the following values: <span class="highlight">0</span>, <span class="highlight">0.25</span>, <span class="highlight">0.5</span>, <span class="highlight">0.75</span>, <span class="highlight">1.0</span>, where <span class="highlight">0</span> means immediate start when the first pixel of an item hits the viewport, and <span class="highlight">1.0</span> means that animation starts only when an entire element is in the viewport.</li>
+                    <li><code class="chl-attr">data-duration</code> - defines the duration of an animation in milliseconds.</li>
+                </ul>
+                <br>
+
+                <h6>Additional Parameters for Stagger appearing</h6>
+                <ul>
+                    <li><code class="chl-attr">data-stagger-delay</code> - defines a time <span class="highlight">(in milliseconds)</span> to delay animation between items in the same row.</li>
+                </ul>
+                <br>
+
+                <h6>Additional Parameters for Split appearing</h6>
+                <ul>
+                    <li><code class="chl-attr">data-split-by</code> - defines a text split type to animate. It can hold the following values: <span class="highlight">char</span>, <span class="highlight">word</span>, <span class="highlight">line</span>.</li>
+                    <li><code class="chl-attr">data-split-delay</code> - defines a time <span class="highlight">(in milliseconds)</span> to delay animation between items.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Leaving animation</h4>
+                <p>Leaving animations are playing before unloading the page. In general, it is the same as the appearing animations, but instead of the <span class="highlight">appear</span> word, it uses the <span class="highlight">unload</span> word:</p>
+                <ul>
+                    <li><code class="chl-attr">data-unload</code> - can be applied to a single element on the page.</li>
+                    <li><code class="chl-attr">data-split-unload</code> - can be applied to the text, like a heading, to create a leaving effect with delay for each <span class="highlight">character</span>, <span class="highlight">word</span>, or <span class="highlight">line</span> of text.</li>
+                    <li><code class="chl-attr">data-stagger-unload</code> - can be applied to parent elements to animate children's items with some delay depending on the item position in the row.</li>
+                </ul>
+                <p>Unlike the appearing animation, the unloading animation has no additional options of its own and uses the appearing animation options.</p>
+            </section>
+
+            <!-- Next Chapter -->
+            <div class="std-next-chapter"></div>
+        </div>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/std.js"></script>
+</body>

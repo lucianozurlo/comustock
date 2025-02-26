@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shadow Themes Studio">
+    <meta name="description" content="Bringer - Creative Multipurpose HTML5 Template Documentation." />    
+
+    <!-- Page Title -->
+    <title>Bringer Documentation | Code Structure</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/std-config.css">
+    <link type="text/css" rel="stylesheet" href="../css/std.css">
+    <link type="text/css" rel="stylesheet" href="../css/std-responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body>
+    
+    <main class="std-main">
+        <!-- Content -->
+        <div class="std-container">
+            <section class="chapter-intro-section">
+                <div class="row">
+                    <div class="col-4 chapter-title-wrap">
+                        <!-- Chapter Title -->
+                    </div>
+                    <div class="col-8">
+                        One of the most important things that help you in page building for your perfect website is the <span class="highlight">Grid System</span>. In our template, we have added our own Grid System called <span class="highlight">STG</span>. Due to that, every grid class starts with the <code class="chl-selector">stg-</code> prefix. Now, let's take a closer look at the rules and possibilities for that system.
+                    </div>
+                </div><!-- .row -->
+            </section>
+
+            <!-- Grid Row -->
+            <section>
+                <h4>Grid Row</h4>
+                <p>Each row container starts with the <code class="chl-selector">stg-row</code> class. The row container has a gap between inner columns, which is set in the <span class="highlight">CSS configuration</span> file. You can read more about the <span class="highlight">CSS configuration</span> in the <a href="customize.html">Customization</a> chapter.</p>
+                <pre class="chl-html">
+...
+<tag data-attrs='{"class":"stg-row"}'>div</tag>
+    <tag data-attrs='{"class":"stg-col-6"}'>div</tag>
+        <span>50% width Column</span>
+    <tag>/div</tag>
+    <tag data-attrs='{"class":"stg-col-6"}'>div</tag>
+        <span>50% width Column</span>
+    <tag>/div</tag>
+<tag>/div</tag>
+...</pre>
+                <p>Also, there are additional classes to adjust the gap:</p>
+                <ul>
+                    <li><code class="chl-selector">stg-no-gap</code> - disables the gap between columns.</li>
+                    <li><code class="chl-selector">stg-xs-gap</code> - reduces the gap by four.</li>
+                    <li><code class="chl-selector">stg-small-gap</code> - reduces the gap by half.</li>
+                    <li><code class="chl-selector">stg-large-gap</code> - increases the gap twice.</li>
+                </ul>
+                <p>You can also adjust values for the smaller and larger gaps in the <span class="highlight">CSS configuration</span>.</p>
+            </section>
+
+            <!-- Grid Columns -->
+            <section>
+                <h4>Grid Columns</h4>
+                <p>Inside the row container, you can put <span class="highlight">columns</span>. Columns classes are <code class="chl-selector">stg-col-X</code>, where <span class="highlight">X</span> is a value between <span class="highlight">1 and 12</span> to define the column size. 12 means <span class="highlight">100%</span>, 6 - <span class="highlight">50%</span>, 4 - <span class="highlight">33.33%</span>, 3 - <span class="highlight">25%</span>, and so on. So, the total column width classes sum for each row <span class="highlight">must equal 12</span>. In some cases, it allows to be less, but not more.</p>
+                <p>Here is a table of available classes:</p>
+                <div class="row">
+                    <div class="col-4 tp-col-4 m-col-12">
+                        <ul>
+                            <li>
+                                <code class="chl-selector">stg-col-1</code> - 8.33%
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg-col-2</code> - 16.67%
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg-col-3</code> - 25%
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg-col-4</code> - 33.33%
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4 tp-col-4 m-col-12">
+                        <ul>
+                            <li>
+                                <code class="chl-selector">stg-col-5</code> - 41.67%
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg-col-6</code> - 50%
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg-col-7</code> - 58.33%
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg-col-8</code> - 66.67%
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4 tp-col-4 m-col-12">
+                        <ul>
+                            <li>
+                                <code class="chl-selector">stg-col-9</code> - 75%
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg-col-10</code> - 83.33%
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg-col-11</code> - 91.67%
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg-col-12</code> - 100%
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Spacing -->
+            <section>
+                <h4>Additional Spacing</h4>
+                <p>Also, our template includes some additional classes to adjust the top or bottom spacings. It can be applied to any block element. The same as a column gap, it contains a few different sizes:</p>
+                <div class="row bottom-gap-s">
+                    <div class="col-6 tp-col-6 m-col-12">
+                        <h6>Bottom Spacings</h6>
+                        <ul>
+                            <li><code class="chl-selector">stg-bottom-gap-none</code> - disables the bottom spacing.</li>
+                            <li><code class="chl-selector">stg-bottom-gap-xs</code> - Extra small bottom spacing.</li>
+                            <li><code class="chl-selector">stg-bottom-gap-s</code> - Small bottom spacing.</li>
+                            <li><code class="chl-selector">stg-bottom-gap</code> - General (equal to grid-gap) bottom spacing.</li>
+                            <li><code class="chl-selector">stg-bottom-gap-l</code> - Large bottom spacing.</li>
+                            <li><code class="chl-selector">stg-bottom-gap-xl</code> - Extra Large bottom spacing.</li>
+                            <li><code class="chl-selector">stg-bottom-gap-section</code> - Bottom spacing, equal to default spacing between sections.</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 tp-col-6 m-col-12">
+                        <h6>Top Spacings</h6>
+                        <ul>
+                            <li><code class="chl-selector">stg-top-gap-xs</code> - Extra small top spacing.</li>
+                            <li><code class="chl-selector">stg-top-gap-s</code> - Small top spacing.</li>
+                            <li><code class="chl-selector">stg-top-gap</code> - General (equal to grid-gap) top spacing.</li>
+                            <li><code class="chl-selector">stg-top-gap-l</code> - Large top spacing.</li>
+                            <li><code class="chl-selector">stg-top-gap-xl</code> - Extra Large top spacing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Responsive -->
+            <section>
+                <h4>Responsive Values</h4>
+                <p>Our <span class="highlight">Grid System</span> also includes <span class="highlight">responsive suffixes</span> to adjust for different screen sizes for better flexibility and usability. There are four suffixes, which must be placed right after the <code class="chl-selector">stg</code> part:</p>
+                <div class="row bottom-gap-s">
+                    <div class="col-3 tp-col-6 m-col-12">
+                        <ul class="grid-responsive-classes">
+                            <li>
+                                <h6>Laptop</h6>
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-l</span>-no-gap</code> - Grid Gap
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-l</span>-col-6</code> - Column Size
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-l</span>-bottom-gap</code> - Spacing
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-l</span>-top-gap</code> - Spacing
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 tp-col-6 m-col-12">
+                        <ul class="grid-responsive-classes">
+                            <li>
+                                <h6>Tablet</h6>
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-t</span>-no-gap</code> - Grid Gap
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-t</span>-col-6</code> - Column Size
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-t</span>-bottom-gap</code> - Spacing
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-t</span>-top-gap</code> - Spacing
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 tp-col-6 m-col-12">
+                        <ul class="grid-responsive-classes">
+                            <li>
+                                <h6>Tablet Portrait</h6>
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-tp</span>-no-gap</code> - Grid Gap
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-tp</span>-col-6</code> - Column Size
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-tp</span>-bottom-gap</code> - Spacing
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-tp</span>-top-gap</code> - Spacing
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 tp-col-6 m-col-12">
+                        <ul class="grid-responsive-classes">
+                            <li>
+                                <h6>Mobile</h6>
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-m</span>-no-gap</code> - Grid Gap
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-m</span>-col-6</code> - Column Size
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-m</span>-bottom-gap</code> - Spacing
+                            </li>
+                            <li>
+                                <code class="chl-selector">stg<span class="chl-var">-m</span>-top-gap</code> - Spacing
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p>One more thing about the responsive classes. <span class="highlight">Higher resolution</span> classes are applied to <span class="highlight">lower</span> as well. So, if you have added the <code class="chl-selector">stg-l-col-6</code> class to make the column 50% for the <span class="highlight">Laptop</span>, it will also apply to the <span class="highlight">Tablet</span>, so you do not need to add one more <code class="chl-selector">stg-t-col-6</code>.</p>
+                <p>On mobile devices, by default, all columns are turned into a <span class="highlight">single one</span> with <span class="highlight">100% width</span>. But with the additional classes, you can adjust this value to your needs.</p>
+            </section>
+
+            <!-- Next Chapter -->
+            <div class="std-next-chapter"></div>
+        </div>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/std.js"></script>
+</body>

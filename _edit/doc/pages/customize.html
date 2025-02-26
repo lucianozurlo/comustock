@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shadow Themes Studio">
+    <meta name="description" content="Bringer - Creative Multipurpose HTML5 Template Documentation." />    
+
+    <!-- Page Title -->
+    <title>Bringer Documentation | Code Structure</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/std-config.css">
+    <link type="text/css" rel="stylesheet" href="../css/std.css">
+    <link type="text/css" rel="stylesheet" href="../css/std-responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body>
+    
+    <main class="std-main">
+        <!-- Content -->
+        <div class="std-container">
+            <section class="chapter-intro-section">
+                <div class="row">
+                    <div class="col-4 chapter-title-wrap">
+                        <!-- Chapter Title -->
+                    </div>
+                    <div class="col-8">
+                        In our template, we use <span class="highlight">CSS variables</span> to quickly and easily change the look and feel of the website. You can find all configurations in the <span class="highlight">config.css</span> file, which is located in the <span class="highlight">CSS</span> folder.
+                    </div>
+                </div><!-- .row -->
+            </section>
+            <section>
+                <p>Here you can see a list of all available options that you can find in the <span class="highlight">config.css</span> file:</p>
+                <ul class="std-template-config-list">
+                    <li>
+                        <h5>Color Scheme</h5>
+                        <ul>
+                            <li>
+                                <span>--bringer-s-body-bg</span>
+                                <p>Used as body background and overlays</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-nav</span>
+                                <p>Used as a background color for header, footer, and mobile navigation</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-container-bg</span>
+                                <p>Used as a background color for block containers, sub-menus, and form inputs</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-container-frosted</span>
+                                <p>The same as the previous one but with transparency for frosted glass blocks</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-heading</span>
+                                <p>Used as a color for headings, page titles, button labels, and other bright text accents</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-heading-fade</span>
+                                <p>It is the same as the previous one but with transparency. Used for labels, meta, and some hover effects</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-text</span>
+                                <p>Used as a color for general content</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-accent</span>
+                                <p>A background color for accents, like buttons, highlighted blocks, etc.</p>
+                            </li>
+                            <li>
+                                <span>--bringer-button-hover-bg</span>
+                                <p>A hovered button background color</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-text-accent</span>
+                                <p>Used as a color for text accents</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-accented-text</span>
+                                <p>Used as a text color for accented blocks</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-border</span>
+                                <p>Used as a primary border-color</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-border-accent</span>
+                                <p>Used as a border color for accented blocks</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-border-mute</span>
+                                <p>A default semi-transparent border color for blocks with a shining effect</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-border-highlight</span>
+                                <p>A semi-transparent border shining effect color</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-backlight</span>
+                                <p>Used as a color for a backlight effect</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-box-shadow</span>
+                                <p>Used as a color for block shadow</p>
+                            </li>
+                            <li>
+                                <span>--bringer-s-cursor-light</span>
+                                <p>The cursor-followed backlight color. It uses the primary backlight color</p>
+                            </li>
+                            <li>
+                                <span>--bringer-c-border-gradient</span>
+                                <p>A horizontal side-fade gradient border color</p>
+                            </li>
+                            <li>
+                                <span>--bringer-c-menu</span>
+                                <p>Main menu text color</p>
+                            </li>
+                            <li>
+                                <span>--bringer-c-menu-hover</span>
+                                <p>Main menu hovered item text color</p>
+                            </li>
+                            <li>
+                                <span>--bringer-c-menu-active</span>
+                                <p>Main menu current item text color</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h5>Typography</h5>
+                        <ul>
+                            <li>
+                                <h6>Font Groups</h6>
+                                <ul>
+                                    <li>
+                                        <span>--bringer-t-heading-ff</span>
+                                        <p>Headings Font Family</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-heading-fw</span>
+                                        <p>Headings Font Weight</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-content-ff</span>
+                                        <p>Content Font Family</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-content-fw</span>
+                                        <p>Content Font Weight</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-content-ls</span>
+                                        <p>Content Font Letter Spacing</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Main Menu</h6>
+                                <ul>
+                                    <li>
+                                        <span>--bringer-t-menu-ff</span>
+                                        <p>Main Menu Font Family</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-menu-fw</span>
+                                        <p>Main Menu Font Weight</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-menu-fs</span>
+                                        <p>Main Menu Font Size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-menu-lh</span>
+                                        <p>Main Menu Line Height</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-submenu-ff</span>
+                                        <p>Sub-Menu Font Family</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-submenu-fw</span>
+                                        <p>Main Menu Font Weight</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-submenu-fs</span>
+                                        <p>Main Menu Font Size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-submenu-lh</span>
+                                        <p>Main Menu Line Heiight</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Footer</h6>
+                                <ul>
+                                    <li>
+                                        <span>--bringer-t-footer-fs</span>
+                                        <p>Footer Font Size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-footer-lh</span>
+                                        <p>Footer Text Line Height</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-socials-size</span>
+                                        <p>Social Icons Size</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Headings</h6>
+                                <ul>
+                                    <li>
+                                        <span>--bringer-t-h1-fs</span>
+                                        <p>H1 Heading font size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h1-ls</span>
+                                        <p>H1 Heading letter spacing</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h1-lh</span>
+                                        <p>H1 Line Height</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h1-margin</span>
+                                        <p>H1 Margin</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h2-fs</span>
+                                        <p>H2 Heading font size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h2-ls</span>
+                                        <p>H2 Heading letter spacing</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h2-lh</span>
+                                        <p>H2 Line Height</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h2-margin</span>
+                                        <p>H2 Margin</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h3-fs</span>
+                                        <p>H3 Heading font size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h3-ls</span>
+                                        <p>H3 Heading letter spacing</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h3-lh</span>
+                                        <p>H3 Line Height</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h3-margin</span>
+                                        <p>H3 Margin</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h4-fs</span>
+                                        <p>H4 Heading font size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h4-ls</span>
+                                        <p>H4 Heading letter spacing</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h4-lh</span>
+                                        <p>H4 Line Height</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h4-margin</span>
+                                        <p>H4 Margin</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h5-fs</span>
+                                        <p>H5 Heading font size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h5-ls</span>
+                                        <p>H5 Heading letter spacing</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h5-lh</span>
+                                        <p>H5 Line Height</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h5-margin</span>
+                                        <p>H5 Margin</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h6-fs</span>
+                                        <p>H6 Heading font size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h6-ls</span>
+                                        <p>H6 Heading letter spacing</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h6-lh</span>
+                                        <p>H6 Line Height</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-h6-margin</span>
+                                        <p>H6 Margin</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Content</h6>
+                                <ul>
+                                    <li>
+                                        <span>--bringer-t-large-fs</span>
+                                        <p>Content Large text Font Size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-content-fs</span>
+                                        <p>Content text Font Size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-content-lh</span>
+                                        <p>Content text Line Height</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-meta-fs</span>
+                                        <p>Meta Font Size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-meta-ls</span>
+                                        <p>Meta Letter Spacing</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-meta-fw</span>
+                                        <p>Meta Font Weight</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Forms and Fields</h6>
+                                <ul>
+                                    <li>
+                                        <span>--bringer-t-button-fs</span>
+                                        <p>Button Font Size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-input-fs</span>
+                                        <p>Input Font Size</p>
+                                    </li>
+                                    <li>
+                                        <span>--bringer-t-input-lh</span>
+                                        <p>Input Line Height</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h5>Dimensions and Spacings</h5>
+                        <ul>
+                            <li>
+                                <span>--bringer-header-spacing</span>
+                                <p>Header vertical spacing</p>
+                            </li>
+                            <li>
+                                <span>--bringer-menu-gap</span>
+                                <p>Main Menu items spacing</p>
+                            </li>
+                            <li>
+                                <span>--bringer-sub-menu-width</span>
+                                <p>Sub-menu container width</p>
+                            </li>
+                            <li>
+                                <span>--bringer-socials-gap</span>
+                                <p>Social Items list items spacing</p>
+                            </li>
+                            <li>
+                                <span>--bringer-section-gap</span>
+                                <p>Section Spacing (Applies at the top and the bottom of each section)</p>
+                            </li>
+                            <li>
+                                <span>--bringer-xl-br</span>
+                                <p>Extra Large border radius</p>
+                            </li>
+                            <li>
+                                <span>--bringer-large-br</span>
+                                <p>Large border radius</p>
+                            </li>
+                            <li>
+                                <span>--bringer-default-br</span>
+                                <p>Default border radius</p>
+                            </li>
+                            <li>
+                                <span>--bringer-small-br</span>
+                                <p>Small border radius</p>
+                            </li>
+                            <li>
+                                <span>--bringer-xs-br</span>
+                                <p>Extra small border radius</p>
+                            </li>
+                            <li>
+                                <span>--bringer-button-spacing</span>
+                                <p>Button padding</p>
+                            </li>
+                            <li>
+                                <span>--bringer-button-br</span>
+                                <p>Button border radius</p>
+                            </li>
+                            <li>
+                                <span>--bringer-input-spacing</span>
+                                <p>Input field padding</p>
+                            </li>
+                            <li>
+                                <span>--bringer-input-br</span>
+                                <p>Input field border radius</p>
+                            </li>
+                            <li>
+                                <span>--bringer-input-gap</span>
+                                <p>Input field bottom margin</p>
+                            </li>
+                            <li>
+                                <span>--stg-container-width</span>
+                                <p>Shadow Themes Grid: Container</p>
+                            </li>
+                            <li>
+                                <span>--stg-gap</span>
+                                <p>Shadow Themes Grid: Default Gap</p>
+                            </li>
+                            <li>
+                                <span>--stg-xs-gap</span>
+                                <p>Shadow Themes Grid: Extra Small Gap</p>
+                            </li>
+                            <li>
+                                <span>--stg-small-gap</span>
+                                <p>Shadow Themes Grid: Small Gap</p>
+                            </li>
+                            <li>
+                                <span>--stg-large-gap</span>
+                                <p>Shadow Themes Grid: Large Gap</p>
+                            </li>
+                            <li>
+                                <span>--stg-xl-gap</span>
+                                <p>Shadow Themes Grid: Extra Large Gap</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h5>Responsive Values</h5>
+                        <ul>
+                            <li>
+                                <h6>Tablet: Landscape</h6>
+                            </li>
+                            <li>
+                                <h6>Mobile Menu</h6>
+                            </li>
+                            <li>
+                                <h6>Tablet: Portrait</h6>
+                            </li>
+                            <li>
+                                <h6>Mobile Phones</h6>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><sup>12.a</sup> Scripts</h2>
+                <p class="note">If you need to add custom JS code, we <span class="highlight">recommend</span> you use a <span class="highlight">dedicated</span> custom file instead of changing template files, which can help you install template updates in the future. The same applies to the template styles.</p>
+                <p>You can add your custom JS code to the function <span class="highlight">CustomFunction</span> in the file <span class="highlight">js/main.js</span>. This function starts when the DOM is ready after all template scripts are triggered.</p>
+            </section>
+
+            <!-- Next Chapter -->
+            <div class="std-next-chapter"></div>
+        </div>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/std.js"></script>
+</body>

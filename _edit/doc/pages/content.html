@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shadow Themes Studio">
+    <meta name="description" content="Bringer - Creative Multipurpose HTML5 Template Documentation." />    
+
+    <!-- Page Title -->
+    <title>Bringer Documentation | Content and Elements</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/std-config.css">
+    <link type="text/css" rel="stylesheet" href="../css/std.css">
+    <link type="text/css" rel="stylesheet" href="../css/std-responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body>
+    
+    <main class="std-main">
+        <!-- Content -->
+        <div class="std-container">
+            <section class="chapter-intro-section">
+                <div class="row">
+                    <div class="col-4 chapter-title-wrap">
+                        <!-- Chapter Title -->
+                    </div>
+                    <div class="col-8">
+                        Now that we have done with the header, footer, and basic things, we can look at the content part. All page content, including the footer, is placed inside the <tag data-attrs='{"id":"bringer-main"}' class='inline-html is-closed'>main</tag> tag.
+                    </div>
+                </div><!-- .row -->
+            </section>
+            <section>
+                <p>Most pages start with the <tag data-attrs='{"class":"stg-container"}' class='inline-html is-closed'>div</tag> wrapper placed right into the <tag data-attrs='{"id":"bringer-main"}' class='inline-html is-closed'>main</tag> tag. But in some cases, or if you need to put the full-width sections, you can append it right into the <tag data-attrs='{"id":"bringer-main"}' class='inline-html is-closed'>main</tag> tag before or after the <tag data-attrs='{"class":"stg-container"}' class='inline-html is-closed'>div</tag>.</p>
+                <p>Inside the <tag data-attrs='{"class":"stg-container"}' class='inline-html is-closed'>div</tag>, you can also place a full-width section with <span class="highlight">boxed</span> or <span class="highlight">stretched</span> layouts. To make a full-width section with a boxed layout (for instance, to add some background image to the full-width block but keep the content area the same size as other sections), you can add the <code class="chl-attr-val">is-fullwidth</code> class to the <tag class="inline-html is-closed">section</tag> tag. And, to stretch the inner content to full width, you can add one more class called <code class="chl-attr-val">is-stretched</code>.</p>
+                <p>Let's take a closer look at the code:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+    ...
+    <span>Page Main</span>
+    <tag data-attrs='{"id":"bringer-main"}'>main</tag>
+        <tag data-attrs='{"class":"stg-container"}'>div</tag>
+            <span>Hero Section</span>
+            <tag>section</tag>
+                <tag data-attrs='{"class":"bringer-hero-block bringer-hero-type03"}'>div</tag>
+                    ...
+                <tag>/div</tag>
+            <tag>/section</tag>
+
+            <span>Content Section 01</span>
+            <tag>section</tag>
+                ...
+            <tag>/section</tag>
+            
+
+            <span>Fullwidth Section with Background and Boxed Content</span>
+            <tag data-attrs='{"class":"is-fullwidth","data-bg-src":"img/your-image-url.jpg"}'>section</tag>
+                ...
+            <tag>/section</tag>
+
+            <span>Fullwidth Section with Stretched Content</span>
+            <tag data-attrs='{"class":"is-fullwidth is-stretched"}'>section</tag>
+                ...
+            <tag>/section</tag>
+
+            <span>Section without bottom spacing</span>
+            <tag data-attrs='{"data-padding":"top"}'>section</tag>
+                ...
+            <tag>/section</tag>
+        <tag>/div</tag>
+
+        <span>Footer</span>
+        ...
+    <tag>/main</tag>
+    ...
+</pre>
+<!-- * END CODE EXAMPLE -->
+                <p>All sections have a <span class="highlight">top</span> and <span class="highlight">bottom</span> spacing. If you need to remove any of that spacing, you can do that with the help of the <code class="chl-attr">data-padding</code> attribute. It can hold the following values: <span class="highlight">top</span> (to keep only the spacing above), <span class="highlight">bottom</span> (to leave only the spacing below), and <span class="highlight">none</span> (to disable all section spacings). </p>
+                <p>Also, you can adjust the bottom spacing with the additional classes. You can find more information about top and bottom spacings in the <a href="grid.html">Grid System</a> chapter.</p>
+            </section>
+
+            <!-- Backlight and Dividers -->
+            <section>
+                <h4>Smooth Scrolling</h4>
+                <p>You can activate a smooth scrolling option in the main.js file. At the beginning of that, there is an option called smoothScroll. It can be one of two values: true or false. To activate the smooth scroll, you should change its value to true.</p>
+<pre class="chl-js">
+    <span class="comment chl-fade">
+    /**
+    * Author: Shadow Themes
+    * Author URL: http://shadow-themes.com
+    */</span>
+    <span class="chl-css-imp-v chl-fade">"use strict";</span>
+
+    <span class="comment">// Core Options</span>
+    <span class="chl-css-attr-n">const</span> <span class="chl-selector">bringer_config</span> = {
+        <span class="comment">// Smooth Scroll</span>
+        <span class="chl-var">smoothScroll</span>: <span class="chl-css-imp-v">false</span>,
+        
+        <span class="comment">// Main Logo Size</span>
+        ...
+</pre>
+                <p>Enabling this option may cause a poor experience for some users, especially when using some peripherals with smooth scrolling, such as touchpads. It may also disrupt accessibility features for users who rely on assistive technology to navigate the Internet.</p>
+            </section>
+
+            <!-- Backlight and Dividers -->
+            <section>
+                <h4>Backlights and Dividers</h4>
+                <p>Each section can also have a <span class="highlight">backlight effect</span> or a <span class="highlight">content divider</span>. You can add both to a single section, but in that case, these elements should be on opposite sides, so you cannot place the divider and the backlight effect at the top of the same section. You can use the following classes to achieve these effects:</p>
+                <div class="row">
+                    <div class="col-6">
+                        <h6>Backlight</h6>
+                        <ul>
+                            <li><code class="chl-selector">backlight-top</code> - backlight effect at the section top.</li>
+                            <li><code class="chl-selector">backlight-bottom</code> - backlight effect at the section bottom.</li>
+                            <li><code class="chl-selector">backlight-both</code> - backlight effect at the section top and bottom.</li>
+                        </ul>
+                        <figure>
+                            <img src="../img/backlight.jpg" alt="Backlight Example">
+                            <figcaption>Example of the bottom Backlight effect.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6">
+                        <h6>Divider</h6>
+                        <ul>
+                            <li><code class="chl-selector">divider-top</code> - place a divider at the section top.</li>
+                            <li><code class="chl-selector">divider-bottom</code> - place a divider at the section bottom.</li>
+                            <li><code class="chl-selector">divider-both</code> - place a divider at the section top and bottom.</li>
+                        </ul>
+                        <figure>
+                            <img src="../img/divider.jpg" alt="Divider Example">
+                            <figcaption>Example of the divider.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sticky Elements -->
+            <section>
+                <h4>Sticky Elements</h4>
+                <p>Sticky Elements may be really useful in the case of a two-column layout, where one part is a title with a short description, for example, and the second one is a long gallery.</p>
+                <p>To create this effect, you need to add the <tag class='inline-html is-closed' data-attrs='{"class":"bringer-sticky-block"}'>div</tag> wrapper inside the long container for the short content:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+    ...
+    <tag class="chl-fade" data-attrs='{"class":"stg-row"}'>div</tag>
+        <span class="chl-fade">Column for the Short content</span>
+        <tag class="chl-fade" data-attrs='{"class":"stg-col-6"}'>div</tag>
+            <span>Sticky Wrapper</span>
+            <tag data-attrs='{"class":"bringer-sticky-block","data-sticky-position":"center"}'>div</tag>
+                <tag>h2</tag>Block Title<tag>/h2</tag>
+                <tag>p</tag>Block Description<tag>/p</tag>
+            <tag>/div</tag>
+        <tag class="chl-fade">/div</tag>
+        <span class="chl-fade">Column for the Long content</span>
+        <tag class="chl-fade" data-attrs='{"class":"stg-col-6"}'>div</tag>
+            <span class="chl-fade">Long content goes here</span>
+            ...
+        <tag class="chl-fade">/div</tag>
+    <tag class="chl-fade">/div</tag>
+    ...
+</pre>
+<!-- * END CODE EXAMPLE -->
+                <p>By default, the element will stick when it reaches the middle of the screen (item height is accounted for). But for your needs, you can change a sticking point to the top or bottom of the screen using the <code class="chl-attr">data-sticky-position</code> attribute with the following values:</p>
+                <ul>
+                    <li><code class="chl-attr-val">top</code> - Sticks an item at the top of the screen.</li>
+                    <li><code class="chl-attr-val">header</code> - Sticks an item right down below the header.</li>
+                    <li><code class="chl-attr-val">center</code> - Sticks an item at the middle of the screen (Default Value).</li>
+                    <li><code class="chl-attr-val">bottom</code> - Sticks an item at the bottom of the screen.</li>
+                </ul>
+                <p class="note">The Sticky Block may not be compatible with some blocks affected by transform or position CSS properties from other sources. It also applies to parent styles.</p>
+            </section>
+
+            <!-- Parallax Effect -->
+            <section id="parallax">
+                <h4>Parallax Effects</h4>
+                <p>In our template, there are two types of parallax effect: the <span class="highlight">parallax for a scrolling element</span> (it scrolls faster or slower than other content) and the <span class="highlight">parallax effect for images</span>, when an image slowly scrolls inside the container which creates some depth effect, especially in combination with smooth scrolling.</p>
+                <p>You can change an element scroll speed to achieve the parallax effect with help of the <code class="chl-attr">data-speed</code> attribute. The value of 1 will make it scroll at 100% speed, the same speed as the entire content. A <span class="highlight">lower</span> value will make it scroll <span class="highlight">slower</span>, and a <span class="highlight">higher</span> value will scroll this block <span class="highlight">faster</span> to create a parallax effect. Also, you can use the responsive values to make adjustment for different screen resolutions:</p>
+                <ul>
+                    <li><code class="chl-attr-val">data-l-speed</code> - for small screens, like laptops (screen size lower than <span class="highlight">1366px</span>).</li>
+                    <li><code class="chl-attr-val">data-t-speed</code> - for tablets (screen size lower than <span class="highlight">1200px</span>).</li>
+                    <li><code class="chl-attr-val">data-tp-speed</code> - for tablets in portrait layout (screen size lower than <span class="highlight">960px</span>).</li>
+                    <li><code class="chl-attr-val">data-m-speed</code> - for mobile phones.</li>
+                </ul>
+                <p>To add the parallax effect to images, you should wrap an image with the <code class="chl-attr-val">bringer-parallax-media</code> class. Also, you can add this class for any <span class="highlight">parent container</span> with elements and blocks that contain images.</p>
+            </section>
+
+            <!-- Expand on Scroll -->
+            <section>
+                <h4>Images Lazy Loading</h4>
+                <p>Lazy image loading can help a website load faster because images will only load when they appear in the viewport.</p>
+                <p>To mark an image for <span class="highlight">lazy loading</span>, you should add the <code class="chl-attr-val">bringer-lazy</code> class to it, specify the <span class="highlight">image URL</span> in the <code class="chl-attr">data-src</code> attribute instead of the classic <code class="chl-attr">src</code>, and the <code class="chl-attr">src</code> attribute must be equal to <code class="chl-attr-val">img/null.png</code>. Also, it is strongly recommended to specify the image's original size in <code class="chl-attr">width</code> and <code class="chl-attr">height</code> attributes:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+    ...
+    <tag data-attrs='{"class":"bringer-lazy","!src":"img/null.png","data-src":"img/your-image-url.jpg","alt":"Your Image","width":"1200","height":"960"}'>img</tag>
+    ...
+</pre>
+<!-- * END CODE EXAMPLE -->
+            </section>
+
+            <!-- Expand on Scroll -->
+            <section>
+                <h4>Expand on Scroll</h4>
+                <p>One more additional thing in our template is the <span class="highlight">Expand on Scroll</span> blocks. This effect may be valuable for large <span class="highlight">images</span> or <span class="highlight">videos</span>. Let's take a look at the code example for the image expanded on scroll:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+    ...
+    <tag data-attrs='{"class":"bringer-expand-on-scroll"}'>div</tag>
+        <tag data-attrs='{"src":"img/your-image-url.jpg","alt":"Your Image","width":"1200","height":"960"}'>img</tag>
+    <tag>/div</tag>
+    ...
+</pre>
+<!-- * END CODE EXAMPLE -->
+                <p>As you can see from the example, all you need is to add a <code class="chl-attr-val">bringer-expand-on-scroll</code> class for a parent <tag class='inline-html'>div</tag></p>
+                <p class="note">The <span class="highlight">Expand on Scroll</span> effect may not be compatible with blocks affected by transform properties from other sources. In such cases, you can try to wrap the block you need with another one or apply the class to another item.</p>
+            </section>
+
+            <!-- Content Elements -->
+            <section>
+                <h2><sup>12.a</sup> Basic Elements</h2>
+                <p>In this section, we will look at the basic elements that are the basis for other content elements. These elements include <span class="highlight">Block Item</span>, <span class="highlight">Grid</span>, <span class="highlight">Bento Grid</span>, <span class="highlight">Carousel</span>, and <span class="highlight">Masked Block</span>. Each of them will be used in the Content Elements section and can be mixed with each other.</p>
+
+                <!-- Block Item -->
+                <article>
+                    <h4>Block Item</h4>
+                    <p>This is a basic element that is commonly used as a stand-alone content block or in the mix with other elements. This element includes the background color, rounded borders, and light effect (if the global backlight option is on). To add such a block, all you need is to use the <code class="chl-attr-val">bringer-block</code> class on a <tag class='inline-html is-closed'>div</tag> tag.</p>
+                    <p>Also, in the template code, you can find some additional options used in combination with the <code class="chl-attr-val">bringer-block</code> (but also can be used for other blocks):
+                        <ul>
+                            <li>
+                                <code class="chl-attr-val">stg-aspect-square</code> - this class will make the block in 1/1 aspect ratio.
+                            </li>
+                            <li><code class="chl-attr-val">stg-vertical-space-between</code> - this class will arrange inner content at the top and the bottom of the block (if there are two children tags inside).</li>
+                        </ul>
+                    </p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+    ...
+    <span>Simple Content Block</span>
+    <tag data-attrs='{"class":"bringer-block"}'>div</tag>
+        ...
+    <tag>/div</tag>
+
+    <span>Square Content Block painted with the Accent color</span>
+    <tag data-attrs='{"class":"bringer-block stg-aspect-square is-accented"}'>div</tag>
+        ...
+    <tag>/div</tag>
+
+    <span>Square Content Block with title at the top and description at the bottom</span>
+    <tag data-attrs='{"class":"bringer-block stg-aspect-square stg-vertical-space-between"}'>div</tag>
+        <tag>h4</tag>Block Title<tag>/h4</tag>
+        <tag>p</tag>Block Description<tag>/p</tag>
+    <tag>/div</tag>
+    ...
+</pre>
+<!-- * END CODE EXAMPLE -->
+                </article>
+
+                <!-- Grid -->
+                <article id="grid_container">
+                    <h4>Grid</h4>
+                    <p>This element is used to create grid-based containers, for instance, to display portfolio works, testimonials, or any other card-based items in a strong grid layout. In our template, you can use up to 6 columns. Also, the same as the rows and columns, it supports prefixes for responsive adjustment. Here is the classes list that you can use for the container to make it the Grid container:</p>
+                    <div class="row">
+                        <div class="col-3">
+                            <h6>Default</h6>
+                            <ul>
+                                <li><code class="chl-attr-val">bringer-grid-1col</code></li>
+                                <li><code class="chl-attr-val">bringer-grid-2cols</code></li>
+                                <li><code class="chl-attr-val">bringer-grid-3cols</code></li>
+                                <li><code class="chl-attr-val">bringer-grid-4cols</code></li>
+                                <li><code class="chl-attr-val">bringer-grid-5cols</code></li>
+                                <li><code class="chl-attr-val">bringer-grid-6cols</code></li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <h6>Tablet</h6>
+                            <ul>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-t</span>-grid-1col</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-t</span>-grid-2cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-t</span>-grid-3cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-t</span>-grid-4cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-t</span>-grid-5cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-t</span>-grid-6cols</code></li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <h6>Tablet (Portrait layout)</h6>
+                            <ul>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-tp</span>-grid-1col</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-tp</span>-grid-2cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-tp</span>-grid-3cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-tp</span>-grid-4cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-tp</span>-grid-5cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-tp</span>-grid-6cols</code></li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <h6>Mobile Phone</h6>
+                            <ul>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-m</span>-grid-1col</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-m</span>-grid-2cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-m</span>-grid-3cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-m</span>-grid-4cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-m</span>-grid-5cols</code></li>
+                                <li><code class="chl-attr-val">bringer<span class="chl-var">-m</span>-grid-6cols</code></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row no-gap valign-middle bottom-gap-s">
+                        <div class="col-7">
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+...
+<span>Grid Example</span>
+<tag data-attrs='{"class":"bringer-grid-3cols"}'>div</tag>
+    <span>Block01</span>
+    <tag data-attrs='{"class":"bringer-block stg-aspect-square stg-vertical-space-between"}'>div</tag>
+        <tag>h4</tag>Block Title<tag>/h4</tag>
+        <tag>p</tag>Block Description<tag>/p</tag>
+    <tag>/div</tag>
+    <span>Block02</span>
+    <tag data-attrs='{"class":"bringer-block stg-aspect-square stg-vertical-space-between"}'>div</tag>
+        <tag>h4</tag>Block Title<tag>/h4</tag>
+        <tag>p</tag>Block Description<tag>/p</tag>
+    <tag>/div</tag>
+    <span>Block03</span>
+    <tag data-attrs='{"class":"bringer-block stg-aspect-square stg-vertical-space-between"}'>div</tag>
+        <tag>h4</tag>Block Title<tag>/h4</tag>
+        <tag>p</tag>Block Description<tag>/p</tag>
+    <tag>/div</tag>
+    ...
+<tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                        </div>
+                        <div class="col-5">
+                            <figure style="margin-left: -40px">
+                                <img src="../img/grid.jpg" alt="3 Columns Grid Example">
+                                <figcaption>Three column grid example.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <h6>Sub-grid</h6>
+                    <p>The Subgrid can be useful when you need to make a relation between children inside a grid item. For instance, if you have a grid of items with the title and description, and you want the description to always start on the same line for all grid items, no matter how high the title of each element is. To implement that, you can add the <code class="chl-attr-val">bringer-subgrid-item</code> class to the Grid container children items inside :</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    ...
+    <span>Subgrid Example</span>
+    <tag data-attrs='{"class":"bringer-grid-3cols"}'>div</tag>
+        <span>Item 01</span>
+        <tag data-attrs='{"class":"bringer-subgrid-item"}'>div</tag>
+            <tag>h4</tag>Normal Title<tag>/h4</tag>
+            <tag>p</tag>Block Description<tag>/p</tag>
+        <tag>/div</tag>
+        <span>Block02</span>
+        <tag data-attrs='{"class":"bringer-subgrid-item"}'>div</tag>
+            <tag>h4</tag>This title is much longer<tag>br</tag>than in other blocks.<tag>/h4</tag>
+            <tag>p</tag>Block Description<tag>/p</tag>
+        <tag>/div</tag>
+        <span>Block03</span>
+        <tag data-attrs='{"class":"bringer-subgrid-item"}'>div</tag>
+            <tag>h4</tag>Normal Title<tag>/h4</tag>
+            <tag>p</tag>Block Description<tag>/p</tag>
+        <tag>/div</tag>
+        ...
+    <tag>/div</tag>
+    </pre>
+    <!-- * END CODE EXAMPLE -->
+                    <figure>
+                        <img src="../img/subgrid.jpg" alt="Subgrid items example.">
+                        <figcaption>Subgrid items example.</figcaption>
+                    </figure>
+                </article>
+                
+                <!-- Bento Grid -->
+                <article>
+                    <h4>Bento Grid</h4>
+                    <p>A Bento grid is a block in a grid layout that contains one large, one medium, and two small blocks. The order of the blocks may vary depending on the use case, but it is important to maintain the number of elements, classes, and structure. The parent container must have the <code class="chl-attr-val">bringer-bento-grid</code> class, and children's blocks must be <code class="chl-attr-val">is-large</code> (for a large block), <code class="chl-attr-val">is-medium</code> (for a medium block), and <code class="chl-attr-val">is-small</code> for small blocks:</p>
+
+                    <div class="row valign-middle">
+                        <div class="col-6">
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    ...
+    <span>Bento Grid Example</span>
+    <tag data-attrs='{"class":"bringer-bento-grid"}'>div</tag>
+        <span>Large Block</span>
+        <tag data-attrs='{"class":"is-large"}'>div</tag>
+            ...
+        <tag>/div</tag>
+        <span>Small Block</span>
+        <tag data-attrs='{"class":"is-small"}'>div</tag>
+            ...
+        <tag>/div</tag>
+        <span>Small Block</span>
+        <tag data-attrs='{"class":"is-small"}'>div</tag>
+            ...
+        <tag>/div</tag>
+        <span>Medium Block</span>
+        <tag data-attrs='{"class":"is-medium"}'>div</tag>
+            ...
+        <tag>/div</tag>
+    <tag>/div</tag>
+    </pre>
+    <!-- * END CODE EXAMPLE -->
+                        </div>
+                        <div class="col-6">
+                            <figure>
+                                <img src="../img/bento.jpg" alt="Bento Grid example.">
+                                <figcaption>Bento Grid example.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="row valign-middle">
+                        <div class="col-6">
+                            <figure>
+                                <img src="../img/bento2.jpg" alt="Bento Grid example.">
+                                <figcaption>Bento Grid example.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-6">
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    ...
+    <span>Bento Grid Example</span>
+    <tag data-attrs='{"class":"bringer-bento-grid"}'>div</tag>
+        <span>Medium Block</span>
+        <tag data-attrs='{"class":"is-medium"}'>div</tag>
+            ...
+        <tag>/div</tag>
+        <span>Small Block</span>
+        <tag data-attrs='{"class":"is-small"}'>div</tag>
+            ...
+        <tag>/div</tag>
+        <span>Small Block</span>
+        <tag data-attrs='{"class":"is-small"}'>div</tag>
+            ...
+        <tag>/div</tag>
+        <span>Large Block</span>
+        <tag data-attrs='{"class":"is-large"}'>div</tag>
+            ...
+        <tag>/div</tag>
+    <tag>/div</tag>
+    </pre>
+    <!-- * END CODE EXAMPLE -->
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Carousel -->
+                <article>
+                    <h4>Carousel</h4>
+                    <p>The Carousel is another multiusage element for different content elements, like portfolio works, team members, testimonials, price tables, etc. To add the carousel container to the page, you can use the following basic markup:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    ...
+    <span>Carousel</span>
+    <tag data-attrs='{"class":"swiper bringer-carousel"}'>div</tag>
+        <tag data-attrs='{"class":"swiper-wrapper"}'>div</tag>
+            <span>Carousel Item 01</span>
+            <tag data-attrs='{"class":"bringer-block bringer-carousel-card swiper-slide"}'>div</tag>
+                ...
+            <tag>/div</tag>
+            <span>Carousel Item 02</span>
+            <tag data-attrs='{"class":"bringer-block bringer-carousel-card swiper-slide"}'>div</tag>
+                ...
+            <tag>/div</tag>
+            ...
+        <tag>/div</tag>
+        <span>Pagination</span>
+        <tag data-attrs='{"class":"swiper-pagination bringer-dots"}'>div</tag><tag>/div</tag>
+    <tag>/div</tag>
+    </pre>
+    <!-- * END CODE EXAMPLE -->
+                    <p>The carousel item requires the <code class="chl-attr-val">swiper-slide</code> class. Other classes are optional and may vary depending on the carousel element. For example, to create the <span class="highlight">Price Table</span> carousel, you can use the <a href="#price_table">Price Table Card</a> element as a carousel item but add the <code class="chl-attr-val">swiper-slide</code> class to its <tag data-attrs='{"class":"bringer-price-table"}' class='inline-html is-closed'>div</tag> container.</p>
+                    <p>For the <tag data-attrs='{"class":"swiper"}' class='inline-html is-closed'>div</tag> tag, you can use the following optional attributes to tweak your carousel:</p>
+                    <ul>
+                        <li><code class="chl-attr">data-duration</code> - defines an animation speed <span class="highlight">(in milliseconds)</span>.</li></li>
+                        <li><code class="chl-attr">data-count</code> - visible items count. It may contain a <span class="highlight">float</span> value, like <span class="highlight">3.5</span>. Also, you can use the <code class="chl-attr">data-t-count</code>, <code class="chl-attr">data-tp-count</code>, and <code class="chl-attr">data-m-count</code> to adjust responsive values.</li>
+                        <li><code class="chl-attr">data-centered</code> - with this option, you can set items centering. It may contain <span class="highlight">only</span> values <code class="chl-attr-val">0</code> <span class="highlight">(not centered)</span> or <code class="chl-attr-val">1</code> <span class="highlight">(is centered)</span>.</li>
+                    </ul>
+                </article>
+
+                <!-- Masked Block -->
+                <article id="masked_block">
+                    <h4>Masked Block</h4>
+                    <p>With this container element, you can cut a part of the container, like a block with background color, image, or video, and put some other content, like text, image, button, or any other content, inside. Let's take a look at the general markup and talk in more detail about the structure:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    ...
+    <span>Masked Block</span>
+    <tag data-attrs='{"class":"bringer-masked-block"}'>div</tag>
+        <span>The media block with a cut</span>
+        <tag data-attrs='{"class":"bringer-masked-media"}'>div</tag>
+            <tag data-attrs='{"src":"video/your-video.mp4","poster":"img/video-poster.jpg","playsinline":"","muted":"","loop":"","autoplay":""}'>video</tag><tag>/video</tag>
+        <tag>/div</tag>
+        <span>The content of the cutout</span>
+        <tag data-attrs='{"class":"bringer-masked-content at-top-right"}'>div</tag>
+            <tag data-attrs='{"class":"align-right"}'>div</tag>
+                Text block content goes here
+            <tag>/div</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                    <div class="row valign-middle">
+                        <div class="col-6">
+                            <figure>
+                                <img src="../img/masked-block.jpg" alt="Masked Block">
+                                <figcaption>Block with a cut top right corner example.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-6">
+                            <p>You can change the <tag data-attrs='{"class":"bringer-masked-content"}' class='inline-html is-closed'>div</tag> position with the following classes:</p>
+                            <div class="row">
+                                <div class="col-4">
+                                    <ul class="unmarked">
+                                        <li><code class="chl-attr-val">at-top-left</code></li>
+                                        <li><code class="chl-attr-val">at-middle-left</code></li>
+                                        <li><code class="chl-attr-val">at-bottom-left</code></li>
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <ul class="unmarked">
+                                        <li><code class="chl-attr-val">at-top-center</code></li>
+                                        <li><code class="chl-attr-val">at-middle-center</code></li>
+                                        <li><code class="chl-attr-val">at-bottom-center</code></li>
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <ul class="unmarked">
+                                        <li><code class="chl-attr-val">at-top-right</code></li>
+                                        <li><code class="chl-attr-val">at-middle-right</code></li>
+                                        <li><code class="chl-attr-val">at-bottom-right</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </article>
+            </section>
+
+            <!-- Content Elements -->
+            <section>
+                <h2><sup>12.b</sup> Content Elements</h2>
+                <p>In this section, we will tell you about the content page Elements which you can use in building pages. These elements can be used in any part of the content area. So, without a long foreword, let's get right into it.</p>
+                
+                <!-- Image Slider -->
+                <article>
+                    <h4>Image Slider</h4>
+                    <p>Before we will dive into the code example, let's talk about the basics. Each slider starts with the <tag data-attrs='{"class":"bringer-slider-wrapper"}' class='inline-html is-closed'>div</tag> wrapper container, where you put the slider itself and navigation. There are two navigation types: placed on the left and right edges (with smooth cutting) or placed together at the corner. The code structure is the same for both cases, but some classes are different, so we will show you examples for both cases.</p>
+                    <p>But before that, let's take a look at the attribute options that can be applied to the <tag data-attrs='{"class":"swiper bringer-slider"}' class='inline-html is-closed'>div</tag> slider container:</p>
+                    <ul>
+                        <li><code class="chl-attr">data-duration</code> - defines the transition speed (in milliseconds). The default value is 500ms.</li>
+                        <li><code class="chl-attr">data-effect</code> - defines the transition effect, which can be one of the three values: slide, fade, or coverflow.</li>
+                        <li><code class="chl-attr">data-autoplay</code> - add this attribute to enable autoplay. Inside it, you should specify the transition delay (in milliseconds).</li>
+                    </ul>
+                    <p>And now, let's take a look at the code structure for both slider variants:</p>
+                    <div class="row bottom-gap-s valign-middle">
+                        <div class="col-7">
+                            <!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    ...
+    <span>Slider Gallery</span>
+    <tag data-attrs='{"class":"bringer-slider-wrapper"}'>div</tag>
+        <tag data-attrs='{"class":"swiper bringer-slider"}'>div</tag>
+            <span>Slider Item 01</span>
+            <tag data-attrs='{"class":"swiper-slide"}'>div</tag>
+                <tag data-attrs='{"src":"img/you-image-url.jpg"}'>img</tag>
+            <tag>/div</tag>
+            <span>Slider Item 02</span>
+            <tag data-attrs='{"class":"swiper-slide"}'>div</tag>
+                <tag data-attrs='{"src":"img/you-image-url.jpg"}'>img</tag>
+            <tag>/div</tag>
+            ...
+        <tag>/div</tag>
+        <span>Slider Navigation</span>
+        <tag data-attrs='{"class":"bringer-slider-nav on-sides"}'>div</tag>
+            <tag data-attrs='{"href":"#","class":"bringer-slider-prev"}'>a</tag>
+                <tag data-attrs='{"class":"bringer-icon bringer-icon-arrow-left"}'>span</tag><tag>/span</tag>
+            <tag>/a</tag>
+            <tag data-attrs='{"href":"#","class":"bringer-slider-prev"}'>a</tag>
+                <tag data-attrs='{"class":"bringer-icon bringer-icon-arrow-right"}'>span</tag><tag>/span</tag>
+            <tag>/a</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+    </pre>
+    <!-- * END CODE EXAMPLE -->
+                        </div>
+                        <div class="col-5">
+                            <figure>
+                                <img src="../img/slider01.jpg" alt="Slider 01">
+                                <figcaption>Slider with Navigation on Sides</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row bottom-gap-s valign-middle">
+                        <div class="col-5">
+                            <figure>
+                                <img src="../img/slider02.jpg" alt="Slider 01">
+                                <figcaption>Slider with Navigation in Corner</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-7">
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    ...
+    <span>Slider Gallery</span>
+    <tag data-attrs='{"class":"bringer-slider-wrapper bringer-masked-block"}'>div</tag>
+        <tag data-attrs='{"class":"swiper bringer-slider bringer-masked-media"}'>div</tag>
+            <span>Slider Item 01</span>
+            <tag data-attrs='{"class":"swiper-slide"}'>div</tag>
+                <tag data-attrs='{"src":"img/you-image-url.jpg"}'>img</tag>
+            <tag>/div</tag>
+            <span>Slider Item 02</span>
+            <tag data-attrs='{"class":"swiper-slide"}'>div</tag>
+                <tag data-attrs='{"src":"img/you-image-url.jpg"}'>img</tag>
+            <tag>/div</tag>
+            ...
+        <tag>/div</tag>
+        <span>Slider Navigation</span>
+        <tag data-attrs='{"class":"bringer-slider-nav bringer-masked-content at-bottom-right"}'>div</tag>
+            <tag data-attrs='{"href":"#","class":"bringer-slider-prev"}'>a</tag>
+                <tag data-attrs='{"class":"bringer-icon bringer-icon-chevron-left"}'>span</tag><tag>/span</tag>
+            <tag>/a</tag>
+            <tag data-attrs='{"href":"#","class":"bringer-slider-prev"}'>a</tag>
+                <tag data-attrs='{"class":"bringer-icon bringer-icon-chevron-right"}'>span</tag><tag>/span</tag>
+            <tag>/a</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                        </div>
+                    </div>
+                    <p>As you can see, in the second case, we use the <a href="#masked_block">Masked Block</a> container for the slider wrapper, where the navigation is placed as the cutout place content.</p>
+                </article>
+
+                <!-- Counters -->
+                <article>
+                    <h4>Counters</h4>
+                    <figure>
+                        <img src="../img/counters.jpg" alt="Counters">
+                    </figure>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>Counter</span>
+    <tag data-attrs='{"class":"bringer-counter bringer-block","!data-delay":"3000"}'>div</tag>
+        <tag data-attrs='{"class":"bringer-counter-number","!data-suffix":"+"}'>div</tag>
+            24
+        <tag>/div</tag>
+        <tag data-attrs='{"class":"bringer-counter-label"}'>div</tag>
+            Counter Label
+        <tag>/div</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                    <p>The Counter element can help when you want to animate digital value counting from zero to the specified value. As you can see in the code sample, there is the required attribute <code class="chl-attr">data-delay</code> on the element wrapper. Here, you can adjust the animation speed.</p>
+                    <p>Also, you can add some text or symbol before or after the counter number with the <code class="chl-attr">data-prefix</code> and <code class="chl-attr">data-suffix</code> attributes.</p>
+                </article>
+
+                <!-- Price Card -->
+                <article>
+                    <h4>Price Card</h4>
+                    <figure>
+                        <img src="../img/price-card.jpg" alt="Price Card">
+                    </figure>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>Price Card</span>
+    <tag data-attrs='{"class":"bringer-price-card-item bringer-block"}'>div</tag>
+        <tag data-attrs='{"class":"bringer-price-card-title"}'>div</tag>
+            <tag>h5</tag>Card Title<tag>/h5</tag>
+            <tag>p</tag>Card Description Text<tag>/p</tag>
+        <tag>/div</tag>
+        <tag data-attrs='{"class":"bringer-price-card-footer"}'>div</tag>
+            <tag data-attrs='{"class":"bringer-label"}'>span</tag>Starting from<tag>/span</tag>
+            <tag data-attrs='{"class":"bringer-price"}'>div</tag>$99.<tag>sup</tag>99<tag>/sup</tag><tag>/div</tag>
+            <tag data-attrs='{"href":"https:://your-link/","class":"bringer-button is-fullwidth"}'>a</tag>Discover Details<tag>/a</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                </article>
+
+                <!-- Price Table -->
+                <article id="price_table">
+                    <h4>Price Table</h4>
+                    <figure>
+                        <img src="../img/price-table.jpg" alt="Price Table">
+                    </figure>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>Price Table Item</span>
+    <tag data-attrs='{"class":"bringer-block bringer-price-table"}'>div</tag>
+        <tag>h6</tag>Card Title<tag>/h6</tag>
+        <tag>p</tag>Card Description Text<tag>/p</tag>
+        <tag data-attrs='{"class":"bringer-price-wrapper"}'>div</tag>
+            <tag data-attrs='{"class":"bringer-label"}'>div</tag>Starting at<tag>/div</tag>
+            <tag>h2</tag>$999<tag>/h2</tag>
+        <tag>/div</tag>
+        <tag data-attrs='{"class":"bringer-label bringer-highlight"}'>div</tag>What is included<tag>/div</tag>
+        <tag data-attrs='{"class":"bringer-marked-list"}'>ul</tag>
+            <tag>li</tag>Feature List Item 01<tag>/li</tag>
+            <tag>li</tag>Feature List Item 02<tag>/li</tag>
+            <tag>li</tag>Feature List Item 03<tag>/li</tag>
+            <tag>li</tag>Feature List Item 04<tag>/li</tag>
+        <tag>/ul</tag>
+        <tag data-attrs='{"href":"https:://your-link/","class":"bringer-button is-fullwidth"}'>a</tag>Order Now<tag>/a</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                </article>
+
+                <!-- Marquee -->
+                <article>
+                    <h4>Marquee</h4>
+                    <figure>
+                        <img src="../img/marquee.jpg" alt="Marquee">
+                    </figure>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>Marquee</span>
+    <tag data-attrs='{"class":"bringer-marquee","data-speed":"5000"}'>div</tag>
+        <tag data-attrs='{"class":"bringer-marquee-inner"}'>div</tag>
+            <tag data-attrs='{"class":"bringer-marquee-list"}'>ul</tag>
+                <tag>li</tag>
+                    <tag>h2</tag>Item Title 01<tag>/h2</tag>
+                <tag>/li</tag>
+                <tag>li</tag>
+                    <tag>h2</tag>Item Title 02<tag>/h2</tag>
+                <tag>/li</tag>
+                <tag>li</tag>
+                    <tag>h2</tag>Item Title 03<tag>/h2</tag>
+                <tag>/li</tag>
+                <tag>li</tag>
+                    <tag>h2</tag>Item Title 04<tag>/h2</tag>
+                <tag>/li</tag>
+            <tag>/ul</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                    <p>You can use the <code class="chl-attr">data-speed</code> attribute to change the element scroll speed.</p>
+                </article>
+
+                <!-- Testimonials Card -->
+                <article>
+                    <h4>Testimonials Card</h4>
+                    <figure>
+                        <img src="../img/testimonials.jpg" alt="Tastimonials Card">
+                    </figure>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>Testimonials Card Item</span>
+    <tag data-attrs='{"class":"bringer-block bringer-tetimonials-card"}'>div</tag>
+        <tag data-attrs='{"class":"bringer-tetimonials-card-descr"}'>div</tag>
+            Testimonials text content goes here
+        <tag>/div</tag>
+        <tag data-attrs='{"class":"bringer-tetimonials-card-footer"}'>div</tag>
+            <tag data-attrs='{"class":"bringer-tetimonials-card-name"}'>div</tag>
+                <tag>h6</tag>Author Name<tag>/h6</tag>
+                <tag data-attrs='{"class":"bringer-meta"}'>span</tag>Author Meta<tag>/span</tag>
+            <tag>/div</tag>
+            <tag data-attrs='{"class":"bringer-tetimonials-card-rate"}'>div</tag>
+                <tag data-attrs='{"class":"bringer-tetimonials-stars5"}'>span</tag><tag>/span</tag>
+            <tag>/div</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                </article>
+
+                <!-- Carousel Card -->
+                <article>
+                    <h4>Carousel Card</h4>
+                    <figure>
+                        <img src="../img/carousel-card.jpg" alt="Carousel Card">
+                    </figure>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>Carousel Card Item</span>
+    <tag data-attrs='{"class":"bringer-block bringer-carousel-card swiper-slide"}'>div</tag>
+        <tag data-attrs='{"class":"bringer-carousel-card-image"}'>div</tag>
+            <tag data-attrs='{"src":"img/your-image-url.jpg","alt":"Your Image","width":"600","height":"900"}'>img</tag>
+        <tag>/div</tag>
+        <tag data-attrs='{"class":"bringer-carousel-card-footer"}'>div</tag>
+            <tag data-attrs='{"class":"bringer-carousel-card-title"}'>div</tag>
+                <tag data-attrs='{"class":"bringer-meta"}'>span</tag>Card Meta<tag>/span</tag>
+                <tag>h6</tag>Card Title<tag>/h6</tag>
+            <tag>/div</tag>
+            <tag data-attrs='{"class":"bringer-icon bringer-icon-explore"}'>span</tag><tag>/span</tag>
+        <tag>/div</tag>
+        <tag data-attrs='{"href":"https://your-link-url/"}'>a</tag><tag>/a</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                    <p>You should remove the <code class="chl-attr-val">swiper-slide</code> class from the <tag data-attrs='{"class":"bringer-carousel-card"}' class='inline-html is-closed'>div</tag> if you use this card outside the carousel (for instance, in the grid container, or any other use case).</p>
+                </article>
+
+                <!-- Toggler -->
+                <article>
+                    <h4>Toggler (FAQ)</h4>
+                    <figure>
+                        <img src="../img/toggler.jpg" alt="Toggler">
+                    </figure>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>Toggler Item</span>
+    <tag data-attrs='{"class":"bringer-toggles-item bringer-block"}'>div</tag>
+        <tag data-attrs='{"class":"bringer-toggles-item--title"}'>div</tag>
+            <tag data-attrs='{"class":"bringer-label"}'>span</tag>Category Name<tag>/span</tag>
+            <tag>h4</tag>
+                <tag>sup</tag>01.<tag>/sup</tag>
+                Toggler Title
+            <tag>/h4</tag>
+        <tag>/div</tag>
+        <tag data-attrs='{"class":"bringer-toggles-item--content"}'>div</tag>
+            Item togglable content goes here.
+        <tag>/div</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                </article>
+
+                <!-- List with Preview -->
+                <article>
+                    <h4>List with Preview</h4>
+                    <figure>
+                        <img src="../img/list-w-preview.jpg" alt="List with Preview">
+                    </figure>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>List with Preview</span>
+    <tag data-attrs='{"class":"bringer-list-with-preview"}'>div</tag>
+        <tag data-attrs='{"class":"bringer-lwp-roster"}'>div</tag>
+            <span>List Item 01</span>
+            <tag data-attrs='{"class":"bringer-lwp-item bringer-block"}'>div</tag>
+                <tag data-attrs='{"src":"img/your-image-url.jpg","alt":"Your Image","width":"800","height":"1200"}'>img</tag>
+                <tag data-attrs='{"class":"bringer-lwp-item-content"}'>div</tag>
+                    <tag>h5</tag>Item Title<tag>/h5</tag>
+                    <tag>p</tag>Item description goes here<tag>/p</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+
+            <span>List Item 02</span>
+            <tag data-attrs='{"class":"bringer-lwp-item bringer-block"}'>div</tag>
+                <tag data-attrs='{"src":"img/your-image-url.jpg","alt":"Your Image","width":"800","height":"1200"}'>img</tag>
+                <tag data-attrs='{"class":"bringer-lwp-item-content"}'>div</tag>
+                    <tag>h5</tag>Item Title<tag>/h5</tag>
+                    <tag>p</tag>Item description goes here<tag>/p</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+
+            <span>List Item 03</span>
+            ...
+        <tag>/div</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                </article>
+
+                <!-- List with Details -->
+                <article>
+                    <h4>List with Details</h4>
+                    <figure>
+                        <img src="../img/detailed-list.jpg" alt="Detailed List">
+                    </figure>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>Detailed List</span>
+    <tag data-attrs='{"class":"bringer-detailed-list-wrap"}'>div</tag>
+        <tag data-attrs='{"class":"bringer-detailed-list"}'>ul</tag>
+            <span>List Item 01</span>
+            <tag>li</tag>
+                <tag data-attrs='{"class":"bringer-detailed-list-title"}'>div</tag>
+                    <tag>h4</tag>Item Title<tag>/h4</tag>
+                <tag>/div</tag>
+                <tag data-attrs='{"class":"bringer-detailed-list-description"}'>div</tag>
+                    <tag>p</tag>Item description goes here.<tag>/p</tag>
+                <tag>/div</tag>
+                <tag data-attrs='{"class":"bringer-detailed-list-button"}'>div</tag>
+                    <tag data-attrs='{"class":"bringer-icon bringer-icon-explore"}'>span</tag><tag>/span</tag>
+                <tag>/div</tag>
+                <tag data-attrs='{"href":"https://your-link-url/"}'>a</tag><tag>/a</tag>
+            <tag>/li</tag>
+
+            <span>List Item 02</span>
+            <tag>li</tag>
+                <tag data-attrs='{"class":"bringer-detailed-list-title"}'>div</tag>
+                    <tag>h4</tag>Item Title<tag>/h4</tag>
+                <tag>/div</tag>
+                <tag data-attrs='{"class":"bringer-detailed-list-description"}'>div</tag>
+                    <tag>p</tag>Item description goes here.<tag>/p</tag>
+                <tag>/div</tag>
+                <tag data-attrs='{"class":"bringer-detailed-list-button"}'>div</tag>
+                    <tag data-attrs='{"class":"bringer-icon bringer-icon-explore"}'>span</tag><tag>/span</tag>
+                <tag>/div</tag>
+                <tag data-attrs='{"href":"https://your-link-url/"}'>a</tag><tag>/a</tag>
+            <tag>/li</tag>
+
+            <span>List Item 03</span>
+            ...
+        <tag>/ul</tag>
+    <tag>/div</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                </article>
+
+                <!-- Link with Arrow -->
+                <article>
+                    <h4>Link with Arrow</h4>
+                    <figure>
+                        <img src="../img/arrow-link.jpg" alt="Link with Arrow">
+                    </figure>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>Link with Arrow</span>
+    <tag data-attrs='{"href":"https://your-link-url/","class":"bringer-icon-link"}'>a</tag>
+        <tag data-attrs='{"class":"bringer-icon-link-content"}'>div</tag>
+            <tag>h6</tag>
+                Your<tag>br</tag>Title
+            <tag>/h6</tag>
+            <tag data-attrs='{"class":"bringer-label"}'>span</tag>Subtitle<tag>/span</tag>
+        <tag>/div</tag>
+        <tag data-attrs='{"class":"bringer-icon-wrap"}'>div</tag>
+            <tag data-attrs='{"class":"bringer-icon bringer-icon-explore"}'>i</tag><tag>/i</tag>
+        <tag>/div</tag>
+    <tag>/a</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                    <p>Depending on your needs, you can place the <tag data-attrs='{"class":"bringer-icon-wrap"}' class='inline-html is-closed'>div</tag> block after the <tag data-attrs='{"class":"bringer-icon-link-content"}' class='inline-html is-closed'>div</tag> block (like in the example) or before it.</p>
+                </article>
+
+                <!-- Tags List -->
+                <article>
+                    <h4>Tags List</h4>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html">
+    <span>Tags List</span>
+    <tag data-attrs='{"class":"bringer-tags-list"}'>ul</tag>
+        <span>List Item 01</span>
+        <tag>li</tag>
+            <tag data-attrs='{"href":"https://your-link-url/"}'>a</tag>Tag Item 01<tag>/a</tag>
+        <tag>/li</tag>
+
+        <span>List Item 02</span>
+        <tag>li</tag>
+            <tag data-attrs='{"href":"https://your-link-url/"}'>a</tag>Tag Item 02<tag>/a</tag>
+        <tag>/li</tag>
+
+        <span>List Item 03</span>
+        ...
+    <tag>/ul</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+                </article>
+            </section>
+
+            <!-- Next Chapter -->
+            <div class="std-next-chapter"></div>
+        </div>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/std.js"></script>
+</body>
