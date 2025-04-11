@@ -1,0 +1,365 @@
+/* estructura */
+.brands-container {
+  width: 1200px;
+  display: flex;
+  margin-top: 145px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease 0s !important;
+}
+
+.brands-content {
+  width: 85%;
+}
+
+.side-menu {
+  width: 15%;
+  margin-left: 30px;
+  box-sizing: border-box;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 225px;
+  transform: translateY(-13.5px);
+  align-self: flex-start;
+  overflow-y: auto;
+  z-index: 11;
+}
+
+.side-menu a {
+  display: block;
+  margin: 12px 0;
+  text-decoration: none;
+  color: var(--cs-s-heading);
+  font-size: var(--cs-t-content-fs);
+  font-weight: 400;
+  border-left: 2px solid transparent;
+  padding-left: 12px;
+  padding-bottom: 0.5px;
+  transition: all 0.3s ease 0s !important;
+}
+
+.side-menu a:hover {
+  color: var(--comustock);
+}
+
+.side-menu a.active {
+  border-color: var(--comustock);
+}
+
+.side-menu .min-menu {
+  font-size: var(--cs-t-input-fs);
+  font-weight: 300;
+  margin-top: -5px !important;
+  margin-left: 14px;
+}
+
+.side-menu a.min-menu.active {
+  border-left: 2px dotted var(--comustock);
+}
+
+.brands-content .brand-section {
+  width: 100% !important;
+  color: white;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin-bottom: 55px;
+  position: relative;
+  padding: 0;
+}
+
+.brands-content .brand-section h2 {
+  margin-bottom: 35px;
+}
+
+.brands-content .brand-section h4 {
+  font-weight: 300;
+}
+
+.brands-content .section-content {
+  width: 100%;
+}
+
+.stg-row > .stg-col-1 {
+  display: flex;
+  align-items: flex-end;
+}
+
+.brands-content .sticky-div {
+  height: 20px;
+  margin-right: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 225px;
+  box-sizing: border-box;
+  z-index: 10;
+  width: 68px !important;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.brands-content .sticky-div .bench-logo {
+  height: 20px;
+  width: 20px;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: 0.2;
+  -webkit-filter: contrast(0);
+  filter: contrast(0);
+  transition: all 0.2s ease-in-out;
+  background-size: 200% !important;
+  background-position: center !important;
+}
+
+.brands-content .sticky-div a:hover.bench-logo {
+  opacity: 1;
+  -webkit-filter: contrast(1);
+  filter: contrast(1);
+}
+
+.brands-content .sticky-div .bench-logo.iso_personal {
+  background: url("../../content/identidad/marcas/personal/logos/svg/personal_iso.svg");
+}
+
+.brands-content .sticky-div .bench-logo.iso_flow {
+  background: url("../../content/identidad/marcas/flow/logos/svg/flow_iso.svg");
+}
+
+.brands-content .sticky-div .bench-logo.iso_ppay {
+  background: url("../../content/identidad/marcas/personalPay/logos/svg/personalPay_iso.svg");
+}
+
+.brands-content .sticky-div .bench-logo img {
+  border-radius: 0;
+}
+
+.brands-content .scrollable-content {
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.brands-content #nuestras-marcas .block p.box {
+  border: 1px solid var(--telecom);
+}
+
+/* banner */
+#banner {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  width: 100vw;
+  z-index: 12;
+}
+
+#banner .brand-top {
+  padding: 0;
+  position: relative;
+}
+
+#banner .brand-top.backlight-top::before {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  left: calc(-0.5 * (100vw - var(--stg-container-width)));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+#banner-section {
+  padding: 5px 0;
+  z-index: 11;
+  transition: all 0.3s ease 0s !important;
+}
+
+#banner-section.divider-bottom::after,
+.brands-content .divider-bottom::after {
+  width: 100%;
+  left: 0;
+}
+
+#banner-section .st-lazy-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#banner-section img {
+  height: 80px;
+  will-change: height;
+  transition: all 0.3s ease 0s !important;
+}
+
+.brand-section .cs-square-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+}
+
+.brand-section .cs-square-button span.cs-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.download-square .cs-block {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-square .cs-block.stg-aspect-rectangle-full img {
+  max-height: 50px;
+  /* margin: 20px 0; */
+}
+
+#logo .iso {
+  margin-top: 32px;
+}
+.brands-content #nuestras-marcas .block {
+  margin-bottom: 0;
+}
+
+.brands-content #nuestras-marcas .block:first-child {
+  padding-right: 10px;
+}
+
+.brands-content #nuestras-marcas .block:last-child {
+  padding-left: 10px;
+}
+
+.brands-content #nuestras-marcas .block p.box {
+  border: 1px solid var(--cs-s-heading);
+  background-color: var(--cs-s-heading-fade);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 15px;
+  border-radius: var(--cs-xs-br);
+  font-weight: 500;
+}
+
+#glosario table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--cs-roboto);
+  text-align: left;
+  font-weight: 700;
+}
+
+#glosario th,
+#glosario td {
+  padding: 10px;
+  border-bottom: 1px solid #f5f7fa11;
+}
+
+#glosario th {
+  background-color: var(--telecom-light);
+  border-right: none;
+  border-bottom: none;
+}
+
+#glosario th:first-child {
+  border-top-left-radius: 5px;
+}
+
+#glosario th:last-child {
+  border-top-right-radius: 5px;
+}
+
+#glosario td:last-child {
+  font-weight: 300;
+}
+
+#glosario td:last-child,
+#glosario th:last-child {
+  border-left: none;
+}
+
+#glosario th:first-child,
+#glosario td:first-child {
+  width: 40%;
+}
+
+#glosario th:last-child,
+#glosario td:last-child {
+  width: 60%;
+}
+
+/* tooltip */
+.bench-logo {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.bench-logo::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  border: 1px solid var(--cs-s-container-frosted);
+  background-color: #33333333;
+  border-radius: var(--cs-small-br);
+  color: #fff;
+  padding: 4px 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.85rem;
+  z-index: 10;
+}
+
+.bench-logo:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.bench-logo::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 9px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--cs-s-container-frosted);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 9;
+}
+
+.bench-logo:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/****** TELECOM ******/
+
+#telecom .brand-color {
+  color: var(--telecom-acento);
+}
+
+#telecom .brand-top.backlight-top::before {
+  background: radial-gradient(
+    80vw circle at 50vw -10%,
+    var(--telecom),
+    var(--telecom-null) 50%
+  );
+  left: 0;
+}
+
+#telecom .brands-content #nuestras-marcas .block p.box {
+  border-color: var(--telecom);
+  background-color: var(--telecom-transparent);
+}
