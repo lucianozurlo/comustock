@@ -1,4 +1,8 @@
 /* estructura */
+h6 {
+  font-weight: 300;
+}
+
 .brands-container {
   width: 1200px;
   display: flex;
@@ -22,7 +26,7 @@
   transform: translateY(-13.5px);
   align-self: flex-start;
   overflow-y: auto;
-  z-index: 11;
+  z-index: 1;
 }
 
 .side-menu a {
@@ -51,10 +55,35 @@
   font-weight: 300;
   margin-top: -5px !important;
   margin-left: 14px;
+  height: 22px;
 }
 
 .side-menu a.min-menu.active {
   border-left: 2px dotted var(--comustock);
+}
+
+.side-menu a.manual-de-marca {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+  border: unset;
+}
+
+.side-menu .manual-de-marca .iso {
+  width: 36px;
+  height: 36px;
+  background-size: 300% !important;
+  background-position: center !important;
+}
+
+.side-menu .manual-de-marca p {
+  color: #fff !important;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .brands-content .brand-section {
@@ -65,9 +94,13 @@
   align-items: flex-start;
   justify-content: flex-start;
   box-sizing: border-box;
-  margin-bottom: 55px;
+  margin-bottom: 25px;
   position: relative;
   padding: 0;
+}
+
+.brands-content .brand-section.divider-bottom {
+  margin-bottom: 55px;
 }
 
 .brands-content .brand-section h2 {
@@ -110,7 +143,7 @@
   -webkit-filter: contrast(0);
   filter: contrast(0);
   transition: all 0.2s ease-in-out;
-  background-size: 200% !important;
+  background-size: 300% !important;
   background-position: center !important;
 }
 
@@ -178,14 +211,22 @@
   z-index: 11;
   transition: all 0.3s ease 0s !important;
 }
-
+.divider-bottom::after {
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+body.brands.is-loaded .divider-bottom::after {
+  opacity: 1;
+  transition: all 2s ease-in-out;
+}
 #banner-section.divider-bottom::after,
 .brands-content .divider-bottom::after {
   width: 100%;
   left: 0;
+  transition: all 2s ease-in-out;
 }
 
-#banner-section .st-lazy-wrapper {
+#banner-section .cs-hero-media-wrap {
   display: flex;
   justify-content: center;
 }
@@ -215,12 +256,8 @@
 
 .download-square .cs-block.stg-aspect-rectangle-full img {
   max-height: 50px;
-  /* margin: 20px 0; */
 }
 
-#logo .iso {
-  margin-top: 32px;
-}
 .brands-content #nuestras-marcas .block {
   margin-bottom: 0;
 }
@@ -229,7 +266,7 @@
   padding-right: 10px;
 }
 
-.brands-content #nuestras-marcas .block:last-child {
+.brands-content #nuestras-marcas .block:nth-child(2) {
   padding-left: 10px;
 }
 
@@ -259,7 +296,6 @@
 }
 
 #glosario th {
-  background-color: var(--telecom-light);
   border-right: none;
   border-bottom: none;
 }
@@ -291,21 +327,25 @@
   width: 60%;
 }
 
-/* tooltip */
-.bench-logo {
+/****** TOOLTIP / COPY ******/
+.bench-logo,
+.copy {
+  cursor: pointer;
   position: relative;
   display: inline-block;
+  z-index: 111;
   transition: all 0.3s ease-in-out;
 }
 
-.bench-logo::after {
+.bench-logo::after,
+.copy::after {
   content: attr(data-tooltip);
   position: absolute;
   bottom: calc(100% + 15px);
   left: 50%;
   transform: translateX(-50%) translateY(10px);
   border: 1px solid var(--cs-s-container-frosted);
-  background-color: #33333333;
+  background-color: var(--cs-s-container-frosted);
   border-radius: var(--cs-small-br);
   color: #fff;
   padding: 4px 14px;
@@ -314,15 +354,18 @@
   pointer-events: none;
   transition: all 0.3s ease-in-out;
   font-size: 0.85rem;
-  z-index: 10;
+  z-index: 111;
 }
 
-.bench-logo:hover::after {
+.bench-logo:hover::after,
+.copy:hover::after {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(2px);
+  z-index: 111;
 }
 
-.bench-logo::before {
+.bench-logo::before,
+.copy::before {
   content: "";
   position: absolute;
   bottom: calc(100% + 9px);
@@ -336,30 +379,238 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
-  z-index: 9;
+  z-index: 111;
 }
 
-.bench-logo:hover::before {
+.bench-logo:hover::before,
+.copy:hover::before {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(2px);
+  z-index: 111;
+}
+/*****/
+
+#logos .iso {
+  margin-top: 32px;
 }
 
-/****** TELECOM ******/
-
-#telecom .brand-color {
-  color: var(--telecom-acento);
+#tamanos .cs-block,
+#usos .cs-block {
+  background-color: #fff;
 }
 
-#telecom .brand-top.backlight-top::before {
-  background: radial-gradient(
-    80vw circle at 50vw -10%,
-    var(--telecom),
-    var(--telecom-null) 50%
-  );
-  left: 0;
+.box p {
+  text-align: center;
+  font-style: italic;
+  margin-top: 12px;
+  margin-bottom: 0;
 }
 
-#telecom .brands-content #nuestras-marcas .block p.box {
-  border-color: var(--telecom);
-  background-color: var(--telecom-transparent);
+#usos [class*="stg-col-"] .cs-grid-2cols .cs-block,
+#usos [class*="stg-col-"] .cs-grid-4cols .cs-block,
+#aplicaciones [class*="stg-col-"] .cs-grid-3cols .cs-block,
+#aplicaciones [class*="stg-col-"] .cs-grid-4cols .cs-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover !important;
+}
+
+#usos [class*="stg-col-"] .cs-grid-4cols .cs-block {
+  padding: 0;
+}
+
+#paleta .box {
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#paleta .box .color {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#paleta .box .color .cs-block {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+}
+
+#paleta .box .info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#paleta .box .info p {
+  text-align: left;
+  font-size: 15px;
+  font-style: unset;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#paleta .box .info p.name {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+#paleta .box .info p strong {
+  margin-left: 4px;
+}
+
+#paleta .min .box {
+  align-items: center;
+}
+
+#paleta .min .box .info {
+  height: 70px;
+}
+
+#paleta .cs-grid-4cols {
+  grid-column-gap: var(--stg-xs-gap);
+}
+
+#paleta .cs-grid-4cols,
+#paleta .cs-grid-4cols .box {
+  height: 70px;
+  gap: 14px;
+}
+#paleta .cs-grid-4cols .box .color,
+#paleta .cs-grid-4cols .box .color .cs-block {
+  width: 70px;
+  height: 70px;
+}
+#paleta .cs-grid-4cols .box .info p {
+  font-size: 14px;
+}
+#paleta .cs-grid-4cols.min .box .info {
+  height: 60px;
+}
+
+#paleta .cs-grid-2cols .info {
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+#paleta .cs-grid-2cols .info > div:first-child {
+  padding-right: 14px;
+  border-right: 1px dotted var(--lightgray);
+}
+
+#banda-sonido .video-container {
+  overflow: hidden; /* Oculta el contenido que se exceda del contenedor */
+  position: relative;
+}
+
+#banda-sonido .video-container video {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  -o-object-fit: fill;
+  object-fit: fill; /* O simplemente omitir object-fit */
+}
+
+#modal-download .video-container button {
+  opacity: 0.2;
+  transition: all 0.2s ease-in-out;
+}
+#modal-download .video-container:hover button {
+  opacity: 1 !important;
+}
+
+#productos .cs-toggles-item--title {
+  height: 50px;
+}
+
+#productos .cs-toggles-item--title img {
+  height: 90px;
+  position: absolute;
+  transform: translate(-30px, -20px);
+}
+
+#productos .cs-toggles-item .cs-toggles-item--title i.cs-icon {
+  top: calc(36% - 16px);
+}
+
+#productos
+  .cs-toggles-item
+  a.cs-masked-content.at-bottom-right
+  .cs-square-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#productos .cs-toggles-item--content .box {
+  margin-bottom: 40px;
+}
+
+#productos .cs-toggles-item--content .box:last-child {
+  margin-bottom: 0;
+}
+
+#productos.brand-section .cs-square-button span.cs-icon {
+  margin-bottom: 0;
+}
+
+#redes .social,
+#web .social {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+#redes .social img,
+#web .social img {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+#redes .social h6,
+#web .social h6 {
+  color: var(--cs-s-heading);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+#redes .cs-menu-widget,
+#web .cs-menu-widget {
+  margin-left: 30px;
+}
+
+#redes [class*="cs-grid"],
+#web [class*="cs-grid"] {
+  grid-column-gap: var(--stg-xs-gap);
+}
+
+#redes .cs-menu-widget ul li a,
+#web .cs-menu-widget ul li a {
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--cs-s-heading);
+  padding: 4px 8px;
+}
+
+#web .cs-menu-widget ul li a span {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+}
+#redes .cs-menu-widget ul li a:hover,
+#web .cs-menu-widget ul li a:hover {
+  opacity: 1;
+}
+
+#web.brand-section h4 {
+  margin-bottom: 24px;
 }
