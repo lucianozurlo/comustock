@@ -20,8 +20,8 @@
 }
 /* SIDE MENU end */
 
-#glosario th {
-  background-color: var(--personal-light);
+#glosario thead {
+  background-color: var(--personal);
 }
 
 #personal .brand-top.backlight-top::before {

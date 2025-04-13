@@ -20,10 +20,6 @@
 }
 /* SIDE MENU end */
 
-#glosario th {
-  background-color: var(--telecom-light);
-}
-
 #telecom .brand-top.backlight-top::before {
   background: radial-gradient(
     80vw circle at 50vw -10%,

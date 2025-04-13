@@ -65,10 +65,12 @@ p,
 }
 .clarification {
   padding: 20px 0 0 40px;
+}
+.clarification p {
+  margin-bottom: 0;
   font-size: var(--cs-t-input-fs);
   font-style: italic;
 }
-
 .crossed-out {
   text-decoration: line-through;
   opacity: 0.5;

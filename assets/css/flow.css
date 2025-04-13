@@ -20,8 +20,9 @@
 }
 /* SIDE MENU end */
 
-#glosario th {
-  background-color: var(--flow-light);
+#glosario thead {
+  background-color: var(--flow);
+  color: #000;
 }
 
 #flow .brand-top.backlight-top::before {
