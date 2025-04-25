@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shadow Themes Studio">
+    <meta name="description" content="Bringer - Creative Multipurpose HTML5 Template Documentation." />    
+
+    <!-- Page Title -->
+    <title>Bringer Documentation | Header and Menu</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/std-config.css">
+    <link type="text/css" rel="stylesheet" href="../css/std.css">
+    <link type="text/css" rel="stylesheet" href="../css/std-responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body>
+    
+    <main class="std-main">
+        <!-- Content -->
+        <div class="std-container">
+            <section class="chapter-intro-section">
+                <div class="row">
+                    <div class="col-12 chapter-title-wrap">
+                        <!-- Chapter Title -->
+                    </div>
+                </div><!-- .row -->
+            </section>
+
+            <!-- Header Code Structure -->
+            <section>
+                <p>In this chapter we will show you how to create a header and main menu in our template. Let's start from the code markup for the header container:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+    <span>Header</span>
+    <tag data-attrs='{"id":"bringer-header","class":"is-frosted is-sticky","data-appear":"fade-down","data-unload":"fade-up"}'>header</tag>
+        <span>Desktop Header</span>
+        <tag data-attrs='{"class":"bringer-header-inner"}'>div</tag>
+            <span>Header Logo</span>
+            <tag data-attrs='{"class":"bringer-header-lp"}'>div</tag>
+                <tag data-attrs='{"href":"./","class":"bringer-logo"}'>a</tag>
+                    <tag data-attrs='{"src":"img/logo.png","alt":"bringer.","width":"88","height":"24"}'>img</tag>
+                <tag>/a</tag>
+            <tag>/div</tag>
+            <span>Main Menu</span>
+            <tag data-attrs='{"class":"bringer-header-mp"}'>div</tag>
+                <tag data-attrs='{"class":"bringer-nav"}'>nav</tag>
+                    ...
+                <tag>/nav</tag>
+            <tag>/div</tag>
+            <span>Header Button</span>
+            <tag data-attrs='{"class":"bringer-header-rp"}'>div</tag>
+                <tag data-attrs='{"href":"contacts.html","class":"bringer-button"}'>a</tag>Get a FREE Quote<tag>/a</tag>
+            <tag>/div</tag>
+        <tag>/div</tag>
+        <span>Mobile Header</span>
+        <tag data-attrs='{"class":"bringer-mobile-header-inner"}'>div</tag>
+            <tag data-attrs='{"href":"./","class":"bringer-logo"}'>a</tag>
+                <tag data-attrs='{"src":"img/logo.png","alt":"bringer.","width":"88","height":"24"}'>img</tag>
+            <tag>/a</tag>
+            <tag data-attrs='{"href":"#","class":"bringer-mobile-menu-toggler"}'>a</tag>
+                <tag data-attrs='{"class":"bringer-menu-toggler-icon"}'>i</tag>
+                    <tag>span</tag><tag>/span</tag>
+                    <tag>span</tag><tag>/span</tag>
+                    <tag>span</tag><tag>/span</tag>
+                <tag>/i</tag>
+            <tag>/a</tag>
+        <tag>/div</tag>
+    <tag>/header</tag>
+</pre>
+<!-- * END CODE EXAMPLE -->
+            </section>
+
+            <!-- Main Menu -->
+            <section>
+                <h4>Main Menu</h4>
+                <p>The main menu in the code is the unordered list with links to other pages. The <span class="highlight">main menu</span> level must contain the class <code class="chl-selector">main-menu</code>, and the <span class="highlight">sub menus</span> must have the class <code class="chl-selector">sub-menu</code>.</p>
+                <p>To <span class="highlight">highlight</span> the active menu item, you can use the <code class="chl-selector">current-menu-item</code> class for the <tag class='inline-html'>li</tag> tag and the <code class="chl-selector">current-menu-parent</code> class for the parent <tag class='inline-html'>li</tag> tag.</p>
+                <p>Let's take a look at the example code:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+    ...
+    <tag class="chl-fade" data-attrs='{"class":"bringer-nav"}'>nav</tag>
+        <tag data-attrs='{"class":"main-menu"}'>ul</tag>
+            <tag>li</tag>
+                <tag data-attrs='{"href":"link-to-the-page.html"}'>a</tag>Main Menu Item<tag>/a</tag>
+            <tag>/li</tag>
+            <tag data-attrs='{"class":"current-menu-parent"}'>li</tag>
+                <tag data-attrs='{"href":"#"}'>a</tag>Active Parent Menu Item<tag>/a</tag>
+                <tag data-attrs='{"class":"sub-menu"}'>ul</tag>
+                    <tag>li</tag>
+                        <tag data-attrs='{"href":"link-to-the-page.html"}'>a</tag>Level 02 Item 01<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag data-attrs='{"class":"current-menu-item"}'>li</tag>
+                        <tag data-attrs='{"href":"#"}'>a</tag>Active Sub-Menu Item<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag data-attrs='{"href":"#"}'>a</tag>Sub Menu Parent<tag>/a</tag>
+                        <tag data-attrs='{"class":"sub-menu"}'>ul</tag>
+                            <tag>li</tag>
+                                <tag data-attrs='{"href":"link-to-the-page.html"}'>a</tag>Level 03 Item 01<tag>/a</tag>
+                            <tag>/li</tag>
+                            <tag>li</tag>
+                                <tag data-attrs='{"href":"link-to-the-page.html"}'>a</tag>Level 03 Item 02<tag>/a</tag>
+                            <tag>/li</tag>
+                            <tag>li</tag>
+                                <tag data-attrs='{"href":"link-to-the-page.html"}'>a</tag>Level 03 Item 03<tag>/a</tag>
+                            <tag>/li</tag>
+                        <tag>/ul</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag data-attrs='{"href":"link-to-the-page.html"}'>a</tag>Level 02 Item 03<tag>/a</tag>
+                    <tag>/li</tag>
+                <tag>/ul</tag>
+            <tag>/li</tag>
+            <tag>li</tag>
+                <tag data-attrs='{"href":"link-to-the-page.html"}'>a</tag>Main Menu Item<tag>/a</tag>
+            <tag>/li</tag>
+            ...
+        <tag>/ul</tag>
+    <tag class="chl-fade">/nav</tag>
+    ...
+</pre>
+<!-- * END CODE EXAMPLE -->
+            </section>
+
+            <!-- Next Chapter -->
+            <div class="std-next-chapter"></div>
+        </div>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/std.js"></script>
+</body>

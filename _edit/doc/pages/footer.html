@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shadow Themes Studio">
+    <meta name="description" content="Bringer - Creative Multipurpose HTML5 Template Documentation." />    
+
+    <!-- Page Title -->
+    <title>Bringer Documentation | Footer and Socials</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/std-config.css">
+    <link type="text/css" rel="stylesheet" href="../css/std.css">
+    <link type="text/css" rel="stylesheet" href="../css/std-responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body>
+    
+    <main class="std-main">
+        <!-- Content -->
+        <div class="std-container">
+            <section class="chapter-intro-section">
+                <div class="row">
+                    <div class="col-4 chapter-title-wrap">
+                        <!-- Chapter Title -->
+                    </div>
+                    <div class="col-8">
+                        The footer is another element that is the same for all pages. It holds your copyright information and may contain a widget area with additional information, menus, and links to your social media networks.
+                    </div>
+                </div><!-- .row -->
+            </section>
+
+            <!-- Footer Code Structure -->
+            <section>
+                <p>Let's take a look at the basic code markup for the footer:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+    ...
+    <tag data-attrs='{"id":"bringer-footer","data-appear":"fade-up","data-unload":"fade-down"}'>footer</tag>
+        <span>Footer Widgets Area (Optional)</span>
+        <tag data-attrs='{"class":"bringer-footer-widgets"}'>div</tag>
+            <tag data-attrs='{"class":"stg-container"}'>div</tag>
+                ...
+            <tag>/div</tag>
+        <tag>/div</tag>
+        <span>Footer Coryright Line</span>
+        <tag data-attrs='{"class":"bringer-footer-line stg-container"}'>div</tag>
+            <tag data-attrs='{"class":"align-center"}'>div</tag>
+                Copyright &copy; 2024. All Rights Reserved.
+            <tag>/div</tag>
+        <tag>/div</tag>
+    <tag>/footer</tag>
+    ...
+</pre>
+<!-- * END CODE EXAMPLE -->
+            </section>
+
+            <!-- Footer Widgets -->
+            <section>
+                <h4>Footer Widgets</h4>
+                <p>You can put whatever code into the <tag data-attrs='{"class":"bringer-main"}' class='stg-container'>div</tag> inside the <tag data-attrs='{"class":"bringer-footer-widgets"}' class='stg-container'>div</tag>. In our template, we use the following four-column structure:</p>
+<pre class="chl chl-html bottom-gap-p">
+    ...
+        <tag class="chl-fade" data-attrs='{"class":"bringer-footer-widgets"}'>div</tag>
+            <tag class="chl-fade" data-attrs='{"class":"stg-container"}'>div</tag>
+                <tag data-attrs='{"class":"stg-row","data-stagger-appear":"fade-left","data-stagger-delay":"100"}'>div</tag>
+                    <tag data-attrs='{"class":"stg-col-5 stg-tp-col-12 stg-tp-bottom-gap-l"}'>div</tag>
+                        ...
+                    <tag>/div</tag>
+                    <tag data-attrs='{"class":"stg-col-2 stg-offset-1 stg-tp-col-4 stg-m-col-4"}'>div</tag>
+                        ...
+                    <tag>/div</tag>
+                    <tag data-attrs='{"class":"stg-col-2 stg-tp-col-4 stg-m-col-4"}'>div</tag>
+                        ...
+                    <tag>/div</tag>
+                    <tag data-attrs='{"class":"stg-col-2 stg-tp-col-4 stg-m-col-4"}'>div</tag>
+                        ...
+                    <tag>/div</tag>
+                <tag>/div</tag>
+            <tag class="chl-fade">/div</tag>
+        <tag class="chl-fade">/div</tag>
+    ...
+</pre>
+                <p class="note">You can find more details about rows and columns in the <a href="grid.html">Grid System</a> chapter.</p>
+            </section>
+            
+            <!-- Socials List Settings -->
+            <section>
+                <h4>Socials Links</h4>
+                <p>The socials list is a <tag data-attrs='{"class":"bringer-socials-list"}' class='inline-html'>ul</tag> tag, where you can specify child items with links to your social media networks. Let's take a look at the code example:</p>
+<!-- * CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap-p">
+    ...
+    <span>Socials List</span>
+    <tag data-attrs='{"class":"bringer-socials-list","data-stagger-appear":"fade-up","data-stagger-delay":"75"}'>ul</tag>
+        <tag>li</tag>
+            <tag data-attrs='{"href":"https://link-to-your-profile/","target":"_blank","class":"bringer-socials-facebook"}'>a</tag>
+                <tag>i</tag><tag>/i</tag>
+            <tag>/a</tag>
+        <tag>/li</tag>
+        <tag>li</tag>
+            <tag data-attrs='{"href":"https://link-to-your-profile/","target":"_blank","class":"bringer-socials-instagram"}'>a</tag>
+                <tag>i</tag><tag>/i</tag>
+            <tag>/a</tag>
+        <tag>/li</tag>
+        <tag>li</tag>
+            <tag data-attrs='{"href":"https://link-to-your-profile/","target":"_blank","class":"bringer-socials-x"}'>a</tag>
+                <tag>i</tag><tag>/i</tag>
+            <tag>/a</tag>
+        <tag>/li</tag>
+        <tag>li</tag>
+            <tag data-attrs='{"href":"https://link-to-your-profile/","target":"_blank","class":"bringer-socials-tiktok"}'>a</tag>
+                <tag>i</tag><tag>/i</tag>
+            <tag>/a</tag>
+        <tag>/li</tag>
+        <tag>li</tag>
+            <tag data-attrs='{"href":"https://link-to-your-profile/","target":"_blank","class":"bringer-socials-patreon"}'>a</tag>
+                <tag>i</tag><tag>/i</tag>
+            <tag>/a</tag>
+        <tag>/li</tag>
+    <tag>/ul</tag>
+    ...
+</pre>
+<!-- * END CODE EXAMPLE -->
+                <p>For the link, you can use the following classes for different social networks:</p>
+                <div class="row bottom-gap-m">
+                    <div class="col-4 tp-col-4 m-col-12">
+                        <ul class="std-socials-list-icons">
+                            <li class="std-socials-500px"><i></i>bringer-socials-500px</li>
+                            <li class="std-socials-behance"><i></i>bringer-socials-behance</li>
+                            <li class="std-socials-dribble"><i></i>bringer-socials-dribble</li>
+                            <li class="std-socials-facebook"><i></i>bringer-socials-facebook</li>
+                            <li class="std-socials-flickr"><i></i>bringer-socials-flickr</li>
+                        </ul>
+                    </div>
+                    <div class="col-4 tp-col-4 m-col-12">
+                        <ul class="std-socials-list-icons">
+                            <li class="std-socials-instagram"><i></i>bringer-socials-instagram</li>
+                            <li class="std-socials-linkedin"><i></i>bringer-socials-linkedin</li>
+                            <li class="std-socials-patreon"><i></i>bringer-socials-patreon</li>
+                            <li class="std-socials-pinterest"><i></i>bringer-socials-pinterest</li>
+                            <li class="std-socials-tiktok"><i></i>bringer-socials-tiktok</li>
+                        </ul>
+                    </div>
+                    <div class="col-4 tp-col-4 m-col-12">
+                        <ul class="std-socials-list-icons">
+                            <li class="std-socials-tumblr"><i></i>bringer-socials-tumblr</li>
+                            <li class="std-socials-vimeo"><i></i>bringer-socials-vimeo</li>
+                            <li class="std-socials-x"><i></i>bringer-socials-x</li>
+                            <li class="std-socials-xing"><i></i>bringer-socials-xing</li>
+                            <li class="std-socials-youtube"><i></i>bringer-socials-youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="note">You can also use the Socials list for the Contact Information element or any other content place, not only the footer area.</p>
+            </section>
+
+            <!-- Next Chapter -->
+            <div class="std-next-chapter"></div>
+        </div>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/std.js"></script>
+</body>

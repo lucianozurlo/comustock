@@ -1,0 +1,69 @@
+.color-brand {
+  color: var(--flow) !important;
+}
+.bg-brand {
+  background-color: var(--flow) !important;
+}
+.border-brand {
+  border-color: var(--flow) !important;
+}
+
+/* SIDE MENU */
+.side-menu .manual-de-marca .iso {
+  background-image: url("../../content/identidad/marcas/flow/logos/svg/flow_iso_blanco.svg");
+}
+.side-menu a.manual-de-marca {
+  background-color: var(--flow-transparent);
+}
+.side-menu a:hover.manual-de-marca {
+  background-color: var(--flow);
+}
+/* SIDE MENU end */
+
+#glosario thead {
+  background-color: var(--flow);
+  color: #000;
+}
+
+#flow .brand-top.backlight-top::before {
+  background: radial-gradient(
+    80vw circle at 50vw -10%,
+    var(--black),
+    var(--flow-half) 150%
+  );
+  left: 0;
+}
+
+#flow .brands-content #nuestras-marcas .block p.box {
+  border-color: var(--flow);
+  background-color: var(--flow-transparent);
+}
+
+#flow #tamanos [class*="stg-col-"] .cs-grid-2cols div:nth-child(2) .cs-block {
+  background-color: var(--flow);
+}
+
+#flow #usos [class*="stg-col-"] .cs-grid-2cols div:nth-child(1) .cs-block {
+  background: url("../../content/identidad/marcas/flow/lineamientos/flow_usosBG1.jpg");
+}
+
+#flow #usos [class*="stg-col-"] .cs-grid-2cols div:nth-child(2) .cs-block {
+  background: url("../../content/identidad/marcas/flow/lineamientos/flow_usosBG2.jpg");
+}
+
+#flow #usos [class*="stg-col-"] .cs-grid-4cols div:nth-child(1) .cs-block {
+  background: url("../../content/identidad/marcas/flow/lineamientos/flow_usosBG1.jpg");
+}
+
+#flow #usos [class*="stg-col-"] .cs-grid-4cols div:nth-child(2) .cs-block {
+  background: url("../../content/identidad/marcas/flow/lineamientos/flow_usosBG1.jpg");
+}
+#flow #usos [class*="stg-col-"] .cs-grid-4cols div:nth-child(2) .cs-block {
+  background: url("../../content/identidad/marcas/flow/lineamientos/flow_usosBG3.jpg");
+}
+#flow #usos [class*="stg-col-"] .cs-grid-4cols div:nth-child(3) .cs-block {
+  background: url("../../content/identidad/marcas/flow/lineamientos/flow_usosBG4.jpg");
+}
+#flow #usos [class*="stg-col-"] .cs-grid-4cols div:nth-child(4) .cs-block {
+  background: url("../../content/identidad/marcas/flow/lineamientos/flow_usosBG5.jpg");
+}

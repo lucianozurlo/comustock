@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shadow Themes Studio">
+    <meta name="description" content="Bringer - Creative Multipurpose HTML5 Template Documentation." />    
+
+    <!-- Page Title -->
+    <title>Bringer Documentation | Contact Form</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/std-config.css">
+    <link type="text/css" rel="stylesheet" href="../css/std.css">
+    <link type="text/css" rel="stylesheet" href="../css/std-responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body>
+    
+    <main class="std-main">
+        <!-- Content -->
+        <div class="std-container">
+            <section class="chapter-intro-section">
+                <div class="row">
+                    <div class="col-4 chapter-title-wrap">
+                        <!-- Chapter Title -->
+                    </div>
+                    <div class="col-8">
+                        In this chapter, we'll learn how to create the basic contact form and how to set it to send mail to your address. We have two types of contact forms in our template: <span class="highlight">short</span> and <span class="highlight">classic</span>.
+                    </div>
+                </div><!-- .row -->
+            </section>
+
+            <!-- Form Markup -->
+            <section>
+                <h4>Classic Contact Form</h4>
+                <p>This classic contact form lets visitors send you a message with contact details to establish a connection. Here is a general form markup:</p>
+<pre class="chl-html">
+...
+<span>Contact Form</span>
+<tag data-attrs='{"action":"mail.php","method":"post","class":"bringer-contact-form bringer-block","data-fill-error":"Please, fill out the contact form."}'>form</tag>
+    <tag data-attrs='{"class":"bringer-form-content"}'>div</tag>
+        <span>Field: Name</span>
+        <tag data-attrs='{"for":"name"}'>label</tag>Your name<tag>/label</tag>
+        <tag data-attrs='{"type":"text","id":"name","name":"name","placeholder":"Your Name","required":""}'>input</tag>
+        <span>Field: Email</span>
+        <tag data-attrs='{"for":"email"}'>label</tag>Your email:<tag>/label</tag>
+        <tag data-attrs='{"type":"email","id":"email","name":"email","placeholder":"Your Email","required":""}'>input</tag>
+        <span>Field: Message</span>
+        <tag data-attrs='{"for":"message"}'>label</tag>Your message:<tag>/label</tag>
+        <tag data-attrs='{"id":"message","name":"message","placeholder":"Your Message","required":""}'>textarea</tag><tag>/textarea</tag>
+        <span>Form Button</span>
+        <tag data-attrs='{"type":"submit","value":"Send Message"}'>button</tag>Send Message<tag>/button</tag>
+        <tag data-attrs='{"class":"bringer-contact-form__response"}'>div</tag><tag>/div</tag>
+    <tag>/div</tag>
+    <tag data-attrs='{"class":"bringer-form-spinner"}'>span</tag><tag>/span</tag>
+<tag>/form</tag>
+...
+</pre>
+                <p>To make everything work, you should edit the <span class="std-highlight">mail.php</span> file and specify your <span class="std-highlight">email address</span> in the <code class="chl-css-attr-n">$mail_to</code> variable.</p>
+                <pre class="chl-js">
+<span class="chl-css-imp-v">&lt;?php</span><span class="comment chl-fade">
+/**
+* Author: Shadow Themes
+* Author URL: http://shadow-themes.com
+*/</span>
+
+<span class="chl-selector chl-fade"><span class="chl-var">if</span> (<span class="chl-css-attr-n">$_SERVER[<span class="chl-prop">"REQUEST_METHOD"</span>]</span></span> <span class="chl-fade">==</span> <span class="chl-selector chl-fade"><span class="chl-prop">"POST"</span>)</span> <span class="chl-var chl-fade">{</span>
+
+    <span class="comment chl-fade"># Replace this email with your email address</span>
+    <span class="highlight-line"><span class="chl-css-attr-n">$mail_to</span> = <span class="chl-prop">"yourmail@example.com"</span>;</span>
+    
+    ...
+<span class="chl-var chl-fade">}</span>
+<span class="chl-css-imp-v">?&gt;</span>
+</pre>
+            </section>
+
+            <section>
+                <h4>Short Contact Form</h4>
+                <p>The short contact form lets visitors share their email addresses without any additional messaging to let you contact them or use it for a news subscription list. Here, we will look at the basic markup for a better understanding of the form code, but in actual usage in our template, the inner markup may differ depending on a block, like <span class="highlight">Call to Action</span> or <span class="highlight">Hero Section</span>.</p>
+<pre class="chl-html">
+...
+<span>Short Contact Form</span>
+<tag data-attrs='{"!action":"mail-short.php","method":"post","class":"bringer-contact-form is-short","data-fill-error":"Please, fill out the contact form."}'>form</tag>
+    <tag data-attrs='{"class":"bringer-form-content"}'>div</tag>
+        <span>Mail Field</span>
+        <tag data-attrs='{"type":"email","id":"email","name":"email","placeholder":"Your Email","required":""}'>input</tag>
+        <span>Form Button</span>
+        <tag data-attrs='{"type":"submit","value":"Send Message"}'>button</tag>
+            <tag data-attrs='{"class":"bringer-icon bringer-icon-arrow-submit"}'>span</tag><tag>/span</tag>
+        <tag>/button</tag>
+        <tag data-attrs='{"class":"bringer-contact-form__response"}'>div</tag><tag>/div</tag>
+    <tag>/div</tag>
+    <tag data-attrs='{"class":"bringer-form-spinner"}'>span</tag><tag>/span</tag>
+<tag>/form</tag>
+...
+</pre>
+
+                <p>The same as in the previous example, you should edit the PHP file called <span class="highlight">mail-short.php</span> and specify your email address in the <code class="chl-css-attr-n">$mail_to</code> variable. Also, below the <code class="chl-css-attr-n">$mail_to</code>, you can write some text for the <code class="chl-css-attr-n">$message</code> variable to display to you in the received message.</p>
+
+<pre class="chl-js">
+<span class="chl-css-imp-v">&lt;?php</span><span class="comment chl-fade">
+/**
+* Author: Shadow Themes
+* Author URL: http://shadow-themes.com
+*/</span>
+
+<span class="chl-selector chl-fade"><span class="chl-var">if</span> (<span class="chl-css-attr-n">$_SERVER[<span class="chl-prop">"REQUEST_METHOD"</span>]</span></span> <span class="chl-fade">==</span> <span class="chl-selector chl-fade"><span class="chl-prop">"POST"</span>)</span> <span class="chl-var chl-fade">{</span>
+
+    <span class="comment chl-fade"># Replace this email with your email address</span>
+    <span class="highlight-line"><span class="chl-css-attr-n">$mail_to</span> = <span class="chl-prop">"yourmail@example.com"</span>;</span>
+
+    <span class="comment chl-fade"># Message: You can modify that string with your text.</span>
+    <span class="highlight-line"><span class="chl-css-attr-n">$message</span> = <span class="chl-prop">""</span>;</span>
+
+    ...
+<span class="chl-var chl-fade">}</span>
+<span class="chl-css-imp-v">?&gt;</span>
+</pre>
+            </section>
+
+            <section>
+                <p class="note">Please note that this is a straightforward basic contact form. There is no captcha or any serious spam protection. To secure your contact form, you should find third-party solutions. For example, here you can find the information about the <span class="std-highlight">reCaptcha</span> by Google <a href="https://www.google.com/recaptcha/" target="_blank">https://www.google.com/recaptcha/</a></p>
+            </section>
+
+            <!-- Next Chapter -->
+            <div class="std-next-chapter"></div>
+        </div>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/std.js"></script>
+</body>
