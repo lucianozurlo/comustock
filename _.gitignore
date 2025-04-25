@@ -111,7 +111,7 @@ media/
 # ============================
 # Configuraciones de IDE/Editor
 # ============================
-.vscode/
+# .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
