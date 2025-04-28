@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../assets/css/modal-form.css">
     <link rel="stylesheet" href="../assets/css/custom.css">
     <link rel="stylesheet" href="../assets/css/colors.css">
-    <link rel="stylesheet" href="../assets/css/marcas.css">
+    <link rel="stylesheet" href="../assets/css/brands.css">
     <link rel="stylesheet" href="../assets/css/personal.css">
     <link rel="icon" href="../assets/img/favicon.png" sizes="32x32">
     <script>
@@ -25,6 +25,7 @@
 </head>
 
 <body id="personal" class="brands">
+
     <header id="cs-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
         <div class="cs-header-inner">
             <div class="cs-header-lp">
@@ -41,8 +42,33 @@
                                 <li><a href="../telecom">Telecom</a></li>
                                 <li class="current-menu-item"><a href="../personal">Personal</a></li>
                                 <li><a href="../flow">Flow</a></li>
-                                <li><a href="../personal-pay">Personal Pay</a></li>
+                                <li><a href="../personalPay">Personal Pay</a></li>
+                                <li class="cs-menu-divider"></li>
+                                <li class="product">
+                                    <a href="../telecom#telecomEmpresas">Telecom Empresas</a>
+                                </li>
+                                <li class="product">
+                                    <a href="#" class="toggle-link" data-target="smarthome">
+                                        Smarthome</a>
+                                </li>
+                                <li class="product">
+                                    <a href="#" class="toggle-link" data-target="tienda">
+                                        Tienda Personal</a>
+                                </li>
+                                <li class="product disable">
+                                    <a href="#" class="toggle-link disable" data-target="personal5G">
+                                        Personal 5G</a>
+                                </li>
+                                <li class="product disable">
+                                    <a href="#" class="toggle-link disable" data-target="personalFibra">
+                                        Personal Fibra</a>
+                                </li>
+                                <li class="product disable">
+                                    <a href="#" class="toggle-link disable" data-target="personalWiFiZone">Personal WiFi
+                                        Zone</a>
+                                </li>
                             </ul>
+
                         </li>
                         <li>
                             <a href="../#templates">Templates</a>
@@ -141,11 +167,11 @@
 
                                 <div class="stg-col-1">
                                     <div class="sticky-div" data-appear="fade-up" data-unload="fade-up">
-                                        <a href="" class="bench-logo iso_personal"
-                                            data-tooltip="Nuestras marcas en Personal"></a>
-                                        <a href="" class="bench-logo iso_flow"
+                                        <a href="../telecom/#nuestras-marcas" class="bench-logo iso_telecom"
+                                            data-tooltip="Nuestras marcas en Telecom"></a>
+                                        <a href="../flow/#nuestras-marcas" class="bench-logo iso_flow"
                                             data-tooltip="Nuestras marcas en Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay"
+                                        <a href="../personalPay/#nuestras-marcas" class="bench-logo iso_ppay"
                                             data-tooltip="Nuestras marcas en Personal Pay"></a>
                                     </div>
                                 </div>
@@ -153,6 +179,7 @@
                             </div>
                         </div>
                     </section>
+
 
                     <!-- Glosario -->
                     <section id="glosario" class="brand-section divider-bottom">
@@ -297,17 +324,15 @@
 
                                 <div class="stg-col-1">
                                     <div class="sticky-div">
-                                        <a href="" class="bench-logo iso_personal"
-                                            data-tooltip="Glosario de Personal"></a>
-                                        <a href="" class="bench-logo iso_flow" data-tooltip="Glosario de Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay"
-                                            data-tooltip="Glosario de Personal Pay"></a>
+                                        <a href="../flow/#glosario" class="bench-logo iso_flow"
+                                            data-tooltip="Glosario de Flow"></a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </section>
+
 
                     <!-- Logo -->
                     <section id="logos" class="brand-section">
@@ -326,12 +351,26 @@
                                         data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
                                         data-unload="fade-up">
 
-                                        <div class="cs-masked-block cs-grid-more-masked"
-                                            data-jpg-filename="personal_blanco_s-violeta.jpg">
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial"
+                                            data-jpg-filename="_fondo-violeta">
                                             <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
                                                 data-delay="3000">
                                                 <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
-                                                    alt="Logo Personal">
+                                                    alt="Personal">
+                                            </div>
+                                            <a data-fancybox data-src="#modal-download" href="javascript:;"
+                                                class="cs-masked-content at-bottom-right">
+                                                <span class="cs-square-button is-secondary">
+                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial"
+                                            data-jpg-filename="_fondo-violeta">
+                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
+                                                data-delay="3000">
+                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_iso_blanco.svg"
+                                                    alt="Personal">
                                             </div>
                                             <a data-fancybox data-src="#modal-download" href="javascript:;"
                                                 class="cs-masked-content at-bottom-right">
@@ -341,11 +380,12 @@
                                             </a>
                                         </div>
 
-                                        <div class="cs-masked-block cs-grid-more-masked">
+
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
                                             <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgray"
                                                 data-delay="3000">
                                                 <img src="../content/identidad/marcas/personal/logos/svg/personal.svg"
-                                                    alt="Logo Personal">
+                                                    alt="Personal">
                                             </div>
                                             <a data-fancybox data-src="#modal-download" href="javascript:;"
                                                 class="cs-masked-content at-bottom-right">
@@ -354,62 +394,11 @@
                                                 </span>
                                             </a>
                                         </div>
-
-                                        <div class="cs-masked-block cs-grid-more-masked">
-                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
-                                                data-delay="3000">
-                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_negro.svg"
-                                                    alt="Logo Personal">
-                                            </div>
-                                            <a data-fancybox data-src="#modal-download" href="javascript:;"
-                                                class="cs-masked-content at-bottom-right">
-                                                <span class="cs-square-button is-secondary">
-                                                    <span class="cs-icon cs-icon-comustock"></span>
-                                                </span>
-                                            </a>
-                                        </div>
-
-                                        <div class="cs-masked-block cs-grid-more-masked"
-                                            data-jpg-filename="personal_blanco_s-negro.jpg">
-                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
-                                                data-delay="3000">
-                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
-                                                    alt="Logo Personal">
-                                            </div>
-                                            <a data-fancybox data-src="#modal-download" href="javascript:;"
-                                                class="cs-masked-content at-bottom-right">
-                                                <span class="cs-square-button is-secondary">
-                                                    <span class="cs-icon cs-icon-comustock"></span>
-                                                </span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="cs-grid-4cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap iso download-square"
-                                        data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
-                                        data-unload="fade-up">
-
-                                        <div class="cs-masked-block cs-grid-more-masked"
-                                            data-jpg-filename="personal_blanco_s-violeta.jpg">
-                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
-                                                data-delay="3000">
-                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_iso_blanco.svg"
-                                                    alt="Logo Personal">
-                                            </div>
-                                            <a data-fancybox data-src="#modal-download" href="javascript:;"
-                                                class="cs-masked-content at-bottom-right">
-                                                <span class="cs-square-button is-secondary">
-                                                    <span class="cs-icon cs-icon-comustock"></span>
-                                                </span>
-                                            </a>
-                                        </div>
-
-                                        <div class="cs-masked-block cs-grid-more-masked">
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
                                             <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgray"
                                                 data-delay="3000">
                                                 <img src="../content/identidad/marcas/personal/logos/svg/personal_iso.svg"
-                                                    alt="Logo Personal">
+                                                    alt="Personal">
                                             </div>
                                             <a data-fancybox data-src="#modal-download" href="javascript:;"
                                                 class="cs-masked-content at-bottom-right">
@@ -419,11 +408,25 @@
                                             </a>
                                         </div>
 
-                                        <div class="cs-masked-block cs-grid-more-masked">
+
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
+                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
+                                                data-delay="3000">
+                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_negro.svg"
+                                                    alt="Personal">
+                                            </div>
+                                            <a data-fancybox data-src="#modal-download" href="javascript:;"
+                                                class="cs-masked-content at-bottom-right">
+                                                <span class="cs-square-button is-secondary">
+                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
                                             <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
                                                 data-delay="3000">
                                                 <img src="../content/identidad/marcas/personal/logos/svg/personal_iso_negro.svg"
-                                                    alt="Logo Personal">
+                                                    alt="Personal">
                                             </div>
                                             <a data-fancybox data-src="#modal-download" href="javascript:;"
                                                 class="cs-masked-content at-bottom-right">
@@ -433,12 +436,24 @@
                                             </a>
                                         </div>
 
-                                        <div class="cs-masked-block cs-grid-more-masked"
-                                            data-jpg-filename="personal_blanco_s-negro.jpg">
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
+                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
+                                                data-delay="3000">
+                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
+                                                    alt="Personal">
+                                            </div>
+                                            <a data-fancybox data-src="#modal-download" href="javascript:;"
+                                                class="cs-masked-content at-bottom-right">
+                                                <span class="cs-square-button is-secondary">
+                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
                                             <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
                                                 data-delay="3000">
                                                 <img src="../content/identidad/marcas/personal/logos/svg/personal_iso_blanco.svg"
-                                                    alt="Logo Personal">
+                                                    alt="Personal">
                                             </div>
                                             <a data-fancybox data-src="#modal-download" href="javascript:;"
                                                 class="cs-masked-content at-bottom-right">
@@ -453,15 +468,19 @@
 
                                 <div class="stg-col-1">
                                     <div class="sticky-div">
-                                        <a href="" class="bench-logo iso_personal" data-tooltip="Logos de Personal"></a>
-                                        <a href="" class="bench-logo iso_flow" data-tooltip="Logos de Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay" data-tooltip="Logos de Personal Pay"></a>
+                                        <a href="../telecom/#logos" class="bench-logo iso_telecom"
+                                            data-tooltip="Logos de Telecom"></a>
+                                        <a href="../flow/#logos" class="bench-logo iso_flow"
+                                            data-tooltip="Logos de Flow"></a>
+                                        <a href="../personalPay/#logos" class="bench-logo iso_ppay"
+                                            data-tooltip="Logos de Personal Pay"></a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </section>
+
 
                     <!-- Convivencia -->
                     <section id="convivencia" class="brand-section">
@@ -478,11 +497,10 @@
                                         data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
                                         data-unload="fade-up">
 
-                                        <div class="cs-masked-block cs-grid-more-masked"
-                                            data-jpg-filename="personal_blanco_s-violeta.jpg">
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
                                             <div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-white"
                                                 data-delay="3000">
-                                                <img src="../content/identidad/convivencia/personal-personal-flow/svg/personal-personal-flow.svg"
+                                                <img src="../content/identidad/convivencia/telecom-personal-flow/svg/telecom-personal-flow.svg"
                                                     alt="Convivencia Telecom Personal Flow">
                                             </div>
                                             <a data-fancybox data-src="#modal-download" href="javascript:;"
@@ -493,11 +511,10 @@
                                             </a>
                                         </div>
 
-                                        <div class="cs-masked-block cs-grid-more-masked"
-                                            data-jpg-filename="personal_blanco_s-violeta.jpg">
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
                                             <div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-black"
                                                 data-delay="3000">
-                                                <img src="../content/identidad/convivencia/personal-personal-flow/svg/personal-personal-flow_blanco.svg"
+                                                <img src="../content/identidad/convivencia/telecom-personal-flow/svg/telecom-personal-flow_blanco.svg"
                                                     alt="Convivencia Telecom Personal Flow">
                                             </div>
                                             <a data-fancybox data-src="#modal-download" href="javascript:;"
@@ -508,10 +525,10 @@
                                             </a>
                                         </div>
 
-                                        <div class="cs-masked-block cs-grid-more-masked">
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
                                             <div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-white"
                                                 data-delay="3000">
-                                                <img src="../content/identidad/convivencia/personal-personal/svg/personal-personal.svg"
+                                                <img src="../content/identidad/convivencia/telecom-personal/svg/telecom-personal.svg"
                                                     alt="Convivencia Telecom Personal">
                                             </div>
                                             <a data-fancybox data-src="#modal-download" href="javascript:;"
@@ -522,10 +539,10 @@
                                             </a>
                                         </div>
 
-                                        <div class="cs-masked-block cs-grid-more-masked">
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
                                             <div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-black"
                                                 data-delay="3000">
-                                                <img src="../content/identidad/convivencia/personal-personal/svg/personal-personal_blanco.svg"
+                                                <img src="../content/identidad/convivencia/telecom-personal/svg/telecom-personal_blanco.svg"
                                                     alt="Convivencia Telecom Personal">
                                             </div>
                                             <a data-fancybox data-src="#modal-download" href="javascript:;"
@@ -536,36 +553,7 @@
                                             </a>
                                         </div>
 
-                                        <div class="cs-masked-block cs-grid-more-masked">
-                                            <div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-white"
-                                                data-delay="3000">
-                                                <img src="../content/identidad/convivencia/personal-flow/svg/personal-flow.svg"
-                                                    alt="Convivencia Telecom Flow">
-                                            </div>
-                                            <a data-fancybox data-src="#modal-download" href="javascript:;"
-                                                class="cs-masked-content at-bottom-right">
-                                                <span class="cs-square-button is-secondary">
-                                                    <span class="cs-icon cs-icon-comustock"></span>
-                                                </span>
-                                            </a>
-                                        </div>
-
-                                        <div class="cs-masked-block cs-grid-more-masked">
-                                            <div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-black"
-                                                data-delay="3000">
-                                                <img src="../content/identidad/convivencia/personal-flow/svg/personal-flow_blanco.svg"
-                                                    alt="Convivencia Telecom Flow">
-                                            </div>
-                                            <a data-fancybox data-src="#modal-download" href="javascript:;"
-                                                class="cs-masked-content at-bottom-right">
-                                                <span class="cs-square-button is-secondary">
-                                                    <span class="cs-icon cs-icon-comustock"></span>
-                                                </span>
-                                            </a>
-                                        </div>
-
-                                        <div class="cs-masked-block cs-grid-more-masked"
-                                            data-jpg-filename="personal_blanco_s-negro.jpg">
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
                                             <div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-white"
                                                 data-delay="3000">
                                                 <img src="../content/identidad/convivencia/personal-flow/svg/personal-flow.svg"
@@ -579,8 +567,7 @@
                                             </a>
                                         </div>
 
-                                        <div class="cs-masked-block cs-grid-more-masked"
-                                            data-jpg-filename="personal_blanco_s-negro.jpg">
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial">
                                             <div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-black"
                                                 data-delay="3000">
                                                 <img src="../content/identidad/convivencia/personal-flow/svg/personal-flow_blanco.svg"
@@ -599,10 +586,11 @@
 
                                 <div class="stg-col-1">
                                     <div class="sticky-div">
-                                        <a href="" class="bench-logo iso_personal"
-                                            data-tooltip="Convivencia en Personal"></a>
-                                        <a href="" class="bench-logo iso_flow" data-tooltip="Convivencia en Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay"
+                                        <a href="../telecom/#convivencia" class="bench-logo iso_telecom"
+                                            data-tooltip="Convivencia en Telecom"></a>
+                                        <a href="../flow/#convivencia" class="bench-logo iso_flow"
+                                            data-tooltip="Convivencia en Flow"></a>
+                                        <a href="../personalPay/#convivencia" class="bench-logo iso_ppay"
                                             data-tooltip="Convivencia en Personal Pay"></a>
                                     </div>
                                 </div>
@@ -610,6 +598,7 @@
                             </div>
                         </div>
                     </section>
+
 
                     <!-- Tamaños -->
                     <section id="tamanos" class="brand-section">
@@ -622,7 +611,7 @@
                                         data-delay="100">
                                         Como parámetro de resguardo se toma la letra O, signo geométrico que rige la
                                         anatomía del logo y se repite en todos los identificadores de la familia
-                                        personal.
+                                        Telecom.
                                     </p>
                                     <div class="cs-grid-2cols" data-stagger-appear="zoom-in" data-stagger-delay="100"
                                         data-stagger-unload="zoom-out">
@@ -647,10 +636,11 @@
 
                                 <div class="stg-col-1">
                                     <div class="sticky-div">
-                                        <a href="" class="bench-logo iso_personal"
-                                            data-tooltip="Tamaños en Personal"></a>
-                                        <a href="" class="bench-logo iso_flow" data-tooltip="Tamaños en Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay"
+                                        <a href="../telecom/#tamanos" class="bench-logo iso_telecom"
+                                            data-tooltip="Tamaños en Telecom"></a>
+                                        <a href="../flow/#tamanos" class="bench-logo iso_flow"
+                                            data-tooltip="Tamaños en Flow"></a>
+                                        <a href="../personalPay/#tamanos" class="bench-logo iso_ppay"
                                             data-tooltip="Tamaños en Personal Pay"></a>
                                     </div>
                                 </div>
@@ -659,9 +649,10 @@
                         </div>
                     </section>
 
+
                     <!-- Usos -->
                     <section id="usos" class="brand-section divider-bottom">
-                        <div class="section-content">
+                        <div class="section-content usos">
                             <div class="stg-row cs-section-title">
 
                                 <div class="stg-col-11">
@@ -793,9 +784,12 @@
 
                                 <div class="stg-col-1">
                                     <div class="sticky-div">
-                                        <a href="" class="bench-logo iso_personal" data-tooltip="Usos en Personal"></a>
-                                        <a href="" class="bench-logo iso_flow" data-tooltip="Usos en Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay" data-tooltip="Usos en Personal Pay"></a>
+                                        <a href="../telecom/#usos" class="bench-logo iso_telecom"
+                                            data-tooltip="Usos en Telecom"></a>
+                                        <a href="../flow/#usos" class="bench-logo iso_flow"
+                                            data-tooltip="Usos en Flow"></a>
+                                        <a href="../personalPay/#usos" class="bench-logo iso_ppay"
+                                            data-tooltip="Usos en Personal Pay"></a>
                                     </div>
                                 </div>
 
@@ -803,9 +797,10 @@
                         </div>
                     </section>
 
+
                     <!-- Paleta colores -->
                     <section id="paleta" class="brand-section">
-                        <div class="section-content">
+                        <div class="section-content paleta">
                             <div class="stg-row cs-section-title">
 
                                 <div class="stg-col-11">
@@ -820,12 +815,12 @@
                                                     <div class="cs-block bg-personal"></div>
                                                 </div>
                                                 <div class="info">
-                                                    <p class="name">Violeta Telecom</p>
+                                                    <p class="name">Cyan Personal</p>
                                                     <div class="copy" data-tooltip="Copiar">
-                                                        <p>HEX <strong>#3c00a0</strong></p>
+                                                        <p>HEX <strong>#00B7EB</strong></p>
                                                     </div>
-                                                    <p>RGB <strong>60 · 0 · 160</strong></p>
-                                                    <p>CMYK <strong>62 · 100 · 0 · 37</strong></p>
+                                                    <p>RGB <strong>0 · 183 · 235</strong></p>
+                                                    <p>CMYK <strong>90 · 5 · 5 · 5</strong></p>
                                                 </div>
                                             </div>
                                             <div class="box">
@@ -984,99 +979,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <h6 data-appear="fade-up" data-unload="fade-up">Subproductos</h6>
-                                        <div class="cs-grid-2cols stg-bottom-gap stg-top-gap-xs min"
-                                            data-stagger-appear="zoom-in" data-stagger-delay="100"
-                                            data-stagger-unload="zoom-out">
-                                            <div class="box">
-                                                <div class="color">
-                                                    <div class="cs-block bg-lightgray"></div>
-                                                </div>
-                                                <div class="info">
-                                                    <div>
-                                                        <div class="copy" data-tooltip="Copiar">
-                                                            <p>HEX <strong>#f5f5f5</strong></p>
-                                                        </div>
-                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
-                                                    </div>
-                                                    <div>
-                                                        <div class="copy" data-tooltip="Copiar">
-                                                            <p>HEX <strong>#f5f5f5</strong></p>
-                                                        </div>
-                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="box">
-                                                <div class="color">
-                                                    <div class="cs-block bg-personal-secundario-2"></div>
-                                                </div>
-                                                <div class="info">
-                                                    <div>
-                                                        <div class="copy" data-tooltip="Copiar">
-                                                            <p>HEX <strong>#f5f5f5</strong></p>
-                                                        </div>
-                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
-                                                    </div>
-                                                    <div>
-                                                        <div class="copy" data-tooltip="Copiar">
-                                                            <p>HEX <strong>#f5f5f5</strong></p>
-                                                        </div>
-                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="box">
-                                                <div class="color">
-                                                    <div class="cs-block bg-personal-secundario-3"></div>
-                                                </div>
-                                                <div class="info">
-                                                    <div>
-                                                        <div class="copy" data-tooltip="Copiar">
-                                                            <p>HEX <strong>#f5f5f5</strong></p>
-                                                        </div>
-                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
-                                                    </div>
-                                                    <div>
-                                                        <div class="copy" data-tooltip="Copiar">
-                                                            <p>HEX <strong>#f5f5f5</strong></p>
-                                                        </div>
-                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="box">
-                                                <div class="color">
-                                                    <div class="cs-block bg-personal-b2b"></div>
-                                                </div>
-                                                <div class="info">
-                                                    <div>
-                                                        <div class="copy" data-tooltip="Copiar">
-                                                            <p>HEX <strong>#f5f5f5</strong></p>
-                                                        </div>
-                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
-                                                    </div>
-                                                    <div>
-                                                        <div class="copy" data-tooltip="Copiar">
-                                                            <p>HEX <strong>#f5f5f5</strong></p>
-                                                        </div>
-                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                 </div>
 
                                 <div class="stg-col-1">
                                     <div class="sticky-div">
-                                        <a href="" class="bench-logo iso_personal"
-                                            data-tooltip="Paleta cromática de Personal"></a>
-                                        <a href="" class="bench-logo iso_flow"
+                                        <a href="../telecom/#paleta" class="bench-logo iso_telecom"
+                                            data-tooltip="Paleta cromática de Telecom"></a>
+                                        <a href="../flow/#paleta" class="bench-logo iso_flow"
                                             data-tooltip="Paleta cromática de Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay"
+                                        <a href="../personalPay/#paleta" class="bench-logo iso_ppay"
                                             data-tooltip="Paleta cromática de Personal Pay"></a>
                                     </div>
                                 </div>
@@ -1085,9 +997,10 @@
                         </div>
                     </section>
 
+
                     <!-- Aplicaciones -->
                     <section id="aplicaciones" class="brand-section divider-bottom">
-                        <div class="section-content">
+                        <div class="section-content aplicaciones">
                             <div class="stg-row cs-section-title">
 
                                 <div class="stg-col-11">
@@ -1158,11 +1071,11 @@
 
                                 <div class="stg-col-1">
                                     <div class="sticky-div">
-                                        <a href="" class="bench-logo iso_personal"
-                                            data-tooltip="Aplicaciones sobre colores en Personal"></a>
-                                        <a href="" class="bench-logo iso_flow"
+                                        <a href="../telecom/#aplicaciones" class="bench-logo iso_telecom"
+                                            data-tooltip="Aplicaciones sobre colores en Telecom"></a>
+                                        <a href="../flow/#aplicaciones" class="bench-logo iso_flow"
                                             data-tooltip="Aplicaciones sobre colores en Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay"
+                                        <a href="../personalPay/#aplicaciones" class="bench-logo iso_ppay"
                                             data-tooltip="Aplicaciones sobre colores en Personal Pay"></a>
                                     </div>
                                 </div>
@@ -1171,10 +1084,60 @@
                         </div>
                     </section>
 
+
+                    <!-- Manual de Marca -->
+                    <section id="manual-de-marca" class="brand-section divider-bottom">
+                        <div class="section-content">
+                            <div class="stg-row cs-section-title">
+
+                                <div class="stg-col-11">
+                                    <h2 data-appear="fade-up" data-unload="fade-up">Manual de Marca</h2>
+                                    <p class="cs-large-text" data-appear="fade-up" data-unload="fade-up"
+                                        data-delay="100">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    </p>
+                                    <div class="cs-grid-2cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
+                                        data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
+                                        data-unload="fade-up">
+
+                                        <div class="cs-masked-block cs-grid-more-masked" data-file-group="pdf">
+                                            <div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
+                                                data-delay="3000">
+                                                <img src="../content/identidad/marcas/personal/vid/Personal_VID.png"
+                                                    alt="Manual de Marca Personal">
+                                            </div>
+                                            <a data-fancybox data-src="#modal-download" href="javascript:;"
+                                                class="cs-masked-content at-bottom-right">
+                                                <span class="cs-square-button is-secondary">
+                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="stg-col-1">
+                                    <div class="sticky-div">
+                                        <a href="../telecom/#manual-de-marca" class="bench-logo iso_telecom"
+                                            data-tooltip="Manual de Marca de Telecom"></a>
+                                        <a href="../flow/#manual-de-marca" class="bench-logo iso_flow"
+                                            data-tooltip="Manual de Marca de Flow"></a>
+                                        <a href="../personalPay/#manual-de-marca" class="bench-logo iso_ppay"
+                                            data-tooltip="Manual de Marca de Personal Pay"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
                     <!-- Productos -->
                     <section id="productos" class="brand-section divider-bottom">
                         <div class="section-content">
                             <div class="stg-row cs-section-title">
+
                                 <div class="stg-col-11">
                                     <h2>Productos</h2>
 
@@ -1183,22 +1146,22 @@
                                         <div class="cs-toggles-item cs-block" data-appear="fade-up"
                                             data-unload="fade-up">
                                             <div class="cs-toggles-item--title">
-                                                <img src="../content/identidad/marcas/personal/smartHome/logos/svg/smartHome_blanco.svg"
-                                                    alt="">
+                                                <img src="../content/identidad/marcas/personal/XXX/logoClaim/svg/personal_empresas_blanco.svg"
+                                                    alt="Telecom Empresas">
                                             </div>
                                             <div class="cs-toggles-item--content">
                                                 <div class="box">
-                                                    <h5 data-appear="fade-up" data-unload="fade-up">Logos</h5>
+                                                    <h5 data-appear="fade-up" data-unload="fade-up">Logo</h5>
                                                     <div class="cs-grid-4cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
                                                         data-stagger-appear="fade-up" data-delay="100"
                                                         data-stagger-delay="100" data-unload="fade-up">
 
                                                         <div class="cs-masked-block cs-grid-more-masked"
-                                                            data-jpg-filename="personal_blanco_s-violeta.jpg">
-                                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
+                                                            data-file-group="vectorial" data-jpg-filename="_fondo-azul">
+                                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-personal_empresas"
                                                                 data-delay="3000">
-                                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
-                                                                    alt="Logo Personal">
+                                                                <img src="../content/identidad/marcas/personal/XXX/logo/svg/personal_empresas_blanco.svg"
+                                                                    alt="Telecom Empresas">
                                                             </div>
                                                             <a data-fancybox data-src="#modal-download"
                                                                 href="javascript:;"
@@ -1210,11 +1173,43 @@
                                                         </div>
 
                                                         <div class="cs-masked-block cs-grid-more-masked"
-                                                            data-jpg-filename="personal_blanco_s-violeta.jpg">
-                                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
+                                                            data-file-group="vectorial">
+                                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
                                                                 data-delay="3000">
-                                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
-                                                                    alt="Logo Personal">
+                                                                <img src="../content/identidad/marcas/personal/XXX/logo/svg/personal_empresas.svg"
+                                                                    alt="Telecom Empresas">
+                                                            </div>
+                                                            <a data-fancybox data-src="#modal-download"
+                                                                href="javascript:;"
+                                                                class="cs-masked-content at-bottom-right">
+                                                                <span class="cs-square-button is-secondary">
+                                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="cs-masked-block cs-grid-more-masked"
+                                                            data-file-group="vectorial">
+                                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
+                                                                data-delay="3000">
+                                                                <img src="../content/identidad/marcas/personal/XXX/logo/svg/personal_empresas_negro.svg"
+                                                                    alt="Telecom Empresas">
+                                                            </div>
+                                                            <a data-fancybox data-src="#modal-download"
+                                                                href="javascript:;"
+                                                                class="cs-masked-content at-bottom-right">
+                                                                <span class="cs-square-button is-secondary">
+                                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="cs-masked-block cs-grid-more-masked"
+                                                            data-file-group="vectorial">
+                                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
+                                                                data-delay="3000">
+                                                                <img src="../content/identidad/marcas/personal/XXX/logo/svg/personal_empresas_blanco.svg"
+                                                                    alt="Telecom Empresas">
                                                             </div>
                                                             <a data-fancybox data-src="#modal-download"
                                                                 href="javascript:;"
@@ -1229,93 +1224,397 @@
                                                 </div>
 
                                                 <div class="box">
-                                                    <h5 data-appear="fade-up" data-unload="fade-up">Manual de marca</h5>
+                                                    <h5 data-appear="fade-up" data-unload="fade-up">Logo + Claim</h5>
+                                                    <div class="cs-grid-2cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
+                                                        data-stagger-appear="fade-up" data-delay="100"
+                                                        data-stagger-delay="100" data-unload="fade-up">
+
+                                                        <div class="cs-masked-block cs-grid-more-masked"
+                                                            data-file-group="vectorial" data-jpg-filename="_fondo-azul">
+                                                            <div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-personal_empresas"
+                                                                data-delay="3000">
+                                                                <img src="../content/identidad/marcas/personal/XXX/logoClaim/svg/personal_empresas_blanco.svg"
+                                                                    alt="Telecom Empresas">
+                                                            </div>
+                                                            <a data-fancybox data-src="#modal-download"
+                                                                href="javascript:;"
+                                                                class="cs-masked-content at-bottom-right">
+                                                                <span class="cs-square-button is-secondary">
+                                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="cs-masked-block cs-grid-more-masked"
+                                                            data-file-group="vectorial"
+                                                            data-jpg-filename="_fondo-violeta">
+                                                            <div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
+                                                                data-delay="3000">
+                                                                <img src="../content/identidad/marcas/personal/XXX/logoClaim/svg/personal_empresas_blanco.svg"
+                                                                    alt="Telecom Empresas">
+                                                            </div>
+                                                            <a data-fancybox data-src="#modal-download"
+                                                                href="javascript:;"
+                                                                class="cs-masked-content at-bottom-right">
+                                                                <span class="cs-square-button is-secondary">
+                                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="cs-masked-block cs-grid-more-masked"
+                                                            data-file-group="vectorial">
+                                                            <div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-white"
+                                                                data-delay="3000">
+                                                                <img src="../content/identidad/marcas/personal/XXX/logoClaim/svg/personal_empresas.svg"
+                                                                    alt="Telecom Empresas">
+                                                            </div>
+                                                            <a data-fancybox data-src="#modal-download"
+                                                                href="javascript:;"
+                                                                class="cs-masked-content at-bottom-right">
+                                                                <span class="cs-square-button is-secondary">
+                                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="cs-masked-block cs-grid-more-masked"
+                                                            data-file-group="vectorial">
+                                                            <div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-white"
+                                                                data-delay="3000">
+                                                                <img src="../content/identidad/marcas/personal/XXX/logoClaim/svg/personal_empresas_violeta.svg"
+                                                                    alt="Telecom Empresas">
+                                                            </div>
+                                                            <a data-fancybox data-src="#modal-download"
+                                                                href="javascript:;"
+                                                                class="cs-masked-content at-bottom-right">
+                                                                <span class="cs-square-button is-secondary">
+                                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="cs-masked-block cs-grid-more-masked"
+                                                            data-file-group="vectorial">
+                                                            <div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-white"
+                                                                data-delay="3000">
+                                                                <img src="../content/identidad/marcas/personal/XXX/logoClaim/svg/personal_empresas_negro.svg"
+                                                                    alt="Telecom Empresas">
+                                                            </div>
+                                                            <a data-fancybox data-src="#modal-download"
+                                                                href="javascript:;"
+                                                                class="cs-masked-content at-bottom-right">
+                                                                <span class="cs-square-button is-secondary">
+                                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="cs-masked-block cs-grid-more-masked"
+                                                            data-file-group="vectorial">
+                                                            <div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-black"
+                                                                data-delay="3000">
+                                                                <img src="../content/identidad/marcas/personal/XXX/logoClaim/svg/personal_empresas_blanco.svg"
+                                                                    alt="Telecom Empresas">
+                                                            </div>
+                                                            <a data-fancybox data-src="#modal-download"
+                                                                href="javascript:;"
+                                                                class="cs-masked-content at-bottom-right">
+                                                                <span class="cs-square-button is-secondary">
+                                                                    <span class="cs-icon cs-icon-comustock"></span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="box paleta">
+                                                    <h5 data-appear="fade-up" data-unload="fade-up">Paleta crómática
+                                                    </h5>
+
+                                                    <div>
+                                                        <h6 data-appear="fade-up" data-unload="fade-up">Paleta principal
+                                                        </h6>
+                                                        <div class="cs-grid-3cols stg-bottom-gap-l stg-top-gap-xs"
+                                                            data-stagger-appear="zoom-in" data-stagger-delay="100"
+                                                            data-stagger-unload="zoom-out">
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div class="cs-block bg-personal-empresas"></div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div class="copy" data-tooltip="Copiar">
+                                                                        <p>HEX <strong>#190646</strong></p>
+                                                                    </div>
+                                                                    <p>RGB <strong>25 · 6 · 70</strong></p>
+                                                                    <p>CMYK <strong>64 · 91 · 0 · 73</strong></p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div
+                                                                        class="cs-block bg-personal-empresas-principal-2">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div class="copy" data-tooltip="Copiar">
+                                                                        <p>HEX <strong>#322D6E</strong></p>
+                                                                    </div>
+                                                                    <p>RGB <strong>50 · 45 · 110</strong></p>
+                                                                    <p>CMYK <strong>55 · 59 · 0 · 57</strong></p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div class="cs-block bg-personal"></div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <p class="name">Violeta Telecom</p>
+                                                                    <div class="copy" data-tooltip="Copiar">
+                                                                        <p>HEX <strong>#3c00a0</strong></p>
+                                                                    </div>
+                                                                    <p>RGB <strong>61 · 0 · 169</strong></p>
+                                                                    <p>CMYK <strong>64 · 100 · 0 · 34</strong></p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div class="cs-block bg-lightgray"></div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div class="copy" data-tooltip="Copiar">
+                                                                        <p>HEX <strong>#f5f5f5</strong></p>
+                                                                    </div>
+                                                                    <p>RGB <strong>245 · 245 · 245</strong></p>
+                                                                    <p>CMYK <strong>0 · 0 · 0 · 4</strong></p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div class="cs-block bg-personal-empresas-acento">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <p class="name">Color Acento</p>
+                                                                    <div class="copy" data-tooltip="Copiar">
+                                                                        <p>HEX <strong>#69D8D0</strong></p>
+                                                                    </div>
+                                                                    <p>RGB <strong>105 · 216 · 208</strong></p>
+                                                                    <p>CMYK <strong>51 · 0 · 4 · 15</strong></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <h6 data-appear="fade-up" data-unload="fade-up">Paleta acentos
+                                                            secundarios
+                                                        </h6>
+                                                        <div class="cs-grid-3cols stg-bottom-gap stg-top-gap-xs min"
+                                                            data-stagger-appear="zoom-in" data-stagger-delay="100"
+                                                            data-stagger-unload="zoom-out">
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div
+                                                                        class="cs-block bg-personal-empresas-acentos-secundarios-1">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div class="copy" data-tooltip="Copiar">
+                                                                        <p>HEX <strong>#af8cff</strong></p>
+                                                                    </div>
+                                                                    <p>RGB <strong>175 · 140 · 255</strong></p>
+                                                                    <p>CMYK <strong>31 · 45 · 0 · 0</strong></p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div
+                                                                        class="cs-block bg-personal-empresas-acentos-secundarios-2">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div class="copy" data-tooltip="Copiar">
+                                                                        <p>HEX <strong>#e6b4cf</strong></p>
+                                                                    </div>
+                                                                    <p>RGB <strong>230 · 180 · 207</strong></p>
+                                                                    <p>CMYK <strong>0 · 22 · 10 · 10</strong></p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div
+                                                                        class="cs-block bg-personal-empresas-acentos-secundarios-3">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div class="copy" data-tooltip="Copiar">
+                                                                        <p>HEX <strong>#96cdfa</strong></p>
+                                                                    </div>
+                                                                    <p>RGB <strong>150 · 205 · 250</strong></p>
+                                                                    <p>CMYK <strong>40 · 18 · 0 · 2</strong></p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div
+                                                                        class="cs-block bg-personal-empresas-acentos-secundarios-4">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div class="copy" data-tooltip="Copiar">
+                                                                        <p>HEX <strong>#6e78fa</strong></p>
+                                                                    </div>
+                                                                    <p>RGB <strong>110 · 120 · 250</strong></p>
+                                                                    <p>CMYK <strong>56 · 52 · 0 · 2</strong></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <h6 data-appear="fade-up" data-unload="fade-up">Paleta Gradients
+                                                        </h6>
+                                                        <div class="cs-grid-2cols stg-bottom-gap stg-top-gap-xs min"
+                                                            data-stagger-appear="zoom-in" data-stagger-delay="100"
+                                                            data-stagger-unload="zoom-out">
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div
+                                                                        class="cs-block bg-personal-empresas-gradients-1">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div>
+                                                                        <div class="copy" data-tooltip="Copiar">
+                                                                            <p>HEX <strong>#af8cff</strong></p>
+                                                                        </div>
+                                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="copy" data-tooltip="Copiar">
+                                                                            <p>HEX <strong>#190646</strong></p>
+                                                                        </div>
+                                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div
+                                                                        class="cs-block bg-personal-empresas-gradients-2">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div>
+                                                                        <div class="copy" data-tooltip="Copiar">
+                                                                            <p>HEX <strong>#6e78fa</strong></p>
+                                                                        </div>
+                                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="copy" data-tooltip="Copiar">
+                                                                            <p>HEX <strong>#190646</strong></p>
+                                                                        </div>
+                                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div
+                                                                        class="cs-block bg-personal-empresas-gradients-3">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div>
+                                                                        <div class="copy" data-tooltip="Copiar">
+                                                                            <p>HEX <strong>#69d8d0</strong></p>
+                                                                        </div>
+                                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="copy" data-tooltip="Copiar">
+                                                                            <p>HEX <strong>#00b7eb</strong></p>
+                                                                        </div>
+                                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="color">
+                                                                    <div
+                                                                        class="cs-block bg-personal-empresas-gradients-4">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info">
+                                                                    <div>
+                                                                        <div class="copy" data-tooltip="Copiar">
+                                                                            <p>HEX <strong>#6e78fa</strong></p>
+                                                                        </div>
+                                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="copy" data-tooltip="Copiar">
+                                                                            <p>HEX <strong>#e6b4cf</strong></p>
+                                                                        </div>
+                                                                        <p>RGB <strong>245 · 245 · 245</strong></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="aplicaciones">
+                                                        <h6 data-appear="fade-up" data-unload="fade-up">Aplicaciones
+                                                        </h6>
+                                                        <div class="cs-grid-3cols cs-tp-grid-3cols cs-m-grid-1cols stg-bottom-gap-m"
+                                                            data-stagger-appear="fade-up" data-delay="100"
+                                                            data-stagger-delay="100" data-unload="fade-up">
+                                                            <div class="box">
+                                                                <div class="cs-block stg-aspect-square bg-personal">
+                                                                    <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
+                                                                        alt="">
+                                                                </div>
+                                                                <p>En versión negativa (blanco).</p>
+                                                            </div>
+
+                                                            <div class="box">
+                                                                <div
+                                                                    class="cs-block stg-aspect-square bg-personal-empresas-acento">
+                                                                    <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
+                                                                        alt="">
+                                                                </div>
+                                                                <p>Sobre colores de la paleta institucional.
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="box">
+                                                                <div
+                                                                    class="cs-block stg-aspect-square bg-personal-empresas-principal-2">
+                                                                    <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
+                                                                        alt="">
+                                                                </div>
+                                                                <p>Sobre colores de la paleta institucional.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="box">
+                                                    <h5 data-appear="fade-up" data-unload="fade-up">Manual de Marca</h5>
                                                     <div class="cs-grid-3cols cs-tp-grid-3cols cs-m-grid-2cols stg-m-small-gap download-square"
                                                         data-stagger-appear="fade-up" data-delay="100"
                                                         data-stagger-delay="100" data-unload="fade-up">
 
                                                         <div class="cs-masked-block cs-grid-more-masked"
-                                                            data-jpg-filename="personal_blanco_s-violeta.jpg">
+                                                            data-file-group="pdf">
                                                             <div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
                                                                 data-delay="3000">
-                                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
-                                                                    alt="Logo Personal">
-                                                            </div>
-                                                            <a data-fancybox data-src="#modal-download"
-                                                                href="javascript:;"
-                                                                class="cs-masked-content at-bottom-right">
-                                                                <span class="cs-square-button is-secondary">
-                                                                    <span class="cs-icon cs-icon-comustock"></span>
-                                                                </span>
-                                                            </a>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="cs-toggles-item cs-block" data-appear="fade-up"
-                                            data-unload="fade-up">
-                                            <div class="cs-toggles-item--title">
-                                                <img src="../content/identidad/marcas/personal/tiendaPersonal/logos/svg/tiendaPersonal_blanco.svg"
-                                                    alt="">
-                                            </div>
-                                            <div class="cs-toggles-item--content">
-                                                <div class="box">
-                                                    <h5 data-appear="fade-up" data-unload="fade-up">Logos</h5>
-                                                    <div class="cs-grid-4cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
-                                                        data-stagger-appear="fade-up" data-delay="100"
-                                                        data-stagger-delay="100" data-unload="fade-up">
-
-                                                        <div class="cs-masked-block cs-grid-more-masked"
-                                                            data-jpg-filename="personal_blanco_s-violeta.jpg">
-                                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
-                                                                data-delay="3000">
-                                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
-                                                                    alt="Logo Personal">
-                                                            </div>
-                                                            <a data-fancybox data-src="#modal-download"
-                                                                href="javascript:;"
-                                                                class="cs-masked-content at-bottom-right">
-                                                                <span class="cs-square-button is-secondary">
-                                                                    <span class="cs-icon cs-icon-comustock"></span>
-                                                                </span>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="cs-masked-block cs-grid-more-masked"
-                                                            data-jpg-filename="personal_blanco_s-violeta.jpg">
-                                                            <div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
-                                                                data-delay="3000">
-                                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
-                                                                    alt="Logo Personal">
-                                                            </div>
-                                                            <a data-fancybox data-src="#modal-download"
-                                                                href="javascript:;"
-                                                                class="cs-masked-content at-bottom-right">
-                                                                <span class="cs-square-button is-secondary">
-                                                                    <span class="cs-icon cs-icon-comustock"></span>
-                                                                </span>
-                                                            </a>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="box">
-                                                    <h5 data-appear="fade-up" data-unload="fade-up">Manual de marca</h5>
-                                                    <div class="cs-grid-3cols cs-tp-grid-3cols cs-m-grid-2cols stg-m-small-gap download-square"
-                                                        data-stagger-appear="fade-up" data-delay="100"
-                                                        data-stagger-delay="100" data-unload="fade-up">
-
-                                                        <div class="cs-masked-block cs-grid-more-masked"
-                                                            data-jpg-filename="personal_blanco_s-violeta.jpg">
-                                                            <div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
-                                                                data-delay="3000">
-                                                                <img src="../content/identidad/marcas/personal/logos/svg/personal_blanco.svg"
-                                                                    alt="Logo Personal">
+                                                                <img src="../content/identidad/marcas/personal/XXX/vid/PersonalEmpresas_VID.png"
+                                                                    alt="Manual de Marca Personal">
                                                             </div>
                                                             <a data-fancybox data-src="#modal-download"
                                                                 href="javascript:;"
@@ -1335,23 +1634,24 @@
                                     </div>
 
                                 </div>
+
                                 <div class="stg-col-1">
                                     <div class="sticky-div">
-                                        <a href="" class="bench-logo iso_personal"
-                                            data-tooltip="Productos en Personal"></a>
-                                        <a href="" class="bench-logo iso_flow" data-tooltip="Productos en Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay"
-                                            data-tooltip="Productos en Personal Pay"></a>
+                                        <a href="../telecom/#productos" class="bench-logo iso_telecom"
+                                            data-tooltip="Productos de Telecom"></a>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </section>
+
 
                     <!-- Redes -->
                     <section id="redes" class="brand-section">
                         <div class="section-content">
                             <div class="stg-row cs-section-title">
+
                                 <div class="stg-col-11">
                                     <h2>Redes</h2>
 
@@ -1361,7 +1661,7 @@
 
                                         <div class="cs-widget">
                                             <div class="social">
-                                                <img src="../assets/img/social/x.svg" alt="">
+                                                <span class="cs-icon bg-brand social-icon-x"></span>
                                                 <h6>X</h6>
                                             </div>
                                             <div class="cs-menu-widget">
@@ -1374,7 +1674,7 @@
                                         </div>
                                         <div class="cs-widget">
                                             <div class="social">
-                                                <img src="../assets/img/social/instagram.svg" alt="">
+                                                <span class="cs-icon bg-brand social-icon-instagram"></span>
                                                 <h6>Instagram</h6>
                                             </div>
                                             <div class="cs-menu-widget">
@@ -1389,7 +1689,7 @@
                                         </div>
                                         <div class="cs-widget">
                                             <div class="social">
-                                                <img src="../assets/img/social/facebook.svg" alt="">
+                                                <span class="cs-icon bg-brand social-icon-facebook"></span>
                                                 <h6>Facebook</h6>
                                             </div>
                                             <div class="cs-menu-widget">
@@ -1403,7 +1703,7 @@
                                         </div>
                                         <div class="cs-widget">
                                             <div class="social">
-                                                <img src="../assets/img/social/youtube.svg" alt="">
+                                                <span class="cs-icon bg-brand social-icon-youtube"></span>
                                                 <h6>YouTube</h6>
                                             </div>
                                             <div class="cs-menu-widget">
@@ -1419,13 +1719,18 @@
                                     </div>
 
                                 </div>
+
                                 <div class="stg-col-1">
                                     <div class="sticky-div">
-                                        <a href="" class="bench-logo iso_personal" data-tooltip="Redes de Personal"></a>
-                                        <a href="" class="bench-logo iso_flow" data-tooltip="Redes de Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay" data-tooltip="Redes de Personal Pay"></a>
+                                        <a href="../telecom/#redes" class="bench-logo iso_telecom"
+                                            data-tooltip="Redes de Telecom"></a>
+                                        <a href="../flow/#redes" class="bench-logo iso_flow"
+                                            data-tooltip="Redes de Flow"></a>
+                                        <a href="../personalPay/#redes" class="bench-logo iso_ppay"
+                                            data-tooltip="Redes de Personal Pay"></a>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </section>
@@ -1435,6 +1740,7 @@
                     <section id="web" class="brand-section">
                         <div class="section-content">
                             <div class="stg-row cs-section-title">
+
                                 <div class="stg-col-11">
                                     <h4 data-appear="fade-up" data-unload="fade-up">Sitios web</h4>
 
@@ -1444,7 +1750,7 @@
 
                                         <div class="cs-widget">
                                             <div class="social">
-                                                <img src="../assets/img/social/web.svg" alt="">
+                                                <span class="cs-icon bg-brand social-icon-web"></span>
                                                 <h6>Argentina</h6>
                                             </div>
                                             <div class="cs-menu-widget">
@@ -1469,7 +1775,7 @@
                                         </div>
                                         <div class="cs-widget">
                                             <div class="social">
-                                                <img src="../assets/img/social/web.svg" alt="">
+                                                <span class="cs-icon bg-brand social-icon-web"></span>
                                                 <h6>Paraguay</h6>
                                             </div>
                                             <div class="cs-menu-widget">
@@ -1485,11 +1791,15 @@
                                     </div>
 
                                 </div>
+
                                 <div class="stg-col-1">
                                     <div class="sticky-div">
-                                        <a href="" class="bench-logo iso_personal" data-tooltip="Redes de Personal"></a>
-                                        <a href="" class="bench-logo iso_flow" data-tooltip="Redes de Flow"></a>
-                                        <a href="" class="bench-logo iso_ppay" data-tooltip="Redes de Personal Pay"></a>
+                                        <a href="../telecom/#web" class="bench-logo iso_telecom"
+                                            data-tooltip="Sitios Web de Telecom"></a>
+                                        <a href="../flow/#web" class="bench-logo iso_flow"
+                                            data-tooltip="Sitios Web de Flow"></a>
+                                        <a href="../personalPay/#web" class="bench-logo iso_ppay"
+                                            data-tooltip="Sitios Web de Personal Pay"></a>
                                     </div>
                                 </div>
                             </div>
@@ -1508,14 +1818,10 @@
                         <a href="#usos" class="min-menu">Usos</a>
                         <a href="#paleta">Paleta cromática</a>
                         <a href="#aplicaciones" class="min-menu">Aplicaciones</a>
+                        <a href="#manual-de-marca">Manual de Marca</a>
                         <a href="#productos">Productos</a>
                         <a href="#redes">Redes</a>
                         <a href="#web" class="min-menu">Sitios web</a>
-                        <a href="../content/identidad/marcas/personal/personal_VID.pdf" target="_blank"
-                            class="cs-block manual-de-marca">
-                            <div class="iso"></div>
-                            <p>Manual<br />de Marca</p>
-                        </a>
                     </div>
                 </div>
 
@@ -1525,7 +1831,7 @@
         <footer data-appear="fade-up" data-unload="fade-down">
             <div class="cs-footer-line stg-container">
                 <div class="align-center">
-                    Telecom · 2024
+                    Telecom · 2025
                 </div>
             </div>
         </footer>
@@ -1540,6 +1846,7 @@
     <script src="../assets/js/classes.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/brands.js"></script>
+    <script src="../assets/js/toggle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="../assets/js/modal-form.js"></script>
     <script src="../assets/js/copy.js"></script>

@@ -40,7 +40,7 @@
 }
 
 #flow #tamanos [class*="stg-col-"] .cs-grid-2cols div:nth-child(2) .cs-block {
-  background-color: var(--flow);
+  background-color: black;
 }
 
 #flow #usos [class*="stg-col-"] .cs-grid-2cols div:nth-child(1) .cs-block {

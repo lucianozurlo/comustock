@@ -167,6 +167,90 @@
 .border-telecom-dark {
   border-color: var(--telecom-dark) !important;
 }
+/* Telecom Empresas */
+.color-telecom-empresas {
+  color: var(--telecom-empresas) !important;
+}
+.bg-telecom-empresas {
+  background-color: var(--telecom-empresas) !important;
+}
+.border-telecom-empresas {
+  border-color: var(--telecom-empresas) !important;
+}
+/**/
+.color-telecom-empresas-principal-2 {
+  color: var(--telecom-empresas-principal-2) !important;
+}
+.bg-telecom-empresas-principal-2 {
+  background-color: var(--telecom-empresas-principal-2) !important;
+}
+.border-telecom-empresas-principal-2 {
+  border-color: var(--telecom-empresas-principal-2) !important;
+}
+/**/
+.color-telecom-empresas-acento {
+  color: var(--telecom-empresas-acento) !important;
+}
+.bg-telecom-empresas-acento {
+  background-color: var(--telecom-empresas-acento) !important;
+}
+.border-telecom-empresas-acento {
+  border-color: var(--telecom-empresas-acento) !important;
+}
+/**/
+.color-telecom-empresas-acentos-secundarios-1 {
+  color: var(--telecom-empresas-acentos-secundarios-1) !important;
+}
+.bg-telecom-empresas-acentos-secundarios-1 {
+  background-color: var(--telecom-empresas-acentos-secundarios-1) !important;
+}
+.border-telecom-empresas-acentos-secundarios-1 {
+  border-color: var(--telecom-empresas-acentos-secundarios-1) !important;
+}
+/**/
+.color-telecom-empresas-acentos-secundarios-2 {
+  color: var(--telecom-empresas-acentos-secundarios-2) !important;
+}
+.bg-telecom-empresas-acentos-secundarios-2 {
+  background-color: var(--telecom-empresas-acentos-secundarios-2) !important;
+}
+.border-telecom-empresas-acentos-secundarios-2 {
+  border-color: var(--telecom-empresas-acentos-secundarios-2) !important;
+}
+/**/
+.color-telecom-empresas-acentos-secundarios-3 {
+  color: var(--telecom-empresas-acentos-secundarios-3) !important;
+}
+.bg-telecom-empresas-acentos-secundarios-3 {
+  background-color: var(--telecom-empresas-acentos-secundarios-3) !important;
+}
+.border-telecom-empresas-acentos-secundarios-3 {
+  border-color: var(--telecom-empresas-acentos-secundarios-3) !important;
+}
+/**/
+.color-telecom-empresas-acentos-secundarios-4 {
+  color: var(--telecom-empresas-acentos-secundarios-4) !important;
+}
+.bg-telecom-empresas-acentos-secundarios-4 {
+  background-color: var(--telecom-empresas-acentos-secundarios-4) !important;
+}
+.border-telecom-empresas-acentos-secundarios-4 {
+  border-color: var(--telecom-empresas-acentos-secundarios-4) !important;
+}
+/**/
+.bg-telecom-empresas-gradients-1 {
+  background: var(--telecom-empresas-gradients-1) !important;
+}
+.bg-telecom-empresas-gradients-2 {
+  background: var(--telecom-empresas-gradients-2) !important;
+}
+.bg-telecom-empresas-gradients-3 {
+  background: var(--telecom-empresas-gradients-3) !important;
+}
+.bg-telecom-empresas-gradients-4 {
+  background: var(--telecom-empresas-gradients-4) !important;
+}
+/**/
 
 /****** PERSONAL ******/
 .color-personal {

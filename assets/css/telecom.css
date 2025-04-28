@@ -7,6 +7,9 @@
 .border-brand {
   border-color: var(--telecom) !important;
 }
+.bg-telecom_empresas {
+  background-color: var(--telecom-empresas) !important;
+}
 
 /* SIDE MENU */
 .side-menu .manual-de-marca .iso {
