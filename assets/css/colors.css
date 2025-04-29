@@ -198,44 +198,44 @@
   border-color: var(--telecom-empresas-acento) !important;
 }
 /**/
-.color-telecom-empresas-acentos-secundarios-1 {
-  color: var(--telecom-empresas-acentos-secundarios-1) !important;
+.color-telecom-empresas-acento-secundario-1 {
+  color: var(--telecom-empresas-acento-secundario-1) !important;
 }
-.bg-telecom-empresas-acentos-secundarios-1 {
-  background-color: var(--telecom-empresas-acentos-secundarios-1) !important;
+.bg-telecom-empresas-acento-secundario-1 {
+  background-color: var(--telecom-empresas-acento-secundario-1) !important;
 }
-.border-telecom-empresas-acentos-secundarios-1 {
-  border-color: var(--telecom-empresas-acentos-secundarios-1) !important;
-}
-/**/
-.color-telecom-empresas-acentos-secundarios-2 {
-  color: var(--telecom-empresas-acentos-secundarios-2) !important;
-}
-.bg-telecom-empresas-acentos-secundarios-2 {
-  background-color: var(--telecom-empresas-acentos-secundarios-2) !important;
-}
-.border-telecom-empresas-acentos-secundarios-2 {
-  border-color: var(--telecom-empresas-acentos-secundarios-2) !important;
+.border-telecom-empresas-acento-secundario-1 {
+  border-color: var(--telecom-empresas-acento-secundario-1) !important;
 }
 /**/
-.color-telecom-empresas-acentos-secundarios-3 {
-  color: var(--telecom-empresas-acentos-secundarios-3) !important;
+.color-telecom-empresas-acento-secundario-2 {
+  color: var(--telecom-empresas-acento-secundario-2) !important;
 }
-.bg-telecom-empresas-acentos-secundarios-3 {
-  background-color: var(--telecom-empresas-acentos-secundarios-3) !important;
+.bg-telecom-empresas-acento-secundario-2 {
+  background-color: var(--telecom-empresas-acento-secundario-2) !important;
 }
-.border-telecom-empresas-acentos-secundarios-3 {
-  border-color: var(--telecom-empresas-acentos-secundarios-3) !important;
+.border-telecom-empresas-acento-secundario-2 {
+  border-color: var(--telecom-empresas-acento-secundario-2) !important;
 }
 /**/
-.color-telecom-empresas-acentos-secundarios-4 {
-  color: var(--telecom-empresas-acentos-secundarios-4) !important;
+.color-telecom-empresas-acento-secundario-3 {
+  color: var(--telecom-empresas-acento-secundario-3) !important;
 }
-.bg-telecom-empresas-acentos-secundarios-4 {
-  background-color: var(--telecom-empresas-acentos-secundarios-4) !important;
+.bg-telecom-empresas-acento-secundario-3 {
+  background-color: var(--telecom-empresas-acento-secundario-3) !important;
 }
-.border-telecom-empresas-acentos-secundarios-4 {
-  border-color: var(--telecom-empresas-acentos-secundarios-4) !important;
+.border-telecom-empresas-acento-secundario-3 {
+  border-color: var(--telecom-empresas-acento-secundario-3) !important;
+}
+/**/
+.color-telecom-empresas-acento-secundario-4 {
+  color: var(--telecom-empresas-acento-secundario-4) !important;
+}
+.bg-telecom-empresas-acento-secundario-4 {
+  background-color: var(--telecom-empresas-acento-secundario-4) !important;
+}
+.border-telecom-empresas-acento-secundario-4 {
+  border-color: var(--telecom-empresas-acento-secundario-4) !important;
 }
 /**/
 .bg-telecom-empresas-gradients-1 {
@@ -504,54 +504,64 @@
   border-color: var(--personal-acento) !important;
 }
 /**/
-.color-personal-subproductos-1 {
-  color: var(--personal-subproductos-1) !important;
+.color-personal-subproducto-1 {
+  color: var(--personal-subproducto-1) !important;
 }
-.bg-personal-subproductos-1 {
-  background-color: var(--personal-subproductos-1) !important;
+.bg-personal-subproducto-1 {
+  background: var(--personal-subproducto-1) !important;
 }
-.border-personal-subproductos-1 {
-  border-color: var(--personal-subproductos-1) !important;
-}
-/**/
-.color-personal-subproductos-2 {
-  color: var(--personal-subproductos-2) !important;
-}
-.bg-personal-subproductos-2 {
-  background-color: var(--personal-subproductos-2) !important;
-}
-.border-personal-subproductos-2 {
-  border-color: var(--personal-subproductos-2) !important;
+.border-personal-subproducto-1 {
+  border-color: var(--personal-subproducto-1) !important;
 }
 /**/
-.color-personal-subproductos-3 {
-  color: var(--personal-subproductos-3) !important;
+.color-personal-subproducto-2 {
+  color: var(--personal-subproducto-2) !important;
 }
-.bg-personal-subproductos-3 {
-  background-color: var(--personal-subproductos-3) !important;
+.bg-personal-subproducto-2 {
+  background: var(--personal-subproducto-2) !important;
 }
-.border-personal-subproductos-3 {
-  border-color: var(--personal-subproductos-3) !important;
-}
-/**/
-.color-personal-subproductos-5 {
-  color: var(--personal-subproductos-5) !important;
-}
-.bg-personal-subproductos-5 {
-  background-color: var(--personal-subproductos-5) !important;
-}
-.border-personal-subproductos-5 {
-  border-color: var(--personal-subproductos-5) !important;
+.border-personal-subproducto-2 {
+  border-color: var(--personal-subproducto-2) !important;
 }
 /**/
-.color-personal-subproductos-6 {
-  color: var(--personal-subproductos-6) !important;
+.color-personal-subproducto-3 {
+  color: var(--personal-subproducto-3) !important;
 }
-.bg-personal-subproductos-6 {
-  background-color: var(--personal-subproductos-6) !important;
+.bg-personal-subproducto-3 {
+  background: var(--personal-subproducto-3) !important;
 }
-.border-personal-subproductos-6 {
-  border-color: var(--personal-subproductos-6) !important;
+.border-personal-subproducto-3 {
+  border-color: var(--personal-subproducto-3) !important;
+}
+/**/
+.color-personal-subproducto-4 {
+  color: var(--personal-subproducto-4) !important;
+}
+.bg-personal-subproducto-4 {
+  background: var(--personal-subproducto-4) !important;
+}
+.border-personal-subproducto-4 {
+  border-color: var(--personal-subproducto-4) !important;
+}
+/**/
+.color-personal-subproducto-5 {
+  color: var(--personal-subproducto-5) !important;
+}
+.bg-personal-subproducto-5 {
+  background: var(--personal-subproducto-5) !important;
+}
+.border-personal-subproducto-5 {
+  border-color: var(--personal-subproducto-5) !important;
+}
+/**/
+.color-personal-subproducto-6 {
+  color: var(--personal-subproducto-6) !important;
+}
+.bg-personal-subproducto-6 {
+  background: var(--personal-subproducto-6) !important;
+}
+.border-personal-subproducto-6 {
+  border-color: var(--personal-subproducto-6) !important;
 }
 /**/
 .color-personal-light {
@@ -656,64 +666,64 @@
   border-color: var(--flow-principal-3) !important;
 }
 /**/
-.color-flow-secundarios-1 {
-  color: var(--flow-secundarios-1) !important;
+.color-flow-secundario-1 {
+  color: var(--flow-secundario-1) !important;
 }
-.bg-flow-secundarios-1 {
-  background-color: var(--flow-secundarios-1) !important;
+.bg-flow-secundario-1 {
+  background-color: var(--flow-secundario-1) !important;
 }
-.border-flow-secundarios-1 {
-  border-color: var(--flow-secundarios-1) !important;
-}
-/**/
-.color-flow-secundarios-2 {
-  color: var(--flow-secundarios-2) !important;
-}
-.bg-flow-secundarios-2 {
-  background-color: var(--flow-secundarios-2) !important;
-}
-.border-flow-secundarios-2 {
-  border-color: var(--flow-secundarios-2) !important;
+.border-flow-secundario-1 {
+  border-color: var(--flow-secundario-1) !important;
 }
 /**/
-.color-flow-secundarios-3 {
-  color: var(--flow-secundarios-3) !important;
+.color-flow-secundario-2 {
+  color: var(--flow-secundario-2) !important;
 }
-.bg-flow-secundarios-3 {
-  background-color: var(--flow-secundarios-3) !important;
+.bg-flow-secundario-2 {
+  background-color: var(--flow-secundario-2) !important;
 }
-.border-flow-secundarios-3 {
-  border-color: var(--flow-secundarios-3) !important;
-}
-/**/
-.color-flow-complementarios-1 {
-  color: var(--flow-complementarios-1) !important;
-}
-.bg-flow-complementarios-1 {
-  background-color: var(--flow-complementarios-1) !important;
-}
-.border-flow-complementarios-1 {
-  border-color: var(--flow-complementarios-1) !important;
+.border-flow-secundario-2 {
+  border-color: var(--flow-secundario-2) !important;
 }
 /**/
-.color-flow-complementarios-2 {
-  color: var(--flow-complementarios-2) !important;
+.color-flow-secundario-3 {
+  color: var(--flow-secundario-3) !important;
 }
-.bg-flow-complementarios-2 {
-  background-color: var(--flow-complementarios-2) !important;
+.bg-flow-secundario-3 {
+  background-color: var(--flow-secundario-3) !important;
 }
-.border-flow-complementarios-2 {
-  border-color: var(--flow-complementarios-2) !important;
+.border-flow-secundario-3 {
+  border-color: var(--flow-secundario-3) !important;
 }
 /**/
-.color-flow-complementarios-3 {
-  color: var(--flow-complementarios-3) !important;
+.color-flow-complementario-1 {
+  color: var(--flow-complementario-1) !important;
 }
-.bg-flow-complementarios-3 {
-  background-color: var(--flow-complementarios-3) !important;
+.bg-flow-complementario-1 {
+  background-color: var(--flow-complementario-1) !important;
 }
-.border-flow-complementarios-3 {
-  border-color: var(--flow-complementarios-3) !important;
+.border-flow-complementario-1 {
+  border-color: var(--flow-complementario-1) !important;
+}
+/**/
+.color-flow-complementario-2 {
+  color: var(--flow-complementario-2) !important;
+}
+.bg-flow-complementario-2 {
+  background-color: var(--flow-complementario-2) !important;
+}
+.border-flow-complementario-2 {
+  border-color: var(--flow-complementario-2) !important;
+}
+/**/
+.color-flow-complementario-3 {
+  color: var(--flow-complementario-3) !important;
+}
+.bg-flow-complementario-3 {
+  background-color: var(--flow-complementario-3) !important;
+}
+.border-flow-complementario-3 {
+  border-color: var(--flow-complementario-3) !important;
 }
 /**/
 .color-flow-light {
@@ -778,16 +788,6 @@
   border-color: var(--personalPay-null) !important;
 }
 /**/
-.color-personalPay-moon-white {
-  color: var(--personalPay-moon-white) !important;
-}
-.bg-personalPay-moon-white {
-  background-color: var(--personalPay-moon-white) !important;
-}
-.border-personalPay-moon-white {
-  border-color: var(--personalPay-moon-white) !important;
-}
-/**/
 .color-personalPay-poseidon-violet {
   color: var(--personalPay-poseidon-violet) !important;
 }
@@ -798,74 +798,77 @@
   border-color: var(--personalPay-poseidon-violet) !important;
 }
 /**/
-.color-personalPay-halita-blue-2 {
-  color: var(--personalPay-halita-blue-2) !important;
+.color-personalPay-night-blue {
+  color: var(--personalPay-night-blue) !important;
 }
-.bg-personalPay-halita-blue-2 {
-  background-color: var(--personalPay-halita-blue-2) !important;
+.bg-personalPay-night-blue {
+  background-color: var(--personalPay-night-blue) !important;
 }
-.border-personalPay-halita-blue-2 {
-  border-color: var(--personalPay-halita-blue-2) !important;
-}
-/**/
-.color-personalPay-emeralcoast-cyan {
-  color: var(--personalPay-emeralcoast-cyan) !important;
-}
-.bg-personalPay-emeralcoast-cyan {
-  background-color: var(--personalPay-emeralcoast-cyan) !important;
-}
-.border-personalPay-emeralcoast-cyan {
-  border-color: var(--personalPay-emeralcoast-cyan) !important;
+.border-personalPay-night-blue {
+  border-color: var(--personalPay-night-blue) !important;
 }
 /**/
-.color-personalPay-midgray {
-  color: var(--personalPay-midgray) !important;
+.color-personalPay-moon-white {
+  color: var(--personalPay-moon-white) !important;
 }
-.bg-personalPay-midgray {
-  background-color: var(--personalPay-midgray) !important;
+.bg-personalPay-moon-white {
+  background-color: var(--personalPay-moon-white) !important;
 }
-.border-personalPay-midgray {
-  border-color: var(--personalPay-midgray) !important;
-}
-/**/
-.color-personalPay-secundario-7 {
-  color: var(--personalPay-secundario-7) !important;
-}
-.bg-personalPay-secundario-7 {
-  background-color: var(--personalPay-secundario-7) !important;
-}
-.border-personalPay-secundario-7 {
-  border-color: var(--personalPay-secundario-7) !important;
+.border-personalPay-moon-white {
+  border-color: var(--personalPay-moon-white) !important;
 }
 /**/
-.color-personalPay-acento-1 {
-  color: var(--personalPay-acento-1) !important;
+.color-personalPay-beneficios {
+  color: var(--personalPay-beneficios) !important;
 }
-.bg-personalPay-acento-1 {
-  background-color: var(--personalPay-acento-1) !important;
+.bg-personalPay-beneficios {
+  background-color: var(--personalPay-beneficios) !important;
 }
-.border-personalPay-acento-1 {
-  border-color: var(--personalPay-acento-1) !important;
-}
-/**/
-.color-personalPay-acento-2 {
-  color: var(--personalPay-acento-2) !important;
-}
-.bg-personalPay-acento-2 {
-  background-color: var(--personalPay-acento-2) !important;
-}
-.border-personalPay-acento-2 {
-  border-color: var(--personalPay-acento-2) !important;
+.border-personalPay-beneficios {
+  border-color: var(--personalPay-beneficios) !important;
 }
 /**/
-.color-personalPay-acento-3 {
-  color: var(--personalPay-acento-3) !important;
+.color-personalPay-inversiones {
+  color: var(--personalPay-inversiones) !important;
 }
-.bg-personalPay-acento-3 {
-  background-color: var(--personalPay-acento-3) !important;
+.bg-personalPay-inversiones {
+  background-color: var(--personalPay-inversiones) !important;
 }
-.border-personalPay-acento-3 {
-  border-color: var(--personalPay-acento-3) !important;
+.border-personalPay-inversiones {
+  border-color: var(--personalPay-inversiones) !important;
+}
+/**/
+.color-personalPay-transacciones {
+  color: var(--personalPay-transacciones) !important;
+}
+.bg-personalPay-transacciones {
+  background-color: var(--personalPay-transacciones) !important;
+}
+.border-personalPay-transacciones {
+  border-color: var(--personalPay-transacciones) !important;
+}
+/**/
+.color-personalPay-prestamos {
+  color: var(--personalPay-prestamos) !important;
+}
+.bg-personalPay-prestamos {
+  background-color: var(--personalPay-prestamos) !important;
+}
+.border-personalPay-prestamos {
+  border-color: var(--personalPay-prestamos) !important;
+}
+/**/
+.bg-personalPay-beneficios-gradients {
+  background: var(--personalPay-beneficios-gradients) !important;
+}
+.bg-personalPay-inversiones-gradients {
+  background: var(--personalPay-inversiones-gradients) !important;
+}
+.bg-personalPay-transacciones-gradients {
+  background: var(--personalPay-transacciones-gradients) !important;
+}
+.bg-personalPay-prestamos-gradients {
+  background: var(--personalPay-prestamos-gradients) !important;
 }
 /**/
 .color-personalPay-light {
