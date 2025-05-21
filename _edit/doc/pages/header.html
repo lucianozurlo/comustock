@@ -1,41 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Shadow Themes Studio">
-    <meta name="description" content="Bringer - Creative Multipurpose HTML5 Template Documentation." />    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Shadow Themes Studio" />
+    <meta
+      name="description"
+      content="Bringer - Creative Multipurpose HTML5 Template Documentation."
+    />
 
     <!-- Page Title -->
     <title>Bringer Documentation | Header and Menu</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../css/std-config.css">
-    <link type="text/css" rel="stylesheet" href="../css/std.css">
-    <link type="text/css" rel="stylesheet" href="../css/std-responsive.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="assets/css/std-config.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/std.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/std-responsive.css" />
 
     <!-- Favicon -->
     <link rel="icon" href="../img/favicon.png" sizes="32x32" />
-</head>
-<body>
-    
+  </head>
+  <body>
     <main class="std-main">
-        <!-- Content -->
-        <div class="std-container">
-            <section class="chapter-intro-section">
-                <div class="row">
-                    <div class="col-12 chapter-title-wrap">
-                        <!-- Chapter Title -->
-                    </div>
-                </div><!-- .row -->
-            </section>
+      <!-- Content -->
+      <div class="std-container">
+        <section class="chapter-intro-section">
+          <div class="row">
+            <div class="col-12 chapter-title-wrap">
+              <!-- Chapter Title -->
+            </div>
+          </div>
+          <!-- .row -->
+        </section>
 
-            <!-- Header Code Structure -->
-            <section>
-                <p>In this chapter we will show you how to create a header and main menu in our template. Let's start from the code markup for the header container:</p>
-<!-- * CODE EXAMPLE -->
-<pre class="chl chl-html bottom-gap-p">
+        <!-- Header Code Structure -->
+        <section>
+          <p>
+            In this chapter we will show you how to create a header and main menu in our template.
+            Let's start from the code markup for the header container:
+          </p>
+          <!-- * CODE EXAMPLE -->
+          <pre class="chl chl-html bottom-gap-p">
     <span>Header</span>
     <tag data-attrs='{"id":"bringer-header","class":"is-frosted is-sticky","data-appear":"fade-down","data-unload":"fade-up"}'>header</tag>
         <span>Desktop Header</span>
@@ -72,17 +81,29 @@
         <tag>/div</tag>
     <tag>/header</tag>
 </pre>
-<!-- * END CODE EXAMPLE -->
-            </section>
+          <!-- * END CODE EXAMPLE -->
+        </section>
 
-            <!-- Main Menu -->
-            <section>
-                <h4>Main Menu</h4>
-                <p>The main menu in the code is the unordered list with links to other pages. The <span class="highlight">main menu</span> level must contain the class <code class="chl-selector">main-menu</code>, and the <span class="highlight">sub menus</span> must have the class <code class="chl-selector">sub-menu</code>.</p>
-                <p>To <span class="highlight">highlight</span> the active menu item, you can use the <code class="chl-selector">current-menu-item</code> class for the <tag class='inline-html'>li</tag> tag and the <code class="chl-selector">current-menu-parent</code> class for the parent <tag class='inline-html'>li</tag> tag.</p>
-                <p>Let's take a look at the example code:</p>
-<!-- * CODE EXAMPLE -->
-<pre class="chl chl-html bottom-gap-p">
+        <!-- Main Menu -->
+        <section>
+          <h4>Main Menu</h4>
+          <p>
+            The main menu in the code is the unordered list with links to other pages. The
+            <span class="highlight">main menu</span> level must contain the class
+            <code class="chl-selector">main-menu</code>, and the
+            <span class="highlight">sub menus</span> must have the class
+            <code class="chl-selector">sub-menu</code>.
+          </p>
+          <p>
+            To <span class="highlight">highlight</span> the active menu item, you can use the
+            <code class="chl-selector">current-menu-item</code> class for the
+            <tag class="inline-html">li</tag> tag and the
+            <code class="chl-selector">current-menu-parent</code> class for the parent
+            <tag class="inline-html">li</tag> tag.
+          </p>
+          <p>Let's take a look at the example code:</p>
+          <!-- * CODE EXAMPLE -->
+          <pre class="chl chl-html bottom-gap-p">
     ...
     <tag class="chl-fade" data-attrs='{"class":"bringer-nav"}'>nav</tag>
         <tag data-attrs='{"class":"main-menu"}'>ul</tag>
@@ -125,15 +146,16 @@
     <tag class="chl-fade">/nav</tag>
     ...
 </pre>
-<!-- * END CODE EXAMPLE -->
-            </section>
+          <!-- * END CODE EXAMPLE -->
+        </section>
 
-            <!-- Next Chapter -->
-            <div class="std-next-chapter"></div>
-        </div>
+        <!-- Next Chapter -->
+        <div class="std-next-chapter"></div>
+      </div>
     </main>
 
     <!-- JS Scripts -->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/std.js"></script>
-</body>
+  </body>
+</html>

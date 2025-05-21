@@ -15,10 +15,10 @@
   --cs-s-container-frosted: #ffffffee;
 
   /* Used as a color for headings, page titles, button labels, and other bright text accents */
-  --cs-s-heading: #1a1d24;
+  --cs-s-heading: #313746;
 
   /* It is the same as the previous one but with transparency. Used for labels, meta, and some hover effects */
-  --cs-s-heading-fade: #1a1d24c0;
+  --cs-s-heading-fade: #313746c0;
 
   /* Used as a color for general content */
   --cs-s-text: #54585c;
@@ -36,19 +36,19 @@
   --cs-s-accented-text: var(--cs-s-heading);
 
   /* Used as a primary border-color */
-  --cs-s-border: #1a1d2427;
+  --cs-s-border: #31374627;
 
   /* Used as a border color for accented blocks */
   --cs-s-border-accent: #d068ab80;
 
   /* A default semi-transparent border color for blocks with a shining effect */
-  --cs-s-border-mute: #1a1d240d;
+  --cs-s-border-mute: #3137460d;
 
   /* A semi-transparent border shining effect color */
   --cs-s-border-highlight: #f5f7fa40;
 
   /* Used as a color for a backlight effect */
-  --cs-s-backlight: #1a1d2412;
+  --cs-s-backlight: #31374612;
 
   /* Used as a color for block shadow */
   --cs-s-box-shadow: #07090d10;
@@ -57,12 +57,7 @@
   --cs-s-cursor-light: var(--cs-s-backlight);
 
   /* A horizontal side-fade gradient border color */
-  --cs-c-border-gradient: linear-gradient(
-    to left,
-    transparent,
-    var(--cs-s-border),
-    transparent
-  );
+  --cs-c-border-gradient: linear-gradient(to left, transparent, var(--cs-s-border), transparent);
 
   /* Main menu text color */
   --cs-c-menu: var(--cs-s-text);
@@ -81,9 +76,9 @@
   --black: #000;
   --black-null: #00000000;
   --lightgray: #f5f5f5;
-  --darkgray: #1a1d24;
-  --darkgray-mid: #1a1d2422;
-  --darkgray-low: #1a1d240a;
+  --darkgray: #313746;
+  --darkgray-mid: #31374622;
+  --darkgray-low: #3137460a;
 
   /*** telecom ***/
   --telecom: #3c00a0;
@@ -109,26 +104,10 @@
   --telecom-empresas-acento-secundario-2: #e6b4cf;
   --telecom-empresas-acento-secundario-3: #96cdfa;
   --telecom-empresas-acento-secundario-4: #6e78fa;
-  --telecom-empresas-gradients-1: linear-gradient(
-    45deg,
-    #af8cff 0%,
-    #190646 100%
-  );
-  --telecom-empresas-gradients-2: linear-gradient(
-    45deg,
-    #6e78fa 0%,
-    #190646 100%
-  );
-  --telecom-empresas-gradients-3: linear-gradient(
-    45deg,
-    #69d8d0 0%,
-    #00b7eb 100%
-  );
-  --telecom-empresas-gradients-4: linear-gradient(
-    45deg,
-    #6e78fa 0%,
-    #e6b4cf 100%
-  );
+  --telecom-empresas-gradients-1: linear-gradient(45deg, #af8cff 0%, #190646 100%);
+  --telecom-empresas-gradients-2: linear-gradient(45deg, #6e78fa 0%, #190646 100%);
+  --telecom-empresas-gradients-3: linear-gradient(45deg, #69d8d0 0%, #00b7eb 100%);
+  --telecom-empresas-gradients-4: linear-gradient(45deg, #6e78fa 0%, #e6b4cf 100%);
 
   /*** personal ***/
   --personal: #00b7eb;
@@ -213,26 +192,10 @@
   --personalPay-transacciones: #d300ff;
   --personalPay-prestamos: #f795ee;
 
-  --personalPay-beneficios-gradients: linear-gradient(
-    45deg,
-    #5a50f9 0%,
-    #54e0da 100%
-  );
-  --personalPay-inversiones-gradients: linear-gradient(
-    45deg,
-    #5a50f9 0%,
-    #ffd166 100%
-  );
-  --personalPay-transacciones-gradients: linear-gradient(
-    45deg,
-    #5a50f9 0%,
-    #d300ff 100%
-  );
-  --personalPay-prestamos-gradients: linear-gradient(
-    45deg,
-    #5a50f9 0%,
-    #f795ee 100%
-  );
+  --personalPay-beneficios-gradients: linear-gradient(45deg, #5a50f9 0%, #54e0da 100%);
+  --personalPay-inversiones-gradients: linear-gradient(45deg, #5a50f9 0%, #ffd166 100%);
+  --personalPay-transacciones-gradients: linear-gradient(45deg, #5a50f9 0%, #d300ff 100%);
+  --personalPay-prestamos-gradients: linear-gradient(45deg, #5a50f9 0%, #f795ee 100%);
 
   --personalPay-halita-blue-2: #052c50;
   --personalPay-emeralcoast-cyan: #72eed2;
@@ -256,13 +219,13 @@
 :root {
   /* === FONT GROUPS === */
   /* Headings Font Family */
-  --cs-pulso: "Pulso", sans-serif;
+  --cs-pulso: 'Pulso', sans-serif;
 
   /* Headings Font Weight */
   --cs-t-heading-fw: 400;
 
   /* paragraph Font Family */
-  --cs-roboto: "Roboto", sans-serif;
+  --cs-roboto: 'Roboto', sans-serif;
 
   /* Content Font Weight */
   --cs-t-content-fw: 300;

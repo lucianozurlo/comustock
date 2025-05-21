@@ -1,62 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Shadow Themes Studio">
-    <meta name="description" content="Bringer - Creative Multipurpose HTML5 Template Documentation." />    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Shadow Themes Studio" />
+    <meta
+      name="description"
+      content="Bringer - Creative Multipurpose HTML5 Template Documentation."
+    />
 
     <!-- Page Title -->
     <title>Bringer Documentation | Portfolio</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../css/std-config.css">
-    <link type="text/css" rel="stylesheet" href="../css/std.css">
-    <link type="text/css" rel="stylesheet" href="../css/std-responsive.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="assets/css/std-config.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/std.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/std-responsive.css" />
 
     <!-- Favicon -->
     <link rel="icon" href="../img/favicon.png" sizes="32x32" />
-</head>
-<body>
-    
+  </head>
+  <body>
     <main class="std-main">
-        <!-- Content -->
-        <div class="std-container">
-            <section class="chapter-intro-section">
-                <div class="row">
-                    <div class="col-4 chapter-title-wrap">
-                        <!-- Chapter Title -->
-                    </div>
-                    <div class="col-8">
-                        There are four general layouts for portfolio listing in our template, and in this chapter, we will take a closer look at each of them and some other features related to the portfolio.
-                    </div><!-- .col-8 -->
-                </div><!-- .row -->
-            </section>
+      <!-- Content -->
+      <div class="std-container">
+        <section class="chapter-intro-section">
+          <div class="row">
+            <div class="col-4 chapter-title-wrap">
+              <!-- Chapter Title -->
+            </div>
+            <div class="col-8">
+              There are four general layouts for portfolio listing in our template, and in this
+              chapter, we will take a closer look at each of them and some other features related to
+              the portfolio.
+            </div>
+            <!-- .col-8 -->
+          </div>
+          <!-- .row -->
+        </section>
 
-            <!-- Fullscreen Pages -->
-            <section>
-                <p>Before we jump into the code instances, you should also note that to create a fullscreen page, you should add the <code class="chl-attr-val">bringer-fullscreen-page</code> class for the <tag class='inline-html is-closed'>body</tag> tag. Also, it is recommended to use the <code class="chl-attr-val">disable-smooth-scroll</code> class to turn off the smooth scroll scripts for such pages to optimize performance.</p>
-<!-- * CODE EXAMPLE -->
-<pre class="chl-html bottom-gap-p">
+        <!-- Fullscreen Pages -->
+        <section>
+          <p>
+            Before we jump into the code instances, you should also note that to create a fullscreen
+            page, you should add the <code class="chl-attr-val">bringer-fullscreen-page</code> class
+            for the <tag class="inline-html is-closed">body</tag> tag. Also, it is recommended to
+            use the <code class="chl-attr-val">disable-smooth-scroll</code> class to turn off the
+            smooth scroll scripts for such pages to optimize performance.
+          </p>
+          <!-- * CODE EXAMPLE -->
+          <pre class="chl-html bottom-gap-p">
     ...
     <tag data-attrs='{"class":"bringer-fullscreen-page"}'>body</tag>
         ...
     <tag>/body</tag>
 <tag>/html</tag>
 </pre>
-<!-- * END CODE EXAMPLE -->
-                <p>Additionally, you can use the classes no-header-border or no-footer-border to remove the header or footer borders, as we did on the Fullscreen Slider page.</p>
-            </section>
+          <!-- * END CODE EXAMPLE -->
+          <p>
+            Additionally, you can use the classes no-header-border or no-footer-border to remove the
+            header or footer borders, as we did on the Fullscreen Slider page.
+          </p>
+        </section>
 
-            <!-- Infinite List -->
-            <section>
-                <h4>Infinite List</h4>
-                <figure>
-                    <img src="../img/port-list.jpg" alt="Infinite List">
-                </figure>
-<!-- * CODE EXAMPLE -->
-<pre class="chl-html bottom-gap-p">
+        <!-- Infinite List -->
+        <section>
+          <h4>Infinite List</h4>
+          <figure>
+            <img src="assets/img/port-list.jpg" alt="Infinite List" />
+          </figure>
+          <!-- * CODE EXAMPLE -->
+          <pre class="chl-html bottom-gap-p">
 ...
 <tag class="chl-fade" data-attrs='{"class":"bringer-fullscreen-page disable-smooth"}'>body</tag>
     ...
@@ -93,17 +111,17 @@
     ...
 <tag class="chl-fade">/body</tag>
 </pre>
-<!-- * END CODE EXAMPLE -->
-            </section>
+          <!-- * END CODE EXAMPLE -->
+        </section>
 
-            <!-- Fullscren Slider -->
-            <section>
-                <h4>Fullscreen Slider</h4>
-                <figure>
-                    <img src="../img/port-slider.jpg" alt="Fullscreen Slider">
-                </figure>
-<!-- * CODE EXAMPLE -->
-<pre class="chl-html bottom-gap-p">
+        <!-- Fullscren Slider -->
+        <section>
+          <h4>Fullscreen Slider</h4>
+          <figure>
+            <img src="assets/img/port-slider.jpg" alt="Fullscreen Slider" />
+          </figure>
+          <!-- * CODE EXAMPLE -->
+          <pre class="chl-html bottom-gap-p">
 ...
 <tag class="chl-fade" data-attrs='{"class":"bringer-fullscreen-page no-header-border no-footer-border disable-smooth-scroll"}'>body</tag>
     ...
@@ -139,18 +157,21 @@
     ...
 <tag class="chl-fade">/body</tag>
 </pre>
-<!-- * END CODE EXAMPLE -->
-            </section>
+          <!-- * END CODE EXAMPLE -->
+        </section>
 
-            <!-- Single Column Listing -->
-            <section>
-                <h4>Single Column Card</h4>
-                <figure>
-                    <img src="../img/port-column.jpg" alt="Single Column">
-                </figure>
-                <p>This portfolio listing type uses the default content structure as on any other page. Let's take a look at the code example:</p>
-<!-- * CODE EXAMPLE -->
-<pre class="chl-html bottom-gap-p">
+        <!-- Single Column Listing -->
+        <section>
+          <h4>Single Column Card</h4>
+          <figure>
+            <img src="assets/img/port-column.jpg" alt="Single Column" />
+          </figure>
+          <p>
+            This portfolio listing type uses the default content structure as on any other page.
+            Let's take a look at the code example:
+          </p>
+          <!-- * CODE EXAMPLE -->
+          <pre class="chl-html bottom-gap-p">
 ...
 <tag class="chl-fade">section</tag>
 
@@ -177,18 +198,24 @@
 
 <tag class="chl-fade">/section</tag>    
 </pre>
-<!-- * END CODE EXAMPLE -->
-            </section>
+          <!-- * END CODE EXAMPLE -->
+        </section>
 
-            <!-- Classic Grid -->
-            <section>
-                <h4>Classic Grid</h4>
-                <figure>
-                    <img src="../img/port-grid.jpg" alt="Classic Grid">
-                </figure>
-                <p>The same as the previous one, this type of portfolio is a part of the default page content. Moreover, the <code class="chl-attr-val">bringer-portfolio-card</code> block may be used not only for grid containers but also for carousels and other content parts. And now, let's take a look at the code of that item in the <span class="highlight">Grid</span> container:</p>
-<!-- * CODE EXAMPLE -->
-<pre class="chl-html bottom-gap-p">
+        <!-- Classic Grid -->
+        <section>
+          <h4>Classic Grid</h4>
+          <figure>
+            <img src="assets/img/port-grid.jpg" alt="Classic Grid" />
+          </figure>
+          <p>
+            The same as the previous one, this type of portfolio is a part of the default page
+            content. Moreover, the <code class="chl-attr-val">bringer-portfolio-card</code> block
+            may be used not only for grid containers but also for carousels and other content parts.
+            And now, let's take a look at the code of that item in the
+            <span class="highlight">Grid</span> container:
+          </p>
+          <!-- * CODE EXAMPLE -->
+          <pre class="chl-html bottom-gap-p">
 ...
 <tag class="chl-fade">section</tag>
 
@@ -216,16 +243,21 @@
 
 <tag class="chl-fade">/section</tag>    
 </pre>
-<!-- * END CODE EXAMPLE -->
-                <p class="note">More details about the <a href="content.html#grid_container">Grid</a> container and the <a href="content.html#parallax">Parallax Media</a> may be found in the previous chapter, where we talk about the <a href="content.html">Content</a> area.</p>
-            </section>
+          <!-- * END CODE EXAMPLE -->
+          <p class="note">
+            More details about the <a href="content.html#grid_container">Grid</a> container and the
+            <a href="content.html#parallax">Parallax Media</a> may be found in the previous chapter,
+            where we talk about the <a href="content.html">Content</a> area.
+          </p>
+        </section>
 
-            <!-- Next Chapter -->
-            <div class="std-next-chapter"></div>
-        </div>
+        <!-- Next Chapter -->
+        <div class="std-next-chapter"></div>
+      </div>
     </main>
-    
+
     <!-- JS Scripts -->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/std.js"></script>
-</body>
+  </body>
+</html>

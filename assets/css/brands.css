@@ -88,7 +88,7 @@ h6 {
 
 .brands-content .brand-section {
   width: 100% !important;
-  color: white;
+  /* color: white; */
   text-align: left;
   display: flex;
   align-items: flex-start;
@@ -154,19 +154,19 @@ h6 {
 }
 
 .brands-content .sticky-div .bench-logo.iso_telecom {
-  background: url("../../content/identidad/marcas/telecom/logos/svg/telecom_iso.svg");
+  background: url('../../content/identidad/marcas/telecom/logos/svg/telecom_iso.svg');
 }
 
 .brands-content .sticky-div .bench-logo.iso_personal {
-  background: url("../../content/identidad/marcas/personal/logos/svg/personal_iso.svg");
+  background: url('../../content/identidad/marcas/personal/logos/svg/personal_iso.svg');
 }
 
 .brands-content .sticky-div .bench-logo.iso_flow {
-  background: url("../../content/identidad/marcas/flow/logos/svg/flow_iso.svg");
+  background: url('../../content/identidad/marcas/flow/logos/svg/flow_iso.svg');
 }
 
 .brands-content .sticky-div .bench-logo.iso_ppay {
-  background: url("../../content/identidad/marcas/personalPay/logos/svg/personalPay_iso.svg");
+  background: url('../../content/identidad/marcas/personalPay/logos/svg/personalPay_iso.svg');
 }
 .cs-toggles-item--title img,
 .cs-block img,
@@ -204,7 +204,7 @@ h6 {
   top: 0;
   height: 100%;
   width: 100%;
-  content: "";
+  content: '';
   left: calc(-0.5 * (100vw - var(--stg-container-width)));
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -372,7 +372,7 @@ body.brands.is-loaded .divider-bottom::after {
 
 .bench-logo::before,
 .copy::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: calc(100% + 9px);
   left: 50%;
@@ -412,10 +412,10 @@ body.brands.is-loaded .divider-bottom::after {
   margin-bottom: 0;
 }
 
-.usos [class*="stg-col-"] .cs-grid-2cols .cs-block,
-.usos [class*="stg-col-"] .cs-grid-4cols .cs-block,
-.aplicaciones [class*="stg-col-"] .cs-grid-3cols .cs-block,
-.aplicaciones [class*="stg-col-"] .cs-grid-4cols .cs-block {
+.usos [class*='stg-col-'] .cs-grid-2cols .cs-block,
+.usos [class*='stg-col-'] .cs-grid-4cols .cs-block,
+.aplicaciones [class*='stg-col-'] .cs-grid-3cols .cs-block,
+.aplicaciones [class*='stg-col-'] .cs-grid-4cols .cs-block {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,7 +427,7 @@ body.brands.is-loaded .divider-bottom::after {
   border-radius: var(--cs-small-br);
 }
 
-.usos [class*="stg-col-"] .cs-grid-4cols .cs-block {
+.usos [class*='stg-col-'] .cs-grid-4cols .cs-block {
   padding: 0;
 }
 
@@ -490,8 +490,8 @@ body.brands.is-loaded .divider-bottom::after {
   grid-column-gap: var(--stg-xs-gap);
 }
 
-.paleta [class*="cs-grid"],
-.paleta [class*="cs-grid"] .box {
+.paleta [class*='cs-grid'],
+.paleta [class*='cs-grid'] .box {
   /* height: 70px; */
   gap: 14px;
   grid-column-gap: 12px;
@@ -570,10 +570,7 @@ body.brands.is-loaded .divider-bottom::after {
   transform: rotate(0deg);
 }
 
-#productos
-  .cs-toggles-item
-  a.cs-masked-content.at-bottom-right
-  .cs-square-button {
+#productos .cs-toggles-item a.cs-masked-content.at-bottom-right .cs-square-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -625,8 +622,8 @@ body.brands.is-loaded .divider-bottom::after {
   margin-left: 30px;
 }
 
-#redes [class*="cs-grid"],
-#web [class*="cs-grid"] {
+#redes [class*='cs-grid'],
+#web [class*='cs-grid'] {
   grid-column-gap: var(--stg-xs-gap);
 }
 
