@@ -1,106 +1,135 @@
-// let timeout;
-// document.addEventListener("scroll", function() {
-//     clearTimeout(timeout);
-//     timeout = setTimeout(() => {
-//         if (window.scrollY >= 36) {
-//             document.body.classList.add("scrolled");
-//         } else {
-//             document.body.classList.remove("scrolled");
-//         }
-//     }, 10);
-// });
+/* ────────────────────────────────────────────────────────────────────────
+   brands.js  (rev 2025-05-25 c) – scroll a #productos cuando es toggle
+   ──────────────────────────────────────────────────────────────────────── */
 
-/* sticky divs */
-// Desactivamos la restauración automática del scroll si es compatible
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+/* helpers */
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => [...document.querySelectorAll(s)];
+const off = (i) => (i === 0 ? 282 : 221); // offset por sección
+
+/* desplazamiento con offset ------------------------------------------------ */
+function goTo(id, smooth = true) {
+	const el = $('#' + id);
+	if (!el) return;
+
+	/* abre acordeón si procede ------------------------------------------- */
+	const toggler = el.classList.contains('cs-toggles-item') ? el : el.closest('.cs-toggles-item');
+	if (toggler) openAccordion(toggler);
+
+	/* determina a qué elemento desplazar ---------------------------------- */
+	let scrollEl = el;
+	const parentSection = el.closest('.brand-section');
+
+	/* ⇢ NOVEDAD: si el destino vive dentro de #productos,
+     el scroll se hace sobre la sección #productos                       */
+	if (parentSection && parentSection.id === 'productos') {
+		scrollEl = parentSection;
+	}
+
+	/* calcula offset contextual ------------------------------------------ */
+	const idx = parentSection ? $$('.brand-section').indexOf(parentSection) : 0;
+
+	const y = scrollEl.getBoundingClientRect().top + window.pageYOffset - off(idx);
+	window.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
+
+	/* tras abrir el acordeón la altura cambia → recolocamos -------------- */
+	if (toggler) {
+		setTimeout(() => {
+			const y2 = scrollEl.getBoundingClientRect().top + window.pageYOffset - off(idx);
+			window.scrollTo({ top: y2, behavior: 'auto' });
+		}, 350);
+	}
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".brand-section");
-  const menuLinks = document.querySelectorAll(".side-menu a");
+/* lateral activo --------------------------------------------------------- */
+function highlightLink() {
+	const y = window.pageYOffset;
+	let activeId = $$('.brand-section')[0].id;
 
-  // Al hacer click en cada link del side menu
-  menuLinks.forEach((link, index) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      event.stopImmediatePropagation(); // Evita que otros handlers se disparen
+	$$('.brand-section').forEach((sec, i) => {
+		if (y >= sec.offsetTop - off(i)) activeId = sec.id;
+	});
 
-      const targetId = this.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-      // Para el primer enlace usamos offset 282, para los demás 221
-      let offset = index === 0 ? 282 : 221;
-      window.scrollTo({
-        top: targetSection.offsetTop - offset,
-        behavior: "smooth",
-      });
-    });
-  });
+	$$('.side-menu a').forEach((a) => a.classList.toggle('active', a.hash.slice(1) === activeId));
+}
 
-  // Detectar en qué sección estamos y marcar el enlace activo
-  window.addEventListener("scroll", function () {
-    let currentSection = sections[0].id; // Por defecto, la primera sección
-    sections.forEach((section, i) => {
-      // Usamos el mismo offset que para el scroll en función del índice
-      let effectiveOffset = i === 0 ? 282 : 221;
-      if (window.pageYOffset >= section.offsetTop - effectiveOffset) {
-        currentSection = section.id;
-      }
-    });
-    menuLinks.forEach((link) => {
-      if (link.getAttribute("href").substring(1) === currentSection) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
-  });
+/* acordeones exclusivos --------------------------------------------------- */
+function openAccordion(acc) {
+	$$('.cs-toggles-item').forEach((item) => {
+		const box = item.querySelector('.cs-toggles-item--content');
+		if (!box) return;
 
-  // Forzar la ejecución del evento scroll al cargar la página para activar el primer enlace
-  window.dispatchEvent(new Event("scroll"));
+		if (item === acc) {
+			item.classList.add('is-active');
+			box.style.removeProperty('display');
+		} else {
+			item.classList.remove('is-active');
+			box.style.display = 'none';
+		}
+	});
+}
 
-  // Al cargar la página, si hay hash en la URL, anular el scroll automático y aplicar el scroll con offset
-  window.addEventListener("load", function () {
-    window.scrollTo(0, 0);
-    setTimeout(function () {
-      if (window.location.hash) {
-        const targetId = window.location.hash.substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          let index = 0;
-          menuLinks.forEach((link, i) => {
-            if (link.getAttribute("href").substring(1) === targetId) {
-              index = i;
-            }
-          });
-          let offset = index === 0 ? 282 : 221;
-          window.scrollTo({
-            top: targetSection.offsetTop - offset,
-            behavior: "smooth",
-          });
-        }
-      }
-    }, 500);
-  });
+/* vigila que ningún script mueva el scroll después ----------------------- */
+function watchdogHash() {
+	const target = location.hash.slice(1);
+	if (!target) return;
 
-  // Si se cambia el hash estando la página activa, aplicamos el scroll con offset
-  window.addEventListener("hashchange", function () {
-    if (window.location.hash) {
-      const targetId = window.location.hash.substring(1);
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        let index = 0;
-        menuLinks.forEach((link, i) => {
-          if (link.getAttribute("href").substring(1) === targetId) {
-            index = i;
-          }
-        });
-        let offset = index === 0 ? 282 : 221;
-        window.scrollTo({
-          top: targetSection.offsetTop - offset,
-          behavior: "smooth",
-        });
-      }
-    }
-  });
+	let ticks = 20;
+	const iv = setInterval(() => {
+		const el = $('#' + target);
+		if (!el) return;
+		const parent = el.closest('.brand-section');
+		const idx = parent ? $$('.brand-section').indexOf(parent) : 0;
+		const wanted =
+			(parent && parent.id === 'productos' ? parent : el).getBoundingClientRect().top - off(idx);
+
+		if (Math.abs(wanted) > 5) goTo(target, false);
+		if (--ticks <= 0) clearInterval(iv);
+	}, 150);
+}
+
+/* listeners -------------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+	/* menú lateral */
+	$$('.side-menu a').forEach((a) =>
+		a.addEventListener('click', (e) => {
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			history.pushState(null, '', a.hash);
+			goTo(a.hash.slice(1));
+		})
+	);
+
+	/* anclas internas genéricas */
+	document.addEventListener('click', (e) => {
+		const link = e.target.closest('a[href^="#"]');
+		if (!link) return;
+
+		const url = new URL(link.href, location.href);
+		if (url.pathname !== location.pathname || url.host !== location.host) return;
+
+		e.preventDefault();
+		history.pushState(null, '', url.hash);
+		goTo(url.hash.slice(1));
+	});
+
+	/* clic en título acordeón → exclusivo */
+	$$('.cs-toggles-item--title').forEach((t) =>
+		t.addEventListener('click', () => openAccordion(t.closest('.cs-toggles-item')))
+	);
+
+	window.addEventListener('scroll', highlightLink);
+	highlightLink();
+});
+
+/* hash y carga ----------------------------------------------------------- */
+const applyHash = () => goTo(location.hash.slice(1), false);
+
+window.addEventListener('hashchange', applyHash);
+window.addEventListener('pageshow', applyHash);
+window.addEventListener('load', () => {
+	applyHash();
+	watchdogHash();
 });

@@ -1,287 +1,302 @@
-// 1. Crear el modal dinámicamente
-(function createDownloadModal() {
-  const modalDiv = document.createElement("div");
-  modalDiv.id = "modal-download";
-  modalDiv.style.display = "none";
-  modalDiv.innerHTML = `
-    <form id="download-form">
-      <div id="download-file" class="download-file-custom" style="padding: 0;">
-        <img src="" alt="">
-      </div>
-      <div class="format-container">
-        <p>Elegí el formato:</p>
-        <div class="format"></div>
-      </div>
-      <input type="checkbox" id="terms" name="terms">
-      <div class="disclaimer">
-        Acepto los <a href="javascript:void(0);" id="toggle-disclaimer">términos y condiciones</a>
-        <div id="disclaimer-content" class="disclaimer-content"><p>…</p></div>
-      </div>
-      <button type="submit" id="download-btn" disabled>
-        Descargar <span class="cs-icon cs-icon-comustock"></span>
-      </button>
-    </form>`;
-  document.body.appendChild(modalDiv);
+/* ────────────────────────────────────────────────────────────── */
+/* 1 · Crear los dos modales (download + message)                 */
+/* ────────────────────────────────────────────────────────────── */
+(function () {
+   /* Modal de descarga */
+   const dModal = document.createElement('div');
+   dModal.id = 'modal-download';
+   dModal.style.display = 'none';
+   dModal.innerHTML = `
+<form id="download-form">
+  <div id="download-file" class="download-file-custom" style="padding:0;"></div>
+
+  <div class="format-container">
+    <p>Elegí el formato:</p>
+    <div class="format"></div>
+  </div>
+
+  <input type="checkbox" id="terms" name="terms">
+  <div class="disclaimer">
+    Acepto los <a href="javascript:void(0);" id="toggle-disclaimer">términos y condiciones</a>
+    <div id="disclaimer-content" class="disclaimer-content"><p>…</p></div>
+  </div>
+
+  <button type="submit" id="download-btn" disabled>
+    Descargar <span class="cs-icon cs-icon-comustock"></span>
+  </button>
+</form>`;
+   document.body.appendChild(dModal);
+
+   /* Modal de mensajes */
+   const mModal = document.createElement('div');
+   mModal.id = 'modal-message';
+   mModal.style.display = 'none';
+   /* se rellena dinámicamente */
+   document.body.appendChild(mModal);
 })();
 
-// 2. Inicializar Fancybox v5
-Fancybox.bind("[data-fancybox]", {
-  animationEffect: "zoom-in-out",
-  on: {
-    destroy: () => {
-      console.log("El modal se cerró");
-      const mv = document.getElementById("custom-video");
-      if (mv) mv.pause();
-    },
-  },
+/* ────────────────────────────────────────────────────────────── */
+/* 2 · Ajuste global de Fancybox (sin botón close)                */
+/* ────────────────────────────────────────────────────────────── */
+Fancybox.defaults = { ...Fancybox.defaults, closeButton: false };
+
+Fancybox.bind('[data-fancybox]', {
+   animationEffect: 'zoom-in-out',
+   on: {
+      destroy() {
+         document.getElementById('custom-video')?.pause();
+      },
+   },
 });
 
-// 3. Click-handler para abrir y poblar el modal
-document.querySelectorAll("[data-fancybox]").forEach((anchor) => {
-  anchor.addEventListener("click", () => {
-    const container = anchor.closest(".cs-masked-block");
+/* ────────────────────────────────────────────────────────────── */
+/* 3 · Abrir / poblar el modal adecuado                           */
+/* ────────────────────────────────────────────────────────────── */
+document.querySelectorAll('[data-fancybox]').forEach((anchor) => {
+   anchor.addEventListener('click', (ev) => {
+      const block = anchor.closest('.cs-masked-block');
+      const group = block.dataset.fileGroup || 'vectorial';
 
-    // Mute preview video al abrir
-    const previewVid = container.querySelector("video");
-    if (previewVid) previewVid.muted = true;
+      /* ============ CASO «copy» (sólo mensaje) ============ */
+      if (group === 'copy') {
+         ev.preventDefault(); // anulamos apertura automática del otro modal
+         const text = block.dataset.copy || '';
 
-    // Media (video o imagen)
-    const media =
-      container.querySelector("video") || container.querySelector("img");
-    const src = media.getAttribute("src");
-    const alt = media.getAttribute("alt") || "";
+         /* copiar al clipboard (silencioso) */
+         navigator.clipboard?.writeText(text).catch(() => {});
 
-    // Extraer fondo bg-*
-    const mc = container.querySelector(".cs-masked-media");
-    let bg = "";
-    mc.classList.forEach((c) => {
-      if (c.startsWith("bg-")) bg = c;
-    });
+         /* llenar modal-message */
+         const mWrap = document.getElementById('modal-message');
+         mWrap.innerHTML = `
+        <p>
+          El claim<br><strong>${text}</strong><br>se copió en el portapapeles
+        </p>`;
 
-    // Preparar contenedor del modal
-    const dl = document.getElementById("download-file");
-    dl.className = "download-file-custom";
-    if (bg) dl.classList.add(bg);
-    dl.innerHTML = "";
+         /* abrir manualmente #modal-message */
+         Fancybox.show([{ src: '#modal-message', type: 'inline' }]);
 
-    // Parse URL
-    const parts = src.split("/");
-    const basePath = parts.slice(0, -2).join("/") + "/";
-    const fnameExt = parts.pop();
-    const dotIdx = fnameExt.lastIndexOf(".");
-    const fname = fnameExt.slice(0, dotIdx);
-    const ext = fnameExt.slice(dotIdx + 1).toLowerCase();
+         /* cerrar a los 2 s */
+         setTimeout(() => Fancybox.close(), 2000);
+         return; // — fin —
+      }
 
-    const jpgSuffix = container.dataset.jpgFilename || "";
-    const group = container.dataset.fileGroup || "vectorial";
+      /* ——— resto de lógica para descargas ——— */
+      /* ... (todo el código de descarga se mantiene idéntico) ... */
 
-    // Guardar datos
-    window._downloadData = {
-      basePath,
-      fileName: fname,
-      originalExtension: ext,
-      originalSrc: src,
-      alt,
-      jpgSuffix,
-      group,
-    };
+      /* ========= Mute video preview ========= */
+      block.querySelector('video')?.((v) => (v.muted = true)); // si existe
 
-    // Preview en el modal
-    if (group === "audio" || group === "video") {
-      dl.innerHTML = `
-        <div class="video-container" style="position:relative;width:100%;">
-          <video id="custom-video" preload="auto" style="width:100%;display:block;">
-            <source src="${src}" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-          </video>
-          <button id="video-play" class="video-control"
-                  style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-                         background:none;border:none;cursor:pointer;border-radius:0;">
-            <img src="../assets/img/icons/play.svg" alt="Play"
-                 style="width:48px;height:48px;border-radius:0;">
-          </button>
-          <button id="video-stop" class="video-control"
-                  style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-                         background:none;border:none;cursor:pointer;display:none;border-radius:0;">
-            <img src="../assets/img/icons/stop.svg" alt="Stop"
-                 style="width:48px;height:48px;border-radius:0;">
-          </button>
-        </div>`;
+      /* ====== datos del archivo / preview … ====== */
+      const media = block.querySelector('video') || block.querySelector('img');
+      const src = media.getAttribute('src');
+      const alt = media.getAttribute('alt') || '';
+      const bgClass =
+         [...block.querySelector('.cs-masked-media').classList].find((c) => c.startsWith('bg-')) ||
+         '';
 
-      // Controles play/stop
-      const video = document.getElementById("custom-video");
-      const playBtn = document.getElementById("video-play");
-      const stopBtn = document.getElementById("video-stop");
-      const vc = dl.querySelector(".video-container");
+      const holder = document.getElementById('download-file');
+      holder.className = 'download-file-custom' + (bgClass ? ` ${bgClass}` : '');
+      holder.innerHTML = '';
 
-      playBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        video.play();
-        playBtn.style.display = "none";
-        stopBtn.style.display = "block";
-      });
-      vc.addEventListener("mouseenter", () => {
-        if (!video.paused) stopBtn.style.display = "block";
-      });
-      vc.addEventListener("mouseleave", () => {
-        if (!video.paused) stopBtn.style.display = "none";
-      });
-      stopBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        video.pause();
-        stopBtn.style.display = "none";
-        playBtn.style.display = "block";
-      });
-      video.addEventListener("ended", () => {
-        playBtn.style.display = "block";
-        stopBtn.style.display = "none";
-      });
-    } else {
-      dl.innerHTML = `<img src="${src}" alt="${alt}">`;
-    }
+      /* parse ruta */
+      const parts = src.split('/');
+      const base = parts.slice(0, -2).join('/') + '/';
+      const nExt = parts.pop();
+      const dot = nExt.lastIndexOf('.');
+      const fname = nExt.slice(0, dot);
+      const ext = nExt.slice(dot + 1).toLowerCase();
+      const jpgSuf = block.dataset.jpgFilename || '';
 
-    // Generar formatos según grupo
-    let formats;
-    switch (group) {
-      case "vectorial":
-        formats = ["ai", "svg", "pdf", "png", "jpg"];
-        break;
-      case "audio":
-        formats = ["mp3", "wav"];
-        break;
-      case "imagen":
-        formats = ["jpg"];
-        break;
-      case "pdf":
-        formats = ["pdf"];
-        break;
-      case "documento":
-        formats = ["docx"];
-        break;
-      case "video":
-        formats = ["mp4"];
-        break;
-      case "powerpoint":
-        formats = ["pptx"];
-        break;
-      case "email":
-        formats = ["oft", "eml"];
-        break;
-      case "fuentes":
-        formats = ["otf", "ttf"];
-        break;
-      case "zip":
-        formats = ["zip"];
-        break;
-      default:
-        formats = ["png", "jpg"];
-    }
+      window._downloadData = {
+         basePath: base,
+         fileName: fname,
+         originalExtension: ext,
+         originalSrc: src,
+         alt,
+         jpgSuffix: jpgSuf,
+         group,
+      };
 
-    const fc = document.querySelector("#modal-download .format-container");
-    const fDiv = fc.querySelector(".format");
+      /* preview */
+      if (['audio', 'video'].includes(group)) {
+         holder.innerHTML = `
+      <div class="video-container" style="position:relative;width:100%;">
+        <video id="custom-video" preload="auto" style="width:100%;display:block;">
+          <source src="${src}" type="video/mp4">
+        </video>
+        <button id="video-play" class="video-control"
+                style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                       background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
+          <img src="../assets/img/icons/play.svg" style="width:28px;height:28px;">
+        </button>
+        <button id="video-stop" class="video-control"
+                style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                       display:none;background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
+          <img src="../assets/img/icons/stop.svg" style="width:28px;height:28px;">
+        </button>
+      </div>`;
+         const v = document.getElementById('custom-video');
+         const pb = document.getElementById('video-play');
+         const sb = document.getElementById('video-stop');
+         const box = holder.querySelector('.video-container');
+         pb.onclick = (e) => {
+            e.preventDefault();
+            v.play();
+            pb.style.display = 'none';
+            sb.style.display = 'block';
+         };
+         sb.onclick = (e) => {
+            e.preventDefault();
+            v.pause();
+            sb.style.display = 'none';
+            pb.style.display = 'block';
+         };
+         box.onmouseenter = () => {
+            if (!v.paused) sb.style.display = 'block';
+         };
+         box.onmouseleave = () => {
+            if (!v.paused) sb.style.display = 'none';
+         };
+         v.onended = () => {
+            pb.style.display = 'block';
+            sb.style.display = 'none';
+         };
+      } else {
+         holder.innerHTML = `<img src="${src}" alt="${alt}">`;
+      }
 
-    if (formats.length > 1) {
-      fc.style.display = "";
-      fDiv.innerHTML = formats
-        .map(
-          (e, i) => `
+      /* formatos disponibles */
+      const groups = {
+         vectorial: ['ai', 'svg', 'pdf', 'png', 'jpg'],
+         audio: ['mp3', 'wav'],
+         imagen: ['jpg'],
+         pdf: ['pdf'],
+         documento: ['docx'],
+         video: ['mp4'],
+         powerpoint: ['pptx'],
+         email: ['oft', 'eml'],
+         fuentes: ['otf', 'ttf'],
+         zip: ['zip'],
+      };
+      const fmts = groups[group] || ['png', 'jpg'];
+      const fc = document.querySelector('#modal-download .format-container');
+      const fDiv = fc.querySelector('.format');
+
+      if (fmts.length > 1) {
+         fc.style.display = '';
+         fDiv.innerHTML = fmts
+            .map(
+               (e, i) => `
         <label for="${e}">
-          <input type="radio" name="format" class="format-file" id="${e}" value="${e}"
-                 ${i === 0 ? "checked" : ""} />
+          <input type="radio" name="format" id="${e}" value="${e}" class="format-file" ${!i ? 'checked' : ''}>
           <p class="format-select">.${e}</p>
-        </label>
-      `
-        )
-        .join("");
-      fDiv.querySelectorAll("input").forEach((r) => {
-        if (!r.checked) r.disabled = true;
-      });
-      setTimeout(() => {
-        fDiv.querySelectorAll("input").forEach((r) => (r.disabled = false));
-      }, 300);
-    } else {
-      // Oculto selector si solo hay un formato
-      fc.style.display = "none";
-    }
-  });
+        </label>`
+            )
+            .join('');
+         fDiv.querySelectorAll('input:not(:checked)').forEach((r) => (r.disabled = true));
+         setTimeout(() => fDiv.querySelectorAll('input').forEach((r) => (r.disabled = false)), 300);
+      } else {
+         fc.style.display = 'none';
+      }
+   });
 });
 
-// 4. Términos y envío (cerrar modal al descargar)
-document.addEventListener("DOMContentLoaded", () => {
-  const terms = document.getElementById("terms");
-  const btn = document.getElementById("download-btn");
-  const td = document.getElementById("toggle-disclaimer");
-  const dc = document.getElementById("disclaimer-content");
+/* ────────────────────────────────────────────────────────────── */
+/* 4 · Términos / descarga / cierre                               */
+/* ────────────────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+   const terms = document.getElementById('terms'),
+      btn = document.getElementById('download-btn'),
+      td = document.getElementById('toggle-disclaimer'),
+      dc = document.getElementById('disclaimer-content');
 
-  terms.addEventListener("change", () => (btn.disabled = !terms.checked));
+   terms.onchange = () => (btn.disabled = !terms.checked);
+   td.onclick = () =>
+      (dc.style.maxHeight =
+         !dc.style.maxHeight || dc.style.maxHeight === '0px' ? dc.scrollHeight + 'px' : '0px');
 
-  td.addEventListener("click", () => {
-    dc.style.maxHeight =
-      dc.style.maxHeight === "0px" || !dc.style.maxHeight
-        ? dc.scrollHeight + "px"
-        : "0px";
-  });
+   document.getElementById('download-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const d = window._downloadData;
+      const sel = document.querySelector('input[name="format"]:checked');
+      const def = {
+         imagen: 'jpg',
+         pdf: 'pdf',
+         documento: 'docx',
+         video: 'mp4',
+         powerpoint: 'pptx',
+         email: 'eml',
+         fuentes: 'ttf',
+         zip: 'zip',
+      };
+      const fmt = sel ? sel.value : def[d.group] || d.originalExtension;
 
-  document.getElementById("download-form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const selInput = document.querySelector('input[name="format"]:checked');
+      const singles = [
+         'imagen',
+         'pdf',
+         'documento',
+         'video',
+         'powerpoint',
+         'email',
+         'fuentes',
+         'zip',
+      ];
+      const fname =
+         fmt === 'jpg'
+            ? d.jpgSuffix
+               ? `${d.fileName}${d.jpgSuffix}.jpg`
+               : `${d.fileName}.jpg`
+            : `${d.fileName}.${fmt}`;
 
-    // mapping de grupos single-format a su extensión
-    const defaultExt = {
-      imagen: "jpg",
-      pdf: "pdf",
-      documento: "docx",
-      video: "mp4",
-      powerpoint: "pptx",
-      email: "eml",
-      fuentes: "ttf",
-      zip: "zip",
-    };
+      const url = singles.includes(d.group)
+         ? d.originalSrc.replace(/\.[^/.]+$/, `.${fmt}`)
+         : fmt === 'jpg'
+           ? `${d.basePath}jpg/${fname}`
+           : `${d.basePath}${fmt}/${fname}`;
 
-    const fmt = selInput
-      ? selInput.value
-      : defaultExt[window._downloadData.group] ||
-        window._downloadData.originalExtension;
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = fname;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      Fancybox.close();
+   });
+});
 
-    const d = window._downloadData;
-    const group = d.group;
-    let fname, url;
-
-    // Nombre para .jpg con sufijo
-    if (fmt === "jpg") {
-      fname = d.jpgSuffix
-        ? `${d.fileName}${d.jpgSuffix}.jpg`
-        : `${d.fileName}.jpg`;
-    } else {
-      fname = `${d.fileName}.${fmt}`;
-    }
-
-    // Grupos single-format
-    const single = [
-      "imagen",
-      "pdf",
-      "documento",
-      "video",
-      "powerpoint",
-      "email",
-      "fuentes",
-      "zip",
-    ];
-    if (single.includes(group)) {
-      url = d.originalSrc.replace(/\.[^/.]+$/, `.${fmt}`);
-    } else if (fmt === "jpg") {
-      url = `${d.basePath}jpg/${fname}`;
-    } else {
-      url = `${d.basePath}${fmt}/${fname}`;
-    }
-
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = fname;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    Fancybox.close();
-  });
+/* ────────────────────────────────────────────────────────────── */
+/* 5 · Botón mute/unmute preludios                                */
+/* ────────────────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+   document.querySelectorAll('.cs-masked-media.video-container').forEach((cont) => {
+      const v = cont.querySelector('video');
+      if (!v) return;
+      cont.style.position = 'relative';
+      const btn = document.createElement('button');
+      Object.assign(btn.style, {
+         position: 'absolute',
+         top: '50%',
+         left: '50%',
+         transform: 'translate(-50%,-50%)',
+         background: '#ffffffcc',
+         border: 'none',
+         cursor: 'pointer',
+         borderRadius: '50%',
+         padding: '14px',
+         opacity: 0,
+         transition: 'opacity .3s',
+      });
+      const img = document.createElement('img');
+      Object.assign(img.style, { width: '32px', height: '32px' });
+      img.src = '../assets/img/icons/unmute.svg';
+      btn.appendChild(img);
+      cont.appendChild(btn);
+      cont.onmouseenter = () => (btn.style.opacity = 1);
+      cont.onmouseleave = () => (btn.style.opacity = 0);
+      btn.onclick = (e) => {
+         e.preventDefault();
+         v.muted = !v.muted;
+         img.src = v.muted ? '../assets/img/icons/unmute.svg' : '../assets/img/icons/mute.svg';
+      };
+   });
 });

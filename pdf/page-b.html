@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Página B (destino)</title>
+		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+			section {
+				height: 100vh;
+				padding: 2rem;
+			}
+			nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				background: #222;
+				width: 100%;
+				padding: 1rem;
+			}
+			nav a {
+				color: #fff;
+				margin-right: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<!-- Volver a Página A -->
+			<a href="#bye" data-jump>Ir a #hola (misma página)</a>
+			<!-- OTRA página -->
+			<a href="page-a.html#bye" data-jump>Ir a #hola en Página B</a>
+		</nav>
+
+		<section id="home" style="background: #d0e8ff">HOME (página B)</section>
+		<section id="hola" style="background: #ff8b8b">¡HOLA! (página B)</section>
+		<section id="bye" style="background: #a2ff9c">CHAU (página B)</section>
+
+		<script src="../assets/js/scroll.js"></script>
+	</body>
+</html>
