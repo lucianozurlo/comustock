@@ -4,9 +4,9 @@
       PRESENTACIONES
       **** OK  https://demo.shadow-themes.com/html/bringer/portfolio-column.html
 
-EMAILS / POSTEOS
-guias    https://demo.shadow-themes.com/html/bringer/home03.html              Our Services
-ejemplos https://demo.shadow-themes.com/html/bringer/home05.html              Our Work
+      EMAILS / POSTEOS
+      guias    https://demo.shadow-themes.com/html/bringer/home03.html              Our Services
+      ejemplos https://demo.shadow-themes.com/html/bringer/home05.html              Our Work
 
 FIRMA
 **** OK  https://demo.shadow-themes.com/html/bringer/home04.html		         Let's discuss
@@ -22,7 +22,7 @@ https://demo.shadow-themes.com/html/bringer/home07.html		Portfolio
 CARTELERAS
 **** OK  home07
 
-ESPACIOS
+NUESTROS ESPACIOS
 **** OK  home07
 (ver)    https://demo.shadow-themes.com/html/bringer/about-us.html	From passion
 
