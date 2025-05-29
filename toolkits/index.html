@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>ComuStock :: Templates</title>
+		<title>ComuStock :: Toolkits</title>
 		<link type="text/css" rel="stylesheet" href="../assets/css/config.css" />
 		<link type="text/css" rel="stylesheet" href="../assets/css/libs.css" />
 		<link type="text/css" rel="stylesheet" href="../assets/css/style.css" />
@@ -24,7 +24,7 @@
 		</style>
 	</head>
 
-	<body>
+	<body id="main-toolkits">
 		<header
 			id="cs-header"
 			class="is-frosted is-sticky"
@@ -103,7 +103,7 @@
 									<li><a href="../recursos/#mas-herramientas">Más herramientas</a></li>
 								</ul>
 							</li>
-							<li>
+							<li class="current-menu-item">
 								<a href="../toolkits">Toolkits</a>
 								<ul class="sub-menu">
 									<li><a href="../toolkits/#marca-empleadora">Marca Empleadora</a></li>
@@ -143,87 +143,138 @@
 			</div>
 		</header>
 
-		<!-- Page Main -->
 		<main id="cs-main">
 			<div class="stg-container">
-				<!-- Section: Page Title -->
-				<section class="backlight-bottom header-title">
+				<section id="intro" class="backlight-top">
 					<div class="stg-row">
-						<div class="stg-col-6 stg-offset-3 align-center stg-tp-col-10 stg-tp-offset-1">
-							<h1 class="cs-page-title" data-appear="fade-up" data-unload="fade-up">
-								Templates
-							</h1>
-							<p
-								class="cs-large-text"
-								data-split-appear="fade-up"
-								data-split-unload="fade-up"
-								data-delay="100"
-							>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</p>
-						</div>
-					</div>
-				</section>
-
-				<section class="backlight-top">
-					<div class="cs-bento-grid cs-grid-cta">
-						<div
-							class="is-large cs-masked-block"
-							data-appear="fade-right"
-							data-unload="fade-left"
-						>
-							<div
-								class="cs-grid-cta-media cs-masked-media"
-								data-bg-src="../assets/img/cta/grid-cta-background.jpg"
-							>
-								<div class="cs-grid-cta-heading"></div>
-							</div>
-							<div class="cs-masked-content at-bottom-right"></div>
-						</div>
-						<div
-							class="is-medium cs-block"
-							data-appear="fade-down"
-							data-unload="fade-right"
-						></div>
-						<div
-							class="is-small"
-							data-appear="zoom-out"
-							data-delay="100"
-							data-unload="zoom-out"
-						>
-							<a href="contacts.html" class="cs-square-button"> </a>
-						</div>
-						<div
-							class="is-small"
-							data-appear="zoom-out"
-							data-delay="200"
-							data-unload="zoom-out"
-						>
-							<img
-								src="../assets/img/cta/grid-cta-02.jpg"
-								alt="Let's Chat"
-								width="960"
-								height="960"
-							/>
-						</div>
-					</div>
-				</section>
-
-				<section>
-					<div class="stg-row cs-section-title">
-						<div class="stg-col-8 stg-offset-2 stg-tp-col-10 stg-tp-offset-1">
+						<div class="stg-col-8 stg-offset-2">
 							<div class="align-center">
-								<h2 data-appear="fade-up" data-unload="fade-up">Título contenido</h2>
+								<h1 class="cs-page-title" data-appear="fade-up" data-unload="fade-up">
+									Toolkits
+								</h1>
 								<p
 									class="cs-large-text"
-									data-split-appear="fade-up"
-									data-split-unload="fade-up"
+									data-appear="fade-up"
 									data-delay="100"
+									data-unload="fade-up"
 								>
-									We are a team of passionate and experienced designers, developers, and
-									marketers who specialize in helping businesses achieve their goals.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit dolorem iure
+									libero doloremque quisquam ipsa dolore alias modi.
 								</p>
 							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="slider" class="backlight-bottom">
+					<div class="cs-slider-wrapper">
+						<div class="swiper cs-slider" data-duration="800" data-effect="slide">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img
+										class="cs-lazy"
+										src="../assets/img/null.png"
+										data-src="../assets/img/toolkits/marca-empleadora.jpg"
+										alt=""
+										width="1920"
+										height="1280"
+									/>
+									<div class="cs-slide-content">
+										<div class="cs-slide-content-inner cs-slide-post-title">
+											<!-- <span class="cs-meta">Branding</span> -->
+											<h4>Marca Empleadora</h4>
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+										</div>
+										<a href="marca-empleadora/"></a>
+									</div>
+								</div>
+
+								<div class="swiper-slide">
+									<img
+										class="cs-lazy"
+										src="../assets/img/null.png"
+										data-src="../assets/img/demo/1200x800.jpg"
+										alt=""
+										width="1920"
+										height="1280"
+									/>
+									<div class="cs-slide-content">
+										<div class="cs-slide-content-inner cs-slide-post-title">
+											<!-- <span class="cs-meta">Branding</span> -->
+											<h4>Cómo diseñar</h4>
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+										</div>
+										<a href="#"></a>
+									</div>
+								</div>
+
+								<div class="swiper-slide">
+									<img
+										class="cs-lazy"
+										src="../assets/img/null.png"
+										data-src="../assets/img/demo/1200x800.jpg"
+										alt=""
+										width="1920"
+										height="1280"
+									/>
+									<div class="cs-slide-content">
+										<div class="cs-slide-content-inner cs-slide-post-title">
+											<!-- <span class="cs-meta">Branding</span> -->
+											<h4>Cómo redactar</h4>
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+										</div>
+										<a href="#"></a>
+									</div>
+								</div>
+
+								<div class="swiper-slide">
+									<img
+										class="cs-lazy"
+										src="../assets/img/null.png"
+										data-src="../assets/img/demo/1200x800.jpg"
+										alt=""
+										width="1920"
+										height="1280"
+									/>
+									<div class="cs-slide-content">
+										<div class="cs-slide-content-inner cs-slide-post-title">
+											<!-- <span class="cs-meta">Branding</span> -->
+											<h4>Comunicación Empática</h4>
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+										</div>
+										<a href="#"></a>
+									</div>
+								</div>
+
+								<div class="swiper-slide">
+									<img
+										class="cs-lazy"
+										src="../assets/img/null.png"
+										data-src="../assets/img/demo/1200x800.jpg"
+										alt=""
+										width="1920"
+										height="1280"
+									/>
+									<div class="cs-slide-content">
+										<div class="cs-slide-content-inner cs-slide-post-title">
+											<!-- <span class="cs-meta">Branding</span> -->
+											<h4>Eventos Sustentables</h4>
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+										</div>
+										<a href="#"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- .cs-slider -->
+						<!-- Slider Navigation -->
+						<div class="cs-slider-nav on-sides">
+							<a href="#" class="cs-slider-prev">
+								<span class="cs-icon cs-icon-arrow-left"></span>
+							</a>
+							<a href="#" class="cs-slider-next">
+								<span class="cs-icon cs-icon-arrow-right"></span>
+							</a>
 						</div>
 					</div>
 				</section>

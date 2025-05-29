@@ -13,18 +13,18 @@ FIRMA
 
 ------------
 
-// GALERIAS
-HOME     https://demo.shadow-themes.com/html/bringer/home04.html     HOME
+      // GALERIAS
+      HOME     https://demo.shadow-themes.com/html/bringer/home04.html     HOME
 
-IMAGENES Y VIDEOS
-https://demo.shadow-themes.com/html/bringer/home07.html		Portfolio
+      IMAGENES Y VIDEOS
+      https://demo.shadow-themes.com/html/bringer/home07.html		Portfolio
 
-CARTELERAS
-**** OK  home07
+      CARTELERAS
+      **** OK  home07
 
-NUESTROS ESPACIOS
-**** OK  home07
-(ver)    https://demo.shadow-themes.com/html/bringer/about-us.html	From passion
+      Nuestros Espacios
+      **** OK  home07
+      (ver)    https://demo.shadow-themes.com/html/bringer/about-us.html	From passion
 
 ------------
 

@@ -15,11 +15,6 @@
 	background-color: var(--flow);
 }
 /* SIDE MENU end */
-
-#glosario thead {
-	color: #000;
-}
-
 #flow .brand-top.backlight-top::before {
 	background: radial-gradient(80vw circle at 50vw -10%, var(--black), var(--flow-half) 150%);
 	left: 0;
