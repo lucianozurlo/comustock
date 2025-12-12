@@ -1,0 +1,120 @@
+# ============================
+# Custom
+# ============================
+.env
+.env.development
+.env.productions
+_prueba-2.html
+_prueba.html
+about-me.html
+about-us.html
+contacts.html
+faq.html
+home01.html
+home02.html
+home03.html
+home04.html
+home05.html
+home06.html
+home07.html
+home08.html
+portfolio-column.html
+portfolio-grid.html
+portfolio-infinite-list.html
+portfolio-post01.html
+portfolio-post02.html
+portfolio-post03.html
+portfolio-post04.html
+portfolio-post05.html
+portfolio-post06.html
+portfolio-post07.html
+portfolio-post08.html
+portfolio-post09.html
+portfolio-slider.html
+pricing.html
+service-details.html
+services.html
+team-member.html
+telecom.html
+testimonials.html
+ver.html
+
+
+
+# ============================
+# Archivos y carpetas de macOS
+# ============================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# ============================
+# Node.js / ReactJS
+# ============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Locks de gestores de dependencias (ajusta según tu preferencia)
+package-lock.json
+yarn.lock
+
+# Directorios de construcción (build) para React
+build/
+dist/
+
+# ============================
+# Python
+# ============================
+# Bytecode compilado de Python y cachés
+*.py[cod]
+*$$py.class
+__pycache__/
+.pytest_cache/
+
+# Archivos de log generados por pip u otros procesos
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Distribuciones y eggs
+*.egg-info/
+.eggs/
+
+# Entornos virtuales (virtualenv, venv, pyenv, etc.)
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# ============================
+# Django
+# ============================
+# Base de datos SQLite (si la usas)
+*.sqlite3
+db.sqlite3
+
+# Logs de Django u otros archivos de log
+*.log
+
+# Migraciones: ignora todos menos __init__.py para conservar el paquete
+**/migrations/*
+!**/migrations/__init__.py
+
+# Si manejas archivos estáticos o multimedia fuera de control de versiones
+staticfiles/
+media/
+
+# ============================
+# Configuraciones de IDE/Editor
+# ============================
+# .vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+_edit video
+Cartelera

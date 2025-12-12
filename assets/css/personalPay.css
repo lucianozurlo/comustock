@@ -1,0 +1,60 @@
+:root {
+	--color-brand: var(--personalPay);
+	--color-brand-half: var(--personalPay-half);
+	--color-brand-transparent: var(--personalPay-transparent);
+}
+
+/* SIDE MENU */
+.side-menu .manual-de-marca .iso {
+	background-image: url('../../content/identidad/ecosistema/personalPay/logos/svg/personalPay_iso_blanco.svg');
+}
+.side-menu a.manual-de-marca {
+	background-color: var(--personalPay-transparent);
+}
+.side-menu a:hover.manual-de-marca {
+	background-color: var(--personalPay);
+}
+/* SIDE MENU end */
+
+#personalPay .brand-top.backlight-top::before {
+	background: radial-gradient(
+		80vw circle at 50vw -10%,
+		var(--personalPay),
+		var(--personalPay-null) 50%
+	);
+	left: 0;
+}
+
+#personalPay .brands-content #nuestro-ecosistema .box {
+	border-color: var(--personalPay);
+	background-color: var(--personalPay-transparent);
+}
+
+#personalPay #tamanos [class*='stg-col-'] .cs-grid-2cols div:nth-child(2) .cs-block {
+	background-color: var(--personalPay);
+}
+
+#personalPay #usos [class*='stg-col-'] .cs-grid-2cols div:nth-child(1) .cs-block {
+	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG1.jpg');
+}
+
+#personalPay #usos [class*='stg-col-'] .cs-grid-2cols div:nth-child(2) .cs-block {
+	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG2.jpg');
+}
+
+#personalPay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(1) .cs-block {
+	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG1.jpg');
+}
+
+#personalPay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(2) .cs-block {
+	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG1.jpg');
+}
+#personalPay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(2) .cs-block {
+	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG3.jpg');
+}
+#personalPay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(3) .cs-block {
+	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG4.jpg');
+}
+#personalPay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(4) .cs-block {
+	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG5.jpg');
+}

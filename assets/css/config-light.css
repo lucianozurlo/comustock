@@ -1,0 +1,42 @@
+/* light */
+:root {
+	--cs-s-body-bg: #f5f7fa;
+	--cs-s-nav: #ffffffcc;
+	--cs-s-container-bg: #fff;
+	--cs-s-container-frosted: #ffffffee;
+	--cs-s-container-frosted-alt: #313746;
+	--cs-s-heading: #313746;
+	--cs-s-heading-fade: #313746c0;
+	--cs-s-text: #54585c;
+	--cs-s-accent: #d00086;
+	--cs-button-hover-bg: #d00086d0;
+	--cs-s-text-accent: #d068ab;
+	--cs-s-accented-text: var(--cs-s-heading);
+	--cs-s-border: #31374627;
+	--cs-s-border-accent: #d068ab80;
+	--cs-s-border-mute: #3137460d;
+	--cs-s-border-highlight: #f5f7fa40;
+	--cs-s-backlight: #31374612;
+	--cs-s-box-shadow: #07090d10;
+	--cs-s-cursor-light: var(--cs-s-backlight);
+	--cs-c-border-gradient: linear-gradient(to left, transparent, var(--cs-s-border), transparent);
+	--cs-c-menu: var(--cs-s-text);
+	--cs-c-menu-hover: var(--cs-s-heading);
+	--cs-c-menu-active: var(--cs-s-heading);
+}
+
+/* +++ */
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+button:not([class*='pswp']),
+a.cs-button {
+	color: #fff !important;
+}
+.cs-grid-more-masked .cs-square-button:hover span.cs-icon {
+	background-color: #fff !important;
+}
+
+#glosario td {
+	border-bottom: 1px solid #54585c33 !important;
+}

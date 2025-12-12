@@ -1,0 +1,893 @@
+.color-white {
+  color: var(--white) !important;
+}
+.bg-white {
+  background-color: var(--white) !important;
+}
+.border-white {
+  border-color: var(--white) !important;
+}
+.color-black {
+  color: var(--black) !important;
+}
+.bg-black {
+  background-color: var(--black) !important;
+}
+.bg-black.cs-masked-media {
+  border: 1px solid var(--cs-s-container-frosted) !important;
+}
+.border-black {
+  border-color: var(--black) !important;
+}
+.color-lightgray {
+  color: var(--lightgray) !important;
+}
+.bg-lightgray {
+  background-color: var(--lightgray) !important;
+}
+.border-lightgray {
+  border-color: var(--lightgray) !important;
+}
+.color-darktgray {
+  color: var(--darkgray) !important;
+}
+.bg-darktgray {
+  background-color: var(--darkgray) !important;
+}
+.border-darktgray {
+  border-color: var(--darkgray) !important;
+}
+.color-darktgray-mid {
+  color: var(--darkgray-mid) !important;
+}
+.bg-darktgray-mid {
+  background-color: var(--darkgray-mid) !important;
+}
+.border-darktgray-mid {
+  border-color: var(--darkgray-mid) !important;
+}
+
+/****** TELECOM ******/
+.color-telecom {
+  color: var(--telecom) !important;
+}
+.bg-telecom {
+  background-color: var(--telecom) !important;
+}
+.border-telecom {
+  border-color: var(--telecom) !important;
+}
+/**/
+.color-telecom-half {
+  color: var(--telecom-half) !important;
+}
+.bg-telecom-half {
+  background-color: var(--telecom-half) !important;
+}
+.border-telecom-half {
+  border-color: var(--telecom-half) !important;
+}
+/**/
+.color-telecom-transparent {
+  color: var(--telecom-transparent) !important;
+}
+.bg-telecom-transparent {
+  background-color: var(--telecom-transparent) !important;
+}
+.border-telecom-transparent {
+  border-color: var(--telecom-transparent) !important;
+}
+/**/
+.color-telecom-null {
+  color: var(--telecom-null) !important;
+}
+.bg-telecom-null {
+  background-color: var(--telecom-null) !important;
+}
+.border-telecom-null {
+  border-color: var(--telecom-null) !important;
+}
+/**/
+.color-telecom-b2b {
+  color: var(--telecom-b2b) !important;
+}
+.bg-telecom-b2b {
+  background-color: var(--telecom-b2b) !important;
+}
+.border-telecom-b2b {
+  border-color: var(--telecom-b2b) !important;
+}
+/**/
+.color-telecom-acento {
+  color: var(--telecom-acento) !important;
+}
+.bg-telecom-acento {
+  background-color: var(--telecom-acento) !important;
+}
+.border-telecom-acento {
+  border-color: var(--telecom-acento) !important;
+}
+/**/
+.color-telecom-principal-2 {
+  color: var(--telecom-principal-2) !important;
+}
+.bg-telecom-principal-2 {
+  background-color: var(--telecom-principal-2) !important;
+}
+.border-telecom-principal-2 {
+  border-color: var(--telecom-principal-2) !important;
+}
+/**/
+.color-telecom-principal-4 {
+  color: var(--telecom-principal-4) !important;
+}
+.bg-telecom-principal-4 {
+  background-color: var(--telecom-principal-4) !important;
+}
+.border-telecom-principal-4 {
+  border-color: var(--telecom-principal-4) !important;
+}
+/**/
+.color-telecom-secundario-2 {
+  color: var(--telecom-secundario-2) !important;
+}
+.bg-telecom-secundario-2 {
+  background-color: var(--telecom-secundario-2) !important;
+}
+.border-telecom-secundario-2 {
+  border-color: var(--telecom-secundario-2) !important;
+}
+/**/
+.color-telecom-secundario-3 {
+  color: var(--telecom-secundario-3) !important;
+}
+.bg-telecom-secundario-3 {
+  background-color: var(--telecom-secundario-3) !important;
+}
+.border-telecom-secundario-3 {
+  border-color: var(--telecom-secundario-3) !important;
+}
+/**/
+.color-telecom-light {
+  color: var(--telecom-light) !important;
+}
+.bg-telecom-light {
+  background-color: var(--telecom-light) !important;
+}
+.border-telecom-light {
+  border-color: var(--telecom-light) !important;
+}
+/**/
+.color-telecom-dark {
+  color: var(--telecom-dark) !important;
+}
+.bg-telecom-dark {
+  background-color: var(--telecom-dark) !important;
+}
+.border-telecom-dark {
+  border-color: var(--telecom-dark) !important;
+}
+/* Telecom Empresas */
+.color-telecom-empresas {
+  color: var(--telecom-empresas) !important;
+}
+.bg-telecom-empresas {
+  background-color: var(--telecom-empresas) !important;
+}
+.border-telecom-empresas {
+  border-color: var(--telecom-empresas) !important;
+}
+/**/
+.color-telecom-empresas-principal-2 {
+  color: var(--telecom-empresas-principal-2) !important;
+}
+.bg-telecom-empresas-principal-2 {
+  background-color: var(--telecom-empresas-principal-2) !important;
+}
+.border-telecom-empresas-principal-2 {
+  border-color: var(--telecom-empresas-principal-2) !important;
+}
+/**/
+.color-telecom-empresas-acento {
+  color: var(--telecom-empresas-acento) !important;
+}
+.bg-telecom-empresas-acento {
+  background-color: var(--telecom-empresas-acento) !important;
+}
+.border-telecom-empresas-acento {
+  border-color: var(--telecom-empresas-acento) !important;
+}
+/**/
+.color-telecom-empresas-acento-secundario-1 {
+  color: var(--telecom-empresas-acento-secundario-1) !important;
+}
+.bg-telecom-empresas-acento-secundario-1 {
+  background-color: var(--telecom-empresas-acento-secundario-1) !important;
+}
+.border-telecom-empresas-acento-secundario-1 {
+  border-color: var(--telecom-empresas-acento-secundario-1) !important;
+}
+/**/
+.color-telecom-empresas-acento-secundario-2 {
+  color: var(--telecom-empresas-acento-secundario-2) !important;
+}
+.bg-telecom-empresas-acento-secundario-2 {
+  background-color: var(--telecom-empresas-acento-secundario-2) !important;
+}
+.border-telecom-empresas-acento-secundario-2 {
+  border-color: var(--telecom-empresas-acento-secundario-2) !important;
+}
+/**/
+.color-telecom-empresas-acento-secundario-3 {
+  color: var(--telecom-empresas-acento-secundario-3) !important;
+}
+.bg-telecom-empresas-acento-secundario-3 {
+  background-color: var(--telecom-empresas-acento-secundario-3) !important;
+}
+.border-telecom-empresas-acento-secundario-3 {
+  border-color: var(--telecom-empresas-acento-secundario-3) !important;
+}
+/**/
+.color-telecom-empresas-acento-secundario-4 {
+  color: var(--telecom-empresas-acento-secundario-4) !important;
+}
+.bg-telecom-empresas-acento-secundario-4 {
+  background-color: var(--telecom-empresas-acento-secundario-4) !important;
+}
+.border-telecom-empresas-acento-secundario-4 {
+  border-color: var(--telecom-empresas-acento-secundario-4) !important;
+}
+/**/
+.bg-telecom-empresas-gradients-1 {
+  background: var(--telecom-empresas-gradients-1) !important;
+}
+.bg-telecom-empresas-gradients-2 {
+  background: var(--telecom-empresas-gradients-2) !important;
+}
+.bg-telecom-empresas-gradients-3 {
+  background: var(--telecom-empresas-gradients-3) !important;
+}
+.bg-telecom-empresas-gradients-4 {
+  background: var(--telecom-empresas-gradients-4) !important;
+}
+/**/
+
+/****** PERSONAL ******/
+.color-personal {
+  color: var(--personal) !important;
+}
+.bg-personal {
+  background-color: var(--personal) !important;
+}
+.border-personal {
+  border-color: var(--personal) !important;
+}
+/**/
+.color-personal-half {
+  color: var(--personal-half) !important;
+}
+.bg-personal-half {
+  background-color: var(--personal-half) !important;
+}
+.border-personal-half {
+  border-color: var(--personal-half) !important;
+}
+/**/
+.color-personal-transparent {
+  color: var(--personal-transparent) !important;
+}
+.bg-personal-transparent {
+  background-color: var(--personal-transparent) !important;
+}
+.border-personal-transparent {
+  border-color: var(--personal-transparent) !important;
+}
+/**/
+.color-personal-null {
+  color: var(--personal-null) !important;
+}
+.bg-personal-null {
+  background-color: var(--personal-null) !important;
+}
+.border-personal-null {
+  border-color: var(--personal-null) !important;
+}
+/**/
+.color-personal-principal-2 {
+  color: var(--personal-principal-2) !important;
+}
+.bg-personal-principal-2 {
+  background-color: var(--personal-principal-2) !important;
+}
+.border-personal-principal-2 {
+  border-color: var(--personal-principal-2) !important;
+}
+/**/
+.color-personal-principal-4 {
+  color: var(--personal-principal-4) !important;
+}
+.bg-personal-principal-4 {
+  background-color: var(--personal-principal-4) !important;
+}
+.border-personal-principal-4 {
+  border-color: var(--personal-principal-4) !important;
+}
+/**/
+.color-personal-principal-5 {
+  color: var(--personal-principal-5) !important;
+}
+.bg-personal-principal-5 {
+  background-color: var(--personal-principal-5) !important;
+}
+.border-personal-principal-5 {
+  border-color: var(--personal-principal-5) !important;
+}
+/**/
+.color-personal-principal-6 {
+  color: var(--personal-principal-6) !important;
+}
+.bg-personal-principal-6 {
+  background-color: var(--personal-principal-6) !important;
+}
+.border-personal-principal-6 {
+  border-color: var(--personal-principal-6) !important;
+}
+/**/
+.color-personal-principal-7 {
+  color: var(--personal-principal-7) !important;
+}
+.bg-personal-principal-7 {
+  background-color: var(--personal-principal-7) !important;
+}
+.border-personal-principal-7 {
+  border-color: var(--personal-principal-7) !important;
+}
+/**/
+.color-personal-complementario-a1 {
+  color: var(--personal-complementario-a1) !important;
+}
+.bg-personal-complementario-a1 {
+  background-color: var(--personal-complementario-a1) !important;
+}
+.border-personal-complementario-a1 {
+  border-color: var(--personal-complementario-a1) !important;
+}
+/**/
+.color-personal-complementario-a2 {
+  color: var(--personal-complementario-a2) !important;
+}
+.bg-personal-complementario-a2 {
+  background-color: var(--personal-complementario-a2) !important;
+}
+.border-personal-complementario-a2 {
+  border-color: var(--personal-complementario-a2) !important;
+}
+/**/
+.color-personal-complementario-a3 {
+  color: var(--personal-complementario-a3) !important;
+}
+.bg-personal-complementario-a3 {
+  background-color: var(--personal-complementario-a3) !important;
+}
+.border-personal-complementario-a3 {
+  border-color: var(--personal-complementario-a3) !important;
+}
+/**/
+.color-personal-complementario-a4 {
+  color: var(--personal-complementario-a4) !important;
+}
+.bg-personal-complementario-a4 {
+  background-color: var(--personal-complementario-a4) !important;
+}
+.border-personal-complementario-a4 {
+  border-color: var(--personal-complementario-a4) !important;
+}
+/**/
+.color-personal-complementario-b1 {
+  color: var(--personal-complementario-b1) !important;
+}
+.bg-personal-complementario-b1 {
+  background-color: var(--personal-complementario-b1) !important;
+}
+.border-personal-complementario-b1 {
+  border-color: var(--personal-complementario-b1) !important;
+}
+/**/
+.color-personal-complementario-b2 {
+  color: var(--personal-complementario-b2) !important;
+}
+.bg-personal-complementario-b2 {
+  background-color: var(--personal-complementario-b2) !important;
+}
+.border-personal-complementario-b2 {
+  border-color: var(--personal-complementario-b2) !important;
+}
+/**/
+.color-personal-complementario-b3 {
+  color: var(--personal-complementario-b3) !important;
+}
+.bg-personal-complementario-b3 {
+  background-color: var(--personal-complementario-b3) !important;
+}
+.border-personal-complementario-b3 {
+  border-color: var(--personal-complementario-b3) !important;
+}
+/**/
+.color-personal-complementario-b4 {
+  color: var(--personal-complementario-b4) !important;
+}
+.bg-personal-complementario-b4 {
+  background-color: var(--personal-complementario-b4) !important;
+}
+.border-personal-complementario-b4 {
+  border-color: var(--personal-complementario-b4) !important;
+}
+/**/
+.color-personal-complementario-c1 {
+  color: var(--personal-complementario-c1) !important;
+}
+.bg-personal-complementario-c1 {
+  background-color: var(--personal-complementario-c1) !important;
+}
+.border-personal-complementario-c1 {
+  border-color: var(--personal-complementario-c1) !important;
+}
+/**/
+.color-personal-complementario-c2 {
+  color: var(--personal-complementario-c2) !important;
+}
+.bg-personal-complementario-c2 {
+  background-color: var(--personal-complementario-c2) !important;
+}
+.border-personal-complementario-c2 {
+  border-color: var(--personal-complementario-c2) !important;
+}
+/**/
+.color-personal-complementario-c3 {
+  color: var(--personal-complementario-c3) !important;
+}
+.bg-personal-complementario-c3 {
+  background-color: var(--personal-complementario-c3) !important;
+}
+.border-personal-complementario-c3 {
+  border-color: var(--personal-complementario-c3) !important;
+}
+/**/
+.color-personal-complementario-c4 {
+  color: var(--personal-complementario-c4) !important;
+}
+.bg-personal-complementario-c4 {
+  background-color: var(--personal-complementario-c4) !important;
+}
+.border-personal-complementario-c4 {
+  border-color: var(--personal-complementario-c4) !important;
+}
+/**/
+
+.color-personal-complementario-d1 {
+  color: var(--personal-complementario-d1) !important;
+}
+.bg-personal-complementario-d1 {
+  background-color: var(--personal-complementario-d1) !important;
+}
+.border-personal-complementario-d1 {
+  border-color: var(--personal-complementario-d1) !important;
+}
+/**/
+.color-personal-complementario-d2 {
+  color: var(--personal-complementario-d2) !important;
+}
+.bg-personal-complementario-d2 {
+  background-color: var(--personal-complementario-d2) !important;
+}
+.border-personal-complementario-d2 {
+  border-color: var(--personal-complementario-d2) !important;
+}
+/**/
+.color-personal-complementario-d3 {
+  color: var(--personal-complementario-d3) !important;
+}
+.bg-personal-complementario-d3 {
+  background-color: var(--personal-complementario-d3) !important;
+}
+.border-personal-complementario-d3 {
+  border-color: var(--personal-complementario-d3) !important;
+}
+/**/
+.color-personal-acento {
+  color: var(--personal-acento) !important;
+}
+.bg-personal-acento {
+  background-color: var(--personal-acento) !important;
+}
+.border-personal-acento {
+  border-color: var(--personal-acento) !important;
+}
+/**/
+.color-personal-subproducto-1 {
+  color: var(--personal-subproducto-1) !important;
+}
+.bg-personal-subproducto-1 {
+  background: var(--personal-subproducto-1) !important;
+}
+.border-personal-subproducto-1 {
+  border-color: var(--personal-subproducto-1) !important;
+}
+/**/
+.color-personal-subproducto-2 {
+  color: var(--personal-subproducto-2) !important;
+}
+.bg-personal-subproducto-2 {
+  background: var(--personal-subproducto-2) !important;
+}
+.border-personal-subproducto-2 {
+  border-color: var(--personal-subproducto-2) !important;
+}
+/**/
+.color-personal-subproducto-3 {
+  color: var(--personal-subproducto-3) !important;
+}
+.bg-personal-subproducto-3 {
+  background: var(--personal-subproducto-3) !important;
+}
+.border-personal-subproducto-3 {
+  border-color: var(--personal-subproducto-3) !important;
+}
+/**/
+.color-personal-subproducto-4 {
+  color: var(--personal-subproducto-4) !important;
+}
+.bg-personal-subproducto-4 {
+  background: var(--personal-subproducto-4) !important;
+}
+.border-personal-subproducto-4 {
+  border-color: var(--personal-subproducto-4) !important;
+}
+/**/
+.color-personal-subproducto-5 {
+  color: var(--personal-subproducto-5) !important;
+}
+.bg-personal-subproducto-5 {
+  background: var(--personal-subproducto-5) !important;
+}
+.border-personal-subproducto-5 {
+  border-color: var(--personal-subproducto-5) !important;
+}
+/**/
+.color-personal-subproducto-6 {
+  color: var(--personal-subproducto-6) !important;
+}
+.bg-personal-subproducto-6 {
+  background: var(--personal-subproducto-6) !important;
+}
+.border-personal-subproducto-6 {
+  border-color: var(--personal-subproducto-6) !important;
+}
+/**/
+.color-personal-light {
+  color: var(--personal-light) !important;
+}
+.bg-personal-light {
+  background-color: var(--personal-light) !important;
+}
+.border-personal-light {
+  border-color: var(--personal-light) !important;
+}
+/**/
+.color-personal-dark {
+  color: var(--personal-dark) !important;
+}
+.bg-personal-dark {
+  background-color: var(--personal-dark) !important;
+}
+.border-personal-dark {
+  border-color: var(--personal-dark) !important;
+}
+/**/
+
+/****** FLOW ******/
+.color-flow {
+  color: var(--flow) !important;
+}
+.bg-flow {
+  background-color: var(--flow) !important;
+}
+.border-flow {
+  border-color: var(--flow) !important;
+}
+/**/
+.color-flow-half {
+  color: var(--flow-half) !important;
+}
+.bg-flow-half {
+  background-color: var(--flow-half) !important;
+}
+.border-flow-half {
+  border-color: var(--flow-half) !important;
+}
+/**/
+.color-flow-transparent {
+  color: var(--flow-transparent) !important;
+}
+.bg-flow-transparent {
+  background-color: var(--flow-transparent) !important;
+}
+.border-flow-transparent {
+  border-color: var(--flow-transparent) !important;
+}
+/**/
+.color-flow-null {
+  color: var(--flow-null) !important;
+}
+.bg-flow-null {
+  background-color: var(--flow-null) !important;
+}
+.border-flow-null {
+  border-color: var(--flow-null) !important;
+}
+/**/
+.color-flow-gray {
+  color: var(--flow-gray) !important;
+}
+.bg-flow-gray {
+  background-color: var(--flow-gray) !important;
+}
+.border-flow-gray {
+  border-color: var(--flow-gray) !important;
+}
+/**/
+.color-flow-acento {
+  color: var(--flow-acento) !important;
+}
+.bg-flow-acento {
+  background-color: var(--flow-acento) !important;
+}
+.border-flow-acento {
+  border-color: var(--flow-acento) !important;
+}
+/**/
+.color-flow-principal-2 {
+  color: var(--flow-principal-2) !important;
+}
+.bg-flow-principal-2 {
+  background-color: var(--flow-principal-2) !important;
+}
+.border-flow-principal-2 {
+  border-color: var(--flow-principal-2) !important;
+}
+/**/
+.color-flow-principal-3 {
+  color: var(--flow-principal-3) !important;
+}
+.bg-flow-principal-3 {
+  background-color: var(--flow-principal-3) !important;
+}
+.border-flow-principal-3 {
+  border-color: var(--flow-principal-3) !important;
+}
+/**/
+.color-flow-secundario-1 {
+  color: var(--flow-secundario-1) !important;
+}
+.bg-flow-secundario-1 {
+  background-color: var(--flow-secundario-1) !important;
+}
+.border-flow-secundario-1 {
+  border-color: var(--flow-secundario-1) !important;
+}
+/**/
+.color-flow-secundario-2 {
+  color: var(--flow-secundario-2) !important;
+}
+.bg-flow-secundario-2 {
+  background-color: var(--flow-secundario-2) !important;
+}
+.border-flow-secundario-2 {
+  border-color: var(--flow-secundario-2) !important;
+}
+/**/
+.color-flow-secundario-3 {
+  color: var(--flow-secundario-3) !important;
+}
+.bg-flow-secundario-3 {
+  background-color: var(--flow-secundario-3) !important;
+}
+.border-flow-secundario-3 {
+  border-color: var(--flow-secundario-3) !important;
+}
+/**/
+.color-flow-complementario-1 {
+  color: var(--flow-complementario-1) !important;
+}
+.bg-flow-complementario-1 {
+  background-color: var(--flow-complementario-1) !important;
+}
+.border-flow-complementario-1 {
+  border-color: var(--flow-complementario-1) !important;
+}
+/**/
+.color-flow-complementario-2 {
+  color: var(--flow-complementario-2) !important;
+}
+.bg-flow-complementario-2 {
+  background-color: var(--flow-complementario-2) !important;
+}
+.border-flow-complementario-2 {
+  border-color: var(--flow-complementario-2) !important;
+}
+/**/
+.color-flow-complementario-3 {
+  color: var(--flow-complementario-3) !important;
+}
+.bg-flow-complementario-3 {
+  background-color: var(--flow-complementario-3) !important;
+}
+.border-flow-complementario-3 {
+  border-color: var(--flow-complementario-3) !important;
+}
+/**/
+.color-flow-light {
+  color: var(--flow-light) !important;
+}
+.bg-flow-light {
+  background-color: var(--flow-light) !important;
+}
+.border-flow-light {
+  border-color: var(--flow-light) !important;
+}
+/**/
+.color-flow-dark {
+  color: var(--flow-dark) !important;
+}
+.bg-flow-dark {
+  background-color: var(--flow-dark) !important;
+}
+.border-flow-dark {
+  border-color: var(--flow-dark) !important;
+}
+/**/
+
+/****** PERSONAL PAY ******/
+.color-personalPay {
+  color: var(--personalPay) !important;
+}
+.bg-personalPay {
+  background-color: var(--personalPay) !important;
+}
+.border-personalPay {
+  border-color: var(--personalPay) !important;
+}
+/**/
+.color-personalPay-half {
+  color: var(--personalPay-half) !important;
+}
+.bg-personalPay-half {
+  background-color: var(--personalPay-half) !important;
+}
+.border-personalPay-half {
+  border-color: var(--personalPay-half) !important;
+}
+/**/
+.color-personalPay-transparent {
+  color: var(--personalPay-transparent) !important;
+}
+.bg-personalPay-transparent {
+  background-color: var(--personalPay-transparent) !important;
+}
+.border-personalPay-transparent {
+  border-color: var(--personalPay-transparent) !important;
+}
+/**/
+.color-personalPay-null {
+  color: var(--personalPay-null) !important;
+}
+.bg-personalPay-null {
+  background-color: var(--personalPay-null) !important;
+}
+.border-personalPay-null {
+  border-color: var(--personalPay-null) !important;
+}
+/**/
+.color-personalPay-poseidon-violet {
+  color: var(--personalPay-poseidon-violet) !important;
+}
+.bg-personalPay-poseidon-violet {
+  background-color: var(--personalPay-poseidon-violet) !important;
+}
+.border-personalPay-poseidon-violet {
+  border-color: var(--personalPay-poseidon-violet) !important;
+}
+/**/
+.color-personalPay-night-blue {
+  color: var(--personalPay-night-blue) !important;
+}
+.bg-personalPay-night-blue {
+  background-color: var(--personalPay-night-blue) !important;
+}
+.border-personalPay-night-blue {
+  border-color: var(--personalPay-night-blue) !important;
+}
+/**/
+.color-personalPay-moon-white {
+  color: var(--personalPay-moon-white) !important;
+}
+.bg-personalPay-moon-white {
+  background-color: var(--personalPay-moon-white) !important;
+}
+.border-personalPay-moon-white {
+  border-color: var(--personalPay-moon-white) !important;
+}
+/**/
+.color-personalPay-beneficios {
+  color: var(--personalPay-beneficios) !important;
+}
+.bg-personalPay-beneficios {
+  background-color: var(--personalPay-beneficios) !important;
+}
+.border-personalPay-beneficios {
+  border-color: var(--personalPay-beneficios) !important;
+}
+/**/
+.color-personalPay-inversiones {
+  color: var(--personalPay-inversiones) !important;
+}
+.bg-personalPay-inversiones {
+  background-color: var(--personalPay-inversiones) !important;
+}
+.border-personalPay-inversiones {
+  border-color: var(--personalPay-inversiones) !important;
+}
+/**/
+.color-personalPay-transacciones {
+  color: var(--personalPay-transacciones) !important;
+}
+.bg-personalPay-transacciones {
+  background-color: var(--personalPay-transacciones) !important;
+}
+.border-personalPay-transacciones {
+  border-color: var(--personalPay-transacciones) !important;
+}
+/**/
+.color-personalPay-prestamos {
+  color: var(--personalPay-prestamos) !important;
+}
+.bg-personalPay-prestamos {
+  background-color: var(--personalPay-prestamos) !important;
+}
+.border-personalPay-prestamos {
+  border-color: var(--personalPay-prestamos) !important;
+}
+/**/
+.bg-personalPay-beneficios-gradients {
+  background: var(--personalPay-beneficios-gradients) !important;
+}
+.bg-personalPay-inversiones-gradients {
+  background: var(--personalPay-inversiones-gradients) !important;
+}
+.bg-personalPay-transacciones-gradients {
+  background: var(--personalPay-transacciones-gradients) !important;
+}
+.bg-personalPay-prestamos-gradients {
+  background: var(--personalPay-prestamos-gradients) !important;
+}
+/**/
+.color-personalPay-light {
+  color: var(--personalPay-light) !important;
+}
+.bg-personalPay-light {
+  background-color: var(--personalPay-light) !important;
+}
+.border-personalPay-light {
+  border-color: var(--personalPay-light) !important;
+}
+/**/
+.color-personalPay-dark {
+  color: var(--personalPay-dark) !important;
+}
+.bg-personalPay-dark {
+  background-color: var(--personalPay-dark) !important;
+}
+.border-personalPay-dark {
+  border-color: var(--personalPay-dark) !important;
+}
+/**/

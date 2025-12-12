@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Página A (origen)</title>
+		<style>
+			html {
+				scroll-behavior: smooth;
+			} /* fallback nativo */
+			section {
+				height: 100vh;
+				padding: 2rem;
+			}
+			nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				background: #222;
+				width: 100%;
+				padding: 1rem;
+			}
+			nav a {
+				color: #fff;
+				margin-right: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<!-- MISMA página -->
+			<a href="#hola" data-jump>Ir a #hola (misma página)</a>
+			<!-- OTRA página -->
+			<a href="page-b.html#hola" data-jump>Ir a #hola en Página B</a>
+		</nav>
+
+		<section id="home" style="background: #f5f5f5">HOME (página A)</section>
+		<section id="hola" style="background: #ffd800">¡HOLA! (página A)</section>
+		<section id="bye" style="background: #88c540">CHAU (página A)</section>
+
+		<script src="../assets/js/scroll.js"></script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+{
+	"workbench.colorCustomizations": {
+		"activityBar.hoverBackground": "#D0008650",
+		"activityBar.foreground": "#D00086",
+		"activityBarBadge.background": "#D00086",
+		"activityBar.activeBorder": "#D00086",
+		"titleBar.activeBackground": "#D00086",
+		"titleBar.activeForeground": "#fff",
+		"statusBar.background": "#D0008650",
+		"statusBar.foreground": "#fff",
+		"statusBarItem.hoverBackground": "#D00086",
+		"statusBarItem.remoteBackground": "#D00086",
+		"tab.activeBorderTop": "#D00086"
+	},
+	"liveServer.settings.port": 5211,
+	"prettier.useTabs": true
+}

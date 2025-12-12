@@ -1,0 +1,67 @@
+:root {
+	--color-brand: var(--telecom);
+	--color-brand-half: var(--telecom-half);
+	--color-brand-transparent: var(--telecom-transparent);
+}
+
+.bg-telecom_empresas {
+	background-color: var(--telecom-empresas) !important;
+}
+
+/* SIDE MENU */
+.side-menu .manual-de-marca .iso {
+	background-image: url('../../content/identidad/ecosistema/telecom/logos/svg/telecom_iso_blanco.svg');
+}
+.side-menu a.manual-de-marca {
+	background-color: var(--telecom-transparent);
+}
+.side-menu a:hover.manual-de-marca {
+	background-color: var(--telecom);
+}
+/* SIDE MENU end */
+
+#telecom .brand-top.backlight-top::before {
+	background: radial-gradient(80vw circle at 50vw -10%, var(--telecom), var(--telecom-null) 50%);
+	left: 0;
+}
+
+#telecom .brands-content #nuestro-ecosistema .box {
+	border-color: var(--telecom);
+	background-color: var(--telecom-transparent);
+}
+
+#telecom #tamanos [class*='stg-col-'] .cs-grid-2cols div:nth-child(2) .cs-block {
+	background-color: var(--telecom);
+}
+
+#telecom #usos [class*='stg-col-'] .cs-grid-2cols div:nth-child(1) .cs-block {
+	background: url('../../content/identidad/ecosistema/telecom/lineamientos/telecom_usosBG1.jpg');
+}
+
+#telecom #usos [class*='stg-col-'] .cs-grid-2cols div:nth-child(2) .cs-block {
+	background: url('../../content/identidad/ecosistema/telecom/lineamientos/telecom_usosBG2.jpg');
+}
+
+#telecom #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(1) .cs-block {
+	background: url('../../content/identidad/ecosistema/telecom/lineamientos/telecom_usosBG1.jpg');
+}
+
+#telecom #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(2) .cs-block {
+	background: url('../../content/identidad/ecosistema/telecom/lineamientos/telecom_usosBG1.jpg');
+}
+#telecom #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(2) .cs-block {
+	background: url('../../content/identidad/ecosistema/telecom/lineamientos/telecom_usosBG3.jpg');
+}
+#telecom #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(3) .cs-block {
+	background: url('../../content/identidad/ecosistema/telecom/lineamientos/telecom_usosBG4.jpg');
+}
+#telecom #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(4) .cs-block {
+	background: url('../../content/identidad/ecosistema/telecom/lineamientos/telecom_usosBG5.jpg');
+}
+#telecom #productos .cs-toggles-item--title {
+	height: 61px;
+}
+#telecom #productos .cs-toggles-item--title img {
+	height: 100px;
+	transform: translate(-23px, -16px);
+}
