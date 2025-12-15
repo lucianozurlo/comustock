@@ -96,13 +96,13 @@ document.querySelectorAll('[data-fancybox]').forEach((anchor) => {
           <button id="video-play" class="video-control"
                   style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
                          background:none;border:none;cursor:pointer;border-radius:0;">
-            <img src="../assets/img/icons/play.svg" alt="Play"
+            <img src="../assets/img/iconos/audio/play.svg" alt="Play"
                  style="width:48px;height:48px;border-radius:0;">
           </button>
           <button id="video-stop" class="video-control"
                   style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
                          background:none;border:none;cursor:pointer;display:none;border-radius:0;">
-            <img src="../assets/img/icons/stop.svg" alt="Stop"
+            <img src="../assets/img/iconos/audio/stop.svg" alt="Stop"
                  style="width:48px;height:48px;border-radius:0;">
           </button>
         </div>`;

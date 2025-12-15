@@ -9,18 +9,15 @@
 		<link type="text/css" rel="stylesheet" href="../assets/css/libs.css" />
 		<link type="text/css" rel="stylesheet" href="../assets/css/style.css" />
 		<link type="text/css" rel="stylesheet" href="../assets/css/responsive.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-		<link rel="stylesheet" href="../assets/css/modal-form.css" />
-		<link rel="stylesheet" href="../assets/css/custom.css" />
-		<link rel="stylesheet" href="../assets/css/colors.css" />
-		<link rel="stylesheet" href="../assets/css/brands.css" />
-		<link rel="stylesheet" href="../assets/css/personal.css" />
+		<link type="text/css" rel="stylesheet" href="../assets/css/base.css" />
+		<link type="text/css" rel="stylesheet" href="../assets/css/content.css" />
+		<link type="text/css" rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+		<link type="text/css" rel="stylesheet" href="../assets/css/modal-form.css" />
+		<link type="text/css" rel="stylesheet" href="../assets/css/colors.css" />
+		<link type="text/css" rel="stylesheet" href="../assets/css/brands.css" />
+		<link type="text/css" rel="stylesheet" href="../assets/css/brands/personal.css" />
 		<link rel="icon" href="../assets/img/favicon.png" sizes="32x32" />
-		<script>
-			if ('scrollRestoration' in history) {
-				history.scrollRestoration = 'manual';
-			}
-		</script>
 	</head>
 
 	<body id="personal" class="brands">
@@ -35,30 +32,32 @@
 					<nav class="cs-nav">
 						<ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
 							<li class="current-menu-parent">
-								<a href="../">Ecosistema</a>
+								<a class="off">Ecosistema</a>
 								<ul class="sub-menu">
-									<li><a href="../telecom">Telecom</a></li>
-									<li class="current-menu-item"><a href="../personal">Personal</a></li>
-									<li><a href="../flow">Flow</a></li>
-									<li><a href="../personalPay">Personal Pay</a></li>
+									<li class="current-menu-item">
+										<a class="off">Personal</a>
+									</li>
 									<li class="cs-menu-divider"></li>
 									<li class="product">
-										<a href="../telecom#telecomEmpresas">Telecom Empresas</a>
+										<a href="movil">Móvil</a>
 									</li>
 									<li class="product">
-										<a href="#smarthome" class="toggle-link">Smarthome</a>
+										<a href="fibra">Fibra</a>
 									</li>
 									<li class="product">
-										<a href="#tienda" class="toggle-link">Tienda Personal</a>
+										<a href="flow">Flow</a>
 									</li>
-									<li class="product disable">
-										<a href="#personal5G" class="toggle-link disable">Personal 5G</a>
+									<li class="product">
+										<a href="pay">Pay</a>
 									</li>
-									<li class="product disable">
-										<a href="#personalFibra" class="toggle-link disable">Personal Fibra</a>
+									<li class="product">
+										<a href="tienda">Tienda</a>
 									</li>
-									<li class="product disable">
-										<a href="#personalWiFiZone" class="toggle-link disable">Personal WiFi Zone</a>
+									<li class="product">
+										<a href="smarthome">Smarthome</a>
+									</li>
+									<li class="product">
+										<a href="tech">Tech</a>
 									</li>
 								</ul>
 							</li>
@@ -75,9 +74,9 @@
 							<li>
 								<a href="../galerias">Galerías</a>
 								<ul class="sub-menu">
-									<li><a href="../galerias/#imagenes-y-videos">Imágenes y videos</a></li>
-									<li><a href="../galerias/#carteleras">Carteleras</a></li>
-									<li><a href="../galerias/#nuestros-espacios">Nuestros Espacios</a></li>
+									<li><a href="../galerias/#via-publica">Vía pública</a></li>
+									<li><a href="../galerias/#publicidades">Publicidades</a></li>
+									<li><a href="../galerias/#cartelera-interna">Cartelera interna</a></li>
 								</ul>
 							</li>
 							<li>
@@ -85,26 +84,21 @@
 								<ul class="sub-menu">
 									<li><a href="../recursos/#fuentes">Fuentes</a></li>
 									<li><a href="../recursos/#iconos">Íconos</a></li>
-									<li class="cs-menu-divider"></li>
-									<li><a href="../recursos/#mas-herramientas">Más herramientas</a></li>
+									<li><a href="../recursos/#elementos">Elementos</a></li>
 								</ul>
 							</li>
 							<li>
 								<a href="../toolkits">Toolkits</a>
 								<ul class="sub-menu">
-									<li><a href="../toolkits/#marca-empleadora">Marca Empleadora</a></li>
 									<li><a href="../toolkits/#disenar">Cómo diseñar</a></li>
 									<li><a href="../toolkits/#redactar">Cómo redactar</a></li>
-									<li>
-										<a href="../toolkits/#comunicacion-empatica">Comunicación empática</a>
-									</li>
 								</ul>
 							</li>
 						</ul>
 					</nav>
 				</div>
 				<div class="cs-header-rp">
-					<a href="#HacemosLaComuFacil" class="cs-button">#HacemosLaComuFácil</a>
+					<a href="../#HacemosLaComuFacil" class="cs-button">#HacemosLaComuFácil</a>
 				</div>
 			</div>
 			<div class="cs-mobile-header-inner">
@@ -137,242 +131,6 @@
 			<div class="stg-container">
 				<div class="brands-container">
 					<div class="brands-content">
-						<!-- Nuestro ecosistema -->
-						<section id="nuestro-ecosistema" class="brand-section divider-bottom">
-							<div class="section-content">
-								<div class="stg-row cs-section-title">
-									<div class="stg-col-11">
-										<h2 data-appear="fade-up" data-unload="fade-up">Nuestro ecosistema</h2>
-
-										<div class="cs-grid-1cols stg-m-small-gap download-square"
-											data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
-											data-unload="fade-up">
-											<div class="cs-masked-block cs-grid-more-masked" data-file-group="copy"
-												data-copy="Conexión total">
-												<div class="cs-block cs-masked-media box stg-vertical-space-between">
-													<div>
-														<h4 data-appear="fade-up" data-unload="fade-up"
-															data-delay="100">
-															Marca comercial · B2C
-														</h4>
-														<p data-appear="fade-up" data-unload="fade-up" data-delay="100">
-															Personal es la marca del servicio
-															<strong>conectividad</strong> que te permite estar
-															siempre conectado, en tu casa y en tu celu, con lo que
-															vos quieras.
-														</p>
-													</div>
-													<div>
-														<div>
-															<span data-appear="fade-up" data-unload="fade-up"
-																data-delay="100" class="cs-meta">Claim/slogan:
-															</span>
-															<h6 data-appear="fade-up" data-unload="fade-up"
-																data-delay="100">
-																Conexión total
-															</h6>
-														</div>
-													</div>
-												</div>
-												<a data-fancybox href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-copy"></span>
-													</span>
-												</a>
-											</div>
-										</div>
-									</div>
-
-									<div class="stg-col-1">
-										<div class="sticky-div" data-appear="fade-up" data-unload="fade-up">
-											<a href="../telecom/#nuestro-ecosistema" class="bench-logo iso_telecom"
-												data-tooltip="Nuestro ecosistema en Telecom"></a>
-											<a href="../flow/#nuestro-ecosistema" class="bench-logo iso_flow"
-												data-tooltip="Nuestro ecosistema en Flow"></a>
-											<a href="../personalPay/#nuestro-ecosistema" class="bench-logo iso_ppay"
-												data-tooltip="Nuestro ecosistema en Personal Pay"></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-
-						<!-- Glosario -->
-						<section id="glosario" class="brand-section divider-bottom">
-							<div class="section-content">
-								<div class="stg-row cs-section-title" data-appear="fade-up" data-unload="zoom-out">
-									<div class="stg-col-11">
-										<h2 data-appear="fade-up" data-unload="fade-up">Glosario</h2>
-										<div class="cs-card-item cs-block">
-											<div class="cs-card-title">
-												<table>
-													<thead>
-														<tr>
-															<th>Concepto</th>
-															<th>Como decirlo</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>Marca</td>
-															<td>
-																Personal <span class="crossed-out">(personal)</span>
-															</td>
-														</tr>
-														<tr>
-															<td>Servicio de Telefonía Móvil</td>
-															<td>
-																<strong class="color-personal">Plan/es para tu celu
-																	(comercial/web)</strong>
-																-
-																<strong class="color-personal">Servicios en tu
-																	celu</strong>
-																- <br />
-																Línea móvil -
-																<span class="crossed-out">Plan móvil - Internet en tu
-																	celu - Servicio
-																	celular - Servicio móvil - Telefonía móvil -
-																	Línea Personal</span>
-															</td>
-														</tr>
-														<tr>
-															<td>Tipos de planes</td>
-															<td>
-																Plan Abono -
-																<span class="crossed-out">Plan Prepago</span>
-															</td>
-														</tr>
-														<tr>
-															<td>Tipos de planes abonos mensual</td>
-															<td>Plan X GB</td>
-														</tr>
-														<tr>
-															<td>Portabilidad</td>
-															<td>Portabilidad</td>
-														</tr>
-														<tr>
-															<td>Prepago</td>
-															<td>Prepago</td>
-														</tr>
-														<tr>
-															<td>Packs pagos</td>
-															<td>Packs <span class="crossed-out">(Pases)</span></td>
-														</tr>
-														<tr>
-															<td>Gigas</td>
-															<td>
-																X Gigas o X GB
-																<span class="crossed-out">(Datos)</span>
-															</td>
-														</tr>
-														<tr>
-															<td>Velocidades Telefonía Móvil</td>
-															<td>4G - 5G</td>
-														</tr>
-														<tr>
-															<td>Terminales</td>
-															<td>Celulares - Celu</td>
-														</tr>
-														<tr>
-															<td rowspan="2">Servicio de Teléfonía Fijo</td>
-															<td>
-																<strong class="color-personal">
-																	Internet en tu casa</strong>
-																-
-																<strong class="color-personal">
-																	Servicios de Internet en tu casa</strong>
-																- Internet
-																<br />
-																<span class="crossed-out">(HFC - XDSL)</span>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<strong class="color-personal">
-																	Personal Fibra</strong>
-																- Internet Fibra
-																<span class="crossed-out">(Fibra óptica - FTTH)</span>
-															</td>
-														</tr>
-														<tr>
-															<td>Wireless Fidelity</td>
-															<td>
-																WiFi - Internet WiFi
-																<span class="crossed-out">(wi fi o Wi-Fi)</span>
-															</td>
-														</tr>
-														<tr>
-															<td>Velocidades Internet</td>
-															<td>X Megas o X MB</td>
-														</tr>
-														<tr>
-															<td>Servicio de Teléfonía Fija</td>
-															<td>Telefonía fija - Línea fija</td>
-														</tr>
-														<tr>
-															<td>Ofertas convergentes</td>
-															<td>Combo</td>
-														</tr>
-														<tr>
-															<td>Chip para Planes Prepago</td>
-															<td>Chip Personal Prepago</td>
-														</tr>
-														<tr>
-															<td>App de Autogestión</td>
-															<td>App Mi Personal Flow</td>
-														</tr>
-														<tr>
-															<td>E-commerce</td>
-															<td>Tienda Personal</td>
-														</tr>
-														<tr>
-															<td>Smarthome</td>
-															<td>Smarthome</td>
-														</tr>
-														<tr>
-															<td>App de Smarthome</td>
-															<td>Personal Smarthome</td>
-														</tr>
-														<tr>
-															<td>Planes de Smarthome</td>
-															<td>Plan Básico - Plan Medio - Plan Premium</td>
-														</tr>
-														<tr>
-															<td>Puntos de venta</td>
-															<td>
-																<strong class="color-personal">Tienda Física</strong>
-																-
-																<strong class="color-personal">Tienda Física Personal
-																	Flow</strong>
-																- Sucursal (*)<br />
-																<span class="crossed-out">(Oficinas Comerciales -
-																	Tienda/Oficina
-																	Convergente)</span>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</div>
-										<div class="clarification">
-											<p>
-												Los nombres en <strong class="color-personal">color</strong> son
-												los recomendados.
-											</p>
-											<p>(*) Solo en landing de contacto.</p>
-										</div>
-									</div>
-
-									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../flow/#glosario" class="bench-logo iso_flow"
-												data-tooltip="Glosario de Flow"></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
 
 						<!-- Logo -->
 						<section id="logos" class="brand-section">
@@ -384,17 +142,11 @@
 											data-delay="100">
 											Texto simulado...
 										</p>
-										<p data-appear="fade-up" data-unload="fade-up" data-delay="100">
-											Texto simulado...
-										</p>
-										<p data-appear="fade-up" data-unload="fade-up" data-delay="100">
-											Texto simulado...
-										</p>
 										<div class="cs-grid-4cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
 											data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
 											data-unload="fade-up">
 											<div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial"
-												data-jpg-filename="_fondo-violeta">
+												data-jpg-filename="_fondo-personal">
 												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
 													data-delay="3000">
 													<img src="../content/identidad/ecosistema/personal/logos/svg/personal_blanco.svg"
@@ -409,7 +161,7 @@
 											</div>
 											<div class="cs-masked-block cs-grid-more-masked"
 												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgray"
+												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgrey"
 													data-delay="3000">
 													<img src="../content/identidad/ecosistema/personal/logos/svg/personal.svg"
 														alt="Personal" />
@@ -451,7 +203,7 @@
 											</div>
 
 											<div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial"
-												data-jpg-filename="_fondo-violeta">
+												data-jpg-filename="_fondo-personal">
 												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
 													data-delay="3000">
 													<img src="../content/identidad/ecosistema/personal/logos/svg/personal_iso_blanco.svg"
@@ -466,7 +218,7 @@
 											</div>
 											<div class="cs-masked-block cs-grid-more-masked"
 												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgray"
+												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgrey"
 													data-delay="3000">
 													<img src="../content/identidad/ecosistema/personal/logos/svg/personal_iso.svg"
 														alt="Personal" />
@@ -510,130 +262,22 @@
 									</div>
 
 									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../telecom/#logos" class="bench-logo iso_telecom"
-												data-tooltip="Logos de Telecom"></a>
+										<div class="sticky-div" data-appear="fade-up" data-unload="fade-up"
+											data-delay="100">
+											<a href="../movil/#logos" class="bench-logo iso_movil"
+												data-tooltip="Logos de Móvil"></a>
+											<a href="../fibra/#logos" class="bench-logo iso_fibra"
+												data-tooltip="Logos de Fibra"></a>
 											<a href="../flow/#logos" class="bench-logo iso_flow"
 												data-tooltip="Logos de Flow"></a>
-											<a href="../personalPay/#logos" class="bench-logo iso_ppay"
-												data-tooltip="Logos de Personal Pay"></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-
-						<!-- Convivencia -->
-						<section id="convivencia" class="brand-section">
-							<div class="section-content">
-								<div class="stg-row cs-section-title">
-									<div class="stg-col-11">
-										<h4 data-appear="fade-up" data-unload="fade-up">Convivencia</h4>
-										<p class="cs-large-text" data-appear="fade-up" data-unload="fade-up"
-											data-delay="100">
-											Nuestra marca no existe sola. Forma parte de una familia.
-										</p>
-										<div class="cs-grid-2cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
-											data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
-											data-unload="fade-up">
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-white"
-													data-delay="3000">
-													<img src="../content/identidad/convivencia/telecom-personal-flow/svg/telecom-personal-flow.svg"
-														alt="Convivencia Telecom Personal Flow" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-black"
-													data-delay="3000">
-													<img src="../content/identidad/convivencia/telecom-personal-flow/svg/telecom-personal-flow_blanco.svg"
-														alt="Convivencia Telecom Personal Flow" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-white"
-													data-delay="3000">
-													<img src="../content/identidad/convivencia/telecom-personal/svg/telecom-personal.svg"
-														alt="Convivencia Telecom Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-black"
-													data-delay="3000">
-													<img src="../content/identidad/convivencia/telecom-personal/svg/telecom-personal_blanco.svg"
-														alt="Convivencia Telecom Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-white"
-													data-delay="3000">
-													<img src="../content/identidad/convivencia/personal-flow/svg/personal-flow.svg"
-														alt="Convivencia Personal Flow" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-rectangle-full stg-vertical-space-between cs-masked-media bg-black"
-													data-delay="3000">
-													<img src="../content/identidad/convivencia/personal-flow/svg/personal-flow_blanco.svg"
-														alt="Convivencia Personal Flow" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-										</div>
-									</div>
-
-									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../telecom/#convivencia" class="bench-logo iso_telecom"
-												data-tooltip="Convivencia en Telecom"></a>
-											<a href="../flow/#convivencia" class="bench-logo iso_flow"
-												data-tooltip="Convivencia en Flow"></a>
+											<a href="../pay/#logos" class="bench-logo iso_pay"
+												data-tooltip="Logos de Pay"></a>
+											<a href="../tienda/#logos" class="bench-logo iso_tienda"
+												data-tooltip="Logos de Tienda"></a>
+											<a href="../smarthome/#logos" class="bench-logo iso_smarthome"
+												data-tooltip="Logos de Smarthome"></a>
+											<a href="../tech/#logos" class="bench-logo iso_tech"
+												data-tooltip="Logos de Tech"></a>
 										</div>
 									</div>
 								</div>
@@ -650,7 +294,7 @@
 											data-delay="100">
 											Como parámetro de resguardo se toma la letra O, signo geométrico
 											que rige la anatomía del logo y se repite en todos los
-											identificadores de la familia Telecom.
+											identificadores.
 										</p>
 										<div class="cs-grid-2cols" data-stagger-appear="zoom-in"
 											data-stagger-delay="100" data-stagger-unload="zoom-out">
@@ -671,17 +315,6 @@
 													<strong>2cm</strong> impresión
 												</p>
 											</div>
-										</div>
-									</div>
-
-									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../telecom/#tamanos" class="bench-logo iso_telecom"
-												data-tooltip="Tamaños en Telecom"></a>
-											<a href="../flow/#tamanos" class="bench-logo iso_flow"
-												data-tooltip="Tamaños en Flow"></a>
-											<a href="../personalPay/#tamanos" class="bench-logo iso_ppay"
-												data-tooltip="Tamaños en Personal Pay"></a>
 										</div>
 									</div>
 								</div>
@@ -825,17 +458,6 @@
 											</div>
 										</div>
 									</div>
-
-									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../telecom/#usos" class="bench-logo iso_telecom"
-												data-tooltip="Usos en Telecom"></a>
-											<a href="../flow/#usos" class="bench-logo iso_flow"
-												data-tooltip="Usos en Flow"></a>
-											<a href="../personalPay/#usos" class="bench-logo iso_ppay"
-												data-tooltip="Usos en Personal Pay"></a>
-										</div>
-									</div>
 								</div>
 							</div>
 						</section>
@@ -924,7 +546,7 @@
 												data-stagger-unload="zoom-out">
 												<div class="box">
 													<div class="color">
-														<div class="cs-block bg-lightgray"></div>
+														<div class="cs-block bg-lightgrey"></div>
 													</div>
 													<div class="info">
 														<div class="copy" data-tooltip="Copiar">
@@ -1306,13 +928,22 @@
 									</div>
 
 									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../telecom/#paleta" class="bench-logo iso_telecom"
-												data-tooltip="Paleta cromática de Telecom"></a>
+										<div class="sticky-div" data-appear="fade-up" data-unload="fade-up"
+											data-delay="100">
+											<a href="../movil/#paleta" class="bench-logo iso_movil"
+												data-tooltip="Colores de Móvil"></a>
+											<a href="../fibra/#paleta" class="bench-logo iso_fibra"
+												data-tooltip="Colores de Fibra"></a>
 											<a href="../flow/#paleta" class="bench-logo iso_flow"
-												data-tooltip="Paleta cromática de Flow"></a>
-											<a href="../personalPay/#paleta" class="bench-logo iso_ppay"
-												data-tooltip="Paleta cromática de Personal Pay"></a>
+												data-tooltip="Colores de Flow"></a>
+											<a href="../pay/#paleta" class="bench-logo iso_pay"
+												data-tooltip="Colores de Pay"></a>
+											<a href="../tienda/#paleta" class="bench-logo iso_tienda"
+												data-tooltip="Colores de Tienda"></a>
+											<a href="../smarthome/#paleta" class="bench-logo iso_smarthome"
+												data-tooltip="Colores de Smarthome"></a>
+											<a href="../tech/#paleta" class="bench-logo iso_tech"
+												data-tooltip="Colores de Tech"></a>
 										</div>
 									</div>
 								</div>
@@ -1391,15 +1022,6 @@
 											</div>
 										</div>
 									</div>
-
-									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../telecom/#aplicaciones" class="bench-logo iso_telecom"
-												data-tooltip="Aplicaciones sobre colores en Telecom"></a>
-											<a href="../flow/#aplicaciones" class="bench-logo iso_flow"
-												data-tooltip="Aplicaciones sobre colores en Flow"></a>
-										</div>
-									</div>
 								</div>
 							</div>
 						</section>
@@ -1417,6 +1039,7 @@
 										<div class="cs-grid-2cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
 											data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
 											data-unload="fade-up">
+
 											<div class="cs-masked-block cs-grid-more-masked" data-file-group="pdf">
 												<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
 													data-delay="3000">
@@ -1430,1017 +1053,7 @@
 													</span>
 												</a>
 											</div>
-										</div>
-									</div>
 
-									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../telecom/#manual-de-marca" class="bench-logo iso_telecom"
-												data-tooltip="Manual de Marca de Telecom"></a>
-											<a href="../flow/#manual-de-marca" class="bench-logo iso_flow"
-												data-tooltip="Manual de Marca de Flow"></a>
-											<a href="../personalPay/#manual-de-marca" class="bench-logo iso_ppay"
-												data-tooltip="Manual de Marca de Personal Pay"></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-
-						<!-- Productos -->
-						<section id="productos" class="brand-section divider-bottom">
-							<div class="section-content">
-								<div class="stg-row cs-section-title">
-									<div class="stg-col-11">
-										<h2>Productos</h2>
-
-										<div class="cs-faq-list">
-											<div id="smarthome" class="cs-toggles-item cs-block" data-appear="fade-up"
-												data-unload="fade-up">
-												<div class="cs-toggles-item--title">
-													<img src="../content/identidad/ecosistema/personal/smartHome/logos/svg/smartHome_blanco.svg"
-														alt="Smarthome" />
-												</div>
-												<div class="cs-toggles-item--content">
-													<div class="box">
-														<h5 data-appear="fade-up" data-unload="fade-up">Logo</h5>
-														<div class="cs-grid-4cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
-															data-stagger-appear="fade-up" data-delay="100"
-															data-stagger-delay="100" data-unload="fade-up">
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial"
-																data-jpg-filename="_fondo-azul">
-																<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-telecom_empresas"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logo/svg/telecom_empresas_blanco.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logo/svg/telecom_empresas.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logo/svg/telecom_empresas_negro.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logo/svg/telecom_empresas_blanco.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-														</div>
-													</div>
-
-													<div class="box">
-														<h5 data-appear="fade-up" data-unload="fade-up">
-															Logo + Claim
-														</h5>
-														<div class="cs-grid-2cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
-															data-stagger-appear="fade-up" data-delay="100"
-															data-stagger-delay="100" data-unload="fade-up">
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial"
-																data-jpg-filename="_fondo-azul">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-telecom_empresas"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas_blanco.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial"
-																data-jpg-filename="_fondo-violeta">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas_blanco.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-white"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-white"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas_violeta.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-white"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas_negro.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-black"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas_blanco.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-														</div>
-													</div>
-
-													<div class="box paleta">
-														<h5 data-appear="fade-up" data-unload="fade-up">
-															Paleta crómática
-														</h5>
-
-														<div>
-															<h6 data-appear="fade-up" data-unload="fade-up">
-																Paleta principal
-															</h6>
-															<div class="cs-grid-3cols stg-bottom-gap-l stg-top-gap-xs"
-																data-stagger-appear="zoom-in" data-stagger-delay="100"
-																data-stagger-unload="zoom-out">
-																<div class="box">
-																	<div class="color">
-																		<div class="cs-block bg-telecom-empresas"></div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#190646</strong></p>
-																		</div>
-																		<p>RGB <strong>25 · 6 · 70</strong></p>
-																		<p>CMYK <strong>64 · 91 · 0 · 73</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-principal-2">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#322D6E</strong></p>
-																		</div>
-																		<p>RGB <strong>50 · 45 · 110</strong></p>
-																		<p>CMYK <strong>55 · 59 · 0 · 57</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div class="cs-block bg-telecom"></div>
-																	</div>
-																	<div class="info">
-																		<p class="name">Violeta Telecom</p>
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#3c00a0</strong></p>
-																		</div>
-																		<p>RGB <strong>61 · 0 · 169</strong></p>
-																		<p>CMYK <strong>64 · 100 · 0 · 34</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div class="cs-block bg-lightgray"></div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#f5f5f5</strong></p>
-																		</div>
-																		<p>RGB <strong>245 · 245 · 245</strong></p>
-																		<p>CMYK <strong>0 · 0 · 0 · 4</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-acento">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<p class="name">Color Acento</p>
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#69D8D0</strong></p>
-																		</div>
-																		<p>RGB <strong>105 · 216 · 208</strong></p>
-																		<p>CMYK <strong>51 · 0 · 4 · 15</strong></p>
-																	</div>
-																</div>
-															</div>
-														</div>
-
-														<div>
-															<h6 data-appear="fade-up" data-unload="fade-up">
-																Paleta acentos secundarios
-															</h6>
-															<div class="cs-grid-3cols stg-bottom-gap stg-top-gap-xs min"
-																data-stagger-appear="zoom-in" data-stagger-delay="100"
-																data-stagger-unload="zoom-out">
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-acentos-secundarios-1">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#af8cff</strong></p>
-																		</div>
-																		<p>RGB <strong>175 · 140 · 255</strong></p>
-																		<p>CMYK <strong>31 · 45 · 0 · 0</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-acentos-secundarios-2">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#e6b4cf</strong></p>
-																		</div>
-																		<p>RGB <strong>230 · 180 · 207</strong></p>
-																		<p>CMYK <strong>0 · 22 · 10 · 10</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-acentos-secundarios-3">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#96cdfa</strong></p>
-																		</div>
-																		<p>RGB <strong>150 · 205 · 250</strong></p>
-																		<p>CMYK <strong>40 · 18 · 0 · 2</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-acentos-secundarios-4">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#6e78fa</strong></p>
-																		</div>
-																		<p>RGB <strong>110 · 120 · 250</strong></p>
-																		<p>CMYK <strong>56 · 52 · 0 · 2</strong></p>
-																	</div>
-																</div>
-															</div>
-														</div>
-
-														<div>
-															<h6 data-appear="fade-up" data-unload="fade-up">
-																Paleta Gradients
-															</h6>
-															<div class="cs-grid-2cols stg-bottom-gap stg-top-gap-xs min"
-																data-stagger-appear="zoom-in" data-stagger-delay="100"
-																data-stagger-unload="zoom-out">
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-gradients-1">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#af8cff</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#190646</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-gradients-2">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#6e78fa</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#190646</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-gradients-3">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#69d8d0</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#00b7eb</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-gradients-4">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#6e78fa</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#e6b4cf</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-
-														<div class="aplicaciones">
-															<h6 data-appear="fade-up" data-unload="fade-up">
-																Aplicaciones
-															</h6>
-															<div class="cs-grid-3cols cs-tp-grid-3cols cs-m-grid-1cols stg-bottom-gap-m"
-																data-stagger-appear="fade-up" data-delay="100"
-																data-stagger-delay="100" data-unload="fade-up">
-																<div class="box">
-																	<div class="cs-block stg-aspect-square bg-telecom">
-																		<img src="../content/identidad/ecosistema/telecom/logos/svg/telecom_blanco.svg"
-																			alt="" />
-																	</div>
-																	<p>En versión negativa (blanco).</p>
-																</div>
-
-																<div class="box">
-																	<div
-																		class="cs-block stg-aspect-square bg-telecom-empresas-acento">
-																		<img src="../content/identidad/ecosistema/telecom/logos/svg/telecom_blanco.svg"
-																			alt="" />
-																	</div>
-																	<p>Sobre colores de la paleta institucional.</p>
-																</div>
-
-																<div class="box">
-																	<div
-																		class="cs-block stg-aspect-square bg-telecom-empresas-principal-2">
-																		<img src="../content/identidad/ecosistema/telecom/logos/svg/telecom_blanco.svg"
-																			alt="" />
-																	</div>
-																	<p>Sobre colores de la paleta institucional.</p>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<div class="box">
-														<h5 data-appear="fade-up" data-unload="fade-up">
-															Manual de Marca
-														</h5>
-														<div class="cs-grid-3cols cs-tp-grid-3cols cs-m-grid-2cols stg-m-small-gap download-square"
-															data-stagger-appear="fade-up" data-delay="100"
-															data-stagger-delay="100" data-unload="fade-up">
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="pdf">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/vid/TelecomEmpresas_VID.png"
-																		alt="Manual de Marca Telecom" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div id="tienda" class="cs-toggles-item cs-block" data-appear="fade-up"
-												data-unload="fade-up">
-												<div class="cs-toggles-item--title">
-													<img src="../content/identidad/ecosistema/personal/tiendaPersonal/logos/svg/tiendaPersonal_blanco.svg"
-														alt="Tienda Personal" />
-												</div>
-												<div class="cs-toggles-item--content">
-													<div class="box">
-														<h5 data-appear="fade-up" data-unload="fade-up">Logo</h5>
-														<div class="cs-grid-4cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
-															data-stagger-appear="fade-up" data-delay="100"
-															data-stagger-delay="100" data-unload="fade-up">
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial"
-																data-jpg-filename="_fondo-azul">
-																<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-telecom_empresas"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logo/svg/telecom_empresas_blanco.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logo/svg/telecom_empresas.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logo/svg/telecom_empresas_negro.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logo/svg/telecom_empresas_blanco.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-														</div>
-													</div>
-
-													<div class="box">
-														<h5 data-appear="fade-up" data-unload="fade-up">
-															Logo + Claim
-														</h5>
-														<div class="cs-grid-2cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
-															data-stagger-appear="fade-up" data-delay="100"
-															data-stagger-delay="100" data-unload="fade-up">
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial"
-																data-jpg-filename="_fondo-azul">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-telecom_empresas"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas_blanco.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial"
-																data-jpg-filename="_fondo-violeta">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas_blanco.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-white"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-white"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas_violeta.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-white"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas_negro.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="vectorial">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-black"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/logoClaim/svg/telecom_empresas_blanco.svg"
-																		alt="Telecom Empresas" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-														</div>
-													</div>
-
-													<div class="box paleta">
-														<h5 data-appear="fade-up" data-unload="fade-up">
-															Paleta crómática
-														</h5>
-
-														<div>
-															<h6 data-appear="fade-up" data-unload="fade-up">
-																Paleta principal
-															</h6>
-															<div class="cs-grid-3cols stg-bottom-gap-l stg-top-gap-xs"
-																data-stagger-appear="zoom-in" data-stagger-delay="100"
-																data-stagger-unload="zoom-out">
-																<div class="box">
-																	<div class="color">
-																		<div class="cs-block bg-telecom-empresas"></div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#190646</strong></p>
-																		</div>
-																		<p>RGB <strong>25 · 6 · 70</strong></p>
-																		<p>CMYK <strong>64 · 91 · 0 · 73</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-principal-2">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#322D6E</strong></p>
-																		</div>
-																		<p>RGB <strong>50 · 45 · 110</strong></p>
-																		<p>CMYK <strong>55 · 59 · 0 · 57</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div class="cs-block bg-telecom"></div>
-																	</div>
-																	<div class="info">
-																		<p class="name">Violeta Telecom</p>
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#3c00a0</strong></p>
-																		</div>
-																		<p>RGB <strong>61 · 0 · 169</strong></p>
-																		<p>CMYK <strong>64 · 100 · 0 · 34</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div class="cs-block bg-lightgray"></div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#f5f5f5</strong></p>
-																		</div>
-																		<p>RGB <strong>245 · 245 · 245</strong></p>
-																		<p>CMYK <strong>0 · 0 · 0 · 4</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-acento">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<p class="name">Color Acento</p>
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#69D8D0</strong></p>
-																		</div>
-																		<p>RGB <strong>105 · 216 · 208</strong></p>
-																		<p>CMYK <strong>51 · 0 · 4 · 15</strong></p>
-																	</div>
-																</div>
-															</div>
-														</div>
-
-														<div>
-															<h6 data-appear="fade-up" data-unload="fade-up">
-																Paleta acentos secundarios
-															</h6>
-															<div class="cs-grid-3cols stg-bottom-gap stg-top-gap-xs min"
-																data-stagger-appear="zoom-in" data-stagger-delay="100"
-																data-stagger-unload="zoom-out">
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-acentos-secundarios-1">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#af8cff</strong></p>
-																		</div>
-																		<p>RGB <strong>175 · 140 · 255</strong></p>
-																		<p>CMYK <strong>31 · 45 · 0 · 0</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-acentos-secundarios-2">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#e6b4cf</strong></p>
-																		</div>
-																		<p>RGB <strong>230 · 180 · 207</strong></p>
-																		<p>CMYK <strong>0 · 22 · 10 · 10</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-acentos-secundarios-3">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#96cdfa</strong></p>
-																		</div>
-																		<p>RGB <strong>150 · 205 · 250</strong></p>
-																		<p>CMYK <strong>40 · 18 · 0 · 2</strong></p>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-acentos-secundarios-4">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div class="copy" data-tooltip="Copiar">
-																			<p>HEX <strong>#6e78fa</strong></p>
-																		</div>
-																		<p>RGB <strong>110 · 120 · 250</strong></p>
-																		<p>CMYK <strong>56 · 52 · 0 · 2</strong></p>
-																	</div>
-																</div>
-															</div>
-														</div>
-
-														<div>
-															<h6 data-appear="fade-up" data-unload="fade-up">
-																Paleta Gradients
-															</h6>
-															<div class="cs-grid-2cols stg-bottom-gap stg-top-gap-xs min"
-																data-stagger-appear="zoom-in" data-stagger-delay="100"
-																data-stagger-unload="zoom-out">
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-gradients-1">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#af8cff</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#190646</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-gradients-2">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#6e78fa</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#190646</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-gradients-3">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#69d8d0</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#00b7eb</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																	</div>
-																</div>
-																<div class="box">
-																	<div class="color">
-																		<div
-																			class="cs-block bg-telecom-empresas-gradients-4">
-																		</div>
-																	</div>
-																	<div class="info">
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#6e78fa</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																		<div>
-																			<div class="copy" data-tooltip="Copiar">
-																				<p>HEX <strong>#e6b4cf</strong></p>
-																			</div>
-																			<p>RGB <strong>245 · 245 · 245</strong></p>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-
-														<div class="aplicaciones">
-															<h6 data-appear="fade-up" data-unload="fade-up">
-																Aplicaciones
-															</h6>
-															<div class="cs-grid-3cols cs-tp-grid-3cols cs-m-grid-1cols stg-bottom-gap-m"
-																data-stagger-appear="fade-up" data-delay="100"
-																data-stagger-delay="100" data-unload="fade-up">
-																<div class="box">
-																	<div class="cs-block stg-aspect-square bg-telecom">
-																		<img src="../content/identidad/ecosistema/telecom/logos/svg/telecom_blanco.svg"
-																			alt="" />
-																	</div>
-																	<p>En versión negativa (blanco).</p>
-																</div>
-
-																<div class="box">
-																	<div
-																		class="cs-block stg-aspect-square bg-telecom-empresas-acento">
-																		<img src="../content/identidad/ecosistema/telecom/logos/svg/telecom_blanco.svg"
-																			alt="" />
-																	</div>
-																	<p>Sobre colores de la paleta institucional.</p>
-																</div>
-
-																<div class="box">
-																	<div
-																		class="cs-block stg-aspect-square bg-telecom-empresas-principal-2">
-																		<img src="../content/identidad/ecosistema/telecom/logos/svg/telecom_blanco.svg"
-																			alt="" />
-																	</div>
-																	<p>Sobre colores de la paleta institucional.</p>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<div class="box">
-														<h5 data-appear="fade-up" data-unload="fade-up">
-															Manual de Marca
-														</h5>
-														<div class="cs-grid-3cols cs-tp-grid-3cols cs-m-grid-2cols stg-m-small-gap download-square"
-															data-stagger-appear="fade-up" data-delay="100"
-															data-stagger-delay="100" data-unload="fade-up">
-															<div class="cs-masked-block cs-grid-more-masked"
-																data-file-group="pdf">
-																<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
-																	data-delay="3000">
-																	<img src="../content/identidad/ecosistema/telecom/telecomEmpresas/vid/TelecomEmpresas_VID.png"
-																		alt="Manual de Marca Telecom" />
-																</div>
-																<a data-fancybox data-src="#modal-download"
-																	href="javascript:;"
-																	class="cs-masked-content at-bottom-right">
-																	<span class="cs-square-button is-secondary">
-																		<span class="cs-icon cs-icon-comustock"></span>
-																	</span>
-																</a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../telecom/#productos" class="bench-logo iso_telecom"
-												data-tooltip="Productos de Telecom"></a>
 										</div>
 									</div>
 								</div>
@@ -2451,6 +1064,7 @@
 						<section id="redes" class="brand-section">
 							<div class="section-content">
 								<div class="stg-row cs-section-title">
+
 									<div class="stg-col-11">
 										<h2>Redes</h2>
 
@@ -2529,15 +1143,25 @@
 									</div>
 
 									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../telecom/#redes" class="bench-logo iso_telecom"
-												data-tooltip="Redes de Telecom"></a>
+										<div class="sticky-div" data-appear="fade-up" data-unload="fade-up"
+											data-delay="100">
+											<a href="../movil/#redes" class="bench-logo iso_movil"
+												data-tooltip="Redes de Móvil"></a>
+											<a href="../fibra/#redes" class="bench-logo iso_fibra"
+												data-tooltip="Redes de Fibra"></a>
 											<a href="../flow/#redes" class="bench-logo iso_flow"
 												data-tooltip="Redes de Flow"></a>
-											<a href="../personalPay/#redes" class="bench-logo iso_ppay"
-												data-tooltip="Redes de Personal Pay"></a>
+											<a href="../pay/#redes" class="bench-logo iso_pay"
+												data-tooltip="Redes de Pay"></a>
+											<a href="../tienda/#redes" class="bench-logo iso_tienda"
+												data-tooltip="Redes de Tienda"></a>
+											<a href="../smarthome/#redes" class="bench-logo iso_smarthome"
+												data-tooltip="Redes de Smarthome"></a>
+											<a href="../tech/#redes" class="bench-logo iso_tech"
+												data-tooltip="Redes de Tech"></a>
 										</div>
 									</div>
+
 								</div>
 							</div>
 						</section>
@@ -2546,6 +1170,7 @@
 						<section id="web" class="brand-section">
 							<div class="section-content">
 								<div class="stg-row cs-section-title">
+
 									<div class="stg-col-11">
 										<h4 data-appear="fade-up" data-unload="fade-up">Sitios web</h4>
 
@@ -2562,17 +1187,6 @@
 														<li>
 															<a href="https://www.personal.com.ar" target="_blank">
 																<span>Personal:</span>personal.com.ar
-															</a>
-														</li>
-														<li>
-															<a href="https://tienda.personal.com.ar" target="_blank">
-																<span>Tienda:</span>tienda.personal.com.ar
-															</a>
-														</li>
-														<li>
-															<a href="https://www.personal.com.ar/smarthome"
-																target="_blank">
-																<span>Smarthome:</span>personal.com.ar/smarthome
 															</a>
 														</li>
 													</ul>
@@ -2597,15 +1211,25 @@
 									</div>
 
 									<div class="stg-col-1">
-										<div class="sticky-div">
-											<a href="../telecom/#web" class="bench-logo iso_telecom"
-												data-tooltip="Sitios Web de Telecom"></a>
+										<div class="sticky-div" data-appear="fade-up" data-unload="fade-up"
+											data-delay="100">
+											<a href="../movil/#web" class="bench-logo iso_movil"
+												data-tooltip="Web de Móvil"></a>
+											<a href="../fibra/#web" class="bench-logo iso_fibra"
+												data-tooltip="Web de Fibra"></a>
 											<a href="../flow/#web" class="bench-logo iso_flow"
-												data-tooltip="Sitios Web de Flow"></a>
-											<a href="../personalPay/#web" class="bench-logo iso_ppay"
-												data-tooltip="Sitios Web de Personal Pay"></a>
+												data-tooltip="Web de Flow"></a>
+											<a href="../pay/#web" class="bench-logo iso_pay"
+												data-tooltip="Web de Pay"></a>
+											<a href="../tienda/#web" class="bench-logo iso_tienda"
+												data-tooltip="Web de Tienda"></a>
+											<a href="../smarthome/#web" class="bench-logo iso_smarthome"
+												data-tooltip="Web de Smarthome"></a>
+											<a href="../tech/#web" class="bench-logo iso_tech"
+												data-tooltip="Web de Tech"></a>
 										</div>
 									</div>
+
 								</div>
 							</div>
 						</section>
@@ -2613,16 +1237,12 @@
 
 					<div class="side-menu">
 						<div data-appear="fade-right" data-unload="zoom-out">
-							<a href="#nuestro-ecosistema">Nuestro ecosistema</a>
-							<a href="#glosario">Glosario</a>
 							<a href="#logos">Logos</a>
-							<a href="#convivencia" class="min-menu">Convivencia</a>
 							<a href="#tamanos" class="min-menu">Tamaños</a>
 							<a href="#usos" class="min-menu">Usos</a>
 							<a href="#paleta">Paleta cromática</a>
 							<a href="#aplicaciones" class="min-menu">Aplicaciones</a>
 							<a href="#manual-de-marca">Manual de Marca</a>
-							<a href="#productos">Productos</a>
 							<a href="#redes">Redes</a>
 							<a href="#web" class="min-menu">Sitios web</a>
 						</div>
@@ -2632,7 +1252,7 @@
 
 			<footer data-appear="fade-up" data-unload="fade-down">
 				<div class="cs-footer-line stg-container">
-					<div class="align-center">Telecom · 2025</div>
+					<div class="align-center">Personal · 2025</div>
 				</div>
 			</footer>
 		</main>

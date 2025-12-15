@@ -2,11 +2,11 @@
 /* 1 · Crear los dos modales (download + message)                 */
 /* ────────────────────────────────────────────────────────────── */
 (function () {
-   /* Modal de descarga */
-   const dModal = document.createElement('div');
-   dModal.id = 'modal-download';
-   dModal.style.display = 'none';
-   dModal.innerHTML = `
+	/* Modal de descarga */
+	const dModal = document.createElement("div");
+	dModal.id = "modal-download";
+	dModal.style.display = "none";
+	dModal.innerHTML = `
 <form id="download-form">
   <div id="download-file" class="download-file-custom" style="padding:0;"></div>
 
@@ -18,285 +18,359 @@
   <input type="checkbox" id="terms" name="terms">
   <div class="disclaimer">
     Acepto los <a href="javascript:void(0);" id="toggle-disclaimer">términos y condiciones</a>
-    <div id="disclaimer-content" class="disclaimer-content"><p>…</p></div>
+    <div id="disclaimer-content" class="disclaimer-content">
+      <p style="color:#000;">El contenido de identidad de la marca Personal disponible para descarga es de uso exclusivo para fines vinculados a la aplicación y representación marcaria autorizada. Queda prohibida su reproducción, modificación, distribución o utilización con cualquier otro propósito sin consentimiento previo. La descarga implica la aceptación plena de estas condiciones.</p>
+    </div>
   </div>
 
   <button type="submit" id="download-btn" disabled>
     Descargar <span class="cs-icon cs-icon-comustock"></span>
   </button>
 </form>`;
-   document.body.appendChild(dModal);
+	document.body.appendChild(dModal);
 
-   /* Modal de mensajes */
-   const mModal = document.createElement('div');
-   mModal.id = 'modal-message';
-   mModal.style.display = 'none';
-   /* se rellena dinámicamente */
-   document.body.appendChild(mModal);
+	/* Modal de mensajes (para copy y otros avisos) */
+	const mModal = document.createElement("div");
+	mModal.id = "modal-message";
+	mModal.style.display = "none";
+	document.body.appendChild(mModal);
 })();
 
 /* ────────────────────────────────────────────────────────────── */
 /* 2 · Ajuste global de Fancybox (sin botón close)                */
 /* ────────────────────────────────────────────────────────────── */
 Fancybox.defaults = { ...Fancybox.defaults, closeButton: false };
-
-Fancybox.bind('[data-fancybox]', {
-   animationEffect: 'zoom-in-out',
-   on: {
-      destroy() {
-         document.getElementById('custom-video')?.pause();
-      },
-   },
+Fancybox.bind("[data-fancybox]", {
+	animationEffect: "zoom-in-out",
+	on: {
+		destroy() {
+			document.getElementById("custom-video")?.pause();
+		},
+	},
 });
 
 /* ────────────────────────────────────────────────────────────── */
 /* 3 · Abrir / poblar el modal adecuado                           */
 /* ────────────────────────────────────────────────────────────── */
-document.querySelectorAll('[data-fancybox]').forEach((anchor) => {
-   anchor.addEventListener('click', (ev) => {
-      const block = anchor.closest('.cs-masked-block');
-      const group = block.dataset.fileGroup || 'vectorial';
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelectorAll("[data-fancybox]").forEach((anchor) => {
+		anchor.addEventListener("click", (ev) => {
+			ev.preventDefault(); // ← abrimos manualmente SIEMPRE
+			const block = anchor.closest(".cs-masked-block") || anchor;
+			const group = block.dataset.fileGroup || "vectorial";
 
-      /* ============ CASO «copy» (sólo mensaje) ============ */
-      if (group === 'copy') {
-         ev.preventDefault(); // anulamos apertura automática del otro modal
-         const text = block.dataset.copy || '';
+			/* ============ CASO «copy» ============ */
+			if (group === "copy") {
+				const text = block.dataset.copy || "";
+				navigator.clipboard?.writeText(text).catch(() => {});
 
-         /* copiar al clipboard (silencioso) */
-         navigator.clipboard?.writeText(text).catch(() => {});
+				const mWrap = document.getElementById("modal-message");
+				mWrap.innerHTML = `
+          <div style="padding:24px;text-align:center;color:#000;">
+            <p style="margin:0 0 6px;">El claim</p>
+            <p style="margin:0 0 6px;font-weight:700;">${text}</p>
+            <p style="margin:0;">se copió en el portapapeles</p>
+          </div>`;
+				Fancybox.show([{ src: "#modal-message", type: "inline" }]);
+				setTimeout(() => Fancybox.close(), 2000);
+				return;
+			}
 
-         /* llenar modal-message */
-         const mWrap = document.getElementById('modal-message');
-         mWrap.innerHTML = `
-        <p>
-          El claim<br><strong>${text}</strong><br>se copió en el portapapeles
-        </p>`;
+			// Mute de preview si hubiera
+			const previewVideo = block.querySelector?.("video") || null;
+			if (previewVideo) previewVideo.muted = true;
 
-         /* abrir manualmente #modal-message */
-         Fancybox.show([{ src: '#modal-message', type: 'inline' }]);
+			// Origen de preview: <video>/<img> o data-preview
+			const media =
+				block.querySelector?.("video") || block.querySelector?.("img") || null;
+			const src =
+				(media && media.getAttribute("src")) || block.dataset.preview || "";
+			const alt =
+				(media && media.getAttribute("alt")) ||
+				block.getAttribute?.("aria-label") ||
+				"";
 
-         /* cerrar a los 2 s */
-         setTimeout(() => Fancybox.close(), 2000);
-         return; // — fin —
-      }
+			// Fondo bg-*
+			const mm = block.querySelector?.(".cs-masked-media") || null;
+			const bgClass = mm
+				? [...mm.classList].find((c) => c.startsWith("bg-")) || ""
+				: "";
 
-      /* ——— resto de lógica para descargas ——— */
-      /* ... (todo el código de descarga se mantiene idéntico) ... */
+			// Contenedor del modal
+			const holder = document.getElementById("download-file");
+			holder.className =
+				"download-file-custom" + (bgClass ? ` ${bgClass}` : "");
+			holder.innerHTML = "";
 
-      /* ========= Mute video preview ========= */
-      block.querySelector('video')?.((v) => (v.muted = true)); // si existe
+			// Parse de ruta (si hay src)
+			let basePath = "",
+				fileName = "",
+				ext = "",
+				originalSrc = src;
+			if (src) {
+				const parts = src.split("/");
+				const nameExt = parts.pop();
+				const dot = nameExt.lastIndexOf(".");
+				fileName = dot > -1 ? nameExt.slice(0, dot) : nameExt;
+				ext = dot > -1 ? nameExt.slice(dot + 1).toLowerCase() : "";
+				basePath = parts.length > 1 ? parts.slice(0, -1).join("/") + "/" : "./";
+			}
 
-      /* ====== datos del archivo / preview … ====== */
-      const media = block.querySelector('video') || block.querySelector('img');
-      const src = media.getAttribute('src');
-      const alt = media.getAttribute('alt') || '';
-      const bgClass =
-         [...block.querySelector('.cs-masked-media').classList].find((c) => c.startsWith('bg-')) ||
-         '';
+			const jpgSuffix = block.dataset.jpgFilename || "";
+			const downloadOverride = block.dataset.downloadUrl || "";
 
-      const holder = document.getElementById('download-file');
-      holder.className = 'download-file-custom' + (bgClass ? ` ${bgClass}` : '');
-      holder.innerHTML = '';
+			// Persistimos datos para el submit
+			window._downloadData = {
+				basePath,
+				fileName,
+				originalExtension: ext,
+				originalSrc,
+				alt,
+				jpgSuffix,
+				group,
+				downloadOverride,
+			};
 
-      /* parse ruta */
-      const parts = src.split('/');
-      const base = parts.slice(0, -2).join('/') + '/';
-      const nExt = parts.pop();
-      const dot = nExt.lastIndexOf('.');
-      const fname = nExt.slice(0, dot);
-      const ext = nExt.slice(dot + 1).toLowerCase();
-      const jpgSuf = block.dataset.jpgFilename || '';
+			// Preview según grupo
+			if (["audio", "video"].includes(group)) {
+				holder.innerHTML = src
+					? `
+            <div class="video-container" style="position:relative;width:100%;">
+              <video id="custom-video" preload="auto" style="width:100%;display:block;">
+                <source src="${src}" type="video/mp4">
+              </video>
+              <button id="video-play" class="video-control"
+                      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                             background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
+                <img src="../../assets/img/icons/play.svg" style="width:28px;height:28px;">
+              </button>
+              <button id="video-stop" class="video-control"
+                      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                             display:none;background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
+                <img src="../../assets/img/icons/stop.svg" style="width:28px;height:28px;">
+              </button>
+            </div>`
+					: `<div style="padding:24px;color:#000;text-align:center;">Sin preview disponible</div>`;
 
-      window._downloadData = {
-         basePath: base,
-         fileName: fname,
-         originalExtension: ext,
-         originalSrc: src,
-         alt,
-         jpgSuffix: jpgSuf,
-         group,
-      };
+				if (src) {
+					const v = document.getElementById("custom-video");
+					const pb = document.getElementById("video-play");
+					const sb = document.getElementById("video-stop");
+					const box = holder.querySelector(".video-container");
+					pb.onclick = (e) => {
+						e.preventDefault();
+						v.play();
+						pb.style.display = "none";
+						sb.style.display = "block";
+					};
+					sb.onclick = (e) => {
+						e.preventDefault();
+						v.pause();
+						sb.style.display = "none";
+						pb.style.display = "block";
+					};
+					box.onmouseenter = () => {
+						if (!v.paused) sb.style.display = "block";
+					};
+					box.onmouseleave = () => {
+						if (!v.paused) sb.style.display = "none";
+					};
+					v.onended = () => {
+						pb.style.display = "block";
+						sb.style.display = "none";
+					};
+				}
+			} else {
+				holder.innerHTML = src
+					? `<img src="${src}" alt="${alt}">`
+					: `<div style="padding:24px;color:#000;text-align:center;">Sin preview disponible</div>`;
+			}
 
-      /* preview */
-      if (['audio', 'video'].includes(group)) {
-         holder.innerHTML = `
-      <div class="video-container" style="position:relative;width:100%;">
-        <video id="custom-video" preload="auto" style="width:100%;display:block;">
-          <source src="${src}" type="video/mp4">
-        </video>
-        <button id="video-play" class="video-control"
-                style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-                       background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
-          <img src="../assets/img/icons/play.svg" style="width:28px;height:28px;">
-        </button>
-        <button id="video-stop" class="video-control"
-                style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-                       display:none;background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
-          <img src="../assets/img/icons/stop.svg" style="width:28px;height:28px;">
-        </button>
-      </div>`;
-         const v = document.getElementById('custom-video');
-         const pb = document.getElementById('video-play');
-         const sb = document.getElementById('video-stop');
-         const box = holder.querySelector('.video-container');
-         pb.onclick = (e) => {
-            e.preventDefault();
-            v.play();
-            pb.style.display = 'none';
-            sb.style.display = 'block';
-         };
-         sb.onclick = (e) => {
-            e.preventDefault();
-            v.pause();
-            sb.style.display = 'none';
-            pb.style.display = 'block';
-         };
-         box.onmouseenter = () => {
-            if (!v.paused) sb.style.display = 'block';
-         };
-         box.onmouseleave = () => {
-            if (!v.paused) sb.style.display = 'none';
-         };
-         v.onended = () => {
-            pb.style.display = 'block';
-            sb.style.display = 'none';
-         };
-      } else {
-         holder.innerHTML = `<img src="${src}" alt="${alt}">`;
-      }
+			// Formatos por grupo
+			const groups = {
+				vectorial: ["ai", "svg", "pdf", "png", "jpg"],
+				audio: ["mp3", "wav"],
+				imagen: ["jpg"],
+				pdf: ["pdf"],
+				documento: ["docx"],
+				video: ["mp4"],
+				powerpoint: ["pptx"],
+				email: ["oft", "eml"],
+				fuentes: ["otf", "ttf"],
+				zip: ["zip"],
+			};
+			const fmts = groups[group] || ["png", "jpg"];
+			const fc = document.querySelector("#modal-download .format-container");
+			const fDiv = fc.querySelector(".format");
 
-      /* formatos disponibles */
-      const groups = {
-         vectorial: ['ai', 'svg', 'pdf', 'png', 'jpg'],
-         audio: ['mp3', 'wav'],
-         imagen: ['jpg'],
-         pdf: ['pdf'],
-         documento: ['docx'],
-         video: ['mp4'],
-         powerpoint: ['pptx'],
-         email: ['oft', 'eml'],
-         fuentes: ['otf', 'ttf'],
-         zip: ['zip'],
-      };
-      const fmts = groups[group] || ['png', 'jpg'];
-      const fc = document.querySelector('#modal-download .format-container');
-      const fDiv = fc.querySelector('.format');
+			if (fmts.length > 1) {
+				fc.style.display = "";
+				fDiv.innerHTML = fmts
+					.map(
+						(e, i) => `
+          <label for="${e}">
+            <input type="radio" name="format" id="${e}" value="${e}" class="format-file" ${!i ? "checked" : ""}>
+            <p class="format-select">.${e}</p>
+          </label>`
+					)
+					.join("");
+				fDiv
+					.querySelectorAll("input:not(:checked)")
+					.forEach((r) => (r.disabled = true));
+				setTimeout(
+					() =>
+						fDiv.querySelectorAll("input").forEach((r) => (r.disabled = false)),
+					300
+				);
+			} else {
+				fc.style.display = "none";
+				fDiv.innerHTML = "";
+			}
 
-      if (fmts.length > 1) {
-         fc.style.display = '';
-         fDiv.innerHTML = fmts
-            .map(
-               (e, i) => `
-        <label for="${e}">
-          <input type="radio" name="format" id="${e}" value="${e}" class="format-file" ${!i ? 'checked' : ''}>
-          <p class="format-select">.${e}</p>
-        </label>`
-            )
-            .join('');
-         fDiv.querySelectorAll('input:not(:checked)').forEach((r) => (r.disabled = true));
-         setTimeout(() => fDiv.querySelectorAll('input').forEach((r) => (r.disabled = false)), 300);
-      } else {
-         fc.style.display = 'none';
-      }
-   });
+			// **AQUÍ** abrimos el modal de descarga MANUALMENTE (clave para ZIP):
+			Fancybox.show([{ src: "#modal-download", type: "inline" }]);
+		});
+	});
 });
 
 /* ────────────────────────────────────────────────────────────── */
 /* 4 · Términos / descarga / cierre                               */
 /* ────────────────────────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', () => {
-   const terms = document.getElementById('terms'),
-      btn = document.getElementById('download-btn'),
-      td = document.getElementById('toggle-disclaimer'),
-      dc = document.getElementById('disclaimer-content');
+document.addEventListener("DOMContentLoaded", () => {
+	const terms = document.getElementById("terms"),
+		btn = document.getElementById("download-btn"),
+		td = document.getElementById("toggle-disclaimer"),
+		dc = document.getElementById("disclaimer-content");
 
-   terms.onchange = () => (btn.disabled = !terms.checked);
-   td.onclick = () =>
-      (dc.style.maxHeight =
-         !dc.style.maxHeight || dc.style.maxHeight === '0px' ? dc.scrollHeight + 'px' : '0px');
+	terms.onchange = () => (btn.disabled = !terms.checked);
+	td.onclick = () =>
+		(dc.style.maxHeight =
+			!dc.style.maxHeight || dc.style.maxHeight === "0px"
+				? dc.scrollHeight + "px"
+				: "0px");
 
-   document.getElementById('download-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const d = window._downloadData;
-      const sel = document.querySelector('input[name="format"]:checked');
-      const def = {
-         imagen: 'jpg',
-         pdf: 'pdf',
-         documento: 'docx',
-         video: 'mp4',
-         powerpoint: 'pptx',
-         email: 'eml',
-         fuentes: 'ttf',
-         zip: 'zip',
-      };
-      const fmt = sel ? sel.value : def[d.group] || d.originalExtension;
+	document.getElementById("download-form").addEventListener("submit", (e) => {
+		e.preventDefault();
+		const d = window._downloadData;
 
-      const singles = [
-         'imagen',
-         'pdf',
-         'documento',
-         'video',
-         'powerpoint',
-         'email',
-         'fuentes',
-         'zip',
-      ];
-      const fname =
-         fmt === 'jpg'
-            ? d.jpgSuffix
-               ? `${d.fileName}${d.jpgSuffix}.jpg`
-               : `${d.fileName}.jpg`
-            : `${d.fileName}.${fmt}`;
+		// Seguridad: si fuera copy (no debería llegar)
+		if (d.group === "copy") {
+			Fancybox.close();
+			return;
+		}
 
-      const url = singles.includes(d.group)
-         ? d.originalSrc.replace(/\.[^/.]+$/, `.${fmt}`)
-         : fmt === 'jpg'
-           ? `${d.basePath}jpg/${fname}`
-           : `${d.basePath}${fmt}/${fname}`;
+		// Extensión por defecto para grupos de formato único
+		const singleDefaults = {
+			imagen: "jpg",
+			pdf: "pdf",
+			documento: "docx",
+			video: "mp4",
+			powerpoint: "pptx",
+			email: "eml",
+			fuentes: "ttf",
+			zip: "zip",
+		};
 
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = fname;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      Fancybox.close();
-   });
+		const sel = document.querySelector('input[name="format"]:checked');
+		const fmt = sel
+			? sel.value
+			: singleDefaults[d.group] || d.originalExtension;
+
+		// Grupos de formato único
+		const singleGroups = [
+			"imagen",
+			"pdf",
+			"documento",
+			"video",
+			"powerpoint",
+			"email",
+			"fuentes",
+			"zip",
+		];
+
+		// Si hay URL fija para formatos de un solo tipo, úsala directo
+		if (singleGroups.includes(d.group) && d.downloadOverride) {
+			const a = document.createElement("a");
+			a.href = d.downloadOverride;
+			a.download = d.downloadOverride.split("/").pop();
+			document.body.appendChild(a);
+			a.click();
+			a.remove();
+			Fancybox.close();
+			return;
+		}
+
+		// Construcción de nombre y URL
+		const fname =
+			fmt === "jpg"
+				? d.jpgSuffix
+					? `${d.fileName}${d.jpgSuffix}.jpg`
+					: `${d.fileName}.jpg`
+				: `${d.fileName}.${fmt}`;
+
+		let url = "";
+		if (singleGroups.includes(d.group)) {
+			// Reemplaza la extensión manteniendo la ruta original del preview
+			url = d.originalSrc
+				? d.originalSrc.replace(/\.[^/.]+$/, `.${fmt}`)
+				: `${d.basePath}${fname}`;
+		} else {
+			// Estructura por carpetas /{fmt}/
+			url =
+				fmt === "jpg"
+					? `${d.basePath}jpg/${fname}`
+					: `${d.basePath}${fmt}/${fname}`;
+		}
+
+		// Descargar
+		const a = document.createElement("a");
+		a.href = url;
+		a.download = fname;
+		document.body.appendChild(a);
+		a.click();
+		a.remove();
+
+		Fancybox.close();
+	});
 });
 
 /* ────────────────────────────────────────────────────────────── */
-/* 5 · Botón mute/unmute preludios                                */
+/* 5 · Botón mute/unmute para previews en grilla                  */
 /* ────────────────────────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', () => {
-   document.querySelectorAll('.cs-masked-media.video-container').forEach((cont) => {
-      const v = cont.querySelector('video');
-      if (!v) return;
-      cont.style.position = 'relative';
-      const btn = document.createElement('button');
-      Object.assign(btn.style, {
-         position: 'absolute',
-         top: '50%',
-         left: '50%',
-         transform: 'translate(-50%,-50%)',
-         background: '#ffffffcc',
-         border: 'none',
-         cursor: 'pointer',
-         borderRadius: '50%',
-         padding: '14px',
-         opacity: 0,
-         transition: 'opacity .3s',
-      });
-      const img = document.createElement('img');
-      Object.assign(img.style, { width: '32px', height: '32px' });
-      img.src = '../assets/img/icons/unmute.svg';
-      btn.appendChild(img);
-      cont.appendChild(btn);
-      cont.onmouseenter = () => (btn.style.opacity = 1);
-      cont.onmouseleave = () => (btn.style.opacity = 0);
-      btn.onclick = (e) => {
-         e.preventDefault();
-         v.muted = !v.muted;
-         img.src = v.muted ? '../assets/img/icons/unmute.svg' : '../assets/img/icons/mute.svg';
-      };
-   });
+document.addEventListener("DOMContentLoaded", () => {
+	document
+		.querySelectorAll(".cs-masked-media.video-container")
+		.forEach((cont) => {
+			const v = cont.querySelector("video");
+			if (!v) return;
+			cont.style.position = "relative";
+			const btn = document.createElement("button");
+			Object.assign(btn.style, {
+				position: "absolute",
+				top: "50%",
+				left: "50%",
+				transform: "translate(-50%,-50%)",
+				background: "#ffffffcc",
+				border: "none",
+				cursor: "pointer",
+				borderRadius: "50%",
+				padding: "14px",
+				opacity: 0,
+				transition: "opacity .3s",
+			});
+			const img = document.createElement("img");
+			Object.assign(img.style, { width: "32px", height: "32px" });
+			img.src = "../../assets/img/icons/unmute.svg";
+			btn.appendChild(img);
+			cont.appendChild(btn);
+			cont.onmouseenter = () => (btn.style.opacity = 1);
+			cont.onmouseleave = () => (btn.style.opacity = 0);
+			btn.onclick = (e) => {
+				e.preventDefault();
+				v.muted = !v.muted;
+				img.src = v.muted
+					? "../../assets/img/icons/unmute.svg"
+					: "../../assets/img/icons/mute.svg";
+			};
+		});
 });

@@ -1,0 +1,35 @@
+:root {
+	--color-brand: var(--fibra);
+	--color-brand-half: var(--fibra-half);
+	--color-brand-transparent: var(--fibra-transparent);
+}
+
+/* SIDE MENU */
+.side-menu .manual-de-marca .iso {
+	background-image: url("../../content/identidad/ecosistema/fibra/logos/svg/fibra_iso_blanco.svg");
+}
+.side-menu a.manual-de-marca {
+	background-color: var(--fibra-transparent);
+}
+.side-menu a:hover.manual-de-marca {
+	background-color: var(--fibra);
+}
+/* SIDE MENU end */
+
+#fibra .brand-top.backlight-top::before {
+	background: radial-gradient(
+		80vw circle at 50vw -10%,
+		var(--fibra),
+		var(--fibra-null) 50%
+	);
+	left: 0;
+}
+
+#fibra .brands-content #nuestro-ecosistema .box {
+	border-color: var(--fibra);
+	background-color: var(--fibra-transparent);
+}
+
+#fibra #tamanos [class*="stg-col-"] .cs-grid-2cols div:nth-child(2) .cs-block {
+	background-color: var(--fibra);
+}

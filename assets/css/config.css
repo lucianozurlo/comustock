@@ -28,17 +28,48 @@
 		var(--cs-s-border),
 		transparent
 	);
+	--transition: all 0.5s cubic-bezier(0.8, 0, 0.2, 1);
 
-	--cs-c-menu: var(--cs-s-text);
-	--cs-c-menu-hover: var(--cs-s-heading);
-	--cs-c-menu-active: var(--cs-s-heading);
+	/* DARK */
+	--cs-dark-s-body-bg: #041b31;
+	--cs-dark-s-nav: #052c50cc;
+	--cs-dark-s-container-bg: #062a4a;
+	--cs-dark-s-container-bg-half: #062a4a77;
+	--cs-dark-s-container-frosted: #062a4aee;
+	--cs-dark-s-container-frosted-alt: #0b3a67;
+	--cs-dark-s-heading: #f5f7fa;
+	--cs-dark-s-heading-fade: #f5f7fac0;
+	--cs-dark-s-text: #c9d4e2;
+	--cs-dark-s-accented-text: var(--cs-dark-s-heading);
+	--cs-dark-s-border: #f5f7fa27;
+	--cs-dark-s-border-mute: #f5f7fa0d;
+	--cs-dark-s-border-highlight: #f5f7fa40;
+	--cs-dark-s-backlight: #f5f7fa12;
+	--cs-dark-s-box-shadow: #041b3110;
+	--cs-dark-s-cursor-light: var(--cs-dark-s-backlight);
+	--cs-dark-c-border-gradient: linear-gradient(
+		to left,
+		transparent,
+		var(--cs-dark-s-border),
+		transparent
+	);
+	--cs-dark-c-menu: var(--cs-dark-s-text);
+	--cs-dark-c-menu-hover: var(--cs-dark-s-heading);
+	--cs-dark-c-menu-active: var(--cs-dark-s-heading);
+
+	/*** menu ***/
+	--cs-c-menu: var(--comustock-blue);
+	--cs-c-menu-hover: var(--comustock);
+	--cs-c-menu-active: var(--comustock);
 
 	/*** comustock ***/
 	--comustock: #d00086;
 	--comustock-hover: #d00086d0;
 	--comustock-null: #d0008600;
 	--comustock-blue: #052c50;
-	--comustock-light-gray: #f5f5f5;
+	--comustock-blue-half: #052c50cd;
+	--comustock-light-grey: #f5f5f5;
+	--comustock-light-grey-half: #f5f5f5de;
 
 	/*** light ***/
 	input[type="button"],
@@ -49,32 +80,152 @@
 		color: var(--cs-s-nav);
 	}
 
-	/*** grays ***/
+	/*** greys ***/
 	--white: #fff;
 	--black: #000;
 	--black-null: #00000000;
-	--lightgray: #f5f5f5;
-	--darkgray: #1a1d24;
-	--darkgray-mid: #1a1d2422;
-	--darkgray-low: #1a1d240a;
+	--lightgrey: #f5f5f5;
+	--darkgrey: #1a1d24;
+	--darkgrey-mid: #1a1d2422;
+	--darkgrey-low: #1a1d240a;
+
+	/****** BRANDS *****/
+	/*** Personal - movil ***/
+	--personal: #00b7eb;
+	--personal-half: #00b7eb90;
+	--personal-transparent: #00b7eb44;
+	--personal-null: #00b7eb00;
+	--personal-light-grey: #f5f5f5;
+	--personal-blue: #052c50;
+	--personal-acento: #8a5cf2;
+	--personal-principal-2: #a8e0f6;
+	--personal-principal-4: #199ae0;
+	--personal-principal-5: #084d8b;
+	--personal-principal-6: #052c50;
+	--personal-principal-7: #121212;
+	--personal-complementario-a1: #d1cefd;
+	--personal-complementario-a2: #a39dfb;
+	--personal-complementario-a3: #756bfa;
+	--personal-complementario-a4: #5a50f9;
+	--personal-complementario-b1: #b36eff;
+	--personal-complementario-b2: #8d00ff;
+	--personal-complementario-b3: #6f00f0;
+	--personal-complementario-b4: #3e00e7;
+	--personal-complementario-c1: #ffecef;
+	--personal-complementario-c2: #ffcfd4;
+	--personal-complementario-c3: #ffa0a5;
+	--personal-complementario-c4: #ff7373;
+	--personal-complementario-d1: #d4c4fa;
+	--personal-complementario-d2: #b295f6;
+	--personal-complementario-d3: #a17df4;
+	--personal-subproducto-1: #5a50f9;
+	--personal-subproducto-2: linear-gradient(45deg, #5a50f9 0%, #002850 100%);
+	--personal-subproducto-3: linear-gradient(45deg, #5a50f9 0%, #00b7eb 100%);
+	--personal-subproducto-4: linear-gradient(45deg, #00d3a0 0%, #00b7eb 100%);
+	--personal-subproducto-5: linear-gradient(45deg, #5a50f9 0%, #9b00ff 100%);
+	--personal-subproducto-6: linear-gradient(45deg, #ff7373 0%, #9b00ff 100%);
+	--personal-light: #78d2eb;
+	--personal-dark: #0084a8;
+
+	/*** Institucional ***/
+	--personal-institucional: #3d00a9;
+	--personal-institucional-dark: #12022f;
+
+	/*** Móvil ***/
+	--movil: #00b7eb;
+	--movil-half: #00b7eb90;
+	--movil-transparent: #00b7eb44;
+	--movil-null: #00b7eb00;
+	--movil-light-grey: #f5f5f5;
+	--movil-blue: #052c50;
+	--movil-acento: #8a5cf2;
+
+	/*** Fibra ***/
+	--fibra: #004be2;
+	--fibra-half: #004be290;
+	--fibra-transparent: #004be244;
+	--fibra-null: #004be200;
+
+	/*** Flow ***/
+	--flow: #21dbaa;
+	--flow-half: #21dbaa90;
+	--flow-transparent: #21dbaa44;
+	--flow-null: #21dbaa00;
+	--flow-black: #000000;
+	--flow-grey: #232323;
+	--flow-acento: #8a5cf2;
+	--flow-principal-2: #98efda;
+	--flow-principal-3: #00e6c2;
+	--flow-secundario-1: #c4c4c4;
+	--flow-secundario-2: #555;
+	--flow-secundario-3: #262626;
+	--flow-complementario-1: #dbc5fc;
+	--flow-complementario-2: #bd96f9;
+	--flow-complementario-3: #ae7ef8;
+	--flow-light: #65dcc1;
+	--flow-dark: #006951;
+
+	/*** Pay ***/
+	--pay: #5a50f9;
+	--pay-half: #5a50f990;
+	--pay-transparent: #5a50f944;
+	--pay-null: #5a50f900;
+	--pay-moon-white: #e9f4fc;
+	--pay-dark-blue: #150958;
+	--pay-blue: #3d00e5;
+	--pay-prestamos: #f795ee;
+	--pay-transacciones: #d300ff;
+	--pay-inversiones: #ffd166;
+	--pay-beneficios: #54e0da;
+	--pay-beneficios-gradients: linear-gradient(45deg, #5a50f9 0%, #54e0da 100%);
+	--pay-inversiones-gradients: linear-gradient(45deg, #5a50f9 0%, #ffd166 100%);
+	--pay-transacciones-gradients: linear-gradient(
+		45deg,
+		#5a50f9 0%,
+		#d300ff 100%
+	);
+	--pay-prestamos-gradients: linear-gradient(45deg, #5a50f9 0%, #f795ee 100%);
+	--pay-poseidon-violet: #3e01e6;
+	--pay-night-blue: #150958;
+
+	/*** Tienda ***/
+	--tienda: #00b9c0;
+	--tienda-half: #00b9c090;
+	--tienda-transparent: #00b9c044;
+	--tienda-null: #00b9c000;
+	--tienda-dark-blue: #102d4f;
+	--tienda-acento: #ff686e;
+	--tienda-blue: #3d00e5;
+
+	/*** Smarthome ***/
+	--smarthome: #102d4f;
+	--smarthome-half: #102d4f90;
+	--smarthome-transparent: #102d4f44;
+	--smarthome-null: #102d4f00;
+	--smarthome-grey: #8b9dac;
+	--smarthome-orange: #f68b1f;
+
+	/*** Tech ***/
+	--tech: #3d00e5;
+	--tech-half: #3d00e590;
+	--tech-transparent: #3d00e544;
+	--tech-null: #3d00e500;
+	--tech-grey: #8b9dac;
+	--tech-orange: #f68b1f;
 
 	/*** telecom ***/
 	--telecom: #3c00a0;
-
 	--telecom-half: #3d00a090;
 	--telecom-transparent: #3d00a044;
 	--telecom-null: #3d00a000;
-
 	--telecom-b2b: #140232;
 	--telecom-acento: #b989fa;
 	--telecom-principal-2: #6428fb;
 	--telecom-principal-4: #28096a;
 	--telecom-secundario-2: #39129a;
 	--telecom-secundario-3: #281e5a;
-
 	--telecom-light: #5629ab;
 	--telecom-dark: #1c004a;
-
 	--telecom-empresas: #190646;
 	--telecom-empresas-principal-2: #322d6e;
 	--telecom-empresas-acento: #69d8d0;
@@ -103,124 +254,8 @@
 		#e6b4cf 100%
 	);
 
-	/*** personal ***/
-	--personal: #00b7eb;
-
-	--personal-half: #00b7eb90;
-	--personal-transparent: #00b7eb44;
-	--personal-null: #00b7eb00;
-
-	--personal-principal-2: #a8e0f6;
-	--personal-principal-4: #199ae0;
-	--personal-principal-5: #084d8b;
-	--personal-principal-6: #052c50;
-	--personal-principal-7: #121212;
-
-	--personal-complementario-a1: #d1cefd;
-	--personal-complementario-a2: #a39dfb;
-	--personal-complementario-a3: #756bfa;
-	--personal-complementario-a4: #5a50f9;
-
-	--personal-complementario-b1: #b36eff;
-	--personal-complementario-b2: #8d00ff;
-	--personal-complementario-b3: #6f00f0;
-	--personal-complementario-b4: #3e00e7;
-
-	--personal-complementario-c1: #ffecef;
-	--personal-complementario-c2: #ffcfd4;
-	--personal-complementario-c3: #ffa0a5;
-	--personal-complementario-c4: #ff7373;
-
-	--personal-complementario-d1: #d4c4fa;
-	--personal-complementario-d2: #b295f6;
-	--personal-complementario-d3: #a17df4;
-	--personal-acento: #8a5cf2;
-
-	--personal-subproducto-1: #5a50f9;
-	--personal-subproducto-2: linear-gradient(45deg, #5a50f9 0%, #002850 100%);
-	--personal-subproducto-3: linear-gradient(45deg, #5a50f9 0%, #00b7eb 100%);
-	--personal-subproducto-4: linear-gradient(45deg, #00d3a0 0%, #00b7eb 100%);
-	--personal-subproducto-5: linear-gradient(45deg, #5a50f9 0%, #9b00ff 100%);
-	--personal-subproducto-6: linear-gradient(45deg, #ff7373 0%, #9b00ff 100%);
-
-	--personal-light: #78d2eb;
-	--personal-dark: #0084a8;
-
-	/*** flow ***/
-	--flow: #21dbaa;
-
-	--flow-half: #21dbaa90;
-	--flow-transparent: #21dbaa44;
-	--flow-null: #21dbaa00;
-
-	--flow-gray: #232323;
-	--flow-acento: #8a5cf2;
-
-	--flow-principal-2: #98efda;
-	--flow-principal-3: #00e6c2;
-
-	--flow-secundario-1: #c4c4c4;
-	--flow-secundario-2: #555;
-	--flow-secundario-3: #262626;
-
-	--flow-complementario-1: #dbc5fc;
-	--flow-complementario-2: #bd96f9;
-	--flow-complementario-3: #ae7ef8;
-
-	--flow-light: #65dcc1;
-	--flow-dark: #006951;
-
-	/*** personalPay ***/
-	--personalPay: #5a50f9;
-
-	--personalPay-half: #5a50f990;
-	--personalPay-transparent: #5a50f944;
-	--personalPay-null: #5a50f900;
-
-	--personalPay-poseidon-violet: #3e01e6;
-	--personalPay-night-blue: #150958;
-	--personalPay-moon-white: #e9f4fc;
-
-	--personalPay-beneficios: #54e0da;
-	--personalPay-inversiones: #ffd166;
-	--personalPay-transacciones: #d300ff;
-	--personalPay-prestamos: #f795ee;
-
-	--personalPay-beneficios-gradients: linear-gradient(
-		45deg,
-		#5a50f9 0%,
-		#54e0da 100%
-	);
-	--personalPay-inversiones-gradients: linear-gradient(
-		45deg,
-		#5a50f9 0%,
-		#ffd166 100%
-	);
-	--personalPay-transacciones-gradients: linear-gradient(
-		45deg,
-		#5a50f9 0%,
-		#d300ff 100%
-	);
-	--personalPay-prestamos-gradients: linear-gradient(
-		45deg,
-		#5a50f9 0%,
-		#f795ee 100%
-	);
-
-	--personalPay-halita-blue-2: #052c50;
-	--personalPay-emeralcoast-cyan: #72eed2;
-	--personalPay-midgray: #5a50f9;
-	--personalPay-secundario-7: #a6a6f4;
-
-	--personalPay-acento-1: #ffd166;
-	--personalPay-acento-2: #ff008c;
-	--personalPay-acento-3: #05d675;
-	--personalPay-acento-4: #05d675;
-
-	--personalPay-light: #a29df9;
-	--personalPay-dark: #27226b;
-
 	--cs-button-medium: 152px !important;
+	--cs-button-small: 80px !important;
 }
 
 /* fonts */
@@ -251,6 +286,7 @@
 	--cs-t-h1-lh: 1.1em;
 	--cs-t-h1-margin: -0.175em 0 0.338em -0.063em;
 	--cs-t-h2-fs: 66px;
+	--cs-t-h2-fs-b: 54px;
 	--cs-t-h2-ls: 0;
 	--cs-t-h2-lh: 1.2em;
 	--cs-t-h2-margin: -0.232em 0 0.482em -0.06em;
@@ -290,6 +326,7 @@
 	--cs-sub-menu-width: 200px;
 	--cs-buttons-gap: 32px;
 	--cs-section-gap: 128px;
+	--cs-section-gap-min: 80px;
 	--cs-section-gap-top: 80px;
 	--cs-section-gap-bottom: 120px;
 	--cs-xl-br: 48px;
@@ -310,7 +347,7 @@
 	--stg-small-gap: 16px;
 	--stg-large-gap: 56px;
 	--stg-xl-gap: 128px;
-	
+
 	--cs-gap-8: 8px;
 	--cs-gap-16: 16px;
 	--cs-gap-24: 24px;

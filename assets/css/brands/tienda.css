@@ -1,0 +1,35 @@
+:root {
+	--color-brand: var(--tienda);
+	--color-brand-half: var(--tienda-half);
+	--color-brand-transparent: var(--tienda-transparent);
+}
+
+/* SIDE MENU */
+.side-menu .manual-de-marca .iso {
+	background-image: url("../../content/identidad/ecosistema/tienda/logos/svg/tienda_iso_blanco.svg");
+}
+.side-menu a.manual-de-marca {
+	background-color: var(--tienda-transparent);
+}
+.side-menu a:hover.manual-de-marca {
+	background-color: var(--tienda);
+}
+/* SIDE MENU end */
+
+#tienda .brand-top.backlight-top::before {
+	background: radial-gradient(
+		80vw circle at 50vw -10%,
+		var(--tienda),
+		var(--tienda-null) 50%
+	);
+	left: 0;
+}
+
+#tienda .brands-content #nuestro-ecosistema .box {
+	border-color: var(--tienda);
+	background-color: var(--tienda-transparent);
+}
+
+#tienda #tamanos [class*="stg-col-"] .cs-grid-2cols div:nth-child(2) .cs-block {
+	background-color: var(--tienda);
+}

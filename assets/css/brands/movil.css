@@ -1,0 +1,32 @@
+:root {
+	--color-brand: var(--movil);
+	--color-brand-half: var(--movil-half);
+	--color-brand-transparent: var(--movil-transparent);
+}
+
+/* SIDE MENU */
+.side-menu a.manual-de-marca {
+	background-color: var(--movil-transparent);
+}
+.side-menu a:hover.manual-de-marca {
+	background-color: var(--movil);
+}
+/* SIDE MENU end */
+
+#movil .brand-top.backlight-top::before {
+	background: radial-gradient(
+		80vw circle at 50vw -10%,
+		var(--movil),
+		var(--movil-null) 50%
+	);
+	left: 0;
+}
+
+#movil .brands-content #nuestro-ecosistema .box {
+	border-color: var(--movil);
+	background-color: var(--movil-transparent);
+}
+
+#movil #tamanos [class*="stg-col-"] .cs-grid-2cols div:nth-child(2) .cs-block {
+	background-color: var(--movil);
+}

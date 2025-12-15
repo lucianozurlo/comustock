@@ -1,0 +1,26 @@
+:root {
+	--color-brand: var(--tech);
+	--color-brand-half: var(--tech-half);
+	--color-brand-transparent: var(--tech-transparent);
+}
+
+/* SIDE MENU */
+.side-menu .manual-de-marca .iso {
+	background-image: url("../../content/identidad/ecosistema/tech/logos/svg/tech_iso_blanco.svg");
+}
+.side-menu a.manual-de-marca {
+	background-color: var(--tech-transparent);
+}
+.side-menu a:hover.manual-de-marca {
+	background-color: var(--tech);
+}
+/* SIDE MENU end */
+
+#tech .brand-top.backlight-top::before {
+	background: radial-gradient(
+		80vw circle at 50vw -10%,
+		var(--tech),
+		var(--tech-null) 50%
+	);
+	left: 0;
+}

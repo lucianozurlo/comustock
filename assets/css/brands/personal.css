@@ -1,0 +1,40 @@
+:root {
+	--color-brand: var(--personal);
+	--color-brand-half: var(--personal-half);
+	--color-brand-transparent: var(--personal-transparent);
+}
+
+/* SIDE MENU */
+.side-menu .manual-de-marca .iso {
+	background-image: url("../../content/identidad/ecosistema/personal/logos/svg/personal_iso_blanco.svg");
+}
+.side-menu a.manual-de-marca {
+	background-color: var(--personal-transparent);
+}
+.side-menu a:hover.manual-de-marca {
+	background-color: var(--personal);
+}
+/* SIDE MENU end */
+
+#personal .brand-top.backlight-top::before {
+	background: radial-gradient(
+		80vw circle at 50vw -10%,
+		var(--personal),
+		var(--personal-null) 50%
+	);
+	left: 0;
+}
+
+#personal .brands-content #nuestro-ecosistema .box {
+	border-color: var(--personal);
+	background-color: var(--personal-transparent);
+}
+
+#personal
+	#tamanos
+	[class*="stg-col-"]
+	.cs-grid-2cols
+	div:nth-child(2)
+	.cs-block {
+	background-color: var(--personal);
+}

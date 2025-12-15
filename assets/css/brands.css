@@ -133,24 +133,26 @@ h6 {
 }
 
 .brands-content .sticky-div {
-	height: 20px;
+	/* height: 20px; */
 	margin-right: 10px;
-	position: -webkit-sticky;
+	/* position: -webkit-sticky; */
 	position: sticky;
 	top: 225px;
 	box-sizing: border-box;
 	z-index: 10;
-	width: 68px !important;
-	display: flex;
-	justify-content: flex-end;
+	/* width: 68px !important; */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
 	gap: 4px;
 }
 
 .brands-content .sticky-div .bench-logo {
 	height: 20px;
 	width: 20px;
-	-webkit-filter: grayscale(1);
-	filter: grayscale(1);
+	-webkit-filter: greyscale(1);
+	filter: greyscale(1);
 	opacity: 0.2;
 	-webkit-filter: contrast(0);
 	filter: contrast(0);
@@ -165,21 +167,31 @@ h6 {
 	filter: contrast(1);
 }
 
-.brands-content .sticky-div .bench-logo.iso_telecom {
-	background: url('../../content/identidad/ecosistema/telecom/logos/svg/telecom_iso.svg');
-}
-
 .brands-content .sticky-div .bench-logo.iso_personal {
 	background: url('../../content/identidad/ecosistema/personal/logos/svg/personal_iso.svg');
 }
-
+.brands-content .sticky-div .bench-logo.iso_movil {
+	background: url('../../content/identidad/ecosistema/movil/logos/svg/movil_iso.svg');
+}
+.brands-content .sticky-div .bench-logo.iso_fibra {
+	background: url('../../content/identidad/ecosistema/fibra/logos/svg/fibra_iso.svg');
+}
 .brands-content .sticky-div .bench-logo.iso_flow {
 	background: url('../../content/identidad/ecosistema/flow/logos/svg/flow_iso.svg');
 }
-
-.brands-content .sticky-div .bench-logo.iso_ppay {
-	background: url('../../content/identidad/ecosistema/personalPay/logos/svg/personalPay_iso.svg');
+.brands-content .sticky-div .bench-logo.iso_pay {
+	background: url('../../content/identidad/ecosistema/pay/logos/svg/pay_iso.svg');
 }
+.brands-content .sticky-div .bench-logo.iso_tienda {
+	background: url('../../content/identidad/ecosistema/tienda/logos/svg/tienda_iso.svg');
+}
+.brands-content .sticky-div .bench-logo.iso_smarthome {
+	background: url('../../content/identidad/ecosistema/smarthome/logos/svg/smarthome_iso.svg');
+}
+.brands-content .sticky-div .bench-logo.iso_tech {
+	background: url('../../content/identidad/ecosistema/tech/logos/svg/tech_iso.svg');
+}
+
 .cs-toggles-item--title img,
 .cs-block img,
 .brands-content .sticky-div .bench-logo img {
@@ -401,8 +413,8 @@ body.brands.is-loaded .divider-bottom::after {
 	bottom: calc(100% + 15px);
 	left: 50%;
 	transform: translateX(-50%) translateY(10px);
-	border: 1px solid var(--cs-s-container-frosted-alt);
-	background-color: var(--cs-s-container-frosted-alt);
+	border: 1px solid var(--comustock-blue-half);
+	background-color: var(--comustock-blue-half);
 	border-radius: var(--cs-small-br);
 	color: #fff;
 	padding: 4px 14px;
@@ -432,7 +444,7 @@ body.brands.is-loaded .divider-bottom::after {
 	height: 0;
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
-	border-top: 6px solid var(--cs-s-container-frosted-alt);
+	border-top: 6px solid var(--comustock-blue-half);;
 	opacity: 0;
 	pointer-events: none;
 	transition: all 0.3s ease-in-out;
@@ -447,8 +459,14 @@ body.brands.is-loaded .divider-bottom::after {
 }
 /*****/
 
+#logos .cs-section-title {
+	margin-top: 0;
+}
 #logos .iso {
 	margin-top: 32px;
+}
+#variaciones .cs-block {
+	padding: 4px;
 }
 
 #tamanos .cs-block,
@@ -544,8 +562,8 @@ body.brands.is-loaded .divider-bottom::after {
 .paleta [class*='cs-grid'],
 .paleta [class*='cs-grid'] .box {
 	/* height: 70px; */
-	gap: 14px;
-	grid-column-gap: 12px;
+	gap: 10px;
+	grid-column-gap: 10px;
 }
 /* .paleta .cs-grid-4cols .box .color,
 .paleta .cs-grid-4cols .box .color .cs-block {
@@ -568,7 +586,7 @@ height: 70px;
 
 .paleta .cs-grid-2cols .info > div:first-child {
 	padding-right: 14px;
-	border-right: 1px dotted var(--lightgray);
+	border-right: 1px dotted var(--lightgrey);
 }
 
 .paleta .aplicaciones .box {

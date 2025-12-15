@@ -38,7 +38,7 @@ ICONOS
 https://demo.shadow-themes.com/html/bringer/home05.html     Iconos footer
 https://demo.shadow-themes.com/html/bringer/faq.html        acordeon gris todo el ancho
 
-MÁS HERRAMIENTAS
+Elementos
 **** OK https://demo.shadow-themes.com/html/bringer/index.html		Our Work
 https://demo.shadow-themes.com/html/bringer/home02.html		FOOTER
 

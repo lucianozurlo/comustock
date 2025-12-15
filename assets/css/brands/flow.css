@@ -1,0 +1,29 @@
+:root {
+	--color-brand: var(--flow);
+	--color-brand-half: var(--flow-half);
+	--color-brand-transparent: var(--flow-transparent);
+}
+
+#flow .brand-top.backlight-top::before {
+	/* background: radial-gradient(
+		80vw circle at 50vw -10%,
+		var(--flow),
+		var(--flow-null) 50%
+	); */
+	background: radial-gradient(
+		80vw circle at 50vw -10%,
+		var(--black),
+		var(--flow-half) 150%
+	);
+
+	left: 0;
+}
+
+#flow .brands-content #nuestro-ecosistema .box {
+	border-color: var(--flow);
+	background-color: var(--flow-transparent);
+}
+
+#flow #tamanos [class*="stg-col-"] .cs-grid-2cols div:nth-child(2) .cs-block {
+	background-color: var(--flow);
+}

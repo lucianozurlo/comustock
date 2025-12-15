@@ -19,32 +19,32 @@
 .border-black {
   border-color: var(--black) !important;
 }
-.color-lightgray {
-  color: var(--lightgray) !important;
+.color-lightgrey {
+  color: var(--lightgrey) !important;
 }
-.bg-lightgray {
-  background-color: var(--lightgray) !important;
+.bg-lightgrey {
+  background-color: var(--lightgrey) !important;
 }
-.border-lightgray {
-  border-color: var(--lightgray) !important;
+.border-lightgrey {
+  border-color: var(--lightgrey) !important;
 }
-.color-darktgray {
-  color: var(--darkgray) !important;
+.color-darktgrey {
+  color: var(--darkgrey) !important;
 }
-.bg-darktgray {
-  background-color: var(--darkgray) !important;
+.bg-darktgrey {
+  background-color: var(--darkgrey) !important;
 }
-.border-darktgray {
-  border-color: var(--darkgray) !important;
+.border-darktgrey {
+  border-color: var(--darkgrey) !important;
 }
-.color-darktgray-mid {
-  color: var(--darkgray-mid) !important;
+.color-darktgrey-mid {
+  color: var(--darkgrey-mid) !important;
 }
-.bg-darktgray-mid {
-  background-color: var(--darkgray-mid) !important;
+.bg-darktgrey-mid {
+  background-color: var(--darkgrey-mid) !important;
 }
-.border-darktgray-mid {
-  border-color: var(--darkgray-mid) !important;
+.border-darktgrey-mid {
+  border-color: var(--darkgrey-mid) !important;
 }
 
 /****** TELECOM ******/
@@ -626,14 +626,14 @@
   border-color: var(--flow-null) !important;
 }
 /**/
-.color-flow-gray {
-  color: var(--flow-gray) !important;
+.color-flow-grey {
+  color: var(--flow-grey) !important;
 }
-.bg-flow-gray {
-  background-color: var(--flow-gray) !important;
+.bg-flow-grey {
+  background-color: var(--flow-grey) !important;
 }
-.border-flow-gray {
-  border-color: var(--flow-gray) !important;
+.border-flow-grey {
+  border-color: var(--flow-grey) !important;
 }
 /**/
 .color-flow-acento {
@@ -748,146 +748,146 @@
 /**/
 
 /****** PERSONAL PAY ******/
-.color-personalPay {
-  color: var(--personalPay) !important;
+.color-pay {
+  color: var(--pay) !important;
 }
-.bg-personalPay {
-  background-color: var(--personalPay) !important;
+.bg-pay {
+  background-color: var(--pay) !important;
 }
-.border-personalPay {
-  border-color: var(--personalPay) !important;
-}
-/**/
-.color-personalPay-half {
-  color: var(--personalPay-half) !important;
-}
-.bg-personalPay-half {
-  background-color: var(--personalPay-half) !important;
-}
-.border-personalPay-half {
-  border-color: var(--personalPay-half) !important;
+.border-pay {
+  border-color: var(--pay) !important;
 }
 /**/
-.color-personalPay-transparent {
-  color: var(--personalPay-transparent) !important;
+.color-pay-half {
+  color: var(--pay-half) !important;
 }
-.bg-personalPay-transparent {
-  background-color: var(--personalPay-transparent) !important;
+.bg-pay-half {
+  background-color: var(--pay-half) !important;
 }
-.border-personalPay-transparent {
-  border-color: var(--personalPay-transparent) !important;
-}
-/**/
-.color-personalPay-null {
-  color: var(--personalPay-null) !important;
-}
-.bg-personalPay-null {
-  background-color: var(--personalPay-null) !important;
-}
-.border-personalPay-null {
-  border-color: var(--personalPay-null) !important;
+.border-pay-half {
+  border-color: var(--pay-half) !important;
 }
 /**/
-.color-personalPay-poseidon-violet {
-  color: var(--personalPay-poseidon-violet) !important;
+.color-pay-transparent {
+  color: var(--pay-transparent) !important;
 }
-.bg-personalPay-poseidon-violet {
-  background-color: var(--personalPay-poseidon-violet) !important;
+.bg-pay-transparent {
+  background-color: var(--pay-transparent) !important;
 }
-.border-personalPay-poseidon-violet {
-  border-color: var(--personalPay-poseidon-violet) !important;
-}
-/**/
-.color-personalPay-night-blue {
-  color: var(--personalPay-night-blue) !important;
-}
-.bg-personalPay-night-blue {
-  background-color: var(--personalPay-night-blue) !important;
-}
-.border-personalPay-night-blue {
-  border-color: var(--personalPay-night-blue) !important;
+.border-pay-transparent {
+  border-color: var(--pay-transparent) !important;
 }
 /**/
-.color-personalPay-moon-white {
-  color: var(--personalPay-moon-white) !important;
+.color-pay-null {
+  color: var(--pay-null) !important;
 }
-.bg-personalPay-moon-white {
-  background-color: var(--personalPay-moon-white) !important;
+.bg-pay-null {
+  background-color: var(--pay-null) !important;
 }
-.border-personalPay-moon-white {
-  border-color: var(--personalPay-moon-white) !important;
-}
-/**/
-.color-personalPay-beneficios {
-  color: var(--personalPay-beneficios) !important;
-}
-.bg-personalPay-beneficios {
-  background-color: var(--personalPay-beneficios) !important;
-}
-.border-personalPay-beneficios {
-  border-color: var(--personalPay-beneficios) !important;
+.border-pay-null {
+  border-color: var(--pay-null) !important;
 }
 /**/
-.color-personalPay-inversiones {
-  color: var(--personalPay-inversiones) !important;
+.color-pay-poseidon-violet {
+  color: var(--pay-poseidon-violet) !important;
 }
-.bg-personalPay-inversiones {
-  background-color: var(--personalPay-inversiones) !important;
+.bg-pay-poseidon-violet {
+  background-color: var(--pay-poseidon-violet) !important;
 }
-.border-personalPay-inversiones {
-  border-color: var(--personalPay-inversiones) !important;
-}
-/**/
-.color-personalPay-transacciones {
-  color: var(--personalPay-transacciones) !important;
-}
-.bg-personalPay-transacciones {
-  background-color: var(--personalPay-transacciones) !important;
-}
-.border-personalPay-transacciones {
-  border-color: var(--personalPay-transacciones) !important;
+.border-pay-poseidon-violet {
+  border-color: var(--pay-poseidon-violet) !important;
 }
 /**/
-.color-personalPay-prestamos {
-  color: var(--personalPay-prestamos) !important;
+.color-pay-night-blue {
+  color: var(--pay-night-blue) !important;
 }
-.bg-personalPay-prestamos {
-  background-color: var(--personalPay-prestamos) !important;
+.bg-pay-night-blue {
+  background-color: var(--pay-night-blue) !important;
 }
-.border-personalPay-prestamos {
-  border-color: var(--personalPay-prestamos) !important;
-}
-/**/
-.bg-personalPay-beneficios-gradients {
-  background: var(--personalPay-beneficios-gradients) !important;
-}
-.bg-personalPay-inversiones-gradients {
-  background: var(--personalPay-inversiones-gradients) !important;
-}
-.bg-personalPay-transacciones-gradients {
-  background: var(--personalPay-transacciones-gradients) !important;
-}
-.bg-personalPay-prestamos-gradients {
-  background: var(--personalPay-prestamos-gradients) !important;
+.border-pay-night-blue {
+  border-color: var(--pay-night-blue) !important;
 }
 /**/
-.color-personalPay-light {
-  color: var(--personalPay-light) !important;
+.color-pay-moon-white {
+  color: var(--pay-moon-white) !important;
 }
-.bg-personalPay-light {
-  background-color: var(--personalPay-light) !important;
+.bg-pay-moon-white {
+  background-color: var(--pay-moon-white) !important;
 }
-.border-personalPay-light {
-  border-color: var(--personalPay-light) !important;
+.border-pay-moon-white {
+  border-color: var(--pay-moon-white) !important;
 }
 /**/
-.color-personalPay-dark {
-  color: var(--personalPay-dark) !important;
+.color-pay-beneficios {
+  color: var(--pay-beneficios) !important;
 }
-.bg-personalPay-dark {
-  background-color: var(--personalPay-dark) !important;
+.bg-pay-beneficios {
+  background-color: var(--pay-beneficios) !important;
 }
-.border-personalPay-dark {
-  border-color: var(--personalPay-dark) !important;
+.border-pay-beneficios {
+  border-color: var(--pay-beneficios) !important;
+}
+/**/
+.color-pay-inversiones {
+  color: var(--pay-inversiones) !important;
+}
+.bg-pay-inversiones {
+  background-color: var(--pay-inversiones) !important;
+}
+.border-pay-inversiones {
+  border-color: var(--pay-inversiones) !important;
+}
+/**/
+.color-pay-transacciones {
+  color: var(--pay-transacciones) !important;
+}
+.bg-pay-transacciones {
+  background-color: var(--pay-transacciones) !important;
+}
+.border-pay-transacciones {
+  border-color: var(--pay-transacciones) !important;
+}
+/**/
+.color-pay-prestamos {
+  color: var(--pay-prestamos) !important;
+}
+.bg-pay-prestamos {
+  background-color: var(--pay-prestamos) !important;
+}
+.border-pay-prestamos {
+  border-color: var(--pay-prestamos) !important;
+}
+/**/
+.bg-pay-beneficios-gradients {
+  background: var(--pay-beneficios-gradients) !important;
+}
+.bg-pay-inversiones-gradients {
+  background: var(--pay-inversiones-gradients) !important;
+}
+.bg-pay-transacciones-gradients {
+  background: var(--pay-transacciones-gradients) !important;
+}
+.bg-pay-prestamos-gradients {
+  background: var(--pay-prestamos-gradients) !important;
+}
+/**/
+.color-pay-light {
+  color: var(--pay-light) !important;
+}
+.bg-pay-light {
+  background-color: var(--pay-light) !important;
+}
+.border-pay-light {
+  border-color: var(--pay-light) !important;
+}
+/**/
+.color-pay-dark {
+  color: var(--pay-dark) !important;
+}
+.bg-pay-dark {
+  background-color: var(--pay-dark) !important;
+}
+.border-pay-dark {
+  border-color: var(--pay-dark) !important;
 }
 /**/

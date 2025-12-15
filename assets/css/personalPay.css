@@ -1,60 +1,60 @@
 :root {
-	--color-brand: var(--personalPay);
-	--color-brand-half: var(--personalPay-half);
-	--color-brand-transparent: var(--personalPay-transparent);
+	--color-brand: var(--pay);
+	--color-brand-half: var(--pay-half);
+	--color-brand-transparent: var(--pay-transparent);
 }
 
 /* SIDE MENU */
 .side-menu .manual-de-marca .iso {
-	background-image: url('../../content/identidad/ecosistema/personalPay/logos/svg/personalPay_iso_blanco.svg');
+	background-image: url('../../content/identidad/ecosistema/pay/logos/svg/pay_iso_blanco.svg');
 }
 .side-menu a.manual-de-marca {
-	background-color: var(--personalPay-transparent);
+	background-color: var(--pay-transparent);
 }
 .side-menu a:hover.manual-de-marca {
-	background-color: var(--personalPay);
+	background-color: var(--pay);
 }
 /* SIDE MENU end */
 
-#personalPay .brand-top.backlight-top::before {
+#pay .brand-top.backlight-top::before {
 	background: radial-gradient(
 		80vw circle at 50vw -10%,
-		var(--personalPay),
-		var(--personalPay-null) 50%
+		var(--pay),
+		var(--pay-null) 50%
 	);
 	left: 0;
 }
 
-#personalPay .brands-content #nuestro-ecosistema .box {
-	border-color: var(--personalPay);
-	background-color: var(--personalPay-transparent);
+#pay .brands-content #nuestro-ecosistema .box {
+	border-color: var(--pay);
+	background-color: var(--pay-transparent);
 }
 
-#personalPay #tamanos [class*='stg-col-'] .cs-grid-2cols div:nth-child(2) .cs-block {
-	background-color: var(--personalPay);
+#pay #tamanos [class*='stg-col-'] .cs-grid-2cols div:nth-child(2) .cs-block {
+	background-color: var(--pay);
 }
 
-#personalPay #usos [class*='stg-col-'] .cs-grid-2cols div:nth-child(1) .cs-block {
-	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG1.jpg');
+#pay #usos [class*='stg-col-'] .cs-grid-2cols div:nth-child(1) .cs-block {
+	background: url('../../content/identidad/ecosistema/pay/lineamientos/pay_usosBG1.jpg');
 }
 
-#personalPay #usos [class*='stg-col-'] .cs-grid-2cols div:nth-child(2) .cs-block {
-	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG2.jpg');
+#pay #usos [class*='stg-col-'] .cs-grid-2cols div:nth-child(2) .cs-block {
+	background: url('../../content/identidad/ecosistema/pay/lineamientos/pay_usosBG2.jpg');
 }
 
-#personalPay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(1) .cs-block {
-	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG1.jpg');
+#pay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(1) .cs-block {
+	background: url('../../content/identidad/ecosistema/pay/lineamientos/pay_usosBG1.jpg');
 }
 
-#personalPay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(2) .cs-block {
-	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG1.jpg');
+#pay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(2) .cs-block {
+	background: url('../../content/identidad/ecosistema/pay/lineamientos/pay_usosBG1.jpg');
 }
-#personalPay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(2) .cs-block {
-	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG3.jpg');
+#pay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(2) .cs-block {
+	background: url('../../content/identidad/ecosistema/pay/lineamientos/pay_usosBG3.jpg');
 }
-#personalPay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(3) .cs-block {
-	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG4.jpg');
+#pay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(3) .cs-block {
+	background: url('../../content/identidad/ecosistema/pay/lineamientos/pay_usosBG4.jpg');
 }
-#personalPay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(4) .cs-block {
-	background: url('../../content/identidad/ecosistema/personalPay/lineamientos/personalPay_usosBG5.jpg');
+#pay #usos [class*='stg-col-'] .cs-grid-4cols div:nth-child(4) .cs-block {
+	background: url('../../content/identidad/ecosistema/pay/lineamientos/pay_usosBG5.jpg');
 }
