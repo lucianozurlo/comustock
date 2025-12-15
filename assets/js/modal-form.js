@@ -19,7 +19,7 @@
   <div class="disclaimer">
     Acepto los <a href="javascript:void(0);" id="toggle-disclaimer">términos y condiciones</a>
     <div id="disclaimer-content" class="disclaimer-content">
-      <p style="color:#000;">El contenido de identidad de la marca Personal disponible para descarga es de uso exclusivo para fines vinculados a la aplicación y representación marcaria autorizada. Queda prohibida su reproducción, modificación, distribución o utilización con cualquier otro propósito sin consentimiento previo. La descarga implica la aceptación plena de estas condiciones.</p>
+      <p style="color:#000">El contenido de identidad de la marca Personal disponible para descarga es de uso exclusivo para fines vinculados a la aplicación y representación marcaria autorizada. Queda prohibida su reproducción, modificación, distribución o utilización con cualquier otro propósito sin consentimiento previo. La descarga implica la aceptación plena de estas condiciones.</p>
     </div>
   </div>
 
@@ -29,7 +29,7 @@
 </form>`;
 	document.body.appendChild(dModal);
 
-	/* Modal de mensajes (para copy y otros avisos) */
+	/* Modal de mensajes (para copy y futuros avisos) */
 	const mModal = document.createElement("div");
 	mModal.id = "modal-message";
 	mModal.style.display = "none";
@@ -40,11 +40,13 @@
 /* 2 · Ajuste global de Fancybox (sin botón close)                */
 /* ────────────────────────────────────────────────────────────── */
 Fancybox.defaults = { ...Fancybox.defaults, closeButton: false };
+
 Fancybox.bind("[data-fancybox]", {
 	animationEffect: "zoom-in-out",
 	on: {
 		destroy() {
-			document.getElementById("custom-video")?.pause();
+			const mv = document.getElementById("custom-video");
+			if (mv) mv.pause();
 		},
 	},
 });
@@ -52,184 +54,169 @@ Fancybox.bind("[data-fancybox]", {
 /* ────────────────────────────────────────────────────────────── */
 /* 3 · Abrir / poblar el modal adecuado                           */
 /* ────────────────────────────────────────────────────────────── */
-document.addEventListener("DOMContentLoaded", () => {
-	document.querySelectorAll("[data-fancybox]").forEach((anchor) => {
-		anchor.addEventListener("click", (ev) => {
-			ev.preventDefault(); // ← abrimos manualmente SIEMPRE
-			const block = anchor.closest(".cs-masked-block") || anchor;
-			const group = block.dataset.fileGroup || "vectorial";
+document.querySelectorAll("[data-fancybox]").forEach((anchor) => {
+	anchor.addEventListener("click", (ev) => {
+		const block = anchor.closest(".cs-masked-block");
+		const group = block.dataset.fileGroup || "vectorial";
 
-			/* ============ CASO «copy» ============ */
-			if (group === "copy") {
-				const text = block.dataset.copy || "";
-				navigator.clipboard?.writeText(text).catch(() => {});
+		/* ============ CASO «copy» (sólo mensaje) ============ */
+		if (group === "copy") {
+			ev.preventDefault(); // evitamos que abra el modal de descarga
+			const text = block.dataset.copy || "";
 
-				const mWrap = document.getElementById("modal-message");
-				mWrap.innerHTML = `
-          <div style="padding:24px;text-align:center;color:#000;">
-            <p style="margin:0 0 6px;">El claim</p>
-            <p style="margin:0 0 6px;font-weight:700;">${text}</p>
-            <p style="margin:0;">se copió en el portapapeles</p>
-          </div>`;
-				Fancybox.show([{ src: "#modal-message", type: "inline" }]);
-				setTimeout(() => Fancybox.close(), 2000);
-				return;
+			// Copiar al portapapeles (modo silencioso)
+			if (text && navigator.clipboard) {
+				navigator.clipboard.writeText(text).catch(() => {});
 			}
 
-			// Mute de preview si hubiera
-			const previewVideo = block.querySelector?.("video") || null;
-			if (previewVideo) previewVideo.muted = true;
+			// Render del modal de mensaje (texto negro)
+			const mWrap = document.getElementById("modal-message");
+			mWrap.innerHTML = `
+        <div style="padding:1.5rem 1rem; text-align:center; color:#000;">
+          <p style="margin:0 0 .5rem;">El claim</p>
+          <p style="margin:.25rem 0;"><strong style="color:#000">${text}</strong></p>
+          <p style="margin:.5rem 0 0;">se copió en el portapapeles</p>
+        </div>`;
 
-			// Origen de preview: <video>/<img> o data-preview
-			const media =
-				block.querySelector?.("video") || block.querySelector?.("img") || null;
-			const src =
-				(media && media.getAttribute("src")) || block.dataset.preview || "";
-			const alt =
-				(media && media.getAttribute("alt")) ||
-				block.getAttribute?.("aria-label") ||
-				"";
+			// Abrir mensaje y cerrarlo a los 2s
+			Fancybox.show([{ src: "#modal-message", type: "inline" }]);
+			setTimeout(() => Fancybox.close(), 2000);
+			return; // fin para copy
+		}
 
-			// Fondo bg-*
-			const mm = block.querySelector?.(".cs-masked-media") || null;
-			const bgClass = mm
-				? [...mm.classList].find((c) => c.startsWith("bg-")) || ""
-				: "";
+		/* ——— resto de lógica para descargas ——— */
 
-			// Contenedor del modal
-			const holder = document.getElementById("download-file");
-			holder.className =
-				"download-file-custom" + (bgClass ? ` ${bgClass}` : "");
-			holder.innerHTML = "";
+		/* ========= Mute video preview (si existe) ========= */
+		{
+			const pv = block.querySelector("video");
+			if (pv) pv.muted = true;
+		}
 
-			// Parse de ruta (si hay src)
-			let basePath = "",
-				fileName = "",
-				ext = "",
-				originalSrc = src;
-			if (src) {
-				const parts = src.split("/");
-				const nameExt = parts.pop();
-				const dot = nameExt.lastIndexOf(".");
-				fileName = dot > -1 ? nameExt.slice(0, dot) : nameExt;
-				ext = dot > -1 ? nameExt.slice(dot + 1).toLowerCase() : "";
-				basePath = parts.length > 1 ? parts.slice(0, -1).join("/") + "/" : "./";
-			}
+		/* ====== datos del archivo / preview ====== */
+		const media = block.querySelector("video") || block.querySelector("img");
+		const src = media.getAttribute("src");
+		const alt = media.getAttribute("alt") || "";
+		const bgClass =
+			[...block.querySelector(".cs-masked-media").classList].find((c) =>
+				c.startsWith("bg-")
+			) || "";
 
-			const jpgSuffix = block.dataset.jpgFilename || "";
-			const downloadOverride = block.dataset.downloadUrl || "";
+		const holder = document.getElementById("download-file");
+		holder.className = "download-file-custom" + (bgClass ? ` ${bgClass}` : "");
+		holder.innerHTML = "";
 
-			// Persistimos datos para el submit
-			window._downloadData = {
-				basePath,
-				fileName,
-				originalExtension: ext,
-				originalSrc,
-				alt,
-				jpgSuffix,
-				group,
-				downloadOverride,
+		// Parse de ruta
+		const parts = src.split("/");
+		const base = parts.slice(0, -2).join("/") + "/"; // hasta .../banda/
+		const nameExt = parts.pop();
+		const dot = nameExt.lastIndexOf(".");
+		const fileName = nameExt.slice(0, dot);
+		const origExt = nameExt.slice(dot + 1).toLowerCase();
+		const jpgSuffix = block.dataset.jpgFilename || ""; // ej: "_col-negro"
+
+		// Guardamos datos
+		window._downloadData = {
+			basePath: base,
+			fileName,
+			originalExtension: origExt,
+			originalSrc: src,
+			alt,
+			jpgSuffix,
+			group,
+		};
+
+		/* ====== preview (video/audio muestran mp4; resto imagen) ====== */
+		if (["audio", "video"].includes(group)) {
+			holder.innerHTML = `
+      <div class="video-container" style="position:relative;width:100%;">
+        <video id="custom-video" preload="auto" style="width:100%;display:block;">
+          <source src="${src}" type="video/mp4">
+        </video>
+        <button id="video-play" class="video-control"
+                style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                       background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
+          <img src="../../assets/img/icons/play.svg" style="width:28px;height:28px;">
+        </button>
+        <button id="video-stop" class="video-control"
+                style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                       display:none;background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
+          <img src="../../assets/img/icons/stop.svg" style="width:28px;height:28px;">
+        </button>
+      </div>`;
+			const v = document.getElementById("custom-video");
+			const pb = document.getElementById("video-play");
+			const sb = document.getElementById("video-stop");
+			const box = holder.querySelector(".video-container");
+
+			pb.onclick = (e) => {
+				e.preventDefault();
+				v.play();
+				pb.style.display = "none";
+				sb.style.display = "block";
 			};
-
-			// Preview según grupo
-			if (["audio", "video"].includes(group)) {
-				holder.innerHTML = src
-					? `
-            <div class="video-container" style="position:relative;width:100%;">
-              <video id="custom-video" preload="auto" style="width:100%;display:block;">
-                <source src="${src}" type="video/mp4">
-              </video>
-              <button id="video-play" class="video-control"
-                      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-                             background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
-                <img src="../../assets/img/icons/play.svg" style="width:28px;height:28px;">
-              </button>
-              <button id="video-stop" class="video-control"
-                      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-                             display:none;background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
-                <img src="../../assets/img/icons/stop.svg" style="width:28px;height:28px;">
-              </button>
-            </div>`
-					: `<div style="padding:24px;color:#000;text-align:center;">Sin preview disponible</div>`;
-
-				if (src) {
-					const v = document.getElementById("custom-video");
-					const pb = document.getElementById("video-play");
-					const sb = document.getElementById("video-stop");
-					const box = holder.querySelector(".video-container");
-					pb.onclick = (e) => {
-						e.preventDefault();
-						v.play();
-						pb.style.display = "none";
-						sb.style.display = "block";
-					};
-					sb.onclick = (e) => {
-						e.preventDefault();
-						v.pause();
-						sb.style.display = "none";
-						pb.style.display = "block";
-					};
-					box.onmouseenter = () => {
-						if (!v.paused) sb.style.display = "block";
-					};
-					box.onmouseleave = () => {
-						if (!v.paused) sb.style.display = "none";
-					};
-					v.onended = () => {
-						pb.style.display = "block";
-						sb.style.display = "none";
-					};
-				}
-			} else {
-				holder.innerHTML = src
-					? `<img src="${src}" alt="${alt}">`
-					: `<div style="padding:24px;color:#000;text-align:center;">Sin preview disponible</div>`;
-			}
-
-			// Formatos por grupo
-			const groups = {
-				vectorial: ["ai", "svg", "pdf", "png", "jpg"],
-				audio: ["mp3", "wav"],
-				imagen: ["jpg"],
-				pdf: ["pdf"],
-				documento: ["docx"],
-				video: ["mp4"],
-				powerpoint: ["pptx"],
-				email: ["oft", "eml"],
-				fuentes: ["otf", "ttf"],
-				zip: ["zip"],
+			sb.onclick = (e) => {
+				e.preventDefault();
+				v.pause();
+				sb.style.display = "none";
+				pb.style.display = "block";
 			};
-			const fmts = groups[group] || ["png", "jpg"];
-			const fc = document.querySelector("#modal-download .format-container");
-			const fDiv = fc.querySelector(".format");
+			box.onmouseenter = () => {
+				if (!v.paused) sb.style.display = "block";
+			};
+			box.onmouseleave = () => {
+				if (!v.paused) sb.style.display = "none";
+			};
+			v.onended = () => {
+				pb.style.display = "block";
+				sb.style.display = "none";
+			};
+		} else {
+			holder.innerHTML = `<img src="${src}" alt="${alt}">`;
+		}
 
-			if (fmts.length > 1) {
-				fc.style.display = "";
-				fDiv.innerHTML = fmts
-					.map(
-						(e, i) => `
-          <label for="${e}">
-            <input type="radio" name="format" id="${e}" value="${e}" class="format-file" ${!i ? "checked" : ""}>
-            <p class="format-select">.${e}</p>
-          </label>`
-					)
-					.join("");
-				fDiv
-					.querySelectorAll("input:not(:checked)")
-					.forEach((r) => (r.disabled = true));
-				setTimeout(
-					() =>
-						fDiv.querySelectorAll("input").forEach((r) => (r.disabled = false)),
-					300
-				);
-			} else {
-				fc.style.display = "none";
-				fDiv.innerHTML = "";
-			}
+		/* ====== formatos disponibles por grupo ====== */
+		const groups = {
+			vectorial: ["ai", "svg", "pdf", "png", "jpg"],
+			audio: ["mp3", "wav"],
+			imagen: ["jpg"],
+			pdf: ["pdf"],
+			documento: ["docx"],
+			video: ["mp4"],
+			powerpoint: ["pptx"],
+			email: ["oft", "eml"],
+			fuentes: ["otf", "ttf"],
+			zip: ["zip"],
+		};
+		const fmts = groups[group] || ["png", "jpg"];
+		const fc = document.querySelector("#modal-download .format-container");
+		const fDiv = fc.querySelector(".format");
 
-			// **AQUÍ** abrimos el modal de descarga MANUALMENTE (clave para ZIP):
-			Fancybox.show([{ src: "#modal-download", type: "inline" }]);
-		});
+		if (fmts.length > 1) {
+			fc.style.display = "";
+			fDiv.innerHTML = fmts
+				.map(
+					(e, i) => `
+        <label for="${e}">
+          <input type="radio" name="format" id="${e}" value="${e}" class="format-file" ${
+						!i ? "checked" : ""
+					}>
+          <p class="format-select">.${e}</p>
+        </label>`
+				)
+				.join("");
+			// Bloqueo temporal para evitar dobles clics
+			fDiv
+				.querySelectorAll("input:not(:checked)")
+				.forEach((r) => (r.disabled = true));
+			setTimeout(
+				() =>
+					fDiv.querySelectorAll("input").forEach((r) => (r.disabled = false)),
+				300
+			);
+		} else {
+			// Un solo formato → oculto selector
+			fc.style.display = "none";
+		}
 	});
 });
 
@@ -253,14 +240,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		e.preventDefault();
 		const d = window._downloadData;
 
-		// Seguridad: si fuera copy (no debería llegar)
+		// Por si alguien intenta submittear en modo "copy"
 		if (d.group === "copy") {
 			Fancybox.close();
 			return;
 		}
 
-		// Extensión por defecto para grupos de formato único
-		const singleDefaults = {
+		const sel = document.querySelector('input[name="format"]:checked');
+		const def = {
 			imagen: "jpg",
 			pdf: "pdf",
 			documento: "docx",
@@ -270,14 +257,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			fuentes: "ttf",
 			zip: "zip",
 		};
+		const fmt = sel ? sel.value : def[d.group] || d.originalExtension;
 
-		const sel = document.querySelector('input[name="format"]:checked');
-		const fmt = sel
-			? sel.value
-			: singleDefaults[d.group] || d.originalExtension;
-
-		// Grupos de formato único
-		const singleGroups = [
+		const singles = [
 			"imagen",
 			"pdf",
 			"documento",
@@ -288,19 +270,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			"zip",
 		];
 
-		// Si hay URL fija para formatos de un solo tipo, úsala directo
-		if (singleGroups.includes(d.group) && d.downloadOverride) {
-			const a = document.createElement("a");
-			a.href = d.downloadOverride;
-			a.download = d.downloadOverride.split("/").pop();
-			document.body.appendChild(a);
-			a.click();
-			a.remove();
-			Fancybox.close();
-			return;
-		}
-
-		// Construcción de nombre y URL
 		const fname =
 			fmt === "jpg"
 				? d.jpgSuffix
@@ -308,42 +277,37 @@ document.addEventListener("DOMContentLoaded", () => {
 					: `${d.fileName}.jpg`
 				: `${d.fileName}.${fmt}`;
 
-		let url = "";
-		if (singleGroups.includes(d.group)) {
-			// Reemplaza la extensión manteniendo la ruta original del preview
-			url = d.originalSrc
-				? d.originalSrc.replace(/\.[^/.]+$/, `.${fmt}`)
-				: `${d.basePath}${fname}`;
-		} else {
-			// Estructura por carpetas /{fmt}/
-			url =
-				fmt === "jpg"
-					? `${d.basePath}jpg/${fname}`
-					: `${d.basePath}${fmt}/${fname}`;
-		}
+		// Reglas de URL:
+		// - Grupos de un solo formato: reemplazo directo de extensión en el src original.
+		// - Resto: carpeta por extensión y mismo nombre.
+		const url = singles.includes(d.group)
+			? d.originalSrc.replace(/\.[^/.]+$/, `.${fmt}`)
+			: fmt === "jpg"
+				? `${d.basePath}jpg/${fname}`
+				: `${d.basePath}${fmt}/${fname}`;
 
-		// Descargar
 		const a = document.createElement("a");
 		a.href = url;
 		a.download = fname;
 		document.body.appendChild(a);
 		a.click();
 		a.remove();
-
 		Fancybox.close();
 	});
 });
 
 /* ────────────────────────────────────────────────────────────── */
-/* 5 · Botón mute/unmute para previews en grilla                  */
+/* 5 · Botón mute/unmute para previews en grid                    */
 /* ────────────────────────────────────────────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
-	document
+  document
 		.querySelectorAll(".cs-masked-media.video-container")
 		.forEach((cont) => {
 			const v = cont.querySelector("video");
 			if (!v) return;
+
 			cont.style.position = "relative";
+
 			const btn = document.createElement("button");
 			Object.assign(btn.style, {
 				position: "absolute",
@@ -358,13 +322,17 @@ document.addEventListener("DOMContentLoaded", () => {
 				opacity: 0,
 				transition: "opacity .3s",
 			});
+
 			const img = document.createElement("img");
 			Object.assign(img.style, { width: "32px", height: "32px" });
 			img.src = "../../assets/img/icons/unmute.svg";
+
 			btn.appendChild(img);
 			cont.appendChild(btn);
+
 			cont.onmouseenter = () => (btn.style.opacity = 1);
 			cont.onmouseleave = () => (btn.style.opacity = 0);
+
 			btn.onclick = (e) => {
 				e.preventDefault();
 				v.muted = !v.muted;
