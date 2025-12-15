@@ -32,13 +32,13 @@
 	font-display: swap;
 }
 
-.fw-light {
+.fw-300 {
 	font-weight: 300;
 }
-.fw-regular {
+.fw-400 {
 	font-weight: 400;
 }
-.fw-bold {
+.fw-700 {
 	font-weight: 700;
 }
 .ff-pulso {

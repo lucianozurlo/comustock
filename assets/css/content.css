@@ -710,8 +710,10 @@
 }
 #main-recursos #fuentes .cs-parallax-media {
 	border-radius: 0;
-    overflow: unset;
+	overflow: unset;
 }
+
+/* TOOLKITS */
 #main-toolkits #intro {
 	padding: 80px 0 60px;
 }
@@ -730,4 +732,38 @@
 	height: auto;
 	margin-bottom: 20px;
 	border-radius: 10px;
+}
+#main-toolkits .toolkit-content {
+	padding-top: 20px;
+}
+#main-toolkits .toolkit-content h5 {
+	margin-top: 15px;
+}
+#main-toolkits .toolkit-content h6 {
+	text-transform: uppercase;
+	color: var(--comustock);
+	font-weight: 700;
+}
+/* #main-toolkits .toolkit-content h5 {
+	margin-top: 40px;
+} */
+#main-toolkits .toolkit-content .cs-large-text {
+	margin-bottom: 25px;
+}
+#main-toolkits .toolkit-content p {
+	font-family: "Roboto" !important;
+	margin-bottom: 15px;
+}
+#main-toolkits .toolkit-content ul,
+#main-toolkits .toolkit-content ol {
+	margin-top: 8px;
+	margin-bottom: 12px;
+	padding-left: 20px;
+}
+#main-toolkits .toolkit-content li {
+	font-family: "Roboto" !important;
+	margin-bottom: 5px;
+}
+#main-toolkits .toolkit-content .stg-col-6 p:last-child {
+	margin-bottom: 0;
 }
