@@ -28,7 +28,7 @@
                     <nav class="cs-nav">
                         <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
                             <li>
-                                <a href="#">Ecosistema</a>
+                                <a class="off">Ecosistema</a>
                                 <ul class="sub-menu">
                                     <li><a href="http://comustock.personal.com.ar/personal" target="_blank">Personal</a>
                                     </li>
@@ -72,8 +72,7 @@
                                     <li><a href="http://comustock.personal.com.ar/templates/#vivaengage"
                                             target="_blank">Posteos</a></li>
                                     <li class="cs-menu-divider"></li>
-                                    <li><a href="http://comustock.personal.com.ar/templates/tu-firma" target="_blank">Tu
-                                            firma de e-mail</a></li>
+                                    <li><a class="off">Tu firma de e-mail</a></li>
                                 </ul>
                             </li>
                             <li>
