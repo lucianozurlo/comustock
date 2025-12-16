@@ -434,18 +434,17 @@
 }
 
 /* TEMPLATES */
-#main-templates #presentaciones [class*='cs-grid'] {
-    grid-row-gap: 70px;
+#main-templates #presentaciones [class*="cs-grid"] {
+	grid-row-gap: 70px;
 }
-
 #main-templates #presentaciones h2 {
 	font-size: 46px;
 }
 #main-templates #presentaciones h5 {
-    max-width: 237px;
+	max-width: 237px;
 }
-
-#main-templates #presentaciones img {
+#main-templates #presentaciones img,
+#main-templates #emails img {
 	padding: 0;
 }
 #main-templates #presentaciones .cs-masked-content {
@@ -467,22 +466,50 @@
 #main-templates #presentaciones .cs-column-item:hover .cs-icon-wrap::before {
 	border-color: var(--comustock);
 }
-#main-templates #presentaciones .cs-icon-wrap::before {
+#main-templates #presentaciones .cs-icon-wrap::before,
+#main-templates #emails .cs-icon-wrap::before {
 	border-width: 0;
 }
 #main-templates .ejemplos .cs-column-item-content .cs-icon-wrap {
 	width: 60px;
 	height: 60px;
 }
-#main-templates #presentaciones .cs-icon-wrap a {
+#main-templates #presentaciones .cs-icon-wrap a,
+#main-templates #emails .cs-icon-wrap a {
 	left: 0;
 }
 #main-templates
 	#presentaciones
 	.cs-icon-wrap
 	a.cs-masked-content.at-bottom-right
+	.cs-square-button,
+#main-templates
+	#emails
+	.cs-icon-wrap
+	a.cs-masked-content.at-bottom-right
 	.cs-square-button {
 	margin: var(--stg-small-gap) 0 0 0;
+}
+#main-templates #posteos p.dest {
+	background: #050c5211;
+	border-radius: 50px;
+	padding: 20px 50px;
+	margin-bottom: 30px;
+}
+#main-templates #posteos .pasos img {
+	display: inline;
+	margin-right: 11px;
+}
+#main-templates #posteos .pasos ul {
+	margin-left: 40px;
+}
+#main-templates #posteos .pasos ul li {
+	list-style: disc;
+	margin-left: 16px;
+	padding-left: 8px;
+}
+#main-templates #posteos h3 {
+	margin: 50px auto 30px;
 }
 
 #main-templates .ejemplos .cs-masked-content {

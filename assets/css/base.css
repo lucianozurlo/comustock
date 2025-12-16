@@ -159,6 +159,10 @@ h5.light {
 .cs-square-button {
 	border-width: 2px;
 }
+.cs-square-button.square-button-small {
+	width: 60px;
+	height: 60px;
+}
 a.button-medium {
 	width: var(--cs-button-medium);
 	height: var(--cs-button-medium);
