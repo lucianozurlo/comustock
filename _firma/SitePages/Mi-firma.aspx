@@ -70,19 +70,20 @@
                                     <li><a href="http://comustock.personal.com.ar/templates/#emails"
                                             target="_blank">E-mails</a></li>
                                     <li><a href="http://comustock.personal.com.ar/templates/#vivaengage"
-                                            target="_blank">Posteos</a></li>
+                                            target="_blank">Viva Engage</a></li>
                                     <li class="cs-menu-divider"></li>
                                     <li><a class="off">Tu firma de e-mail</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="http://comustock.personal.com.ar/galerias" target="_blank">Galerías</a>
+                                <a href="http://comustock.personal.com.ar/audiovisuales"
+                                    target="_blank">Audiovisuales</a>
                                 <ul class="sub-menu">
-                                    <li><a href="http://comustock.personal.com.ar/galerias/#publicidad"
+                                    <li><a href="http://comustock.personal.com.ar/audiovisuales/#publicidad"
                                             target="_blank">Publicidad</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/galerias/#imagenes"
+                                    <li><a href="http://comustock.personal.com.ar/audiovisuales/#imagenes"
                                             target="_blank">Imágenes</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/galerias/#cartelera-interna"
+                                    <li><a href="http://comustock.personal.com.ar/audiovisuales/#cartelera-interna"
                                             target="_blank">Cartelera interna</a></li>
                                 </ul>
                             </li>

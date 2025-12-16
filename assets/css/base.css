@@ -325,9 +325,9 @@ section {
 	-webkit-mask-image: var(--icon-cs-templates);
 	mask-image: var(--icon-cs-templates);
 }
-.cs-icon-galerias {
-	-webkit-mask-image: var(--icon-cs-galerias);
-	mask-image: var(--icon-cs-galerias);
+.cs-icon-audiovisuales {
+	-webkit-mask-image: var(--icon-cs-audiovisuales);
+	mask-image: var(--icon-cs-audiovisuales);
 }
 .cs-icon-recursos {
 	-webkit-mask-image: var(--icon-cs-recursos);
