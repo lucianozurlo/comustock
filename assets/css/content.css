@@ -434,8 +434,19 @@
 }
 
 /* TEMPLATES */
+#main-templates #presentaciones [class*='cs-grid'] {
+    grid-row-gap: 70px;
+}
+
 #main-templates #presentaciones h2 {
 	font-size: 46px;
+}
+#main-templates #presentaciones h5 {
+    max-width: 237px;
+}
+
+#main-templates #presentaciones img {
+	padding: 0;
 }
 #main-templates #presentaciones .cs-masked-content {
 	max-width: 50%;
@@ -445,16 +456,35 @@
 	cursor: default;
 	transition: all 0.2s ease-in-out;
 }
+#main-templates
+	#presentaciones
+	.cs-column-item-content
+	.cs-icon-wrap
+	a:hover
+	.cs-icon {
+	cursor: pointer;
+}
 #main-templates #presentaciones .cs-column-item:hover .cs-icon-wrap::before {
 	border-color: var(--comustock);
 }
 #main-templates #presentaciones .cs-icon-wrap::before {
-	border-width: 2px;
+	border-width: 0;
 }
 #main-templates .ejemplos .cs-column-item-content .cs-icon-wrap {
 	width: 60px;
 	height: 60px;
 }
+#main-templates #presentaciones .cs-icon-wrap a {
+	left: 0;
+}
+#main-templates
+	#presentaciones
+	.cs-icon-wrap
+	a.cs-masked-content.at-bottom-right
+	.cs-square-button {
+	margin: var(--stg-small-gap) 0 0 0;
+}
+
 #main-templates .ejemplos .cs-masked-content {
 	max-width: 65%;
 }
@@ -653,7 +683,6 @@
 #main-galerias #imagenes .cs-portfolio-card-image img {
 	transform: scale(1) !important;
 }
-
 #main-galerias #publicidad h3 {
 	font-weight: 600;
 	text-transform: uppercase;
@@ -738,6 +767,7 @@
 #main-recursos #iconos .cs-block {
 	padding: 40px;
 }
+
 /* TOOLKITS */
 #main-toolkits #intro {
 	padding: 80px 0 60px;
