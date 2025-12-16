@@ -463,7 +463,6 @@
   border-color: var(--personal-complementario-c4) !important;
 }
 /**/
-
 .color-personal-complementario-d1 {
   color: var(--personal-complementario-d1) !important;
 }
@@ -584,6 +583,25 @@
   border-color: var(--personal-dark) !important;
 }
 /**/
+
+/****** TIENDA ******/
+
+.color-tienda {
+  color: var(--XXX) !important;
+}
+.bg-XXX {
+  background-color: var(--XXX) !important;
+}
+.border-XXX {
+  border-color: var(--XXX) !important;
+}
+
+
+
+
+
+
+
 
 /****** FLOW ******/
 .color-flow {

@@ -533,6 +533,10 @@
 #main-templates #presentaciones .cs-column-item:not(:last-child) {
 	margin-bottom: 0;
 }
+#main-templates .swiper-slide p {
+	text-align: center;
+}
+
 
 /* GALERIAS */
 #main-audiovisuales .slider {

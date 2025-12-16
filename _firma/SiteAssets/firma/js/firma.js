@@ -134,7 +134,7 @@ function buildSignatureHTML() {
 
 	const html = `
 <div class="w-signature"><table cellspacing="0" cellpadding="0" id="miFirma" style="border: 0px;"><tbody>
-<img src="${LOGO_URL}" width="84" height="53" style="width: 100px; height: 53px; border: 0px; display: inline;"><br>
+<img src="${LOGO_URL}" width="100" height="53" style="width: 100px; height: 53px; border: 0px; display: inline;"><br>
 <tr><td style="vertical-align: top; padding: 0px 0px 0px 3px;">
   <div style="margin-top: -5px; text-align: left; color: rgb(44, 43, 42); font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 10pt; font-weight: bold; line-height: 1.6;">
     ${nameHtml}${roleLine}${domLine}

@@ -337,6 +337,10 @@ section {
 	-webkit-mask-image: var(--icon-cs-toolkits);
 	mask-image: var(--icon-cs-toolkits);
 }
+.cs-icon-stop {
+	-webkit-mask-image: var(--icon-cs-stop);
+	mask-image: var(--icon-cs-stop);
+}
 a.cs-masked-content.at-bottom-right .cs-square-button {
 	transition: all 0.3s ease 0s !important;
 }

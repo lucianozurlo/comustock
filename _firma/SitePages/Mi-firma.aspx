@@ -165,11 +165,8 @@
                                             <option value="Directorio">Directorio</option>
                                             <option value="Dominio Cultural">Dominio Cultural</option>
                                             <option value="Dominio Digital">Dominio Digital</option>
-                                            <option value="Dominio Negocio Argentina">Dominio Negocio Argentina
-                                            </option>
-                                            <option value="Dominio Negocio B2B &amp; IoT">Dominio Negocio B2B &amp;
-                                                IoT
-                                            </option>
+                                            <option value="Dominio Negocio Argentina">Dominio Negocio Argentina</option>
+                                            <option value="Dirección Negocios B2B">Dirección Negocios B2B</option>
                                             <option value="Dominio Negocio Ciberseguridad">Dominio Negocio
                                                 Ciberseguridad
                                             </option>
