@@ -647,6 +647,28 @@
 	width: 18px;
 	height: 18px;
 }
+#main-galerias #imagenes .cs-block.cs-portfolio-card {
+	padding: 0;
+}
+#main-galerias #imagenes .cs-portfolio-card-image img {
+	transform: scale(1) !important;
+}
+
+#main-galerias #publicidad h3 {
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 60px 5px 25px;
+	font-size: 24px;
+	text-align: center;
+	padding: 7px 15px;
+	border-radius: 40px;
+	background-color: #052c5012;
+}
+#main-galerias #publicidad .border-bottom-pub {
+	border-bottom: 1px dotted #052c5099;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
 
 /* RECURSOS */
 #main-recursos #intro {
@@ -708,11 +730,14 @@
 #main-recursos #fuentes .cs-block {
 	padding: 0;
 }
-#main-recursos #fuentes .cs-parallax-media {
+#main-recursos #fuentes .cs-parallax-media,
+#main-recursos #iconos .cs-parallax-media {
 	border-radius: 0;
 	overflow: unset;
 }
-
+#main-recursos #iconos .cs-block {
+	padding: 40px;
+}
 /* TOOLKITS */
 #main-toolkits #intro {
 	padding: 80px 0 60px;

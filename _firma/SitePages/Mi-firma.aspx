@@ -78,10 +78,10 @@
                             <li>
                                 <a href="http://comustock.personal.com.ar/galerias" target="_blank">Galerías</a>
                                 <ul class="sub-menu">
-                                    <li><a href="http://comustock.personal.com.ar/galerias/#via-publica"
-                                            target="_blank">Vía pública</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/galerias/#publicidades"
-                                            target="_blank">Publicidades</a></li>
+                                    <li><a href="http://comustock.personal.com.ar/galerias/#publicidad"
+                                            target="_blank">Publicidad</a></li>
+                                    <li><a href="http://comustock.personal.com.ar/galerias/#imagenes"
+                                            target="_blank">Imágenes</a></li>
                                     <li><a href="http://comustock.personal.com.ar/galerias/#cartelera-interna"
                                             target="_blank">Cartelera interna</a></li>
                                 </ul>
@@ -100,9 +100,9 @@
                             <li>
                                 <a href="http://comustock.personal.com.ar/toolkits">Toolkits</a>
                                 <ul class="sub-menu">
-                                    <li><a href="http://comustock.personal.com.ar/toolkits/#disenar"
-                                            target="_blank">Cómo diseñar</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/toolkits/#redactar"
+                                    <li><a href="http://comustock.personal.com.ar/toolkits/disenar" target="_blank">Cómo
+                                            diseñar</a></li>
+                                    <li><a href="http://comustock.personal.com.ar/toolkits/redactar"
                                             target="_blank">Cómo redactar</a></li>
                                 </ul>
                             </li>

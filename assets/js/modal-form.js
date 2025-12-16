@@ -135,12 +135,12 @@ document.querySelectorAll("[data-fancybox]").forEach((anchor) => {
         <button id="video-play" class="video-control"
                 style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
                        background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
-          <img src="../../assets/img/icons/play.svg" style="width:28px;height:28px;">
+          <img src="../../assets/img/iconos/audio/play.svg" style="width:28px;height:28px;">
         </button>
         <button id="video-stop" class="video-control"
                 style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
                        display:none;background:#ffffffcc;border:none;cursor:pointer;border-radius:50%;padding:18px;">
-          <img src="../../assets/img/icons/stop.svg" style="width:28px;height:28px;">
+          <img src="../../assets/img/iconos/audio/stop.svg" style="width:28px;height:28px;">
         </button>
       </div>`;
 			const v = document.getElementById("custom-video");
