@@ -157,10 +157,9 @@
                                         <input type="text" name="nombre" placeholder="ejemplo&#58; Ana Pérez" required
                                             value="">
                                         <label for="rol">Rol / Área</label>
-                                        <input type="text" name="rol"
-                                            placeholder="ejemplo&#58; Analista / Comunicación Interna" required
-                                            value="">
-                                        <!-- <label for="dominio">Dominio </label>
+                                        <input type="text" name="rol" placeholder="ejemplo&#58; Comunicación Interna"
+                                            required value="">
+                                        <label for="dominio">Dominio </label>
                                         <select name="dominio">
                                             <option value="">Selecciona un dominio</option>
                                             <option value="Auditoría">Auditoría</option>
@@ -189,7 +188,7 @@
                                             <option value="Operaciones Internacionales">Operaciones Internacionales
                                             </option>
                                             <option value="Socios y Alianzas">Socios y Alianzas</option>
-                                        </select> -->
+                                        </select>
                                     </fieldset>
 
                                     <fieldset>
