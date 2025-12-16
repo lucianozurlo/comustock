@@ -444,7 +444,7 @@
 	max-width: 237px;
 }
 #main-templates #presentaciones img,
-#main-templates #emails img {
+#main-templates #e-mails img {
 	padding: 0;
 }
 #main-templates #presentaciones .cs-masked-content {
@@ -467,7 +467,7 @@
 	border-color: var(--comustock);
 }
 #main-templates #presentaciones .cs-icon-wrap::before,
-#main-templates #emails .cs-icon-wrap::before {
+#main-templates #e-mails .cs-icon-wrap::before {
 	border-width: 0;
 }
 #main-templates .ejemplos .cs-column-item-content .cs-icon-wrap {
@@ -475,7 +475,7 @@
 	height: 60px;
 }
 #main-templates #presentaciones .cs-icon-wrap a,
-#main-templates #emails .cs-icon-wrap a {
+#main-templates #e-mails .cs-icon-wrap a {
 	left: 0;
 }
 #main-templates
@@ -484,7 +484,7 @@
 	a.cs-masked-content.at-bottom-right
 	.cs-square-button,
 #main-templates
-	#emails
+	#e-mails
 	.cs-icon-wrap
 	a.cs-masked-content.at-bottom-right
 	.cs-square-button {
@@ -567,7 +567,11 @@
 	align-items: center;
 	justify-content: center;
 }
-#main-audiovisuales .imagenes-y-videos .cs-grid-3cols .cs-square-button span.cs-icon,
+#main-audiovisuales
+	.imagenes-y-videos
+	.cs-grid-3cols
+	.cs-square-button
+	span.cs-icon,
 #main-audiovisuales
 	.nuestros-espacios
 	.cs-grid-3cols

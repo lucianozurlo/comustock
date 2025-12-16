@@ -30,44 +30,45 @@
                             <li>
                                 <a class="off">Ecosistema</a>
                                 <ul class="sub-menu">
-                                    <li><a href="http://comustock.personal.com.ar/personal" target="_blank">Personal</a>
+                                    <li><a href="http://comustock.personal.com.ar/personal/"
+                                            target="_blank">Personal</a>
                                     </li>
                                     <li class="cs-menu-divider"></li>
                                     <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/movil"
+                                        <a href="http://comustock.personal.com.ar/personal/movil/"
                                             target="_blank">Móvil</a>
                                     </li>
                                     <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/fibra"
+                                        <a href="http://comustock.personal.com.ar/personal/fibra/"
                                             target="_blank">Fibra</a>
                                     </li>
                                     <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/flow"
+                                        <a href="http://comustock.personal.com.ar/personal/flow/"
                                             target="_blank">Flow</a>
                                     </li>
                                     <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/pay" target="_blank">Pay</a>
+                                        <a href="http://comustock.personal.com.ar/personal/pay/" target="_blank">Pay</a>
                                     </li>
                                     <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/tienda"
+                                        <a href="http://comustock.personal.com.ar/personal/tienda/"
                                             target="_blank">Tienda</a>
                                     </li>
                                     <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/smarthome"
+                                        <a href="http://comustock.personal.com.ar/personal/smarthome/"
                                             target="_blank">Smarthome</a>
                                     </li>
                                     <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/tech"
+                                        <a href="http://comustock.personal.com.ar/personal/tech/"
                                             target="_blank">Tech</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="http://comustock.personal.com.ar/templates" target="_blank">Templates</a>
+                                <a href="http://comustock.personal.com.ar/templates/" target="_blank">Templates</a>
                                 <ul class="sub-menu">
                                     <li><a href="http://comustock.personal.com.ar/templates/#presentaciones"
                                             target="_blank">Presentaciones</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/templates/#emails"
+                                    <li><a href="http://comustock.personal.com.ar/templates/#e-mails"
                                             target="_blank">E-mails</a></li>
                                     <li><a href="http://comustock.personal.com.ar/templates/#vivaengage"
                                             target="_blank">Viva Engage</a></li>
@@ -76,7 +77,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="http://comustock.personal.com.ar/audiovisuales"
+                                <a href="http://comustock.personal.com.ar/audiovisuales/"
                                     target="_blank">Audiovisuales</a>
                                 <ul class="sub-menu">
                                     <li><a href="http://comustock.personal.com.ar/audiovisuales/#publicidad"
@@ -88,7 +89,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="http://comustock.personal.com.ar/recursos" target="_blank">Recursos</a>
+                                <a href="http://comustock.personal.com.ar/recursos/" target="_blank">Recursos</a>
                                 <ul class="sub-menu">
                                     <li><a href="http://comustock.personal.com.ar/recursos/#fuentes"
                                             target="_blank">Fuentes</a></li>
@@ -99,11 +100,12 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="http://comustock.personal.com.ar/toolkits">Toolkits</a>
+                                <a href="http://comustock.personal.com.ar/toolkits/">Toolkits</a>
                                 <ul class="sub-menu">
-                                    <li><a href="http://comustock.personal.com.ar/toolkits/disenar" target="_blank">Cómo
+                                    <li><a href="http://comustock.personal.com.ar/toolkits/disenar/"
+                                            target="_blank">Cómo
                                             diseñar</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/toolkits/redactar"
+                                    <li><a href="http://comustock.personal.com.ar/toolkits/redactar/"
                                             target="_blank">Cómo redactar</a></li>
                                 </ul>
                             </li>

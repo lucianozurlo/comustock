@@ -183,6 +183,7 @@ document.querySelectorAll("[data-fancybox]").forEach((anchor) => {
 			documento: ["docx"],
 			video: ["mp4"],
 			powerpoint: ["pptx"],
+			editables: ["ai", "pptx"],
 			email: ["oft", "eml"],
 			fuentes: ["otf", "ttf"],
 			zip: ["zip"],
