@@ -1,166 +1,326 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComuStock :: Mi firma</title>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../SiteAssets/firma/css/config.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../SiteAssets/firma/css/libs.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../SiteAssets/firma/css/style.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../SiteAssets/firma/css/responsive.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../SiteAssets/firma/css/base.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../SiteAssets/firma/css/content.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../SiteAssets/firma/css/firma.css"
+    />
+    <link rel="icon" href="../SiteAssets/firma/img/favicon.png" sizes="32x32" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ComuStock :: Mi firma</title>
-        <link type="text/css" rel="stylesheet" href="../SiteAssets/firma/css/config.css" />
-        <link type="text/css" rel="stylesheet" href="../SiteAssets/firma/css/libs.css" />
-        <link type="text/css" rel="stylesheet" href="../SiteAssets/firma/css/style.css" />
-        <link type="text/css" rel="stylesheet" href="../SiteAssets/firma/css/responsive.css" />
-        <link type="text/css" rel="stylesheet" href="../SiteAssets/firma/css/base.css" />
-        <link type="text/css" rel="stylesheet" href="../SiteAssets/firma/css/content.css" />
-        <link type="text/css" rel="stylesheet" href="../SiteAssets/firma/css/firma.css" />
-        <link rel="icon" href="../SiteAssets/firma/img/favicon.png" sizes="32x32" />
+  <body id="home">
+    <header
+      id="cs-header"
+      class="is-frosted is-sticky"
+      data-appear="fade-down"
+      data-unload="fade-up"
+    >
+      <div class="cs-header-inner">
+        <div class="cs-header-lp">
+          <a
+            href="http://comustock.personal.com.ar/"
+            target="_blank"
+            class="cs-logo"
+          >
+            <img
+              src="../SiteAssets/firma/img/logo-comustock.svg"
+              alt="ComuStock"
+              width="140"
+              height="27"
+            />
+          </a>
+        </div>
+        <div class="cs-header-mp">
+          <nav class="cs-nav">
+            <ul
+              class="main-menu"
+              data-stagger-appear="fade-down"
+              data-stagger-delay="75"
+            >
+              <li>
+                <a class="off">Ecosistema</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/personal/index.html"
+                      target="_blank"
+                      >Personal</a
+                    >
+                  </li>
+                  <li class="cs-menu-divider"></li>
+                  <li class="product">
+                    <a
+                      href="http://comustock.personal.com.ar/personal/movil/index.html"
+                      target="_blank"
+                      >Móvil</a
+                    >
+                  </li>
+                  <li class="product">
+                    <a
+                      href="http://comustock.personal.com.ar/personal/fibra/index.html"
+                      target="_blank"
+                      >Fibra</a
+                    >
+                  </li>
+                  <li class="product">
+                    <a
+                      href="http://comustock.personal.com.ar/personal/flow/index.html"
+                      target="_blank"
+                      >Flow</a
+                    >
+                  </li>
+                  <li class="product">
+                    <a
+                      href="http://comustock.personal.com.ar/personal/pay/index.html"
+                      target="_blank"
+                      >Pay</a
+                    >
+                  </li>
+                  <li class="product">
+                    <a
+                      href="http://comustock.personal.com.ar/personal/tienda/index.html"
+                      target="_blank"
+                      >Tienda</a
+                    >
+                  </li>
+                  <li class="product">
+                    <a
+                      href="http://comustock.personal.com.ar/personal/smarthome/index.html"
+                      target="_blank"
+                      >Smarthome</a
+                    >
+                  </li>
+                  <li class="product">
+                    <a
+                      href="http://comustock.personal.com.ar/personal/tech/index.html"
+                      target="_blank"
+                      >Tech</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="http://comustock.personal.com.ar/templates/index.html"
+                  target="_blank"
+                  >Templates</a
+                >
+                <ul class="sub-menu">
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/templates/index.html#presentaciones"
+                      target="_blank"
+                      >Presentaciones</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/templates/index.html#e-mails"
+                      target="_blank"
+                      >E-mails</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/templates/index.html#vivaengage"
+                      target="_blank"
+                      >Viva Engage</a
+                    >
+                  </li>
+                  <li class="cs-menu-divider"></li>
+                  <li><a class="off">Tu firma de e-mail</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="http://comustock.personal.com.ar/audiovisuales/index.html"
+                  target="_blank"
+                  >Audiovisuales</a
+                >
+                <ul class="sub-menu">
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/audiovisuales/index.html#publicidad"
+                      target="_blank"
+                      >Publicidad</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/audiovisuales/index.html#imagenes"
+                      target="_blank"
+                      >Imágenes</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/audiovisuales/index.html#cartelera-interna"
+                      target="_blank"
+                      >Cartelera interna</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="http://comustock.personal.com.ar/recursos/index.html"
+                  target="_blank"
+                  >Recursos</a
+                >
+                <ul class="sub-menu">
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/recursos/index.html#fuentes"
+                      target="_blank"
+                      >Fuentes</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/recursos/index.html#iconos"
+                      target="_blank"
+                      >Íconos</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/recursos/index.html#elementos"
+                      target="_blank"
+                      >Elementos</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="http://comustock.personal.com.ar/toolkits/index.html"
+                  >Toolkits</a
+                >
+                <ul class="sub-menu">
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/toolkits/disenar/index.html"
+                      target="_blank"
+                      >Cómo diseñar</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://comustock.personal.com.ar/toolkits/redactar/index.html"
+                      target="_blank"
+                      >Cómo redactar</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="cs-header-rp">
+          <a
+            href="http://comustock.personal.com.ar/#HacemosLaComuFacil"
+            target="_blank"
+            class="cs-button"
+            >#HacemosLaComuFácil</a
+          >
+        </div>
+      </div>
+      <div class="cs-mobile-header-inner">
+        <a href="#home" class="cs-logo">
+          <img
+            src="../SiteAssets/firma/img/logo-comustock.svg"
+            alt="ComuStock"
+            width="140"
+            height="27"
+          />
+        </a>
+        <a href="#" class="cs-mobile-menu-toggler">
+          <i class="cs-menu-toggler-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </i>
+        </a>
+      </div>
+    </header>
 
-    </head>
+    <main id="cs-main">
+      <div class="stg-container">
+        <section>
+          <div class="align-center stg-bottom-gap-l stg-top-gap-l">
+            <h2 data-split-appear="fade-up" data-unload="fade-up">
+              ¡Creá tu firma!
+            </h2>
+            <p
+              class="cs-large-text"
+              data-appear="fade-up"
+              data-delay="200"
+              data-unload="fade-up"
+            >
+              Ingresá tus datos y agregala en tu Outlook.
+            </p>
+          </div>
 
-    <body id="home">
-        <header id="cs-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
-            <div class="cs-header-inner">
-                <div class="cs-header-lp">
-                    <a href="http://comustock.personal.com.ar/" target="_blank" class="cs-logo">
-                        <img src="../SiteAssets/firma/img/logo-comustock.svg" alt="ComuStock" width="140" height="27" />
-                    </a>
-                </div>
-                <div class="cs-header-mp">
-                    <nav class="cs-nav">
-                        <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
-                            <li>
-                                <a class="off">Ecosistema</a>
-                                <ul class="sub-menu">
-                                    <li><a href="http://comustock.personal.com.ar/personal/index.html"
-                                            target="_blank">Personal</a>
-                                    </li>
-                                    <li class="cs-menu-divider"></li>
-                                    <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/movil/index.html"
-                                            target="_blank">Móvil</a>
-                                    </li>
-                                    <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/fibra/index.html"
-                                            target="_blank">Fibra</a>
-                                    </li>
-                                    <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/flow/index.html"
-                                            target="_blank">Flow</a>
-                                    </li>
-                                    <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/pay/index.html"
-                                            target="_blank">Pay</a>
-                                    </li>
-                                    <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/tienda/index.html"
-                                            target="_blank">Tienda</a>
-                                    </li>
-                                    <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/smarthome/index.html"
-                                            target="_blank">Smarthome</a>
-                                    </li>
-                                    <li class="product">
-                                        <a href="http://comustock.personal.com.ar/personal/tech/index.html"
-                                            target="_blank">Tech</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="http://comustock.personal.com.ar/templates/index.html"
-                                    target="_blank">Templates</a>
-                                <ul class="sub-menu">
-                                    <li><a href="http://comustock.personal.com.ar/templates/index.html#presentaciones"
-                                            target="_blank">Presentaciones</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/templates/index.html#e-mails"
-                                            target="_blank">E-mails</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/templates/index.html#vivaengage"
-                                            target="_blank">Viva Engage</a></li>
-                                    <li class="cs-menu-divider"></li>
-                                    <li><a class="off">Tu firma de e-mail</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="http://comustock.personal.com.ar/audiovisuales/index.html"
-                                    target="_blank">Audiovisuales</a>
-                                <ul class="sub-menu">
-                                    <li><a href="http://comustock.personal.com.ar/audiovisuales/index.html#publicidad"
-                                            target="_blank">Publicidad</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/audiovisuales/index.html#imagenes"
-                                            target="_blank">Imágenes</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/audiovisuales/index.html#cartelera-interna"
-                                            target="_blank">Cartelera interna</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="http://comustock.personal.com.ar/recursos/index.html"
-                                    target="_blank">Recursos</a>
-                                <ul class="sub-menu">
-                                    <li><a href="http://comustock.personal.com.ar/recursos/index.html#fuentes"
-                                            target="_blank">Fuentes</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/recursos/index.html#iconos"
-                                            target="_blank">Íconos</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/recursos/index.html#elementos"
-                                            target="_blank">Elementos</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="http://comustock.personal.com.ar/toolkits/index.html">Toolkits</a>
-                                <ul class="sub-menu">
-                                    <li><a href="http://comustock.personal.com.ar/toolkits/disenar/index.html"
-                                            target="_blank">Cómo
-                                            diseñar</a></li>
-                                    <li><a href="http://comustock.personal.com.ar/toolkits/redactar/index.html"
-                                            target="_blank">Cómo redactar</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="cs-header-rp">
-                    <a href="http://comustock.personal.com.ar/#HacemosLaComuFacil" target="_blank"
-                        class="cs-button">#HacemosLaComuFácil</a>
-                </div>
-            </div>
-            <div class="cs-mobile-header-inner">
-                <a href="#home" class="cs-logo">
-                    <img src="../SiteAssets/firma/img/logo-comustock.svg" alt="ComuStock" width="140" height="27" />
-                </a>
-                <a href="#" class="cs-mobile-menu-toggler">
-                    <i class="cs-menu-toggler-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </i>
-                </a>
-            </div>
-        </header>
-
-        <main id="cs-main">
-            <div class="stg-container">
-
-                <section>
-                    <div class="align-center stg-bottom-gap-l stg-top-gap-l">
-                        <h2 data-split-appear="fade-up" data-unload="fade-up">
-                            ¡Creá tu firma!
-                        </h2>
-                        <p class="cs-large-text" data-appear="fade-up" data-delay="200" data-unload="fade-up">
-                            Ingresá tus datos y agregala en tu Outlook.
-                        </p>
-                    </div>
-
-                    <div class="grid">
-                        <div class="cs-icon-box cs-block card" data-appear="fade-up" data-delay="350"
-                            data-unload="fade-up">
-                            <div class="bd">
-                                <form name="personal-info" autocomplete="on" id="form">
-                                    <fieldset>
-                                        <label for="nombre">Nombre y apellido</label>
-                                        <input type="text" name="nombre" placeholder="ejemplo&#58; Ana Pérez" required
-                                            value="">
-                                        <label for="rol">Rol / Área</label>
-                                        <input type="text" name="rol"
-                                            placeholder="ejemplo&#58; Analista / Comunicación Interna" required
-                                            value="">
-                                        <!-- <label for="dominio">Dominio </label>
+          <div class="grid">
+            <div
+              class="cs-icon-box cs-block card"
+              data-appear="fade-up"
+              data-delay="350"
+              data-unload="fade-up"
+            >
+              <div class="bd">
+                <form name="personal-info" autocomplete="on" id="form">
+                  <fieldset>
+                    <label for="nombre">Nombre y apellido</label>
+                    <input
+                      type="text"
+                      name="nombre"
+                      placeholder="ejemplo&#58; Ana Pérez"
+                      required
+                      value=""
+                    />
+                    <label for="rol">Rol / Área</label>
+                    <input
+                      type="text"
+                      name="rol"
+                      placeholder="ejemplo&#58; Analista / Comunicación Interna"
+                      required
+                      value=""
+                    />
+                    <!-- <label for="dominio">Dominio </label>
                                         <select name="dominio">
                                             <option value="">Selecciona un dominio</option>
                                             <option value="Auditoría">Auditoría</option>
@@ -190,136 +350,208 @@
                                             </option>
                                             <option value="Socios y Alianzas">Socios y Alianzas</option>
                                         </select> -->
-                                    </fieldset>
+                  </fieldset>
 
-                                    <fieldset>
-                                        <label for="celular">Teléfono celular <span
-                                                class="c-form-label__opcional">(opcional)</span></label>
-                                        <input type="tel-national" name="celular"
-                                            placeholder="ejemplo&#58; +54 9 11 2489-3571" autocomplete="tel-national"
-                                            value="">
+                  <fieldset>
+                    <label for="celular"
+                      >Teléfono celular
+                      <span class="c-form-label__opcional"
+                        >(opcional)</span
+                      ></label
+                    >
+                    <input
+                      type="tel-national"
+                      name="celular"
+                      placeholder="ejemplo&#58; +54 9 11 2489-3571"
+                      autocomplete="tel-national"
+                      value=""
+                    />
 
-                                        <label for="telefonoLaboral">Teléfono Laboral <span
-                                                class="c-form-label__opcional">(opcional)</span></label>
-                                        <input type="tel-national" name="telefonoLaboral"
-                                            placeholder="ejemplo&#58; +54 11 3571-2489" value="">
+                    <label for="telefonoLaboral"
+                      >Teléfono Laboral
+                      <span class="c-form-label__opcional"
+                        >(opcional)</span
+                      ></label
+                    >
+                    <input
+                      type="tel-national"
+                      name="telefonoLaboral"
+                      placeholder="ejemplo&#58; +54 11 3571-2489"
+                      value=""
+                    />
 
-                                        <label for="emailAddress">Email </label>
-                                        <input type="email" name="emailAddress"
-                                            placeholder="ejemplo&#58; anaperez@teco.com.ar" value="">
-                                    </fieldset>
+                    <label for="emailAddress">Email </label>
+                    <input
+                      type="email"
+                      name="emailAddress"
+                      placeholder="ejemplo&#58; anaperez@personal.com.ar"
+                      value=""
+                    />
+                  </fieldset>
 
-                                    <fieldset id="fsAddress">
-                                        <div class="fs-row">
-                                            <div class="fs-title">
-                                                <label for="domicilio" style="margin:0;">Domicilio laboral</label>
-                                                <span class="c-form-label__opcional">(opcional)</span>
-                                            </div>
-                                            <label class="fs-toggle">
-                                                <span>Ocultar</span>
-                                                <input type="checkbox" name="hideAddress" class="form-check-input">
-                                            </label>
-                                        </div>
-
-                                        <label class="sublabel" for="domicilio"
-                                            style="font-size: 0.75rem; color: rgb(95, 95, 95);">Dirección</label>
-                                        <input type="text" name="domicilio" placeholder="ejemplo&#58; Gral. Hornos 690"
-                                            value="">
-
-                                        <label class="sublabel" for="localidad"
-                                            style="font-size: 0.75rem; color: rgb(95, 95, 95);">Localidad</label>
-                                        <input type="text" name="localidad" placeholder="ejemplo&#58; CABA" value="">
-                                    </fieldset>
-
-                                    <fieldset id="fsLinkedin">
-                                        <div class="fs-row">
-                                            <div class="fs-title">
-                                                <label for="linkedinUrl" style="margin:0;">Perfil de
-                                                    LinkedIn</label>
-                                                <span class="c-form-label__opcional">(opcional)</span>
-                                            </div>
-                                            <label class="fs-toggle">
-                                                <span>Ocultar</span>
-                                                <input type="checkbox" name="hideSocialLinks" class="form-check-input">
-                                            </label>
-                                        </div>
-
-                                        <input type="url" name="linkedinUrl"
-                                            placeholder="ejemplo&#58; https://www.linkedin.com/in/anaperez"
-                                            class="input-linkedin" value="">
-                                    </fieldset>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="card preview" data-appear="fade-up" data-delay="500" data-unload="fade-up">
-                            <div class="bd preview-outer">
-                                <div id="preview" class="preview"></div>
-
-                                <div
-                                    style="display:flex; gap:8px; justify-content:flex-end; margin-top: 20px; flex-wrap:wrap;">
-                                    <button class="btn" id="btnCopyHtml2" type="button">Copiar firma</button>
-                                </div>
-
-                                <div class="tutorial">
-                                    <h5>Agregá la firma en tu Outlook</h5>
-                                    <ul>
-                                        <li>Ingresá a Outlook</li>
-                                        <li>En la pestaña <strong>Inicio</strong>, seleccioná <strong>Nuevo
-                                                mensaje
-                                                de correo electrónico</strong>.</li>
-                                        <li>En la pestaña <strong>Mensaje</strong>, en el grupo <strong>Incluir
-                                                (o
-                                                Insertar)</strong>, seleccioná <strong>Firma</strong> &gt;
-                                            <strong>Firmas</strong>.
-                                        </li>
-                                        <li>En <strong>Seleccionar firma para editar</strong>, elegí
-                                            <strong>Nueva</strong>, y, en el cuadro de diálogo <strong>Nueva
-                                                firma</strong> escribí un <em>nombre</em> para la firma.
-                                        </li>
-                                        <li>En <strong>Elegir firma predeterminada</strong>, seguí estos pasos:
-                                        </li>
-                                        <ol style="list-style-type: circle">
-                                            <li>En la lista <strong>Cuenta de correo</strong>, seleccioná tu
-                                                cuenta
-                                                de e-mail para asociarla con la firma.</li>
-                                            <li>En las listas <strong>Mensajes nuevos</strong> y
-                                                <strong>Respuestas
-                                                    o reenvíos</strong> elegí la firma que querés agregar a
-                                                todos
-                                                los nuevos mensajes de correo. Si no deseás firmar
-                                                automáticamente
-                                                los mensajes de correo, aceptá la opción
-                                                predeterminada<strong>(ninguno)</strong>.
-                                            </li>
-                                        </ol>
-                                        <li>En <strong>Editar firma</strong>, pegá la <em>firma</em> presionando
-                                            Ctrl+V, y luego hacé clic en <strong>Aceptar</strong>.</li>
-                                    </ul>
-
-                                    <details id="codeBox" style="display:none; margin-top:12px;">
-                                        <summary>Código HTML generado</summary>
-                                        <textarea id="rawHtml" readonly></textarea>
-                                    </details>
-                                </div>
-                            </div>
-                        </div>
+                  <fieldset id="fsAddress">
+                    <div class="fs-row">
+                      <div class="fs-title">
+                        <label for="domicilio" style="margin: 0"
+                          >Domicilio laboral</label
+                        >
+                        <span class="c-form-label__opcional">(opcional)</span>
+                      </div>
+                      <label class="fs-toggle">
+                        <span>Ocultar</span>
+                        <input
+                          type="checkbox"
+                          name="hideAddress"
+                          class="form-check-input"
+                        />
+                      </label>
                     </div>
 
-                </section>
+                    <label
+                      class="sublabel"
+                      for="domicilio"
+                      style="font-size: 0.75rem; color: rgb(95, 95, 95)"
+                      >Dirección</label
+                    >
+                    <input
+                      type="text"
+                      name="domicilio"
+                      placeholder="ejemplo&#58; Gral. Hornos 690"
+                      value=""
+                    />
+
+                    <label
+                      class="sublabel"
+                      for="localidad"
+                      style="font-size: 0.75rem; color: rgb(95, 95, 95)"
+                      >Localidad</label
+                    >
+                    <input
+                      type="text"
+                      name="localidad"
+                      placeholder="ejemplo&#58; CABA"
+                      value=""
+                    />
+                  </fieldset>
+
+                  <fieldset id="fsLinkedin">
+                    <div class="fs-row">
+                      <div class="fs-title">
+                        <label for="linkedinUrl" style="margin: 0"
+                          >Perfil de LinkedIn</label
+                        >
+                        <span class="c-form-label__opcional">(opcional)</span>
+                      </div>
+                      <label class="fs-toggle">
+                        <span>Ocultar</span>
+                        <input
+                          type="checkbox"
+                          name="hideSocialLinks"
+                          class="form-check-input"
+                        />
+                      </label>
+                    </div>
+
+                    <input
+                      type="url"
+                      name="linkedinUrl"
+                      placeholder="ejemplo&#58; https://www.linkedin.com/in/anaperez"
+                      class="input-linkedin"
+                      value=""
+                    />
+                  </fieldset>
+                </form>
+              </div>
             </div>
 
-        </main>
+            <div
+              class="card preview"
+              data-appear="fade-up"
+              data-delay="500"
+              data-unload="fade-up"
+            >
+              <div class="bd preview-outer">
+                <div id="preview" class="preview"></div>
 
-        <div class="cs-backlight"></div>
+                <div
+                  style="
+                    display: flex;
+                    gap: 8px;
+                    justify-content: flex-end;
+                    margin-top: 20px;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <button class="btn" id="btnCopyHtml2" type="button">
+                    Copiar firma
+                  </button>
+                </div>
 
-        <script src="../SiteAssets/firma/js/lib/jquery.min.js"></script>
-        <script src="../SiteAssets/firma/js/lib/libs.js"></script>
-        <script src="../SiteAssets/firma/js/contact_form.js"></script>
-        <script src="../SiteAssets/firma/js/st-core.js"></script>
-        <script src="../SiteAssets/firma/js/classes.js"></script>
-        <script src="../SiteAssets/firma/js/main.js"></script>
-        <script src="../SiteAssets/firma/js/firma.js"></script>
-    </body>
+                <div class="tutorial">
+                  <h5>Agregá la firma en tu Outlook</h5>
+                  <ul>
+                    <li>Ingresá a Outlook</li>
+                    <li>
+                      En la pestaña <strong>Inicio</strong>, seleccioná
+                      <strong>Nuevo mensaje de correo electrónico</strong>.
+                    </li>
+                    <li>
+                      En la pestaña <strong>Mensaje</strong>, en el grupo
+                      <strong>Incluir (o Insertar)</strong>, seleccioná
+                      <strong>Firma</strong> &gt; <strong>Firmas</strong>.
+                    </li>
+                    <li>
+                      En <strong>Seleccionar firma para editar</strong>, elegí
+                      <strong>Nueva</strong>, y, en el cuadro de diálogo
+                      <strong>Nueva firma</strong> escribí un
+                      <em>nombre</em> para la firma.
+                    </li>
+                    <li>
+                      En <strong>Elegir firma predeterminada</strong>, seguí
+                      estos pasos:
+                    </li>
+                    <ol style="list-style-type: circle">
+                      <li>
+                        En la lista <strong>Cuenta de correo</strong>,
+                        seleccioná tu cuenta de e-mail para asociarla con la
+                        firma.
+                      </li>
+                      <li>
+                        En las listas <strong>Mensajes nuevos</strong> y
+                        <strong>Respuestas o reenvíos</strong> elegí la firma
+                        que querés agregar a todos los nuevos mensajes de
+                        correo. Si no deseás firmar automáticamente los mensajes
+                        de correo, aceptá la opción
+                        predeterminada<strong>(ninguno)</strong>.
+                      </li>
+                    </ol>
+                    <li>
+                      En <strong>Editar firma</strong>, pegá la
+                      <em>firma</em> presionando Ctrl+V, y luego hacé clic en
+                      <strong>Aceptar</strong>.
+                    </li>
+                  </ul>
 
+                  <details id="codeBox" style="display: none; margin-top: 12px">
+                    <summary>Código HTML generado</summary>
+                    <textarea id="rawHtml" readonly></textarea>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="cs-backlight"></div>
+
+    <script src="../SiteAssets/firma/js/lib/jquery.min.js"></script>
+    <script src="../SiteAssets/firma/js/lib/libs.js"></script>
+    <script src="../SiteAssets/firma/js/contact_form.js"></script>
+    <script src="../SiteAssets/firma/js/st-core.js"></script>
+    <script src="../SiteAssets/firma/js/classes.js"></script>
+    <script src="../SiteAssets/firma/js/main.js"></script>
+    <script src="../SiteAssets/firma/js/firma.js"></script>
+  </body>
 </html>

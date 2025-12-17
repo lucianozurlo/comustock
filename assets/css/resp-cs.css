@@ -1,0 +1,100 @@
+.cs-mobile-menu-toggler span {
+	background: #fff !important;
+	transition: 0.3s ease-in-out;
+}
+body.show-menu .cs-mobile-menu-toggler span {
+	background: var(--cs-c-menu) !important;
+}
+
+@media only screen and (max-width: 1279px) {
+	#home #templates .cs-templates .is-medium .cs-masked-content.at-bottom-right {
+		width: 98px !important;
+		height: 98px !important;
+	}
+	#home #templates .cs-templates .cs-bento-grid .is-medium p {
+		width: calc(100% - 98px) !important;
+	}
+	.cs-masked-content.at-bottom-right .cs-square-button {
+		margin: calc(1.5 * var(--stg-small-gap)) 0 0
+			calc(1.5 * var(--stg-small-gap));
+		border-radius: 16px;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	#home #intro #ecosistema.stg-row {
+		transform: translateY(28%);
+	}
+}
+
+@media only screen and (max-width: 739px) {
+	#home #intro #ecosistema.stg-row {
+		transform: translateY(20%);
+	}
+	#home #templates .cs-bento-grid .is-medium:last-child {
+		min-height: var(--stg-container-quad-width);
+	}
+
+	#home #templates .cs-templates .is-small .cs-masked-content {
+		width: 90px;
+		height: 90px;
+	}
+
+	#home #templates .cs-templates .cs-masked-content.at-bottom-right {
+		width: 98px;
+		height: 98px;
+	}
+
+	#home #templates .cs-templates .cs-square-button {
+		width: calc(100% - 1.5 * var(--stg-small-gap)) !important;
+		height: calc(100% - 1.5 * var(--stg-small-gap)) !important;
+	}
+	#home #templates .cs-templates .cs-square-button,
+	#home #templates .cs-templates .is-small .cs-square-button {
+		border-radius: var(--cs-default-br) !important;
+	}
+
+	#home #templates .cs-templates .cs-bento-grid .is-large p {
+		width: calc(100% - 98px) !important;
+	}
+}
+
+@media only screen and (max-width: 639px) {
+	#home #intro #ecosistema.stg-row {
+		transform: translateY(20%);
+	}
+
+	#home #templates .cs-templates .is-small h4 {
+		font-size: var(--cs-t-h4-fs) !important;
+	}
+	.cs-square-button {
+		width: 68px;
+		height: 68px;
+	}
+	#home #recursos .cs-grid-more-masked .cs-masked-media {
+		aspect-ratio: 6 / 5;
+		width: 100%;
+		overflow: hidden;
+	}
+	#home #recursos #fuentes .cs-buttons-list li a img {
+		max-height: unset;
+	}
+	#home #recursos #elementos .cs-buttons-list a.s {
+		max-height: 56px;
+	}
+	#home #recursos #elementos .cs-buttons-list li a img {
+		max-height: 46px;
+	}
+	#home #toolkits .cs-detailed-list-wrap {
+		padding: 0 30px;
+	}
+	#home #toolkits .cs-detailed-list .cs-detailed-list-title {
+		max-width: calc(75% - var(--stg-gap));
+	}
+	#home #HacemosLaComuFacil .cs-block {
+		aspect-ratio: 6 / 5;
+	}
+	#home #HacemosLaComuFacil h3 {
+		margin-top: 30px;
+	}
+}

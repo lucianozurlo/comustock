@@ -1,689 +1,1045 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComuStock :: Personal Tech</title>
+    <link type="text/css" rel="stylesheet" href="../../assets/css/config.css" />
+    <link type="text/css" rel="stylesheet" href="../../assets/css/libs.css" />
+    <link type="text/css" rel="stylesheet" href="../../assets/css/style.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../assets/css/responsive.css"
+    />
+    <link type="text/css" rel="stylesheet" href="../../assets/css/base.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../assets/css/content.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../assets/css/modal-form.css"
+    />
+    <link type="text/css" rel="stylesheet" href="../../assets/css/colors.css" />
+    <link type="text/css" rel="stylesheet" href="../../assets/css/brands.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../assets/css/brands/tech.css"
+    />
+    <link rel="icon" href="../../assets/img/favicon.png" sizes="32x32" />
+  </head>
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>ComuStock :: Personal Tech</title>
-		<link type="text/css" rel="stylesheet" href="../../assets/css/config.css" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/libs.css" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/style.css" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/responsive.css" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/base.css" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/content.css" />
-		<link type="text/css" rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/modal-form.css" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/colors.css" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/brands.css" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/brands/tech.css" />
-		<link rel="icon" href="../../assets/img/favicon.png" sizes="32x32" />
-	</head>
+  <body id="tech" class="brands">
+    <header
+      id="cs-header"
+      class="is-frosted is-sticky"
+      data-appear="fade-down"
+      data-unload="fade-up"
+    >
+      <div class="cs-header-inner">
+        <div class="cs-header-lp">
+          <a href="../../index.html" class="cs-logo">
+            <img
+              src="../../assets/img/logo-comustock.svg"
+              alt="ComuStock"
+              width="140"
+              height="27"
+            />
+          </a>
+        </div>
+        <div class="cs-header-mp">
+          <nav class="cs-nav">
+            <ul
+              class="main-menu"
+              data-stagger-appear="fade-down"
+              data-stagger-delay="75"
+            >
+              <li class="current-menu-parent">
+                <a class="off">Ecosistema</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="../../personal/index.html">Personal</a>
+                  </li>
+                  <li class="cs-menu-divider"></li>
+                  <li class="product">
+                    <a href="../movil/index.html">Móvil</a>
+                  </li>
+                  <li class="product">
+                    <a href="../fibra/index.html">Fibra</a>
+                  </li>
+                  <li class="product">
+                    <a href="../flow/index.html">Flow</a>
+                  </li>
+                  <li class="product">
+                    <a href="../pay/index.html">Pay</a>
+                  </li>
+                  <li class="product">
+                    <a href="../tienda/index.html">Tienda</a>
+                  </li>
+                  <li class="product">
+                    <a href="../smarthome/index.html">Smarthome</a>
+                  </li>
+                  <li class="product current-menu-item">
+                    <a class="off">Tech</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="../../templates/index.html">Templates</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="../../templates/index.html#presentaciones"
+                      >Presentaciones</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../../templates/index.html#e-mails">E-mails</a>
+                  </li>
+                  <li>
+                    <a href="../../templates/index.html#viva-engage"
+                      >Viva Engage</a
+                    >
+                  </li>
+                  <li class="cs-menu-divider"></li>
+                  <li>
+                    <a
+                      href="https://cablevisionfibertel.sharepoint.com/sites/ComuStock/SitePages/Mi-firma.aspx"
+                      target="_blank"
+                      >Tu firma de e-mail</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="../../audiovisuales/index.html">Audiovisuales</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="../../audiovisuales/index.html#publicidad"
+                      >Publicidad</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../../audiovisuales/index.html#imagenes"
+                      >Imágenes</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../../audiovisuales/index.html#cartelera-interna"
+                      >Cartelera interna</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="../../recursos/index.html">Recursos</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="../../recursos/index.html#fuentes">Fuentes</a>
+                  </li>
+                  <li><a href="../../recursos/index.html#iconos">Íconos</a></li>
+                  <li>
+                    <a href="../../recursos/elementos/index.html">Elementos</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="../../toolkits/index.html">Toolkits</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="../../toolkits/disenar/index.html">Cómo diseñar</a>
+                  </li>
+                  <li>
+                    <a href="../../toolkits/redactar/index.html"
+                      >Cómo redactar</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="cs-header-rp">
+          <a href="../../#HacemosLaComuFacil" class="cs-button"
+            >#HacemosLaComuFácil</a
+          >
+        </div>
+      </div>
+      <div class="cs-mobile-header-inner">
+        <a href="#nuestro-ecosistema" class="cs-logo">
+          <img
+            src="../../assets/img/logo-comustock.svg"
+            alt="ComuStock"
+            width="140"
+            height="27"
+          />
+        </a>
+        <a href="#" class="cs-mobile-menu-toggler">
+          <i class="cs-menu-toggler-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </i>
+        </a>
+      </div>
+    </header>
 
-	<body id="tech" class="brands">
-		<header id="cs-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
-			<div class="cs-header-inner">
-				<div class="cs-header-lp">
-					<a href="../../index.html" class="cs-logo">
-						<img src="../../assets/img/logo-comustock.svg" alt="ComuStock" width="140" height="27" />
-					</a>
-				</div>
-				<div class="cs-header-mp">
-					<nav class="cs-nav">
-						<ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
-							<li class="current-menu-parent">
-								<a class="off">Ecosistema</a>
-								<ul class="sub-menu">
-									<li>
-										<a href="../../personal/index.html">Personal</a>
-									</li>
-									<li class="cs-menu-divider"></li>
-									<li class="product">
-										<a href="../movil/index.html">Móvil</a>
-									</li>
-									<li class="product">
-										<a href="../fibra/index.html">Fibra</a>
-									</li>
-									<li class="product">
-										<a href="../flow/index.html">Flow</a>
-									</li>
-									<li class="product">
-										<a href="../pay/index.html">Pay</a>
-									</li>
-									<li class="product">
-										<a href="../tienda/index.html">Tienda</a>
-									</li>
-									<li class="product">
-										<a href="../smarthome/index.html">Smarthome</a>
-									</li>
-									<li class="product current-menu-item">
-										<a class="off">Tech</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="../../templates/index.html">Templates</a>
-								<ul class="sub-menu">
-									<li><a href="../../templates/index.html#presentaciones">Presentaciones</a></li>
-									<li><a href="../../templates/index.html#e-mails">E-mails</a></li>
-									<li><a href="../../templates/index.html#viva-engage">Viva Engage</a></li>
-									<li class="cs-menu-divider"></li>
-									<li><a href="https://cablevisionfibertel.sharepoint.com/sites/ComuStock/SitePages/Mi-firma.aspx"
-											target="_blank">Tu firma de e-mail</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../../audiovisuales/index.html">Audiovisuales</a>
-								<ul class="sub-menu">
-									<li><a href="../../audiovisuales/index.html#publicidad">Publicidad</a></li>
-									<li><a href="../../audiovisuales/index.html#imagenes">Imágenes</a></li>
-									<li><a href="../../audiovisuales/index.html#cartelera-interna">Cartelera interna</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="../../recursos/index.html">Recursos</a>
-								<ul class="sub-menu">
-									<li><a href="../../recursos/index.html#fuentes">Fuentes</a></li>
-									<li><a href="../../recursos/index.html#iconos">Íconos</a></li>
-									<li><a href="../../recursos/elementos/index.html">Elementos</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../../toolkits/index.html">Toolkits</a>
-								<ul class="sub-menu">
-									<li><a href="../../toolkits/disenar/index.html">Cómo diseñar</a></li>
-									<li><a href="../../toolkits/redactar/index.html">Cómo redactar</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="cs-header-rp">
-					<a href="../../#HacemosLaComuFacil" class="cs-button">#HacemosLaComuFácil</a>
-				</div>
-			</div>
-			<div class="cs-mobile-header-inner">
-				<a href="#nuestro-ecosistema" class="cs-logo">
-					<img src="../../assets/img/logo-comustock.svg" alt="ComuStock" width="140" height="27" />
-				</a>
-				<a href="#" class="cs-mobile-menu-toggler">
-					<i class="cs-menu-toggler-icon">
-						<span></span>
-						<span></span>
-						<span></span>
-					</i>
-				</a>
-			</div>
-		</header>
+    <div id="banner" class="stg-container">
+      <div
+        class="brand-top backlight-top"
+        data-appear="fade-up"
+        data-unload="zoom-out"
+      >
+        <section id="banner-section" class="divider-bottom">
+          <div class="cs-hero-block cs-type">
+            <div
+              class="cs-hero-media-wrap"
+              data-appear="fade-up"
+              data-unload="zoom-out"
+            >
+              <img
+                src="../../content/identidad/ecosistema/tech/tech-header.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
 
-		<div id="banner" class="stg-container">
-			<div class="brand-top backlight-top" data-appear="fade-up" data-unload="zoom-out">
-				<section id="banner-section" class="divider-bottom">
-					<div class="cs-hero-block cs-type">
-						<div class="cs-hero-media-wrap" data-appear="fade-up" data-unload="zoom-out">
-							<img src="../../content/identidad/ecosistema/tech/tech-header.svg" alt="" />
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
+    <main id="cs-main">
+      <div class="stg-container">
+        <div class="brands-container">
+          <div class="brands-content">
+            <!-- Logo -->
+            <section id="logos" class="brand-section">
+              <div class="section-content">
+                <div class="stg-row cs-section-title">
+                  <div class="stg-col-11">
+                    <h2 data-appear="fade-up" data-unload="fade-up">Logos</h2>
+                    <div
+                      class="cs-grid-4cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
+                      data-stagger-appear="fade-up"
+                      data-delay="100"
+                      data-stagger-delay="100"
+                      data-unload="fade-up"
+                    >
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                        data-jpg-filename="_fondo-personal"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/personal-tech-blanco.svg"
+                            alt="Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgrey"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/personal-tech.svg"
+                            alt="Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/personal-tech-negro.svg"
+                            alt=" Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/personal-tech-blanco.svg"
+                            alt="Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
 
-		<main id="cs-main">
-			<div class="stg-container">
-				<div class="brands-container">
-					<div class="brands-content">
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                        data-jpg-filename="_fondo-personal"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/tech-blanco.svg"
+                            alt="Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgrey"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/tech.svg"
+                            alt="Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/tech-negro.svg"
+                            alt=" Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/tech-blanco.svg"
+                            alt="Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
 
-						<!-- Logo -->
-						<section id="logos" class="brand-section">
-							<div class="section-content">
-								<div class="stg-row cs-section-title">
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                        data-jpg-filename="_fondo-personal"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/tech_iso-blanco.svg"
+                            alt="Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgrey"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/tech_iso.svg"
+                            alt="Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/tech_iso-negro.svg"
+                            alt=" Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="vectorial"
+                      >
+                        <div
+                          class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/logos/svg/tech_iso-blanco.svg"
+                            alt="Personal"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
 
-									<div class="stg-col-11">
-										<h2 data-appear="fade-up" data-unload="fade-up">Logos</h2>
-										<div class="cs-grid-4cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
-											data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
-											data-unload="fade-up">
+                  <div class="stg-col-1">
+                    <div
+                      class="sticky-div"
+                      data-appear="fade-up"
+                      data-unload="fade-up"
+                      data-delay="100"
+                    >
+                      <a
+                        href="../../personal/index.html#logos"
+                        class="bench-logo iso_personal"
+                        data-tooltip="Logos de Personal"
+                      ></a>
+                      <a
+                        href="../movil/index.html#logos"
+                        class="bench-logo iso_movil"
+                        data-tooltip="Logos de Móvil"
+                      ></a>
+                      <a
+                        href="../fibra/index.html#logos"
+                        class="bench-logo iso_fibra"
+                        data-tooltip="Logos de Fibra"
+                      ></a>
+                      <a
+                        href="../flow/index.html#logos"
+                        class="bench-logo iso_flow"
+                        data-tooltip="Logos de Flow"
+                      ></a>
+                      <a
+                        href="../pay/index.html#logos"
+                        class="bench-logo iso_pay"
+                        data-tooltip="Logos de Pay"
+                      ></a>
+                      <a
+                        href="../tienda/index.html#logos"
+                        class="bench-logo iso_tienda"
+                        data-tooltip="Logos de Tienda"
+                      ></a>
+                      <a
+                        href="../smarthome/index.html#logos"
+                        class="bench-logo iso_smarthome"
+                        data-tooltip="Logos de Smarthome"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-											<div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial"
-												data-jpg-filename="_fondo-personal">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/personal-tech-blanco.svg"
-														alt="Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgrey"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/personal-tech.svg"
-														alt="Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/personal-tech-negro.svg"
-														alt=" Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/personal-tech-blanco.svg"
-														alt="Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
+            <!-- Paleta colores -->
+            <section id="paleta" class="brand-section">
+              <div class="section-content paleta">
+                <div class="stg-row cs-section-title">
+                  <div class="stg-col-11">
+                    <h2>Paleta cromática</h2>
+                    <div>
+                      <h5 data-appear="fade-up" data-unload="fade-up">
+                        Paleta principal
+                      </h5>
+                      <div
+                        class="cs-grid-4cols stg-bottom-gap-l stg-top-gap-xs"
+                        data-stagger-appear="zoom-in"
+                        data-stagger-delay="100"
+                        data-stagger-unload="zoom-out"
+                      >
+                        <div class="box">
+                          <div class="color">
+                            <div class="cs-block bg-tech"></div>
+                          </div>
+                          <div class="info">
+                            <div class="copy" data-tooltip="Copiar">
+                              <p>HEX <strong>#0b032f</strong></p>
+                            </div>
+                            <p>RGB <strong>11 · 3 · 47</strong></p>
+                            <p>CMYK <strong>77 · 94 · 0 · 82</strong></p>
+                          </div>
+                        </div>
+                        <div class="box">
+                          <div class="color">
+                            <div class="cs-block bg-tech-violet"></div>
+                          </div>
+                          <div class="info">
+                            <div class="copy" data-tooltip="Copiar">
+                              <p>HEX <strong>#2a1d5b</strong></p>
+                            </div>
+                            <p>RGB <strong>42 · 29 · 91</strong></p>
+                            <p>CMYK <strong>54 · 68 · 0 · 64</strong></p>
+                          </div>
+                        </div>
+                        <div class="box">
+                          <div class="color">
+                            <div class="cs-block bg-tech-acento"></div>
+                          </div>
+                          <div class="info">
+                            <div class="copy" data-tooltip="Copiar">
+                              <p>HEX <strong>#69d8d0</strong></p>
+                            </div>
+                            <p>RGB <strong>105 · 216 · 208</strong></p>
+                            <p>CMYK <strong>51 · 0 · 4 · 15</strong></p>
+                          </div>
+                        </div>
+                        <div class="box">
+                          <div class="color">
+                            <div class="cs-block bg-tech-blue"></div>
+                          </div>
+                          <div class="info">
+                            <div class="copy" data-tooltip="Copiar">
+                              <p>HEX <strong>#3d00e5</strong></p>
+                            </div>
+                            <p>RGB <strong>61 · 0 · 229</strong></p>
+                            <p>CMYK <strong>73 · 100 · 0 · 10</strong></p>
+                          </div>
+                        </div>
+                        <div class="box">
+                          <div class="color">
+                            <div class="cs-block bg-tech-lightgrey"></div>
+                          </div>
+                          <div class="info">
+                            <div class="copy" data-tooltip="Copiar">
+                              <p>HEX <strong>#f5f5f5</strong></p>
+                            </div>
+                            <p>RGB <strong>245 · 245 · 245</strong></p>
+                            <p>CMYK <strong>3 · 2 · 2 · 0</strong></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-											<div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial"
-												data-jpg-filename="_fondo-personal">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/tech-blanco.svg"
-														alt="Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgrey"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/tech.svg"
-														alt="Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/tech-negro.svg"
-														alt=" Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/tech-blanco.svg"
-														alt="Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
+                  <div class="stg-col-1">
+                    <div
+                      class="sticky-div"
+                      data-appear="fade-up"
+                      data-unload="fade-up"
+                      data-delay="100"
+                    >
+                      <a
+                        href="../../personal/index.html#paleta"
+                        class="bench-logo iso_personal"
+                        data-tooltip="Colores de Personal"
+                      ></a>
+                      <a
+                        href="../movil/index.html#paleta"
+                        class="bench-logo iso_movil"
+                        data-tooltip="Colores de Móvil"
+                      ></a>
+                      <a
+                        href="../fibra/index.html#paleta"
+                        class="bench-logo iso_fibra"
+                        data-tooltip="Colores de Fibra"
+                      ></a>
+                      <a
+                        href="../flow/index.html#paleta"
+                        class="bench-logo iso_flow"
+                        data-tooltip="Colores de Flow"
+                      ></a>
+                      <a
+                        href="../pay/index.html#paleta"
+                        class="bench-logo iso_pay"
+                        data-tooltip="Colores de Pay"
+                      ></a>
+                      <a
+                        href="../tienda/index.html#paleta"
+                        class="bench-logo iso_tienda"
+                        data-tooltip="Colores de Tienda"
+                      ></a>
+                      <a
+                        href="../smarthome/index.html#paleta"
+                        class="bench-logo iso_smarthome"
+                        data-tooltip="Colores de Smarthome"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-											<div class="cs-masked-block cs-grid-more-masked" data-file-group="vectorial"
-												data-jpg-filename="_fondo-personal">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-brand"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/tech_iso-blanco.svg"
-														alt="Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-lightgrey"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/tech_iso.svg"
-														alt="Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-white"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/tech_iso-negro.svg"
-														alt=" Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-											<div class="cs-masked-block cs-grid-more-masked"
-												data-file-group="vectorial">
-												<div class="cs-block stg-aspect-square stg-vertical-space-between cs-masked-media bg-black"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/logos/svg/tech_iso-blanco.svg"
-														alt="Personal" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
-
-										</div>
-									</div>
-
-									<div class="stg-col-1">
-										<div class="sticky-div" data-appear="fade-up" data-unload="fade-up"
-											data-delay="100">
-											<a href="../../personal/index.html#logos" class="bench-logo iso_personal"
-												data-tooltip="Logos de Personal"></a>
-											<a href="../movil/index.html#logos" class="bench-logo iso_movil"
-												data-tooltip="Logos de Móvil"></a>
-											<a href="../fibra/index.html#logos" class="bench-logo iso_fibra"
-												data-tooltip="Logos de Fibra"></a>
-											<a href="../flow/index.html#logos" class="bench-logo iso_flow"
-												data-tooltip="Logos de Flow"></a>
-											<a href="../pay/index.html#logos" class="bench-logo iso_pay"
-												data-tooltip="Logos de Pay"></a>
-											<a href="../tienda/index.html#logos" class="bench-logo iso_tienda"
-												data-tooltip="Logos de Tienda"></a>
-											<a href="../smarthome/index.html#logos" class="bench-logo iso_smarthome"
-												data-tooltip="Logos de Smarthome"></a>
-										</div>
-									</div>
-
-								</div>
-							</div>
-						</section>
-
-						<!-- Paleta colores -->
-						<section id="paleta" class="brand-section">
-							<div class="section-content paleta">
-								<div class="stg-row cs-section-title">
-									<div class="stg-col-11">
-										<h2>Paleta cromática</h2>
-										<div>
-											<h5 data-appear="fade-up" data-unload="fade-up">
-												Paleta principal
-											</h5>
-											<div class="cs-grid-4cols stg-bottom-gap-l stg-top-gap-xs"
-												data-stagger-appear="zoom-in" data-stagger-delay="100"
-												data-stagger-unload="zoom-out">
-												<div class="box">
-													<div class="color">
-														<div class="cs-block bg-personal"></div>
-													</div>
-													<div class="info">
-														<div class="copy" data-tooltip="Copiar">
-															<p>HEX <strong>#0b032f</strong></p>
-														</div>
-														<p>RGB <strong>11 · 3 · 47</strong></p>
-														<p>CMYK <strong>77 · 94 · 0 · 82</strong></p>
-													</div>
-												</div>
-												<div class="box">
-													<div class="color">
-														<div class="cs-block bg-personal-principal-5"></div>
-													</div>
-													<div class="info">
-														<div class="copy" data-tooltip="Copiar">
-															<p>HEX <strong>#2a1d5b</strong></p>
-														</div>
-														<p>RGB <strong>42 · 29 · 91</strong></p>
-														<p>CMYK <strong>54 · 68 · 0 · 64</strong></p>
-													</div>
-												</div>
-												<div class="box">
-													<div class="color">
-														<div class="cs-block bg-personal-principal-6"></div>
-													</div>
-													<div class="info">
-														<div class="copy" data-tooltip="Copiar">
-															<p>HEX <strong>#69d8d0</strong></p>
-														</div>
-														<p>RGB <strong>105 · 216 · 208</strong></p>
-														<p>CMYK <strong>51 · 0 · 4 · 15</strong></p>
-													</div>
-												</div>
-												<div class="box">
-													<div class="color">
-														<div class="cs-block bg-personal-acento"></div>
-													</div>
-													<div class="info">
-														<p class="name">Color Acento</p>
-														<div class="copy" data-tooltip="Copiar">
-															<p>HEX <strong>#3d00e5</strong></p>
-														</div>
-														<p>RGB <strong>61 · 0 · 229</strong></p>
-														<p>CMYK <strong>73 · 100 · 0 · 10</strong></p>
-													</div>
-												</div>
-												<div class="box">
-													<div class="color">
-														<div class="cs-block bg-personal-principal-5"></div>
-													</div>
-													<div class="info">
-														<div class="copy" data-tooltip="Copiar">
-															<p>HEX <strong>#f5f5f5</strong></p>
-														</div>
-														<p>RGB <strong>245 · 245 · 245</strong></p>
-														<p>CMYK <strong>3 · 2 · 2 · 0</strong></p>
-													</div>
-												</div>
-											</div>
-										</div>
-
-									</div>
-
-									<div class="stg-col-1">
-										<div class="sticky-div" data-appear="fade-up" data-unload="fade-up"
-											data-delay="100">
-											<a href="../../personal/index.html#paleta" class="bench-logo iso_personal"
-												data-tooltip="Colores de Personal"></a>
-											<a href="../movil/index.html#paleta" class="bench-logo iso_movil"
-												data-tooltip="Colores de Móvil"></a>
-											<a href="../fibra/index.html#paleta" class="bench-logo iso_fibra"
-												data-tooltip="Colores de Fibra"></a>
-											<a href="../flow/index.html#paleta" class="bench-logo iso_flow"
-												data-tooltip="Colores de Flow"></a>
-											<a href="../pay/index.html#paleta" class="bench-logo iso_pay"
-												data-tooltip="Colores de Pay"></a>
-											<a href="../tienda/index.html#paleta" class="bench-logo iso_tienda"
-												data-tooltip="Colores de Tienda"></a>
-											<a href="../smarthome/index.html#paleta" class="bench-logo iso_smarthome"
-												data-tooltip="Colores de Smarthome"></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-
-						<!-- Manual de Marca -->
-						<section id="manual-de-marca" class="brand-section divider-bottom">
-							<div class="section-content">
-								<div class="stg-row cs-section-title">
-									<div class="stg-col-11">
-										<h2 data-appear="fade-up" data-unload="fade-up">Manual de Marca</h2>
-										<!-- <p class="cs-large-text" data-appear="fade-up" data-unload="fade-up"
+            <!-- Manual de Marca -->
+            <section id="manual-de-marca" class="brand-section divider-bottom">
+              <div class="section-content">
+                <div class="stg-row cs-section-title">
+                  <div class="stg-col-11">
+                    <h2 data-appear="fade-up" data-unload="fade-up">
+                      Manual de Marca
+                    </h2>
+                    <!-- <p class="cs-large-text" data-appear="fade-up" data-unload="fade-up"
 											data-delay="100">
 											Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 										</p> -->
-										<div class="cs-grid-2cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
-											data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
-											data-unload="fade-up">
+                    <div
+                      class="cs-grid-2cols cs-tp-grid-2cols cs-m-grid-2cols stg-m-small-gap download-square"
+                      data-stagger-appear="fade-up"
+                      data-delay="100"
+                      data-stagger-delay="100"
+                      data-unload="fade-up"
+                    >
+                      <div
+                        class="cs-masked-block cs-grid-more-masked"
+                        data-file-group="pdf"
+                      >
+                        <div
+                          class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
+                          data-delay="3000"
+                        >
+                          <img
+                            src="../../content/identidad/ecosistema/tech/vid/Personal-Tech_VID.png"
+                            alt="Manual de Marca Personal Tech"
+                          />
+                        </div>
+                        <a
+                          data-fancybox
+                          data-src="#modal-download"
+                          href="javascript:;"
+                          class="cs-masked-content at-bottom-right"
+                        >
+                          <span class="cs-square-button is-secondary">
+                            <span class="cs-icon cs-icon-comustock"></span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
 
-											<div class="cs-masked-block cs-grid-more-masked" data-file-group="pdf">
-												<div class="cs-block stg-aspect-rectangle stg-vertical-space-between cs-masked-media bg-brand"
-													data-delay="3000">
-													<img src="../../content/identidad/ecosistema/tech/vid/Personal-Tech_VID.png"
-														alt="Manual de Marca Personal Tech" />
-												</div>
-												<a data-fancybox data-src="#modal-download" href="javascript:;"
-													class="cs-masked-content at-bottom-right">
-													<span class="cs-square-button is-secondary">
-														<span class="cs-icon cs-icon-comustock"></span>
-													</span>
-												</a>
-											</div>
+                  <div class="stg-col-1">
+                    <div
+                      class="sticky-div"
+                      data-appear="fade-up"
+                      data-unload="fade-up"
+                      data-delay="100"
+                    >
+                      <a
+                        href="../../personal/index.html#manual-de-marca"
+                        class="bench-logo iso_personal"
+                        data-tooltip="Manual de marca de Personal"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-										</div>
-									</div>
+            <!-- Redes -->
+            <section id="redes" class="brand-section">
+              <div class="section-content">
+                <div class="stg-row cs-section-title">
+                  <div class="stg-col-11">
+                    <h2>Redes</h2>
 
-									<div class="stg-col-1">
-										<div class="sticky-div" data-appear="fade-up" data-unload="fade-up"
-											data-delay="100">
-											<a href="../../personal/index.html#manual-de-marca"
-												class="bench-logo iso_personal"
-												data-tooltip="Manual de marca de Personal"></a>
-										</div>
-									</div>
+                    <div
+                      class="cs-grid-5cols cs-tp-grid-3cols cs-m-grid-2cols stg-m-small-gap download-square"
+                      data-stagger-appear="fade-up"
+                      data-delay="100"
+                      data-stagger-delay="100"
+                      data-unload="fade-up"
+                    >
+                      <div class="cs-widget">
+                        <div class="social">
+                          <span class="cs-icon bg-brand social-icon-x"></span>
+                          <h6>X</h6>
+                        </div>
+                        <div class="cs-menu-widget">
+                          <ul>
+                            <li>
+                              <a href="https://x.com/PersonalAr" target="_blank"
+                                >@PersonalAr</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cs-widget">
+                        <div class="social">
+                          <span
+                            class="cs-icon bg-brand social-icon-instagram"
+                          ></span>
+                          <h6>Instagram</h6>
+                        </div>
+                        <div class="cs-menu-widget">
+                          <ul>
+                            <li>
+                              <a
+                                href="https://www.instagram.com/personalar"
+                                target="_blank"
+                                >personalar</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cs-widget">
+                        <div class="social">
+                          <span
+                            class="cs-icon bg-brand social-icon-facebook"
+                          ></span>
+                          <h6>Facebook</h6>
+                        </div>
+                        <div class="cs-menu-widget">
+                          <ul>
+                            <li>
+                              <a
+                                href="https://www.facebook.com/Personalargentina"
+                                target="_blank"
+                                >Personalargentina</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cs-widget">
+                        <div class="social">
+                          <span
+                            class="cs-icon bg-brand social-icon-youtube"
+                          ></span>
+                          <h6>YouTube</h6>
+                        </div>
+                        <div class="cs-menu-widget">
+                          <ul>
+                            <li>
+                              <a
+                                href="https://www.youtube.com/@PersonalArgentina"
+                                target="_blank"
+                                >@PersonalArgentina</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-								</div>
-							</div>
-						</section>
+                  <div class="stg-col-1">
+                    <div
+                      class="sticky-div"
+                      data-appear="fade-up"
+                      data-unload="fade-up"
+                      data-delay="100"
+                    >
+                      <a
+                        href="../../personal/index.html#redes"
+                        class="bench-logo iso_personal"
+                        data-tooltip="Redes de Personal"
+                      ></a>
+                      <a
+                        href="../movil/index.html#redes"
+                        class="bench-logo iso_movil"
+                        data-tooltip="Redes de Móvil"
+                      ></a>
+                      <a
+                        href="../fibra/index.html#redes"
+                        class="bench-logo iso_fibra"
+                        data-tooltip="Redes de Fibra"
+                      ></a>
+                      <a
+                        href="../flow/index.html#redes"
+                        class="bench-logo iso_flow"
+                        data-tooltip="Redes de Flow"
+                      ></a>
+                      <a
+                        href="../pay/index.html#redes"
+                        class="bench-logo iso_pay"
+                        data-tooltip="Redes de Pay"
+                      ></a>
+                      <a
+                        href="../tienda/index.html#redes"
+                        class="bench-logo iso_tienda"
+                        data-tooltip="Redes de Tienda"
+                      ></a>
+                      <a
+                        href="../smarthome/index.html#redes"
+                        class="bench-logo iso_smarthome"
+                        data-tooltip="Redes de Smarthome"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-						<!-- Redes -->
-						<section id="redes" class="brand-section">
-							<div class="section-content">
-								<div class="stg-row cs-section-title">
+            <!-- Sitios web -->
+            <section id="web" class="brand-section">
+              <div class="section-content">
+                <div class="stg-row cs-section-title">
+                  <div class="stg-col-11">
+                    <h4 data-appear="fade-up" data-unload="fade-up">
+                      Sitios web
+                    </h4>
 
-									<div class="stg-col-11">
-										<h2>Redes</h2>
+                    <div
+                      class="cs-grid-3cols cs-tp-grid-3cols cs-m-grid-1cols stg-m-small-gap download-square"
+                      data-stagger-appear="fade-up"
+                      data-delay="100"
+                      data-stagger-delay="100"
+                      data-unload="fade-up"
+                    >
+                      <div class="cs-widget">
+                        <div class="social">
+                          <span class="cs-icon bg-brand social-icon-web"></span>
+                          <h6>Argentina</h6>
+                        </div>
+                        <div class="cs-menu-widget">
+                          <ul>
+                            <li>
+                              <a
+                                href="https://www.personal.com.ar/tech"
+                                target="_blank"
+                              >
+                                <span>Personal:</span>personal.com.ar/tech
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cs-widget">
+                        <div class="social">
+                          <span class="cs-icon bg-brand social-icon-web"></span>
+                          <h6>Paraguay</h6>
+                        </div>
+                        <div class="cs-menu-widget">
+                          <ul>
+                            <li>
+                              <a
+                                href="https://www.personal.com.py"
+                                target="_blank"
+                              >
+                                <span>Personal:</span>personal.com.py
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-										<div class="cs-grid-5cols cs-tp-grid-3cols cs-m-grid-2cols stg-m-small-gap download-square"
-											data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
-											data-unload="fade-up">
-											<div class="cs-widget">
-												<div class="social">
-													<span class="cs-icon bg-brand social-icon-x"></span>
-													<h6>X</h6>
-												</div>
-												<div class="cs-menu-widget">
-													<ul>
-														<li>
-															<a href="https://x.com/PersonalAr"
-																target="_blank">@PersonalAr</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="cs-widget">
-												<div class="social">
-													<span class="cs-icon bg-brand social-icon-instagram"></span>
-													<h6>Instagram</h6>
-												</div>
-												<div class="cs-menu-widget">
-													<ul>
-														<li>
-															<a href="https://www.instagram.com/personalar"
-																target="_blank">personalar</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="cs-widget">
-												<div class="social">
-													<span class="cs-icon bg-brand social-icon-facebook"></span>
-													<h6>Facebook</h6>
-												</div>
-												<div class="cs-menu-widget">
-													<ul>
-														<li>
-															<a href="https://www.facebook.com/Personalargentina"
-																target="_blank">Personalargentina</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="cs-widget">
-												<div class="social">
-													<span class="cs-icon bg-brand social-icon-youtube"></span>
-													<h6>YouTube</h6>
-												</div>
-												<div class="cs-menu-widget">
-													<ul>
-														<li>
-															<a href="https://www.youtube.com/@PersonalArgentina"
-																target="_blank">@PersonalArgentina</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
+                  <div class="stg-col-1">
+                    <div
+                      class="sticky-div"
+                      data-appear="fade-up"
+                      data-unload="fade-up"
+                      data-delay="100"
+                    >
+                      <a
+                        href="../../personal/index.html#web"
+                        class="bench-logo iso_personal"
+                        data-tooltip="Web de Personal"
+                      ></a>
+                      <a
+                        href="../movil/index.html#web"
+                        class="bench-logo iso_movil"
+                        data-tooltip="Web de Móvil"
+                      ></a>
+                      <a
+                        href="../fibra/index.html#web"
+                        class="bench-logo iso_fibra"
+                        data-tooltip="Web de Fibra"
+                      ></a>
+                      <a
+                        href="../flow/index.html#web"
+                        class="bench-logo iso_flow"
+                        data-tooltip="Web de Flow"
+                      ></a>
+                      <a
+                        href="../pay/index.html#web"
+                        class="bench-logo iso_pay"
+                        data-tooltip="Web de Pay"
+                      ></a>
+                      <a
+                        href="../tienda/index.html#web"
+                        class="bench-logo iso_tienda"
+                        data-tooltip="Web de Tienda"
+                      ></a>
+                      <a
+                        href="../smarthome/index.html#web"
+                        class="bench-logo iso_smarthome"
+                        data-tooltip="Web de Smarthome"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
 
-									<div class="stg-col-1">
-										<div class="sticky-div" data-appear="fade-up" data-unload="fade-up"
-											data-delay="100">
-											<a href="../../personal/index.html#redes" class="bench-logo iso_personal"
-												data-tooltip="Redes de Personal"></a>
-											<a href="../movil/index.html#redes" class="bench-logo iso_movil"
-												data-tooltip="Redes de Móvil"></a>
-											<a href="../fibra/index.html#redes" class="bench-logo iso_fibra"
-												data-tooltip="Redes de Fibra"></a>
-											<a href="../flow/index.html#redes" class="bench-logo iso_flow"
-												data-tooltip="Redes de Flow"></a>
-											<a href="../pay/index.html#redes" class="bench-logo iso_pay"
-												data-tooltip="Redes de Pay"></a>
-											<a href="../tienda/index.html#redes" class="bench-logo iso_tienda"
-												data-tooltip="Redes de Tienda"></a>
-											<a href="../smarthome/index.html#redes" class="bench-logo iso_smarthome"
-												data-tooltip="Redes de Smarthome"></a>
-										</div>
-									</div>
+          <div class="side-menu">
+            <div data-appear="fade-right" data-unload="zoom-out">
+              <a href="#logos">Logos</a>
+              <a href="#variaciones" class="min-menu">Variaciones</a>
+              <a href="#paleta">Paleta cromática</a>
+              <a href="#redes">Redes</a>
+              <a href="#web" class="min-menu">Sitios web</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-								</div>
-							</div>
-						</section>
+      <footer data-appear="fade-up" data-unload="fade-down">
+        <div class="cs-footer-line stg-container">
+          <div class="align-center">Personal · 2025</div>
+        </div>
+      </footer>
+    </main>
 
-						<!-- Sitios web -->
-						<section id="web" class="brand-section">
-							<div class="section-content">
-								<div class="stg-row cs-section-title">
+    <div class="cs-backlight"></div>
 
-									<div class="stg-col-11">
-										<h4 data-appear="fade-up" data-unload="fade-up">Sitios web</h4>
-
-										<div class="cs-grid-3cols cs-tp-grid-3cols cs-m-grid-1cols stg-m-small-gap download-square"
-											data-stagger-appear="fade-up" data-delay="100" data-stagger-delay="100"
-											data-unload="fade-up">
-											<div class="cs-widget">
-												<div class="social">
-													<span class="cs-icon bg-brand social-icon-web"></span>
-													<h6>Argentina</h6>
-												</div>
-												<div class="cs-menu-widget">
-													<ul>
-														<li>
-															<a href="https://www.personal.com.ar/tech" target="_blank">
-																<span>Personal:</span>personal.com.ar/tech
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="cs-widget">
-												<div class="social">
-													<span class="cs-icon bg-brand social-icon-web"></span>
-													<h6>Paraguay</h6>
-												</div>
-												<div class="cs-menu-widget">
-													<ul>
-														<li>
-															<a href="https://www.personal.com.py" target="_blank">
-																<span>Personal:</span>personal.com.py
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="stg-col-1">
-										<div class="sticky-div" data-appear="fade-up" data-unload="fade-up"
-											data-delay="100">
-											<a href="../../personal/index.html#web" class="bench-logo iso_personal"
-												data-tooltip="Web de Personal"></a>
-											<a href="../movil/index.html#web" class="bench-logo iso_movil"
-												data-tooltip="Web de Móvil"></a>
-											<a href="../fibra/index.html#web" class="bench-logo iso_fibra"
-												data-tooltip="Web de Fibra"></a>
-											<a href="../flow/index.html#web" class="bench-logo iso_flow"
-												data-tooltip="Web de Flow"></a>
-											<a href="../pay/index.html#web" class="bench-logo iso_pay"
-												data-tooltip="Web de Pay"></a>
-											<a href="../tienda/index.html#web" class="bench-logo iso_tienda"
-												data-tooltip="Web de Tienda"></a>
-											<a href="../smarthome/index.html#web" class="bench-logo iso_smarthome"
-												data-tooltip="Web de Smarthome"></a>
-										</div>
-									</div>
-
-								</div>
-							</div>
-						</section>
-					</div>
-
-					<div class="side-menu">
-						<div data-appear="fade-right" data-unload="zoom-out">
-							<a href="#logos">Logos</a>
-							<a href="#variaciones" class="min-menu">Variaciones</a>
-							<a href="#paleta">Paleta cromática</a>
-							<a href="#redes">Redes</a>
-							<a href="#web" class="min-menu">Sitios web</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<footer data-appear="fade-up" data-unload="fade-down">
-				<div class="cs-footer-line stg-container">
-					<div class="align-center">Personal · 2025</div>
-				</div>
-			</footer>
-		</main>
-
-		<div class="cs-backlight"></div>
-
-		<script src="../../assets/js/lib/jquery.min.js"></script>
-		<script src="../../assets/js/lib/libs.js"></script>
-		<script src="../../assets/js/contact_form.js"></script>
-		<script src="../../assets/js/st-core.js"></script>
-		<script src="../../assets/js/classes.js"></script>
-		<script src="../../assets/js/main.js"></script>
-		<script src="../../assets/js/brands.js"></script>
-		<!-- <script src="../../assets/js/toggle.js"></script> -->
-		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-		<script src="../../assets/js/modal-form.js"></script>
-		<script src="../../assets/js/copy.js"></script>
-	</body>
-
+    <script src="../../assets/js/lib/jquery.min.js"></script>
+    <script src="../../assets/js/lib/libs.js"></script>
+    <script src="../../assets/js/contact_form.js"></script>
+    <script src="../../assets/js/st-core.js"></script>
+    <script src="../../assets/js/classes.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/brands.js"></script>
+    <!-- <script src="../../assets/js/toggle.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="../../assets/js/modal-form.js"></script>
+    <script src="../../assets/js/copy.js"></script>
+  </body>
 </html>

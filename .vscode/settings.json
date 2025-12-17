@@ -12,6 +12,7 @@
 		"statusBarItem.remoteBackground": "#D00086",
 		"tab.activeBorderTop": "#D00086"
 	},
-	"liveServer.settings.port": 5211,
-	"prettier.useTabs": true
+	"liveServer.settings.port": 5212,
+	"prettier.useTabs": true,
+	"djlint.showInstallError": false
 }

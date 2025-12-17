@@ -23,7 +23,8 @@
 	width: 100%;
 }
 #home #intro #ecosistema.stg-row > .stg-col-x7 {
-	width: 150px;
+	/* width: 150px; */
+	width: 14.28%;
 	margin: 0;
 }
 #ecosistema .cs-square-button {
@@ -44,8 +45,11 @@
 #home #intro #ecosistema .logo-iso {
 	position: absolute;
 	inset: 0;
-	width: 150px;
-	height: 150px;
+	/* width: 150px;
+  height: 150px; */
+	width: auto;
+	height: auto;
+	/* padding-top: 3px; */
 	z-index: 2;
 	transform: scale(1.35) translateY(16px);
 	transform-origin: center center;
@@ -179,6 +183,7 @@
 }
 #home #templates .cs-templates .is-small h4 {
 	position: relative;
+	font-size: 30px;
 	left: -3px;
 	top: -3px;
 	z-index: 11;
@@ -192,7 +197,7 @@
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
-	padding: 10px 22px 14px;
+	padding: 10px 20px 14px;
 	border-radius: var(--cs-small-br);
 	transform: translate(2px, 9px);
 }
@@ -227,7 +232,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 }
 #home #recursos .cs-grid-more-masked .cs-masked-media ul {
 	display: flex;
@@ -256,6 +261,7 @@
 #home #recursos .cs-buttons-list li a img {
 	-webkit-filter: brightness(0) saturate(100%) invert(100%);
 	filter: brightness(0) saturate(100%) invert(100%);
+	max-height: 50px;
 }
 #home #recursos .cs-grid-more-masked .cs-masked-media p {
 	position: relative;
@@ -273,6 +279,14 @@
 #iconos.cs-grid-more-masked .cs-masked-media ul li a {
 	background-color: var(--comustock-blue);
 }
+#home #recursos ul.cs-buttons-list.stg-xs-gap-recursos {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+#home #recursos #iconos ul.cs-buttons-list.stg-xs-gap-recursos {
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 #elementos.cs-grid-more-masked .cs-masked-media ul li a {
 	background-color: var(--comustock-blue);
 }
@@ -281,8 +295,11 @@
 }
 
 #home #recursos #elementos .cs-buttons-list a.s {
-	width: 152px;
-	height: 72px;
+	/* width: 152px;
+  height: 72px; */
+	width: 100%;
+	height: auto;
+	max-height: 60px;
 }
 /* #home #elementos.cs-grid-more-masked .cs-masked-media ul {
 	display: flex;
@@ -536,7 +553,6 @@
 #main-templates .swiper-slide p {
 	text-align: center;
 }
-
 
 /* GALERIAS */
 #main-audiovisuales .slider {
