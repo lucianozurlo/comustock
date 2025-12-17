@@ -252,7 +252,7 @@ a.cs-button {
 .cs-button .cs-icon,
 .cs-square-button:not(.is-secondary) .cs-icon:hover,
 .is-accented .cs-icon:hover {
-	background: var(--comustock-light-grey);
+	background: var(--comustock-lightgrey);
 }
 
 input[type="button"],
@@ -265,7 +265,7 @@ input[type="reset"]:hover,
 input[type="submit"]:hover,
 button:not([class*="pswp"]):hover,
 a:hover.cs-button {
-	color: var(--comustock-light-grey);
+	color: var(--comustock-lightgrey);
 }
 
 section {

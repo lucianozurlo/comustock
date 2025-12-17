@@ -47,210 +47,6 @@
   border-color: var(--darkgrey-mid) !important;
 }
 
-/****** TELECOM ******/
-.color-telecom {
-  color: var(--telecom) !important;
-}
-.bg-telecom {
-  background-color: var(--telecom) !important;
-}
-.border-telecom {
-  border-color: var(--telecom) !important;
-}
-/**/
-.color-telecom-half {
-  color: var(--telecom-half) !important;
-}
-.bg-telecom-half {
-  background-color: var(--telecom-half) !important;
-}
-.border-telecom-half {
-  border-color: var(--telecom-half) !important;
-}
-/**/
-.color-telecom-transparent {
-  color: var(--telecom-transparent) !important;
-}
-.bg-telecom-transparent {
-  background-color: var(--telecom-transparent) !important;
-}
-.border-telecom-transparent {
-  border-color: var(--telecom-transparent) !important;
-}
-/**/
-.color-telecom-null {
-  color: var(--telecom-null) !important;
-}
-.bg-telecom-null {
-  background-color: var(--telecom-null) !important;
-}
-.border-telecom-null {
-  border-color: var(--telecom-null) !important;
-}
-/**/
-.color-telecom-b2b {
-  color: var(--telecom-b2b) !important;
-}
-.bg-telecom-b2b {
-  background-color: var(--telecom-b2b) !important;
-}
-.border-telecom-b2b {
-  border-color: var(--telecom-b2b) !important;
-}
-/**/
-.color-telecom-acento {
-  color: var(--telecom-acento) !important;
-}
-.bg-telecom-acento {
-  background-color: var(--telecom-acento) !important;
-}
-.border-telecom-acento {
-  border-color: var(--telecom-acento) !important;
-}
-/**/
-.color-telecom-principal-2 {
-  color: var(--telecom-principal-2) !important;
-}
-.bg-telecom-principal-2 {
-  background-color: var(--telecom-principal-2) !important;
-}
-.border-telecom-principal-2 {
-  border-color: var(--telecom-principal-2) !important;
-}
-/**/
-.color-telecom-principal-4 {
-  color: var(--telecom-principal-4) !important;
-}
-.bg-telecom-principal-4 {
-  background-color: var(--telecom-principal-4) !important;
-}
-.border-telecom-principal-4 {
-  border-color: var(--telecom-principal-4) !important;
-}
-/**/
-.color-telecom-secundario-2 {
-  color: var(--telecom-secundario-2) !important;
-}
-.bg-telecom-secundario-2 {
-  background-color: var(--telecom-secundario-2) !important;
-}
-.border-telecom-secundario-2 {
-  border-color: var(--telecom-secundario-2) !important;
-}
-/**/
-.color-telecom-secundario-3 {
-  color: var(--telecom-secundario-3) !important;
-}
-.bg-telecom-secundario-3 {
-  background-color: var(--telecom-secundario-3) !important;
-}
-.border-telecom-secundario-3 {
-  border-color: var(--telecom-secundario-3) !important;
-}
-/**/
-.color-telecom-light {
-  color: var(--telecom-light) !important;
-}
-.bg-telecom-light {
-  background-color: var(--telecom-light) !important;
-}
-.border-telecom-light {
-  border-color: var(--telecom-light) !important;
-}
-/**/
-.color-telecom-dark {
-  color: var(--telecom-dark) !important;
-}
-.bg-telecom-dark {
-  background-color: var(--telecom-dark) !important;
-}
-.border-telecom-dark {
-  border-color: var(--telecom-dark) !important;
-}
-/* Telecom Empresas */
-.color-telecom-empresas {
-  color: var(--telecom-empresas) !important;
-}
-.bg-telecom-empresas {
-  background-color: var(--telecom-empresas) !important;
-}
-.border-telecom-empresas {
-  border-color: var(--telecom-empresas) !important;
-}
-/**/
-.color-telecom-empresas-principal-2 {
-  color: var(--telecom-empresas-principal-2) !important;
-}
-.bg-telecom-empresas-principal-2 {
-  background-color: var(--telecom-empresas-principal-2) !important;
-}
-.border-telecom-empresas-principal-2 {
-  border-color: var(--telecom-empresas-principal-2) !important;
-}
-/**/
-.color-telecom-empresas-acento {
-  color: var(--telecom-empresas-acento) !important;
-}
-.bg-telecom-empresas-acento {
-  background-color: var(--telecom-empresas-acento) !important;
-}
-.border-telecom-empresas-acento {
-  border-color: var(--telecom-empresas-acento) !important;
-}
-/**/
-.color-telecom-empresas-acento-secundario-1 {
-  color: var(--telecom-empresas-acento-secundario-1) !important;
-}
-.bg-telecom-empresas-acento-secundario-1 {
-  background-color: var(--telecom-empresas-acento-secundario-1) !important;
-}
-.border-telecom-empresas-acento-secundario-1 {
-  border-color: var(--telecom-empresas-acento-secundario-1) !important;
-}
-/**/
-.color-telecom-empresas-acento-secundario-2 {
-  color: var(--telecom-empresas-acento-secundario-2) !important;
-}
-.bg-telecom-empresas-acento-secundario-2 {
-  background-color: var(--telecom-empresas-acento-secundario-2) !important;
-}
-.border-telecom-empresas-acento-secundario-2 {
-  border-color: var(--telecom-empresas-acento-secundario-2) !important;
-}
-/**/
-.color-telecom-empresas-acento-secundario-3 {
-  color: var(--telecom-empresas-acento-secundario-3) !important;
-}
-.bg-telecom-empresas-acento-secundario-3 {
-  background-color: var(--telecom-empresas-acento-secundario-3) !important;
-}
-.border-telecom-empresas-acento-secundario-3 {
-  border-color: var(--telecom-empresas-acento-secundario-3) !important;
-}
-/**/
-.color-telecom-empresas-acento-secundario-4 {
-  color: var(--telecom-empresas-acento-secundario-4) !important;
-}
-.bg-telecom-empresas-acento-secundario-4 {
-  background-color: var(--telecom-empresas-acento-secundario-4) !important;
-}
-.border-telecom-empresas-acento-secundario-4 {
-  border-color: var(--telecom-empresas-acento-secundario-4) !important;
-}
-/**/
-.bg-telecom-empresas-gradients-1 {
-  background: var(--telecom-empresas-gradients-1) !important;
-}
-.bg-telecom-empresas-gradients-2 {
-  background: var(--telecom-empresas-gradients-2) !important;
-}
-.bg-telecom-empresas-gradients-3 {
-  background: var(--telecom-empresas-gradients-3) !important;
-}
-.bg-telecom-empresas-gradients-4 {
-  background: var(--telecom-empresas-gradients-4) !important;
-}
-/**/
 
 /****** PERSONAL ******/
 .color-personal {
@@ -584,9 +380,255 @@
 }
 /**/
 
-/****** TIENDA ******/
+/****** FIBRA ******/
+.color-fibra {
+  color: var(--fibra) !important;
+}
+.bg-fibra {
+  background-color: var(--fibra) !important;
+}
+.border-fibra {
+  border-color: var(--fibra) !important;
+}
+/**/
+.color-fibra-half {
+  color: var(--fibra-half) !important;
+}
+.bg-fibra-half {
+  background-color: var(--fibra-half) !important;
+}
+.border-fibra-half {
+  border-color: var(--fibra-half) !important;
+}
+/**/
+.color-fibra-transparent {
+  color: var(--fibra-transparent) !important;
+}
+.bg-fibra-transparent {
+  background-color: var(--fibra-transparent) !important;
+}
+.border-fibra-transparent {
+  border-color: var(--fibra-transparent) !important;
+}
+/**/
+.color-fibra-null {
+  color: var(--fibra-null) !important;
+}
+.bg-fibra-null {
+  background-color: var(--fibra-null) !important;
+}
+.border-fibra-null {
+  border-color: var(--fibra-null) !important;
+}
+/**/
+.color-fibra-personal {
+  color: var(--fibra-personal) !important;
+}
+.bg-fibra-personal {
+  background-color: var(--fibra-personal) !important;
+}
+.border-fibra-personal {
+  border-color: var(--fibra-personal) !important;
+}
+/**/
+.color-fibra-acento {
+  color: var(--fibra-acento) !important;
+}
+.bg-fibra-acento {
+  background-color: var(--fibra-acento) !important;
+}
+.border-fibra-acento {
+  border-color: var(--fibra-acento) !important;
+}
+/**/
 
+/****** TIENDA ******/
 .color-tienda {
+  color: var(--tienda) !important;
+}
+.bg-tienda {
+  background-color: var(--tienda) !important;
+}
+.border-tienda {
+  border-color: var(--tienda) !important;
+}
+/**/
+.color-tienda-half {
+  color: var(--tienda-half) !important;
+}
+.bg-tienda-half {
+  background-color: var(--tienda-half) !important;
+}
+.border-tienda-half {
+  border-color: var(--tienda-half) !important;
+}
+/**/
+.color-tienda-transparent {
+  color: var(--tienda-transparent) !important;
+}
+.bg-tienda-transparent {
+  background-color: var(--tienda-transparent) !important;
+}
+.border-tienda-transparent {
+  border-color: var(--tienda-transparent) !important;
+}
+/**/
+.color-tienda-null {
+  color: var(--tienda-null) !important;
+}
+.bg-tienda-null {
+  background-color: var(--tienda-null) !important;
+}
+.border-tienda-null {
+  border-color: var(--tienda-null) !important;
+}
+/**/
+.color-tienda-dark-blue {
+  color: var(--tienda-dark-blue) !important;
+}
+.bg-tienda-dark-blue {
+  background-color: var(--tienda-dark-blue) !important;
+}
+.border-tienda-dark-blue {
+  border-color: var(--tienda-dark-blue) !important;
+}
+/**/
+.color-tienda-lightgrey {
+  color: var(--tienda-lightgrey) !important;
+}
+.bg-tienda-lightgrey {
+  background-color: var(--tienda-lightgrey) !important;
+}
+.border-tienda-lightgrey {
+  border-color: var(--tienda-lightgrey) !important;
+}
+/**/
+.color-tienda-acento {
+  color: var(--tienda-acento) !important;
+}
+.bg-tienda-acento {
+  background-color: var(--tienda-acento) !important;
+}
+.border-tienda-acento {
+  border-color: var(--tienda-acento) !important;
+}
+/**/
+.color-tienda-violeta {
+  color: var(--tienda-violeta) !important;
+}
+.bg-tienda-violeta {
+  background-color: var(--tienda-violeta) !important;
+}
+.border-tienda-violeta {
+  border-color: var(--tienda-violeta) !important;
+}
+/**/
+.color-tienda-blue {
+  color: var(--tienda-blue) !important;
+}
+.bg-tienda-blue {
+  background-color: var(--tienda-blue) !important;
+}
+.border-tienda-blue {
+  border-color: var(--tienda-blue) !important;
+}
+/**/
+.color-tienda-personal {
+  color: var(--tienda-personal) !important;
+}
+.bg-tienda-personal {
+  background-color: var(--tienda-personal) !important;
+}
+.border-tienda-personal {
+  border-color: var(--tienda-personal) !important;
+}
+/**/
+
+/****** SMARTHOME ******/
+.color-smarthome {
+  color: var(--smarthome) !important;
+}
+.bg-smarthome {
+  background-color: var(--smarthome) !important;
+}
+.border-smarthome {
+  border-color: var(--smarthome) !important;
+}
+/**/
+.color-smarthome-half {
+  color: var(--smarthome-half) !important;
+}
+.bg-smarthome-half {
+  background-color: var(--smarthome-half) !important;
+}
+.border-smarthome-half {
+  border-color: var(--smarthome-half) !important;
+}
+/**/
+.color-smarthome-transparent {
+  color: var(--smarthome-transparent) !important;
+}
+.bg-smarthome-transparent {
+  background-color: var(--smarthome-transparent) !important;
+}
+.border-smarthome-transparent {
+  border-color: var(--smarthome-transparent) !important;
+}
+/**/
+.color-smarthome-null {
+  color: var(--smarthome-null) !important;
+}
+.bg-smarthome-null {
+  background-color: var(--smarthome-null) !important;
+}
+.border-smarthome-null {
+  border-color: var(--smarthome-null) !important;
+}
+/**/
+.color-smarthome-grey {
+  color: var(--smarthome-grey) !important;
+}
+.bg-smarthome-grey {
+  background-color: var(--smarthome-grey) !important;
+}
+.border-smarthome-grey {
+  border-color: var(--smarthome-grey) !important;
+}
+/**/
+.color-smarthome-lightgrey {
+  color: var(--smarthome-lightgrey) !important;
+}
+.bg-smarthome-lightgrey {
+  background-color: var(--smarthome-lightgrey) !important;
+}
+.border-smarthome-lightgrey {
+  border-color: var(--smarthome-lightgrey) !important;
+}
+/**/
+.color-smarthome-orange {
+  color: var(--smarthome-orange) !important;
+}
+.bg-smarthome-orange {
+  background-color: var(--smarthome-orange) !important;
+}
+.border-smarthome-orange {
+  border-color: var(--smarthome-orange) !important;
+}
+/**/
+.color-smarthome-personal {
+  color: var(--smarthome-personal) !important;
+}
+.bg-smarthome-personal {
+  background-color: var(--smarthome-personal) !important;
+}
+.border-smarthome-personal {
+  border-color: var(--smarthome-personal) !important;
+}
+/**/
+
+
+/****** TECH ******/
+.color-XXX {
   color: var(--XXX) !important;
 }
 .bg-XXX {
@@ -595,12 +637,77 @@
 .border-XXX {
   border-color: var(--XXX) !important;
 }
-
-
-
-
-
-
+/**/
+.color-XXX {
+  color: var(--XXX) !important;
+}
+.bg-XXX {
+  background-color: var(--XXX) !important;
+}
+.border-XXX {
+  border-color: var(--XXX) !important;
+}
+/**/
+.color-XXX {
+  color: var(--XXX) !important;
+}
+.bg-XXX {
+  background-color: var(--XXX) !important;
+}
+.border-XXX {
+  border-color: var(--XXX) !important;
+}
+/**/
+.color-XXX {
+  color: var(--XXX) !important;
+}
+.bg-XXX {
+  background-color: var(--XXX) !important;
+}
+.border-XXX {
+  border-color: var(--XXX) !important;
+}
+/**/
+.color-XXX {
+  color: var(--XXX) !important;
+}
+.bg-XXX {
+  background-color: var(--XXX) !important;
+}
+.border-XXX {
+  border-color: var(--XXX) !important;
+}
+/**/
+.color-XXX {
+  color: var(--XXX) !important;
+}
+.bg-XXX {
+  background-color: var(--XXX) !important;
+}
+.border-XXX {
+  border-color: var(--XXX) !important;
+}
+/**/
+.color-XXX {
+  color: var(--XXX) !important;
+}
+.bg-XXX {
+  background-color: var(--XXX) !important;
+}
+.border-XXX {
+  border-color: var(--XXX) !important;
+}
+/**/
+.color-XXX {
+  color: var(--XXX) !important;
+}
+.bg-XXX {
+  background-color: var(--XXX) !important;
+}
+.border-XXX {
+  border-color: var(--XXX) !important;
+}
+/**/
 
 
 /****** FLOW ******/

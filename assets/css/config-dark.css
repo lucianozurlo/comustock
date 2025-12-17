@@ -50,4 +50,7 @@ a.cs-button {
 .f-button svg {
 	stroke: var(--cs-s-heading) !important;
 }
-color: var(--cs-s-nav);
+
+#cs-header {
+	background: var(--cs-s-nav) !important;
+}

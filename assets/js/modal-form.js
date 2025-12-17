@@ -107,7 +107,7 @@ document.querySelectorAll("[data-fancybox]").forEach((anchor) => {
 
 		// Parse de ruta
 		const parts = src.split("/");
-		const base = parts.slice(0, -2).join("/") + "/"; // hasta .../banda/
+		const base = parts.slice(0, -2).join("/") + "/"; // hasta .../banda/ o carpeta equivalente
 		const nameExt = parts.pop();
 		const dot = nameExt.lastIndexOf(".");
 		const fileName = nameExt.slice(0, dot);
@@ -198,9 +198,7 @@ document.querySelectorAll("[data-fancybox]").forEach((anchor) => {
 				.map(
 					(e, i) => `
         <label for="${e}">
-          <input type="radio" name="format" id="${e}" value="${e}" class="format-file" ${
-						!i ? "checked" : ""
-					}>
+          <input type="radio" name="format" id="${e}" value="${e}" class="format-file" ${!i ? "checked" : ""}>
           <p class="format-select">.${e}</p>
         </label>`
 				)
@@ -301,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /* 5 · Botón mute/unmute para previews en grid                    */
 /* ────────────────────────────────────────────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
-  document
+	document
 		.querySelectorAll(".cs-masked-media.video-container")
 		.forEach((cont) => {
 			const v = cont.querySelector("video");
@@ -343,3 +341,152 @@ document.addEventListener("DOMContentLoaded", () => {
 			};
 		});
 });
+
+/* ────────────────────────────────────────────────────────────── */
+/* 6 · Lazy IMÁGENES y FONDOS (simple: data-src / data-bg)        */
+/* ────────────────────────────────────────────────────────────── */
+(function lazyImagesSimple() {
+	const imgs = document.querySelectorAll("img.js-lazy[data-src]");
+	const bgs = document.querySelectorAll(".js-lazy-bg[data-bg]");
+
+	const upgradeImg = (img) => {
+		const ds = img.getAttribute("data-src");
+		if (!ds) return;
+		img.setAttribute("src", ds);
+		img.removeAttribute("data-src");
+		img.dataset.loaded = "1";
+	};
+
+	const upgradeBg = (el) => {
+		const bg = el.getAttribute("data-bg");
+		if (!bg) return;
+		el.style.backgroundImage = `url("${bg}")`;
+		el.removeAttribute("data-bg");
+		el.dataset.loaded = "1";
+	};
+
+	const onIntersect = (entries, obs) => {
+		entries.forEach((entry) => {
+			if (!entry.isIntersecting) return;
+			const el = entry.target;
+			if (el.tagName === "IMG") upgradeImg(el);
+			else upgradeBg(el);
+			obs.unobserve(el);
+		});
+	};
+
+	if ("IntersectionObserver" in window) {
+		const io = new IntersectionObserver(onIntersect, {
+			rootMargin: "200px 0px",
+		});
+		imgs.forEach((i) => io.observe(i));
+		bgs.forEach((b) => io.observe(b));
+	} else {
+		imgs.forEach(upgradeImg);
+		bgs.forEach(upgradeBg);
+	}
+})();
+
+/* ────────────────────────────────────────────────────────────── */
+/* 7 · Lazy VIDEOS (data-src o <source data-src>)                 */
+/* ────────────────────────────────────────────────────────────── */
+(function lazyVideosSimple() {
+	const vids = document.querySelectorAll(
+		".cs-masked-media.video-container video, video.js-lazy-video"
+	);
+	if (!vids.length) return;
+
+	const loadVideo = (v) => {
+		const sources = v.querySelectorAll("source[data-src]");
+		if (sources.length) {
+			sources.forEach((s) => {
+				s.src = s.dataset.src;
+				s.removeAttribute("data-src");
+			});
+		} else if (v.dataset.src && !v.src) {
+			v.src = v.dataset.src;
+			v.removeAttribute("data-src");
+		}
+		v.load();
+	};
+
+	const onIntersect = (entries, obs) => {
+		entries.forEach((entry) => {
+			const v = entry.target;
+			if (entry.isIntersecting) {
+				if (
+					!v.currentSrc &&
+					(v.dataset.src || v.querySelector("source[data-src]"))
+				) {
+					loadVideo(v);
+				}
+				v.play().catch(() => {});
+			} else {
+				v.pause();
+			}
+		});
+	};
+
+	if ("IntersectionObserver" in window) {
+		const io = new IntersectionObserver(onIntersect, {
+			rootMargin: "200px 0px",
+		});
+		vids.forEach((v) => io.observe(v));
+	} else {
+		vids.forEach((v) => loadVideo(v));
+	}
+})();
+
+/* ────────────────────────────────────────────────────────────── */
+/* 8 · Promover preview a FULL antes de abrir el modal            */
+/* ────────────────────────────────────────────────────────────── */
+/* Asegura que si hay img/video lazy, se cargue la versión full
+   antes de que Fancybox renderice el contenido del bloque */
+(function promotePreviewOnModalOpen() {
+	document.addEventListener(
+		"click",
+		(e) => {
+			const trigger = e.target.closest("[data-fancybox]");
+			if (!trigger) return;
+
+			const block = trigger.closest(".cs-masked-block") || document;
+
+			// IMG
+			const img = block.querySelector("img.js-lazy[data-src]");
+			if (img) {
+				const ds = img.getAttribute("data-src");
+				if (ds) {
+					img.setAttribute("src", ds);
+					img.removeAttribute("data-src");
+					img.dataset.loaded = "1";
+				}
+			}
+
+			// BG
+			const bg = block.querySelector(".js-lazy-bg[data-bg]");
+			if (bg) {
+				const val = bg.getAttribute("data-bg");
+				if (val) {
+					bg.style.backgroundImage = `url("${val}")`;
+					bg.removeAttribute("data-bg");
+					bg.dataset.loaded = "1";
+				}
+			}
+
+			// VIDEO
+			const v = block.querySelector("video");
+			if (v && !v.currentSrc) {
+				const s = v.querySelector("source[data-src]");
+				if (s) {
+					s.src = s.dataset.src;
+					s.removeAttribute("data-src");
+				} else if (v.dataset.src) {
+					v.src = v.dataset.src;
+					v.removeAttribute("data-src");
+				}
+				v.load();
+			}
+		},
+		true
+	); // captura, ocurre antes que Fancybox
+})();

@@ -24,3 +24,7 @@
 	);
 	left: 0;
 }
+
+#logos .cs-block {
+    padding: 4px;
+}

@@ -1,0 +1,18 @@
+Imagen (thumb → full):
+
+<!-- thumb liviano en src; full en data-src -->
+<img class="js-lazy" src="../thumbs/personal-thumb.jpg"
+    data-src="../content/identidad/ecosistema/personal/full/personal.jpg" alt="Personal" width="600" height="600"
+    loading="lazy">
+
+
+Video (lazy con data-src):
+
+<div class="cs-masked-media video-container">
+    <video class="js-lazy-video" preload="none" muted loop playsinline poster="../thumbs/pay-poster.jpg"
+        data-src="../../content/identidad/ecosistema/pay/banda/mp4/pay.mp4">
+        <!-- Alternativa equivalente:
+    <source data-src="../../content/identidad/ecosistema/pay/banda/mp4/pay.mp4" type="video/mp4">
+    -->
+    </video>
+</div>

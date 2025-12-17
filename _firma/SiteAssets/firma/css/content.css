@@ -135,11 +135,11 @@
 }
 #home #templates .cs-masked-block:hover .cs-square-button span.cs-icon {
 	transform: scale(1.1);
-	background-color: var(--comustock-light-grey);
+	background-color: var(--comustock-lightgrey);
 }
 #home #templates .cs-templates .cs-bento-grid .is-large p {
 	max-width: unset;
-	background: var(--comustock-light-grey-half);
+	background: var(--comustock-lightgrey-half);
 	color: var(--comustock-blue);
 	width: calc(100% - 128px);
 	padding-right: 0;
@@ -154,7 +154,7 @@
 .cs-bento-grid div[data-bg-src] h5,
 .cs-bento-grid div[data-bg-src] h6,
 .cs-bento-grid div[data-bg-src] p.cs-large-text {
-	color: var(--comustock-light-grey);
+	color: var(--comustock-lightgrey);
 }
 #home #templates .cs-templates .cs-bento-grid .is-medium {
 	border-bottom-right-radius: var(--cs-small-br);
@@ -170,7 +170,7 @@
 	border-radius: var(--cs-small-br);
 }
 #home #templates .cs-templates .cs-bento-grid .is-medium p {
-	background: var(--comustock-light-grey-half);
+	background: var(--comustock-lightgrey-half);
 	color: var(--comustock-blue);
 	width: calc(100% - 104px);
 	padding-right: 0;
@@ -188,7 +188,7 @@
 }
 #home #templates .cs-page-title {
 	background: var(--comustock-blue);
-	color: var(--comustock-light-grey);
+	color: var(--comustock-lightgrey);
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -268,7 +268,7 @@
 	background-color: var(--comustock-blue);
 }
 #fuentes.cs-grid-more-masked .cs-masked-media ul li a span {
-	color: var(--comustock-light-grey);
+	color: var(--comustock-lightgrey);
 }
 #iconos.cs-grid-more-masked .cs-masked-media ul li a {
 	background-color: var(--comustock-blue);
@@ -406,14 +406,14 @@
 #home #HacemosLaComuFacil textarea {
 	border: 1px solid var(--cs-dark-s-border);
 	background: var(--cs-dark-s-container-bg);
-	color: var(--comustock-light-grey);
+	color: var(--comustock-lightgrey);
 }
 #home #HacemosLaComuFacil input[type="button"],
 #home #HacemosLaComuFacil input[type="reset"],
 #home #HacemosLaComuFacil input[type="submit"],
 #home #HacemosLaComuFacil button:not([class*="pswp"]),
 #home #HacemosLaComuFacil a.cs-button {
-	color: var(--comustock-light-grey);
+	color: var(--comustock-lightgrey);
 }
 #home #HacemosLaComuFacil .cs-hero-form button .cs-icon {
 	background: var(--cs-dark-s-accented-text);
@@ -660,7 +660,7 @@
 #main-recursos .link .cs-page-title {
 	font-size: 28px;
 	background: var(--comustock-blue);
-	color: var(--comustock-light-grey);
+	color: var(--comustock-lightgrey);
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;

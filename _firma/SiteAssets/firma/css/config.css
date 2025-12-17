@@ -68,8 +68,8 @@
 	--comustock-null: #d0008600;
 	--comustock-blue: #052c50;
 	--comustock-blue-half: #052c50cd;
-	--comustock-light-grey: #f5f5f5;
-	--comustock-light-grey-half: #f5f5f5de;
+	--comustock-lightgrey: #f5f5f5;
+	--comustock-lightgrey-half: #f5f5f5de;
 
 	/*** light ***/
 	input[type="button"],
@@ -95,7 +95,7 @@
 	--personal-half: #00b7eb90;
 	--personal-transparent: #00b7eb44;
 	--personal-null: #00b7eb00;
-	--personal-light-grey: #f5f5f5;
+	--personal-lightgrey: #f5f5f5;
 	--personal-blue: #052c50;
 	--personal-acento: #8a5cf2;
 	--personal-principal-2: #a8e0f6;
@@ -136,7 +136,7 @@
 	--movil-half: #00b7eb90;
 	--movil-transparent: #00b7eb44;
 	--movil-null: #00b7eb00;
-	--movil-light-grey: #f5f5f5;
+	--movil-lightgrey: #f5f5f5;
 	--movil-blue: #052c50;
 	--movil-acento: #8a5cf2;
 

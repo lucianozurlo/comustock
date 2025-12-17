@@ -187,7 +187,7 @@
 #download-btn {
 	background-color: var(--comustock-blue);
 	border: 2px solid var(--comustock-blue);
-	color: var(--comustock-light-grey);
+	color: var(--comustock-lightgrey);
 	padding: 9px 18px;
 	border-radius: 11px;
 	margin-top: 10px;
@@ -198,7 +198,7 @@
 }
 
 #download-btn .cs-icon {
-	background: var(--comustock-light-grey);
+	background: var(--comustock-lightgrey);
 	transition: all 0.2s ease-in-out;
 }
 
@@ -206,11 +206,11 @@
 	background-color: var(--comustock);
 	border: 2px solid var(--comustock);
 
-	color: var(--comustock-light-grey);
+	color: var(--comustock-lightgrey);
 }
 
 #download-btn:hover .cs-icon {
-	background-color: var(--comustock-light-grey);
+	background-color: var(--comustock-lightgrey);
 }
 
 #download-btn[disabled] {

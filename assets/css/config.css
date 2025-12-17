@@ -68,8 +68,8 @@
 	--comustock-null: #d0008600;
 	--comustock-blue: #052c50;
 	--comustock-blue-half: #052c50cd;
-	--comustock-light-grey: #f5f5f5;
-	--comustock-light-grey-half: #f5f5f5de;
+	--comustock-lightgrey: #f5f5f5;
+	--comustock-lightgrey-half: #f5f5f5de;
 
 	/*** light ***/
 	input[type="button"],
@@ -95,7 +95,7 @@
 	--personal-half: #00b7eb90;
 	--personal-transparent: #00b7eb44;
 	--personal-null: #00b7eb00;
-	--personal-light-grey: #f5f5f5;
+	--personal-lightgrey: #f5f5f5;
 	--personal-blue: #052c50;
 	--personal-acento: #8a5cf2;
 	--personal-principal-2: #a8e0f6;
@@ -136,7 +136,7 @@
 	--movil-half: #00b7eb90;
 	--movil-transparent: #00b7eb44;
 	--movil-null: #00b7eb00;
-	--movil-light-grey: #f5f5f5;
+	--movil-lightgrey: #f5f5f5;
 	--movil-blue: #052c50;
 	--movil-acento: #8a5cf2;
 
@@ -145,6 +145,9 @@
 	--fibra-half: #004be290;
 	--fibra-transparent: #004be244;
 	--fibra-null: #004be200;
+	--fibra-lightgrey: #f5f5f5;
+	--fibra-personal: #00b7eb;
+	--fibra-acento: #8a5cf2;
 
 	/*** Flow ***/
 	--flow: #21dbaa;
@@ -194,8 +197,11 @@
 	--tienda-transparent: #00b9c044;
 	--tienda-null: #00b9c000;
 	--tienda-dark-blue: #102d4f;
+	--tienda-lightgrey: #f5f5f5;
 	--tienda-acento: #ff686e;
+	--tienda-violeta: #8c5bf5;
 	--tienda-blue: #3d00e5;
+	--tienda-personal: #00b8eb;
 
 	/*** Smarthome ***/
 	--smarthome: #102d4f;
@@ -203,59 +209,19 @@
 	--smarthome-transparent: #102d4f44;
 	--smarthome-null: #102d4f00;
 	--smarthome-grey: #8b9dac;
+	--smarthome-lightgrey: #f5f5f5;
 	--smarthome-orange: #f68b1f;
+	--smarthome-personal: #00b8eb;
 
 	/*** Tech ***/
-	--tech: #3d00e5;
-	--tech-half: #3d00e590;
-	--tech-transparent: #3d00e544;
-	--tech-null: #3d00e500;
-	--tech-grey: #8b9dac;
-	--tech-orange: #f68b1f;
-
-	/*** telecom ***/
-	--telecom: #3c00a0;
-	--telecom-half: #3d00a090;
-	--telecom-transparent: #3d00a044;
-	--telecom-null: #3d00a000;
-	--telecom-b2b: #140232;
-	--telecom-acento: #b989fa;
-	--telecom-principal-2: #6428fb;
-	--telecom-principal-4: #28096a;
-	--telecom-secundario-2: #39129a;
-	--telecom-secundario-3: #281e5a;
-	--telecom-light: #5629ab;
-	--telecom-dark: #1c004a;
-	--telecom-empresas: #190646;
-	--telecom-empresas-principal-2: #322d6e;
-	--telecom-empresas-acento: #69d8d0;
-	--telecom-empresas-acento-secundario-1: #af8cff;
-	--telecom-empresas-acento-secundario-2: #e6b4cf;
-	--telecom-empresas-acento-secundario-3: #96cdfa;
-	--telecom-empresas-acento-secundario-4: #6e78fa;
-	--telecom-empresas-gradients-1: linear-gradient(
-		45deg,
-		#af8cff 0%,
-		#190646 100%
-	);
-	--telecom-empresas-gradients-2: linear-gradient(
-		45deg,
-		#6e78fa 0%,
-		#190646 100%
-	);
-	--telecom-empresas-gradients-3: linear-gradient(
-		45deg,
-		#69d8d0 0%,
-		#00b7eb 100%
-	);
-	--telecom-empresas-gradients-4: linear-gradient(
-		45deg,
-		#6e78fa 0%,
-		#e6b4cf 100%
-	);
-
-	--cs-button-medium: 152px !important;
-	--cs-button-small: 80px !important;
+	--tech: #0b032f;
+	--tech-half: #0b032f90;
+	--tech-transparent: #0b032f44;
+	--tech-null: #0b032f00;
+	--tech-violet: #2a1d5b;
+	--tech-acento: #69d8d0;
+	--tech-blue: #3d00e5;
+	--tech-lightgrey: #f5f5f5;
 }
 
 /* fonts */
@@ -352,6 +318,9 @@
 	--cs-gap-16: 16px;
 	--cs-gap-24: 24px;
 	--cs-gap-32: 32px;
+
+	--cs-button-medium: 152px !important;
+	--cs-button-small: 80px !important;
 }
 
 /* tablet */
